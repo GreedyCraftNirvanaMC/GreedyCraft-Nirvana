@@ -1,0 +1,16 @@
+{
+  "keep_elytra_visible": false,
+  "keep_cape_visible": true,
+  "keep_hats_visible": false,
+  "players_only": true,
+  "toggles_helmet": true,
+  "toggles_chestplate": true,
+  "toggles_leggings": true,
+  "toggles_boots": true,
+  "save_between_launches": false,
+  "save_data": {
+    "hide_my_armor": false,
+    "hide_all_armor": false
+  },
+  "version": 3
+}
