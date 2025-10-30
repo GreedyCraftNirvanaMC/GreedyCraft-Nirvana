@@ -37,12 +37,12 @@
 	spatialPowerExponent = 1.35
 
 [logging]
-	blockUpdateLog = false
-	craftingLog = false
+	blockUpdateLog = true
+	craftingLog = true
 	debugLog = false
-	gridLog = false
+	gridLog = true
 	#Enable stack trace logging for the chunk loading debug command
-	chunkLoggerTrace = false
+	chunkLoggerTrace = true
 
 [battery]
 	#The chargers charging rate factor, which is applied to the charged items charge rate. 2 means it charges everything twice as fast. 0.5 half as fast.
@@ -98,7 +98,7 @@
 [powerRatios]
 	# Default: 0.5
 	# Range: 4.9E-324 ~ 1.7976931348623157E308
-	forgeEnergy = 0.5
+	forgeEnergy = 1.0
 	# Default: 1.0
 	# Range: 0.01 ~ 1.7976931348623157E308
 	usageMultiplier = 1.0
@@ -113,11 +113,11 @@
 	#The cost to transport energy through an energy P2P tunnel expressed as a factor of the transported energy.
 	# Default: 0.025
 	# Range: 0.0 ~ 1.0
-	p2pTunnelEnergyTax = 0.025
+	p2pTunnelEnergyTax = 0.0
 	#The cost to transport items/fluids/etc. through P2P tunnels, expressed in AE energy per equivalent I/O bus operation for the transported object type (i.e. items=per 1 item, fluids=per 125mb).
 	# Default: 0.025
 	# Range: 0.0 ~ 1.0
-	p2pTunnelTransportTax = 0.025
+	p2pTunnelTransportTax = 0.015
 
 [condenser]
 	# Default: 256
