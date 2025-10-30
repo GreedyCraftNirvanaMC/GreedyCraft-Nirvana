@@ -9,7 +9,7 @@
   "toggles_boots": true,
   "save_between_launches": false,
   "save_data": {
-    "hide_my_armor": false,
+    "hide_my_armor": true,
     "hide_all_armor": false
   },
   "version": 3
