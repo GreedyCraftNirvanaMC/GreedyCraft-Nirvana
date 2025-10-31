@@ -1,0 +1,9 @@
+[client]
+	#Use minimal quads for rendering
+	minimalQuads = false
+	#Disable model cache
+	disableModelCache = false
+	#Show all trees in JEI
+	showJEISubtypes = false
+	#Show the tree model in the sapling tooltip
+	showTreesInSaplingTooltip = true

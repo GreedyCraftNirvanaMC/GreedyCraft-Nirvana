@@ -1,0 +1,484 @@
+#饰品通用设置
+[baubles]
+	#是否启用饰品修饰器系统
+	#注意：如果检测到安装了 Baubles Reforked 模组，此选项默认为 false
+	#你仍然可以手动启用此选项，但不建议同时使用两个模组的修饰符系统
+	#Whether to enable the accessory modifier system
+	#Note: If Baubles Reforked mod is detected, this option defaults to false
+	#You can still enable this option manually, but it's not recommended to use both mods' modifier systems simultaneously
+	modifierEnabled = true
+
+	#铁砧重铸设置
+	#Anvil Reforging Settings
+	[baubles.anvil_settings]
+		#重铸消耗经验值 [默认3级]
+		#Experience cost for reforging [default 3 levels]
+		# Default: 3
+		# Range: 0 ~ 100
+		recast_exp_cost = 3
+		#重铸消耗材料数量 [默认1个]
+		#Material cost for reforging [default 1 item]
+		# Default: 1
+		# Range: 1 ~ 64
+		recast_material_cost = 1
+
+	#十字项链设置
+	#Cross Necklace Settings
+	[baubles.cross_necklace]
+		#启用无敌效果 [true/false]
+		#Enable invulnerability effect [true/false]
+		enable = true
+		#是否仅玩家生效 [true/false]
+		#Apply effect to players only [true/false]
+		playersOnly = true
+		#无敌时间加成倍数 [0.0-10.0]
+		#Invulnerability time multiplier [0.0-10.0]
+		# Default: 0.8
+		# Range: 0.0 ~ 10.0
+		boost = 0.8
+
+	#吸血手套设置
+	#Vampiric Glove Settings
+	[baubles.vampiric_glove]
+		#伤害转化比例 [0.0-1.0]
+		#Damage to healing conversion ratio [0.0-1.0]
+		# Default: 0.4
+		# Range: 0.0 ~ 1.0
+		percent = 0.4
+		#单次最大恢复量 [0.0-20.0]
+		#Maximum healing per hit [0.0-20.0]
+		# Default: 6.0
+		# Range: 0.0 ~ 20.0
+		maxHeal = 6.0
+
+	#灵敏手套设置
+	#Dexterity Glove Settings
+	[baubles.dexterity_glove]
+		#攻击速度加成值 [默认0.4，1.0=+100%]
+		#Attack speed bonus [default 0.4, 1.0=+100%]
+		# Default: 0.4
+		# Range: 0.0 ~ 2.0
+		attack_speed = 0.4
+
+	#无限图腾设置
+	#Infinite Totem Settings
+	[baubles.infinite_totem]
+		#无限图腾冷却时间（单位：游戏刻，20刻=1秒）[默认200刻=10秒]
+		#Infinite Totem cooldown (in ticks, 20 ticks = 1 second) [default 200 ticks = 10 seconds]
+		# Default: 6000
+		# Range: 20 ~ 72000
+		cooldown = 6000
+
+	#二段跳设置
+	#Double Jump Settings
+	[baubles.jump_settings]
+		#疾跑垂直加成系数 [默认0.5] 示例：0.5 = +50%
+		#Sprint jump vertical boost [default 0.5] Example: 0.5 = +50%
+		# Default: 0.5
+		# Range: 0.0 ~ 2.0
+		sprint_vertical = 0.5
+		#疾跑水平推进力 [默认0.5] 单位：方块/tick
+		#Sprint jump horizontal boost [default 0.5] Unit: blocks/tick
+		# Default: 0.5
+		# Range: 0.0 ~ 5.0
+		sprint_horizontal = 0.5
+
+	[baubles."Tactical Goggles Settings"]
+		#洞察之眼相关配置
+		#Tactical Goggles Configuration
+		#扫描间隔（单位：tick，20tick = 1秒）
+		#Scan interval (in ticks, 20 ticks = 1 second)
+		# Default: 300
+		# Range: 1 ~ 1200
+		scanInterval = 300
+		#标记持续时间（单位：tick）
+		#Mark duration (in ticks)
+		# Default: 100
+		# Range: 1 ~ 600
+		markDuration = 100
+		#水平扫描半径
+		#Horizontal scan radius
+		# Default: 10.0
+		# Range: 1.0 ~ 32.0
+		scanRadius = 10.0
+		#向上扫描范围
+		#Upward scan range
+		# Default: 5.0
+		# Range: 1.0 ~ 16.0
+		upRange = 5.0
+		#向下扫描范围
+		#Downward scan range
+		# Default: 5.0
+		# Range: 1.0 ~ 16.0
+		downRange = 5.0
+		#对标记目标的伤害倍率
+		#Damage multiplier against marked targets
+		# Default: 1.5
+		# Range: 1.0 ~ 5.0
+		damageMultiplier = 1.5
+
+	[baubles."Lucky Coin Settings"]
+		#幸运硬币相关配置
+		#Lucky Coin Configuration
+		#伤害加成列表（0.05表示+5%伤害）
+		#Damage bonus list (0.05 means +5% damage)
+		damageBonus = [0.05, 0.1, 0.3]
+		#每个伤害加成对应的触发概率（必须和伤害加成数组长度相同，且概率和必须等于1.0）
+		#Trigger probability for each damage bonus (must match the length of damage bonus array and sum up to 1.0)
+		probability = [0.7, 0.2, 0.1]
+
+	[baubles."Tha Wizard Settings"]
+		#小巫师饰品相关配置
+		#Tha Wizard Accessory Configuration
+		#药水效果持续时间倍率 (1.5 = 延长50%)
+		#Potion effect duration multiplier (1.5 = +50% duration)
+		# Default: 1.5
+		# Range: 1.0 ~ 5.0
+		durationMultiplier = 1.5
+
+	[baubles."Drop Spindle Settings"]
+		#纺锤相关配置
+		#Drop Spindle Configuration
+		#每次攻击时触发修复的概率 (0.25 = 25%)
+		#Chance to trigger repair on attack (0.25 = 25%)
+		# Default: 0.25
+		# Range: 0.0 ~ 1.0
+		repairChance = 0.25
+		#每次修复的耐久度
+		#Amount of durability repaired per trigger
+		# Default: 1
+		# Range: 1 ~ 64
+		repairAmount = 1
+
+	[baubles."Dark Egg Settings"]
+		#暗影之卵相关配置
+		#Dark Egg Configuration
+		#技能冷却时间（单位：tick，20tick = 1秒）
+		#Ability cooldown (in ticks, 20 ticks = 1 second)
+		# Default: 1200
+		# Range: 200 ~ 6000
+		cooldown = 1200
+		#每次召唤的恼鬼数量
+		#Number of Vexes summoned per use
+		# Default: 3
+		# Range: 1 ~ 10
+		vexCount = 3
+		#恼鬼存活时间（单位：tick）
+		#Vex lifetime duration (in ticks)
+		# Default: 600
+		# Range: 100 ~ 2400
+		vexLifetime = 600
+
+	[baubles."Mossy Ring Settings"]
+		#苔藓戒指相关配置
+		#Mossy Ring Configuration
+		#修复间隔（单位：tick，20tick = 1秒）
+		#Repair interval (in ticks, 20 ticks = 1 second)
+		# Default: 60
+		# Range: 20 ~ 200
+		repairInterval = 60
+		#每次修复的耐久度
+		#Amount of durability repaired per tick
+		# Default: 1
+		# Range: 1 ~ 10
+		repairAmount = 1
+
+	[baubles."Mossy Belt Settings"]
+		#苔藓腰带相关配置
+		#Mossy Belt Configuration
+		#修复间隔（单位：tick，20tick = 1秒）
+		#Repair interval (in ticks, 20 ticks = 1 second)
+		# Default: 60
+		# Range: 20 ~ 200
+		repairInterval = 60
+		#每次修复的耐久度
+		#Amount of durability repaired per tick
+		# Default: 1
+		# Range: 1 ~ 10
+		repairAmount = 1
+
+	[baubles."Mad Aura Settings"]
+		#炽光环相关配置
+		#Mad Aura Configuration
+		#技能冷却时间（单位：tick，20tick = 1秒）
+		#Ability cooldown (in ticks, 20 ticks = 1 second)
+		# Default: 600
+		# Range: 200 ~ 2400
+		cooldown = 600
+
+	[baubles."Dark Dagger Settings"]
+		#暗影匕首相关配置
+		#Dark Dagger Configuration
+		#斩杀阈值（目标剩余生命值百分比，0.2 = 20%）
+		#Execute threshold (target's remaining health percentage, 0.2 = 20%)
+		# Default: 0.2
+		# Range: 0.05 ~ 0.5
+		executeThreshold = 0.2
+		#斩杀伤害值
+		#Execute damage amount
+		# Default: 9.99999999E8
+		# Range: 1000.0 ~ 9.99999999E8
+		executeDamage = 9.99999999E8
+
+	[baubles."Blaze Heart Settings"]
+		#烈焰之心相关配置
+		#Blaze Heart Configuration
+		#生命恢复效果持续时间（单位：tick，20tick = 1秒）
+		#Regeneration effect duration (in ticks, 20 ticks = 1 second)
+		# Default: 900
+		# Range: 20 ~ 2400
+		regenerationDuration = 900
+
+	[baubles."Wrath Pendant Settings"]
+		#愤怒吊坠相关配置
+		#Wrath Pendant Configuration
+		#暴击时给予的罪恶效果等级 [默认3]
+		#Level of Sin effect given on critical hit [default 3]
+		# Default: 3
+		# Range: 0 ~ 10
+		effectLevel = 3
+		#罪恶效果持续时间（单位：tick，20tick = 1秒）[默认100tick = 5秒]
+		#Sin effect duration (in ticks, 20 ticks = 1 second) [default 100 ticks = 5 seconds]
+		# Default: 100
+		# Range: 20 ~ 1200
+		effectDuration = 100
+
+	[baubles."Golden Skull Settings"]
+		#黄金头颅相关配置
+		#黄金头颅饰品触发宝藏袋掉落的概率 (0.0-1.0)
+		#Chance for Golden Skull accessory to trigger treasure bag drops (0.0-1.0)
+		# Default: 0.05
+		# Range: 0.0 ~ 1.0
+		goldenSkullDropChance = 0.05
+
+	[baubles."Butcher's Cleaver Settings"]
+		#屠宰镰相关配置
+		#屠宰镰饰品触发头颅掉落的概率 (0.0-1.0)
+		#Chance for Butcher's Cleaver accessory to trigger head drops (0.0-1.0)
+		# Default: 0.1
+		# Range: 0.0 ~ 1.0
+		butchersCleaverDropChance = 0.1
+
+	[baubles."Ruby Heart Settings"]
+		#红宝石之心相关配置
+		#红宝石之心触发后的冷却时间（以秒为单位）
+		#Ruby Heart cooldown after activation (in seconds)
+		# Default: 60
+		# Range: 1 ~ 3600
+		rubyHeartCooldown = 60
+		#红宝石之心触发所需的生命值阈值（占最大生命值的百分比，0.0-1.0）
+		#Ruby Heart activation health threshold (percentage of max health, 0.0-1.0)
+		# Default: 0.3
+		# Range: 0.0 ~ 1.0
+		rubyHeartHealthThreshold = 0.3
+
+	[baubles."Rock Candy Settings"]
+		#水晶糖饰品相关配置
+		#水晶糖饰品的移动速度倍率（1.0 = 基础速度翻倍）
+		#Rock Candy accessory movement speed multiplier (1.0 = double base speed)
+		# Default: 1.0
+		# Range: 0.0 ~ 5.0
+		rockCandySpeedMultiplier = 1.0
+		#水晶糖饰品受到的伤害倍率（2.0 = 伤害翻倍）
+		#Rock Candy accessory damage taken multiplier (2.0 = double damage)
+		# Default: 2.0
+		# Range: 1.0 ~ 5.0
+		rockCandyDamageMultiplier = 2.0
+
+	#Treasure Bag Settings
+	[baubles.treasure_bag]
+		#宝藏袋可能掉落的物品列表
+		#List of possible items from treasure bags
+		#
+		#格式：modid:物品ID,权重
+		#Format: modid:item_id,weight
+		#
+		#示例：minecraft:diamond,10
+		#Example: minecraft:diamond,10
+		#
+		#如果权重相同，物品掉落概率相等
+		#Items will have equal chances if weights are the same
+		possible_items = "bountifulbaubles:minds_eye,10;bountifulbaubles:luck_coin,10;bountifulbaubles:dragon_breath,10;bountifulbaubles:ice_shard,10;bountifulbaubles:tha_spider,10;bountifulbaubles:creepo,10;bountifulbaubles:tha_wizard,10;bountifulbaubles:book_o_enchanting,10;bountifulbaubles:warm_void,10;bountifulbaubles:golden_melon,10;bountifulbaubles:fire_mind,10;bountifulbaubles:drop_spindle,10;bountifulbaubles:dark_egg,10;bountifulbaubles:mossy_ring,10;bountifulbaubles:mossy_belt,10;bountifulbaubles:mad_aura,10;bountifulbaubles:turtle_shell,10;bountifulbaubles:dark_dagger,10;bountifulbaubles:ember,10;bountifulbaubles:wither_nail,10;bountifulbaubles:serpent_tooth,10;bountifulbaubles:blaze_heart,10;bountifulbaubles:starfish,10;bountifulbaubles:golden_skull,10;bountifulbaubles:butchers_cleaver,10;bountifulbaubles:karma,10;bountifulbaubles:oxalis,10;bountifulbaubles:glory_shards,10;bountifulbaubles:ruby_heart,10;bountifulbaubles:rock_candy,10"
+
+	#战利品掉落设置
+	#Loot Drop Settings
+	[baubles.loot_settings]
+		#尸壳掉落金苹果的概率 [0.0-1.0]
+		#Chance for Husks to drop Golden Apple [0.0-1.0]
+		# Default: 0.05
+		# Range: 0.0 ~ 1.0
+		huskAppleChance = 0.05
+		#流浪者掉落超频戒指的概率 [0.0-1.0]
+		#Chance for Strays to drop Overclocker Ring [0.0-1.0]
+		# Default: 0.1
+		# Range: 0.0 ~ 1.0
+		strayRingChance = 0.1
+		#潜影贝掉落紫影心脏的概率 [0.0-1.0]
+		#Chance for Shulkers to drop Shulker Heart [0.0-1.0]
+		# Default: 0.25
+		# Range: 0.0 ~ 1.0
+		shulkerHeartChance = 0.25
+		#洞穴蜘蛛掉落解毒珠的概率 [0.0-1.0]
+		#Chance for Cave Spiders to drop Bezoar [0.0-1.0]
+		# Default: 0.15
+		# Range: 0.0 ~ 1.0
+		caveSpiderBezoarChance = 0.15
+		#唤魔者掉落无限图腾的概率 [0.0-1.0]
+		#Chance for Evokers to drop Infinite Totem [0.0-1.0]
+		# Default: 0.05
+		# Range: 0.0 ~ 1.0
+		evokerTotemChance = 0.05
+		#远古守卫者掉落维生素概率 [0.0-1.0]
+		#Chance for Elder Guardians to drop Vitamins [0.0-1.0]
+		# Default: 1.0
+		# Range: 0.0 ~ 1.0
+		elder_guardian_vitamins_chance = 1.0
+		#末影龙鳞片掉落概率 [0.0-1.0]
+		#Chance for Ender Dragon to drop Dragon Scales [0.0-1.0]
+		# Default: 1.0
+		# Range: 0.0 ~ 1.0
+		dragon_scale_chance = 1.0
+		#末影龙鳞片最小掉落数量
+		#Minimum number of Dragon Scales dropped
+		# Default: 3
+		# Range: 1 ~ 64
+		dragon_scale_min_count = 3
+		#末影龙鳞片最大掉落数量
+		#Maximum number of Dragon Scales dropped
+		# Default: 6
+		# Range: 1 ~ 64
+		dragon_scale_max_count = 6
+
+	#结构战利品配置
+	#配置格式：物品ID,权重,最小数量,最大数量;多个物品用分号分隔
+	#Format: itemID,weight,minCount,maxCount;multiple items separated by semicolons
+	[baubles."Loot Settings"]
+		#沙漠神殿战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		desertPyramidLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,3;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:broken_heart,1,1,2;bountifulbaubles:lucky_horseshoe,1,1,2;bountifulbaubles:bottled_cloud,1,1,2;bountifulbaubles:endless_pearl,1,1,2;bountifulbaubles:treasure_bag,2,1,2"
+		#丛林神庙战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		jungleTempleLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:curious_amulet,3,1,2;bountifulbaubles:curious_ring,3,1,2;bountifulbaubles:vampiric_glove,1,1,2;bountifulbaubles:gauntlets_dexterity,2,1,2;bountifulbaubles:treasure_bag,2,1,2"
+		#废弃矿井战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		abandonedMineshaftLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:sunglasses,3,1,2;bountifulbaubles:curious_crown,3,1,2;bountifulbaubles:auto_torch,3,1,2;bountifulbaubles:treasure_bag,2,1,2"
+		#要塞图书馆战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		strongholdLibraryLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#林地府邸战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		woodlandMansionLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#村庄教堂战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageTempleLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#沉船宝藏配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		shipwreckTreasureLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#掠夺者前哨站配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		pillagerOutpostLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:black_dragon_scale,3,1,2;bountifulbaubles:phylactery_charm,1,1,2;bountifulbaubles:treasure_bag,2,1,2"
+		#埋藏宝藏配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		buriedTreasureLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,6,1,2;bountifulbaubles:wormhole_mirror,1,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#大型水下废墟配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		underwaterRuinBigLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,3,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#小型水下废墟配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		underwaterRuinSmallLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#雪屋地下室配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		iglooChestLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#堡垒遗迹-宝藏室配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		bastionTreasureLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:amulet_sin_empty,8,1,7;bountifulbaubles:curious_knuckles,2,1,1;bountifulbaubles:treasure_bag,2,1,2"
+		#堡垒遗迹-桥梁配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		bastionBridgeLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:amulet_sin_empty,5,1,3;bountifulbaubles:curious_knuckles,2,1,1;bountifulbaubles:treasure_bag,2,1,2"
+		#堡垒遗迹-居住区配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		bastionHousingLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:amulet_sin_empty,5,1,3;bountifulbaubles:curious_knuckles,2,1,1;bountifulbaubles:treasure_bag,2,1,2"
+		#堡垒遗迹-杂项配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		bastionOtherLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:amulet_sin_empty,5,1,3;bountifulbaubles:curious_knuckles,2,1,1;bountifulbaubles:treasure_bag,2,1,2"
+		#废弃传送门配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		ruinedPortalLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:obsidian_skull,3,1,2;bountifulbaubles:auto_torch,3,1,2;bountifulbaubles:treasure_bag,2,1,2"
+		#末地城战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		endCityLoot = "bountifulbaubles:wrath_pendant,5,1,3;bountifulbaubles:gluttony_pendant,3,1,2;bountifulbaubles:pride_pendant,3,1,2;bountifulbaubles:treasure_bag,2,1,2"
+		#远古城市配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		ancientCityLoot = "bountifulbaubles:wrath_pendant,5,1,3;bountifulbaubles:gluttony_pendant,3,1,2;bountifulbaubles:pride_pendant,3,1,2;bountifulbaubles:cross_necklace,3,1,2;bountifulbaubles:treasure_bag,2,1,2"
+		#小型地牢配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		simpleDungeonLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:balloon,3,1,1;bountifulbaubles:cobalt_shield,3,1,1;bountifulbaubles:auto_torch,3,1,2;bountifulbaubles:treasure_bag,2,1,2"
+		#要塞走廊配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		strongholdCorridorLoot = "bountifulbaubles:potion_wormhole,6,1,2;bountifulbaubles:potion_recall,7,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#恐龙化石配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		fossilDinosaurLoot = ""
+		#哺乳动物化石配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		fossilMammalLoot = ""
+		#沉船补给配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		shipwreckSupplyLoot = "bountifulbaubles:potion_wormhole,3,1,2;bountifulbaubles:potion_recall,3,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#林地制图室配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		woodlandCartographyLoot = "bountifulbaubles:potion_wormhole,3,1,2;bountifulbaubles:potion_recall,3,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#要塞十字厅配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		strongholdCrossingLoot = "bountifulbaubles:potion_wormhole,3,1,2;bountifulbaubles:potion_recall,3,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#沉船地图配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		shipwreckMapLoot = "bountifulbaubles:potion_wormhole,3,1,2;bountifulbaubles:potion_recall,3,1,2;bountifulbaubles:magic_mirror,2,1,2;bountifulbaubles:broken_black_dragon_scale,2,1,2;bountifulbaubles:spectral_silt,8,1,7;bountifulbaubles:treasure_bag,2,1,2"
+		#盔甲匠战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageArmorerLoot = ""
+		#屠夫战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageButcherLoot = ""
+		#制图师战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageCartographerLoot = ""
+		#平原村庄房屋配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villagePlainsHouseLoot = ""
+		#渔夫战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageFisherLoot = ""
+		#制箭师战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageFletcherLoot = ""
+		#制革厂战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageTanneryLoot = ""
+		#村庄图书馆配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageLibraryLoot = ""
+		#石匠战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageMasonLoot = ""
+		#牧羊人战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageShepherdLoot = ""
+		#工具匠战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageToolsmithLoot = ""
+		#武器匠战利品配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageWeaponsmithLoot = ""
+		#沙漠村庄房屋配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageDesertHouseLoot = ""
+		#雪原村庄房屋配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageSnowyHouseLoot = ""
+		#热带草原村庄房屋配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageSavannaHouseLoot = ""
+		#针叶林村庄房屋配置
+		#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
+		villageTaigaHouseLoot = ""

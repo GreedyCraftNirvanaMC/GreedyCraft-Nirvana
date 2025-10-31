@@ -1,0 +1,29 @@
+[debug]
+	#Show chances in tooltips
+	showChances = false
+	#Show unknown loot conditions in tooltips
+	showUnknownLootConditions = false
+	#Show unused soil recipes in JEI
+	showUnusedSoilRecipesInJEI = false
+	#Show rolls as count in JEI
+	showRollsAsCountInJEI = false
+
+[gameplay]
+	#The base number of ticks it takes for a bonsai tree to grow.
+	# Default: 200
+	# Range: > 1
+	baseGrowTicks = 200
+	#If a bonsai tree has been cut, but its drops do not fit into the output inventory, how many ticks to wait before trying again.
+	# Default: 20
+	# Range: > 0
+	cutCooldown = 20
+	#The amount of damage to deal to the tool when cutting a bonsai tree.
+	# Default: 1
+	# Range: > 0
+	toolDamagePerCut = 1
+	#The chance that a tool will take damage when cutting a bonsai tree.
+	# Default: 0.3333333432674408
+	# Range: 0.0 ~ 1.0
+	toolDamageChance = 0.3333333432674408
+	#If true, indestructible tools (like those from Mystical Agriculture) can be used in bonsai pots.
+	toolAllowIndestructible = true
