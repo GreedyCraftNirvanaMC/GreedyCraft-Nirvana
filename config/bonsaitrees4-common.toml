@@ -1,6 +1,6 @@
 [debug]
 	#Show chances in tooltips
-	showChances = false
+	showChances = true
 	#Show unknown loot conditions in tooltips
 	showUnknownLootConditions = false
 	#Show unused soil recipes in JEI
@@ -12,7 +12,7 @@
 	#The base number of ticks it takes for a bonsai tree to grow.
 	# Default: 200
 	# Range: > 1
-	baseGrowTicks = 200
+	baseGrowTicks = 1800
 	#If a bonsai tree has been cut, but its drops do not fit into the output inventory, how many ticks to wait before trying again.
 	# Default: 20
 	# Range: > 0
