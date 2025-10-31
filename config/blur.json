@@ -17,7 +17,7 @@
   "gradientEndAlpha": 75,
   "gradientRotation": 0,
   "rainbowMode": false,
-  "fadeTimeMillis": 300,
+  "fadeTimeMillis": 250,
   "fadeOutTimeMillis": 300,
   "animationCurve": "FLAT"
 }
