@@ -2,7 +2,7 @@
 	#Vanilla's beds will explode in the Aether
 	"Beds explode" = false
 	#Tools that aren't from the Aether will mine Aether blocks slower than tools that are from the Aether
-	"Debuff non-Aether tools" = true
+	"Debuff non-Aether tools" = false
 	#Ambrosium Shards can be eaten to restore a half heart of health
 	"Ambrosium Shards are edible" = true
 	#Makes Berry Bushes and Bush Stems behave consistently with Sweet Berry Bushes
