@@ -4,7 +4,7 @@ defaultCompletedIconColor = "#DBA213"
 defaultCompletedTitleColor = "#DBA213"
 doAdvancementsBackgroundFade = true
 showDebugCoordinates = false
-orderTabsAlphabetically = false
+orderTabsAlphabetically = true
 #Values below 50% might give odd results, use on own risk ;)
 # Default: 100
 # Range: 1 ~ 100
@@ -14,7 +14,7 @@ uiScaling = 100
 #    Default: List which criteria you have already obtained
 #    Spoiler: Only reveal unobtained criteria
 #    All: Show both obtained and unobtained criteria
-criteriaDetail = "Default"
+criteriaDetail = "All"
 criteriaDetailRequiresShift = false
 addInventoryButton = false
 defaultDrawDirectLines = false
