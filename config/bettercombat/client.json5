@@ -1,5 +1,5 @@
 {
-	"isHoldToAttackEnabled": true,
+	"isHoldToAttackEnabled": false,
 	"isMiningWithWeaponsEnabled": true,
 	"isSwingThruGrassEnabled": true,
 	"isSwingThruGrassSmart": true,
