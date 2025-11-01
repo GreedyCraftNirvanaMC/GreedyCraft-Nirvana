@@ -3,7 +3,7 @@ ovenRequiresCookingOil = false
 #Set to false if you don't want ingredients to be marked with a special icon in the recipe book.
 showIngredientIcon = true
 #The amount of milk the cow in a jar generates per tick.
-cowJarMilkPerTick = 1
+cowJarMilkPerTick = 8
 #Ex Compressum compatibility. Multiplier applied to the milk per tick for Compressed Cow in a Jar.
 compressedCowJarMilkMultiplier = 9.0
 #Set this to true if you'd like the sink to require water to be piped in, instead of providing infinite of it.
