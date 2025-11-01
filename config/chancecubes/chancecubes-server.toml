@@ -3,11 +3,11 @@
 	#The minimum chance range value. Changes the range of chance that the chance block can pick from. i.e. If you have your rangemin set to 10 and range max set to 15. A chance cube with a chance value of 0 can get rewards of -10 to 15 in chance value.
 	# Default: 10
 	# Range: 0 ~ 100
-	ChanceRangeMin = 10
+	ChanceRangeMin = 15
 	#The maximum chance range value. Changes the range of chance that the chance block can pick from. i.e. If you have your rangemin set to 10 and range max set to 15. A chance cube with a chance value of 0 can get rewards of -10 to 15 in chance value.
 	# Default: 10
 	# Range: 0 ~ 100
-	ChanceRangeMax = 10
+	ChanceRangeMax = 25
 	#Set to true if the D20's should have any chance value from -100 to 100. Set to false to have the D20's only have a chance value of either -100 or 100
 	D20UseNormalChanceValues = false
 	#Set to true if the mod should ignore chance values and give each reward and equal chance to be picked
