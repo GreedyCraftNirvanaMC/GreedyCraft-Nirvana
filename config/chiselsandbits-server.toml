@@ -1,6 +1,6 @@
 [balancing]
 	#Disallow blocks which tick randomly from being chiseled.
-	blacklist-random-ticking-blocks = false
+	blacklist-random-ticking-blocks = true
 	#Enables the compatibility mode of the chiselability checked.
 	enable-compatibility-mode = false
 	#The max size of the stacks of bits in the bit bag.
