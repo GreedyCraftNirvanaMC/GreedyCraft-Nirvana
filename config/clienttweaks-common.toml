@@ -22,7 +22,7 @@
 	#This option will hide your offhand item. It can be toggled via an optional key binding.
 	hideOffhandItem = false
 	#This option will hide your own potion particle effects for your client (other players will still see them).
-	hideOwnParticleEffects = false
+	hideOwnParticleEffects = true
 	#This option will hide your shield unless you are holding a weapon.
 	hideShieldUnlessHoldingWeapon = true
 	#This prevents torches from being placed from your offhand at all.
@@ -32,7 +32,7 @@
 	#This prevents torches from being placed from your offhand if you have food in your main hand.
 	noOffhandTorchWithFood = true
 	#This prevents torches from being placed from your offhand if you have an empty main hand.
-	noOffhandTorchWithEmptyHand = false
+	noOffhandTorchWithEmptyHand = true
 	#This prevents items from being used from your offhand if you have food in your main hand.
 	noOffhandUseWithFood = false
 	#This restricts torches to be placed from the offhand only when you're holding a tool in your main hand.
