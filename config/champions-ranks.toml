@@ -1,54 +1,90 @@
-#List of ranks
+# List of ranks
 [[ranks]]
-	tier = 0
-	numAffixes = 0
-	defaultColor = "#FFFFFF"
-	weight = 9500
-	growthFactor = 1
-	effects = []
-	presetAffixes = []
-#List of ranks
+    tier = 1
+    numAffixes = 1
+    defaultColor = "#FFC0C8"
+    weight = 500
+    growthFactor = 2
+    effects = []
+    presetAffixes = []
+
 [[ranks]]
-	tier = 1
-	numAffixes = 1
-	defaultColor = "#FFC0CB"
-	weight = 300
-	growthFactor = 1
-	effects = []
-	presetAffixes = []
-#List of ranks
+    tier = 2
+    numAffixes = 2
+    defaultColor = "#4296A5"
+    weight = 1000
+    growthFactor = 4
+    effects = []
+    presetAffixes = []
+
 [[ranks]]
-	tier = 2
-	numAffixes = 2
-	defaultColor = "#FFFF00"
-	weight = 200
-	growthFactor = 4
-	effects = []
-	presetAffixes = []
-#List of ranks
+    tier = 3
+    numAffixes = 3
+    defaultColor = "#EAA55C"
+    weight = 1000
+    growthFactor = 7
+    effects = []
+    presetAffixes = []
+
 [[ranks]]
-	tier = 3
-	numAffixes = 3
-	defaultColor = "#FF9900"
-	weight = 75
-	growthFactor = 7
-	effects = []
-	presetAffixes = []
-#List of ranks
+    tier = 4
+    numAffixes = 4
+    defaultColor = "#EC78CA"
+    weight = 1000
+    growthFactor = 11
+    effects = []
+    presetAffixes = []
+
 [[ranks]]
-	tier = 4
-	numAffixes = 4
-	defaultColor = "#66FFFF"
-	weight = 50
-	growthFactor = 10
-	effects = []
-	presetAffixes = []
-#List of ranks
+    tier = 5
+    numAffixes = 5
+    defaultColor = "#FFA000"
+    weight = 1000
+    growthFactor = 16
+    effects = ["minecraft:regeneration;1"]
+    presetAffixes = []
+
 [[ranks]]
-	tier = 5
-	numAffixes = 5
-	defaultColor = "#CC33FF"
-	weight = 25
-	growthFactor = 16
-	effects = []
-	presetAffixes = []
+    tier = 6
+    numAffixes = 6
+    defaultColor = "#FF6692"
+    weight = 1000
+    growthFactor = 22
+    effects = ["minecraft:fire_resistance;1", "minecraft:regeneration;1"]
+    presetAffixes = []
+
+[[ranks]]
+    tier = 7
+    numAffixes = 7
+    defaultColor = "#FF66AA"
+    weight = 1000
+    growthFactor = 28
+    effects = ["minecraft:fire_resistance;1", "minecraft:regeneration;2"]
+    presetAffixes = []
+
+[[ranks]]
+    tier = 8
+    numAffixes = 8
+    defaultColor = "#C5B4B8"
+    weight = 1000
+    growthFactor = 36
+    effects = ["minecraft:fire_resistance;1", "minecraft:regeneration;2"]
+    presetAffixes = []
+
+[[ranks]]
+    tier = 9
+    numAffixes = 10
+    defaultColor = "#6A13AA"
+    weight = 1000
+    growthFactor = 46
+    effects = ["minecraft:fire_resistance;1", "minecraft:regeneration;3", "minecraft:resistance;1"]
+    presetAffixes = []
+
+[[ranks]]
+    tier = 10
+    numAffixes = 12
+    defaultColor = "#212801"
+    weight = 1000
+    growthFactor = 60
+    effects = ["minecraft:fire_resistance;1", "minecraft:regeneration;4", "minecraft:resistance;2"]
+    presetAffixes = []
