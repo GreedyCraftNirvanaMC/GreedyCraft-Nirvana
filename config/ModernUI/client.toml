@@ -13,7 +13,7 @@
 	#Disable this if you run into a problem or are on low-end PCs
 	blurEffect = true
 	#Whether to add blur effect to GUI screens that have a background and do not originate from Modern UI.
-	additionalBlurEffect = false
+	additionalBlurEffect = true
 	#Whether to replace Vanilla 3-pass box blur with Modern UI Gaussian blur.
 	#This gives you better quality and performance, recommend setting this to true.
 	overrideVanillaBlur = true
@@ -21,7 +21,7 @@
 	#samples per pixel = ((radius * 2) + 1) * 2, sigma = radius / 2.
 	# Default: 7
 	# Range: 0 ~ 18
-	blurRadius = 7
+	blurRadius = 15
 	#A list of GUI screen superclasses that won't activate blur effect when opened.
 	blurBlacklist = ["net.minecraft.client.gui.screens.ChatScreen"]
 	#(Beta) Pause the game when inventory (also includes creative mode) opened.
@@ -29,12 +29,12 @@
 	#Framerate limit on window inactive (out of focus or minimized), 0 = no change.
 	# Default: 30
 	# Range: 0 ~ 255
-	framerateInactive = 30
+	framerateInactive = 60
 	#Framerate limit on window minimized, 0 = same as framerate inactive.
 	#This value will be no greater than framerate inactive.
 	# Default: 0
 	# Range: 0 ~ 255
-	framerateMinimized = 0
+	framerateMinimized = 60
 	#Master volume multiplier on window inactive (out of focus or minimized), 1 = no change.
 	# Default: 0.5
 	# Range: 0.0 ~ 1.0
