@@ -1,0 +1,19 @@
+[general]
+	# Enable Corruption Spread
+	enable_corruption_spread = true
+	# The probability for two normal book wyrms to produce a golden book wyrm
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	golden_book_wyrm_probability_for_zero_golden = 0.01
+	# The probability for one golden book wyrm and one normal book wyrm to produce a golden book wyrm
+	# Default: 0.04
+	# Range: 0.0 ~ 1.0
+	golden_book_wyrm_probability_for_one_golden = 0.04
+	# The probability for two golden book wyrms to produce a golden book wyrm
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	golden_book_wyrm_probability_for_two_golden = 0.1
+	# Maximum enchanting level for Book Wyrm
+	# Default: 30
+	# Range: 10 ~ 100
+	book_wyrm_max_enchanting_level = 30
