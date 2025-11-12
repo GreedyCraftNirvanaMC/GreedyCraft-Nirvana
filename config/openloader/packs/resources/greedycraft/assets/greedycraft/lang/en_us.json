@@ -1,0 +1,15 @@
+{
+  "greedycraft.fancymenu.custom.mainmenu.text.buttons.github": "Github",
+  "greedycraft.fancymenu.custom.mainmenu.text.modpackname": "GreedyCraft·NIRVANA",
+  "greedycraft.fancymenu.custom.mainmenu.text.author": "Team GCTN",
+  "greedycraft.fancymenu.custom.mainmenu.text.version": "Version",
+  "greedycraft.fancymenu.custom.mainmenu.text.modloader.prefix": "Loader/Enable",
+  "greedycraft.fancymenu.custom.mainmenu.text.modloader.suffix": "mods",
+  "greedycraft.fancymenu.custom.mainmenu.text.welcom": "Welcom",
+  "greedycraft.fancymenu.custom.mainmenu.text.time": "Time",
+  "greedycraft.fancymenu.custom.mainmenu.text.noupdate": "You are playing the latest version",
+  "greedycraft.fancymenu.custom.mainmenu.text.update": "A new version has been found",
+  "greedycraft.fancymenu.custom.mainmenu.text.memoryusage": "Memory Usage",
+  "greedycraft.fancymenu.custom.mainmenu.text.loadingtime": "Loading Time",
+  "greedycraft.fancymenu.custom.mainmenu.text.used": "Used"
+}

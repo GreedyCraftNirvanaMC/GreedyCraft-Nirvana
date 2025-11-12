@@ -1,0 +1,15 @@
+{
+  "greedycraft.fancymenu.custom.mainmenu.text.buttons.github": "官方仓库",
+  "greedycraft.fancymenu.custom.mainmenu.text.modpackname": "贪婪整合包·涅槃",
+  "greedycraft.fancymenu.custom.mainmenu.text.author": "GCTN团队",
+  "greedycraft.fancymenu.custom.mainmenu.text.version": "版本",
+  "greedycraft.fancymenu.custom.mainmenu.text.modloader.prefix": "已加载/启用",
+  "greedycraft.fancymenu.custom.mainmenu.text.modloader.suffix": "个模组",
+  "greedycraft.fancymenu.custom.mainmenu.text.welcom": "欢迎",
+  "greedycraft.fancymenu.custom.mainmenu.text.time": "现在是",
+  "greedycraft.fancymenu.custom.mainmenu.text.noupdate": "你当前游玩的是最新版本",
+  "greedycraft.fancymenu.custom.mainmenu.text.update": "发现新版本",
+  "greedycraft.fancymenu.custom.loadingscreen.text.memoryusage": "内存使用",
+  "greedycraft.fancymenu.custom.loadingscreen.text.loadingtime": "加载时间",
+  "greedycraft.fancymenu.custom.loadingscreen.text.used": "已使用"
+}
