@@ -1,64 +1,76 @@
 #Ambience Mini Mod Configurations
 [AmbienceMini]
-	#Whether the features of this mod should be enabled [Default: true]
+	#If enabled, upon joining a multiplayer server the client will notify whether the server has support for Ambience Mini. If no support, server-dependent features will be disabled. [Default: true]
 	Enabled = true
-	#The interval in milliseconds between checking the environment and possibly picking new music [Default: 150]
+	#The interval in milliseconds between checking the environment and possibly picking new music. [Default: 150]
 	# Default: 150
 	# Range: 50 ~ 10000
 	Update_Interval = 150
-	#The delay in milliseconds from when some music reaches the end until the next music begins [Default: 4000]
+	#The delay in milliseconds from when some music reaches the end until the next music begins. [Default: 4000]
 	# Default: 4000
 	# Range: 1000 ~ 60000
 	Next_Music_Delay = 4000
-	#Fade Out Sound Volume on Game Lost Focus [Default: true]
+	#Fade Out Sound Volume on Game Lost Focus. [Default: true]
 	Lost_Focus_FadeOut = true
-	#If 'true', music volume is not affected by 'Master Volume' to make it easier to balance music volume with everything else [Default: true]
+	#If 'true', music volume is not affected by 'Master Volume' to make it easier to balance music volume with everything else. [Default: true]
 	Ignore_Master_Volume = true
-	#The horizontal radius/distance to scan for villagers [Default: 30]
+	#The horizontal radius/distance to scan for villagers. [Default: 30]
 	# Default: 30
 	# Range: 10 ~ 100
 	Village_Scan_Horizontal_Radius = 30
-	#The vertical radius/distance to scan for villagers [Default: 15]
+	#The vertical radius/distance to scan for villagers. [Default: 15]
 	# Default: 15
 	# Range: 10 ~ 100
 	Village_Scan_Vertical_Radius = 15
-	#The minimum number of villagers needed within the search box to count as a village [Default: 3]
+	#The minimum number of villagers needed within the search box to count as a village. [Default: 3]
 	# Default: 3
 	# Range: > 2
 	Villager_Count_Threshold = 3
-	#The horizontal radius/distance to scan for villagers [Default: 30]
+	#The horizontal radius/distance to scan for villagers. [Default: 30]
 	# Default: 30
 	# Range: 10 ~ 100
 	Ranch_Scan_Horizontal_Radius = 30
-	#The vertical radius/distance to scan for animals [Default: 8]
+	#The vertical radius/distance to scan for animals. [Default: 8]
 	# Default: 8
 	# Range: 5 ~ 100
 	Ranch_Scan_Vertical_Radius = 8
-	#The minimum number of animals needed within the search box to count as a ranch [Default: 15]
+	#The minimum number of animals needed within the search box to count as a ranch. [Default: 15]
 	# Default: 15
 	# Range: > 5
 	Animal_Count_Threshold = 15
-	#If not having fished for 'Fishing_Timeout' milliseconds, the player will no longer be considered as fishing [Default: 4000]
+	#If not having fished for 'Fishing_Timeout' milliseconds, the player will no longer be considered as fishing. [Default: 4000]
 	# Default: 4000
 	# Range: 500 ~ 10000
 	Fishing_Timeout = 4000
-	#If not fishing and moving more than 'Fishing_Move_Threshold' blocks away from the latest fishing position, the player will no longer be considered as fishing [Default: 1]
+	#If not fishing and moving more than 'Fishing_Move_Threshold' blocks away from the latest fishing position, the player will no longer be considered as fishing.[Default: 1]
 	# Default: 1
 	# Range: 1 ~ 10
 	Fishing_Move_Threshold = 1
-	#The cave score is based on the average of all scores measured in the given radius from the player's eye-position. Higher values should yield smoother boundaries for entering/leaving caves. Only change if you experience odd music behavior when dealing with caves [Default: 1]
+	#The cave score is based on the average of all scores measured in the given radius from the player's eye-position. Higher values should yield smoother boundaries for entering/leaving caves. Only change if you experience odd music behavior when dealing with caves. [Default: 1]
 	# Default: 1
 	# Range: 1 ~ 10
 	Cave_Score_Radius = 1
-	#The maximal distance in blocks from the player that the cave-detection algorithm will check to determine whether the player is in a cave [Default: 123]
+	#The maximal distance in blocks from the player that the cave-detection algorithm will check to determine whether the player is in a cave. [Default: 123]
 	# Default: 123
 	# Range: 16 ~ 500
 	Cave_Measure_Distance = 123
-	#The number of vertical directions (in addition to straight up and down) to probe when determining whether the player is in a cave. Total directions: X_Axis_Granularity * Y_Axis_Granularity + 2 [Default: 5]
+	#The number of vertical directions (in addition to straight up and down) to probe when determining whether the player is in a cave. Total directions: X_Axis_Granularity * Y_Axis_Granularity + 2. [Default: 5]
 	# Default: 5
 	# Range: 1 ~ 90
 	Y_Axis_Granularity = 5
-	#The number of horizontal directions to probe when determining whether the player is in a cave. Total directions X_Axis_Granularity * Y_Axis_Granularity + 2 [Default: 12]
+	#The number of horizontal directions to probe when determining whether the player is in a cave. Total directions X_Axis_Granularity * Y_Axis_Granularity + 2. [Default: 12]
 	# Default: 12
 	# Range: 4 ~ 180
 	X_Axis_Granularity = 12
+	#After leaving combat, the 'in_combat' event will stay active for the additional time (in milliseconds) given here, allowing new enemies to join the fight without music switching between combat and non-combat music. [Default: 2500]
+	# Default: 3500
+	# Range: 1000 ~ 10000
+	Combat_Grace_Period = 3500
+	#Only used when no server-support is detected. If no interaction has been made between a player and a mob for the time given here (in milliseconds), these will no longer be considered 'in combat'. [Default: 5000]
+	# Default: 5000
+	# Range: 2500 ~ 15000
+	Combatant_Timeout = 5000
+	#Only used when no server-support is detected. When the player moves the number of blocks away from a mob given here, these will no longer be considered 'in combat'. [Default: 20]
+	# Default: 20
+	# Range: 10 ~ 50
+	Leaving_Combat_Distance = 20

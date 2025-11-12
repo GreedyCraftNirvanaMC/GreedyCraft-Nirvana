@@ -1,0 +1,1 @@
+§9{"placeholder":"local","values":{"key":"greedycraft.fancymenu.custom.mainmenu.text.welcom"}}§7, §e{"placeholder":"playername"}§9! §6{"placeholder":"local","values":{"key":"greedycraft.fancymenu.custom.mainmenu.text.time"}}§7: §b{"placeholder":"realtimehour"}§7:§b{"placeholder":"realtimeminute"} 
