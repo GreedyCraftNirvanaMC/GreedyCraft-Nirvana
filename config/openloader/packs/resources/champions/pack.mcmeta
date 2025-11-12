@@ -1,9 +1,0 @@
-{
-    "pack":{
-        "description": "GreedyCraft-Nirvana B.A.S.E Resources",
-        "pack_format": 55,
-        "supported_formats": [34, 64],
-        "min_format": 34,
-        "max_format": [69, 0]
-    }
-}
