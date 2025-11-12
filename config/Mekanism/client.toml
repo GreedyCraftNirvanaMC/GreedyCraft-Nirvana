@@ -3,7 +3,7 @@
 	#Tries to force all text rendered as part of radial menus to be white instead of the color of the slice's mode.
 	whiteRadialText = false
 	#If true, renders sides for Universal Cables, Mechanical Pipes, Pressurized Tubes, Logistical Transporters, and Thermodynamic Conductors instead of rendering their contents. If transmitters are causing you fps issues, this should hopefully help.
-	opaqueTransmitters = false
+	opaqueTransmitters = true
 	#Allows changing the mode of held items by holding sneak and using the scroll wheel.
 	allowModeScroll = true
 
