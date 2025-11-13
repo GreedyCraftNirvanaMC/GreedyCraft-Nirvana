@@ -8,7 +8,7 @@
 	#----------------------------------------------------------------------------------------------------+
 	# When enabled, the dungeons will ignore caves instead of trying to adjust to them (by not generating specific blocks).
 	#
-	solid = false
+	solid = true
 	#----------------------------------------------------------------------------------------------------+
 	# Whether falling blocks like sand or gravel should drop down after being placed during dungeon generation.
 	#
@@ -27,7 +27,7 @@
 	# Whether loot tables of certain spawner entities should be overwritten.
 	# For example, wither skeletons from dungeon spawners will never drop skulls if this is enabled.
 	#
-	overwrite_entity_loot_tables = true
+	overwrite_entity_loot_tables = false
 	#----------------------------------------------------------------------------------------------------+
 	# Whether the hell stage should be built with blocks from the overworld instead from the nether.
 	#
@@ -37,7 +37,7 @@
 	#
 	# Default: 12
 	# Range: 1 ~ 64
-	spawner_activation_range = 12
+	spawner_activation_range = 32
 	#----------------------------------------------------------------------------------------------------+
 	# The number of different entities per spawner. Increasing the number increases the diversity of the monster equipment.
 	#
