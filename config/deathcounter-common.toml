@@ -11,10 +11,10 @@
 	#Number of names to show in the leaderboard
 	# Default: 5
 	# Range: 1 ~ 50
-	leaderboardCount = 5
+	leaderboardCount = 20
 	#Do not persist deaths across sessions? Turning this on disables saving deaths to server folder.
 	singleSession = false
 	#Permission level required to use the op commands for Death Counter
 	# Default: 1
 	# Range: 0 ~ 4
-	commandPermissionLevel = 1
+	commandPermissionLevel = 0
