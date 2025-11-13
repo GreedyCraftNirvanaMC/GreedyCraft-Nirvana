@@ -1,0 +1,19 @@
+general.width = 宽
+general.height = 高
+general.on = 开启
+general.off = 关闭
+
+popup.done = 完成
+
+popup.yesno.confirm = 确认
+popup.yesno.cancel = 取消
+
+popup.notification.accept = 接受
+
+popup.choosefile.back = 返回
+popup.choosefile.title = 选择文件
+popup.choosefile.choose = 选择
+popup.choosefile.supported = 支持的文件类型：
+
+configscreen.boolean.enabled = 启用
+configscreen.boolean.disabled = 关闭
