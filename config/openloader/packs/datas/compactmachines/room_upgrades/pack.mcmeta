@@ -1,0 +1,11 @@
+{
+  "features": {
+    "enabled": [
+      "compactmachines:room_upgrades"
+    ]
+  },
+  "pack": {
+    "description": "Enables the room upgrade experimental features.",
+    "pack_format": 48
+  }
+}
