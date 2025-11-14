@@ -1,0 +1,21 @@
+	[mob.energetic_sheep]
+		#How much base energy energetic wool wool has.
+		woolBaseCapacity = 500
+		#The items that can be used to power-breed sheep, by unique item name.
+		powerBreedingItems = ["minecraft:rabbit_stew", "minecraft:chorus_fruit", "integrateddynamics:menril_berries"]
+		#How much base energy the sheep can regenerate each time.
+		sheepBaseCapacity = 20000
+		#This factor will be multiplied by the ordinal value of the color, and will be multiplied with the base sheepBaseCapacity of the sheep.
+		additionalCapacityColorFactor = 0.075
+		#The 1/X chance on having an energetic baby when breeding with a power-breeding item.
+		babyChancePowerBreeding = 1
+		#The 1/X chance on having an energetic baby when breeding.
+		babyChance = 3
+
+	[item.energetic_shears]
+		#The amount of energy this item can hold.
+		capacity = 1000000
+		#How much the regular shear action should consume.
+		shearConsumption = 100
+		#How much energy should be transferred on each usage.
+		usageTransferAmount = 100000

@@ -1,0 +1,60 @@
+#经验球行为设置
+[behavior]
+	#经验球追踪玩家的范围 (方块)
+	#当玩家进入此范围内时，经验球会开始追踪
+	#范围越大，经验球会从更远的地方开始追踪玩家
+	#设置过大可能会影响性能
+	# Default: 32.0
+	# Range: 16.0 ~ 128.0
+	tracking_range = 32.0
+
+#粒子基础设置
+[particle_basic]
+	#可用的粒子类型：
+	#DUST - 红石尘样式粒子 [完全支持RGB和自定义大小] 类似红石粉的圆形粒子
+	#DUST_COLOR_TRANSITION - 渐变粒子 [完全支持RGB和自定义大小] 在两个颜色间渐变的粒子
+	#ENTITY_EFFECT - 药水效果粒子 [完全支持RGB] 明亮清晰的药水效果
+	#NOTE - 音符盒粒子 [仅支持24种预设颜色] 音符形状的粒子
+	#Allowed Values: DUST, DUST_COLOR_TRANSITION, ENTITY_EFFECT, NOTE
+	particle_type = "ENTITY_EFFECT"
+	#每次生成的粒子数量 (1-10)
+	# Default: 2
+	# Range: 1 ~ 10
+	particle_count = 2
+	#粒子大小 (仅对DUST和DUST_COLOR_TRANSITION类型有效，其他类型会忽略此设置)
+	#范围: 0.1 - 4.0，默认: 1.0
+	# Default: 1.0
+	# Range: 0.1 ~ 4.0
+	particle_size = 1.0
+
+#颜色设置
+[color]
+	#启用彩虹颜色模式（启用后会覆盖RGB颜色设置）
+	rainbow_mode = true
+	#彩虹模式颜色循环时间 (秒)
+	#一个完整的颜色循环需要多少秒
+	#值越小循环越快，值越大循环越慢
+	# Default: 4.0
+	# Range: 0.5 ~ 20.0
+	rainbow_cycle_time = 4.0
+	#渐变暗度 (0.1-1.0)
+	#仅对DUST_COLOR_TRANSITION类型生效
+	#值越小，颜色渐变越明显（越暗）
+	#值越大，颜色渐变越微妙（越亮）
+	# Default: 0.7
+	# Range: 0.1 ~ 1.0
+	transition_alpha = 0.7
+
+	[color.rgb_colors]
+		#红色值 (0-255)（仅在彩虹模式关闭时生效）
+		# Default: 255
+		# Range: 0 ~ 255
+		red = 255
+		#绿色值 (0-255)（仅在彩虹模式关闭时生效）
+		# Default: 0
+		# Range: 0 ~ 255
+		green = 0
+		#蓝色值 (0-255)（仅在彩虹模式关闭时生效）
+		# Default: 0
+		# Range: 0 ~ 255
+		blue = 0
