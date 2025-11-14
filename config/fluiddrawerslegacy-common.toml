@@ -1,0 +1,20 @@
+#Debug settings
+[debugMode]
+	#Set false to stop output log.
+	debugMode = false
+
+#General settings
+[general]
+	#Set it to change volume.
+	# Default: 32000
+	# Range: 4000 ~ 96000
+	volume = 32000
+	#Whether the drawer retains fluid when destroyed.
+	retainFluid = true
+
+#Compat settings
+[compat]
+	#Allow players to use potion bottles to deposit potions directly in survival mode.
+	createPotionInteraction = true
+	#Allow players to use caupona soup bowl to deposit soup directly in survival mode.
+	cauponaSoupBowlInteraction = true

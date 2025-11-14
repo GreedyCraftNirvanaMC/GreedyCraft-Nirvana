@@ -1,0 +1,13 @@
+#Client settings
+[Renderer]
+	#Set the label renderer distance, -1 stands for unlimited distance.
+	# Default: -1
+	# Range: -1 ~ 1024
+	distance = -1
+
+#Waila settings
+[Display]
+	#Set the fluid show amounts limit with controller and slave.
+	# Default: 9
+	# Range: 3 ~ 24
+	showlimit = 9
