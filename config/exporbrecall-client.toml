@@ -16,7 +16,7 @@
 	#ENTITY_EFFECT - 药水效果粒子 [完全支持RGB] 明亮清晰的药水效果
 	#NOTE - 音符盒粒子 [仅支持24种预设颜色] 音符形状的粒子
 	#Allowed Values: DUST, DUST_COLOR_TRANSITION, ENTITY_EFFECT, NOTE
-	particle_type = "ENTITY_EFFECT"
+	particle_type = "DUST_COLOR_TRANSITION"
 	#每次生成的粒子数量 (1-10)
 	# Default: 2
 	# Range: 1 ~ 10
