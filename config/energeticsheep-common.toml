@@ -1,6 +1,6 @@
 	[mob.energetic_sheep]
 		#How much base energy energetic wool wool has.
-		woolBaseCapacity = 500
+		woolBaseCapacity = 750
 		#The items that can be used to power-breed sheep, by unique item name.
 		powerBreedingItems = ["minecraft:rabbit_stew", "minecraft:chorus_fruit", "integrateddynamics:menril_berries"]
 		#How much base energy the sheep can regenerate each time.
