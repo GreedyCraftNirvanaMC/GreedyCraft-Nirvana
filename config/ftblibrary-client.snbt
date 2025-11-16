@@ -24,7 +24,7 @@
 				y: 1
 			}
 			"ftblibrary:toggle/night": {
-				enabled: true
+				enabled: false
 				x: 2
 				y: 0
 			}
@@ -34,7 +34,7 @@
 				y: 2
 			}
 			"ftblibrary:toggle/gamemode": {
-				enabled: true
+				enabled: false
 				x: 0
 				y: 0
 			}
@@ -49,12 +49,12 @@
 				y: 2
 			}
 			"ftblibrary:toggle/day": {
-				enabled: true
+				enabled: false
 				x: 1
 				y: 0
 			}
 			"ftblibrary:toggle/rain": {
-				enabled: true
+				enabled: false
 				x: 3
 				y: 0
 			}
@@ -72,15 +72,15 @@
 	tooltips: {
 		# Add the name of the mod that entities belong to in the entity face selection GUI.
 		# Default: true
-		entity_modname: true
+		entity_modname: false
 		
 		# Add the name of the mod that fluids belong to in the fluid selection GUI.
 		# Default: true
-		fluid_modname: true
+		fluid_modname: false
 		
 		# Add the name of the mod that images belong to in the image selection GUI.
 		# Default: true
-		image_modname: true
+		image_modname: false
 		
 		# Add the name of the mod that items belong to in the item selection GUI.
 		# Note that several common mods also do this (modnametooltip,WTHIT,EMI...) so this is false by default
