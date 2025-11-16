@@ -3,7 +3,7 @@
 	#Setting this to 0 will only allow super admins to create networks.
 	# Default: 5
 	# Range: > -1
-	maximumPerPlayer = 5
+	maximumPerPlayer = -1
 	#Allows someone to be a network super admin. Otherwise, no one can access a flux device or delete a network without permission.
 	enableSuperAdmin = true
 	#See ops.json. If the player has permission level equal or greater to the value set here they will be able to activate Super Admin.
@@ -11,7 +11,7 @@
 	#Players have permission level 3 or 4 can use commands to set others as Super Admin whether others have this permission level or not.
 	# Default: 1
 	# Range: 0 ~ 3
-	superAdminRequiredPermission = 1
+	superAdminRequiredPermission = 4
 
 [general]
 	#Enables redstone being compressed with the bedrock and obsidian to get flux dusts.
@@ -33,7 +33,7 @@
 	#The maximum energy storage of a Basic Flux Storage
 	# Default: 2000000
 	# Range: 0 ~ 9223372036854775807
-	basicCapacity = 2000000
+	basicCapacity = 1000000
 	#The default transfer limit of a Basic Flux Storage
 	# Default: 20000
 	# Range: 0 ~ 9223372036854775807
@@ -41,7 +41,7 @@
 	#The maximum energy storage of a Herculean Flux Storage
 	# Default: 16000000
 	# Range: 0 ~ 9223372036854775807
-	herculeanCapacity = 16000000
+	herculeanCapacity = 8000000
 	#The default transfer limit of a Herculean Flux Storage
 	# Default: 120000
 	# Range: 0 ~ 9223372036854775807
@@ -53,4 +53,4 @@
 	#The default transfer limit of a Gargantuan Flux Storage
 	# Default: 720000
 	# Range: 0 ~ 9223372036854775807
-	gargantuanTransfer = 720000
+	gargantuanTransfer = 1440000
