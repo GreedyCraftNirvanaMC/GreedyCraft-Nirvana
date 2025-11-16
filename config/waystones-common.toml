@@ -30,9 +30,9 @@
 	#Allowed Values: DEFAULT, MOSSY, SANDY, BLACKSTONE, DEEPSLATE, END_STONE, BIOME
 	wildWaystoneStyle = "BIOME"
 	#Approximate chunk distance between wild waystones being generated. Set to 0 to disable generation.
-	chunksBetweenWildWaystones = 25
+	chunksBetweenWildWaystones = 50
 	#List of dimensions that wild waystones are allowed to spawn in. If left empty, all dimensions except those in wildWaystonesDimensionDenyList are used.
-	wildWaystonesDimensionAllowList = ["minecraft:the_nether", "minecraft:the_end", "minecraft:overworld"]
+	wildWaystonesDimensionAllowList = ["minecraft:overworld", "twilightforest:twilight_forest"]
 	#List of dimensions that wild waystones are not allowed to spawn in. Only used if wildWaystonesDimensionAllowList is empty.
 	wildWaystonesDimensionDenyList = []
 	#Set to 'PRESET_FIRST' to first use names from the nameGenerationPresets. Set to 'PRESET_ONLY' to use only those custom names. Set to 'MIXED' to have some waystones use custom names, and others random names.
@@ -44,11 +44,11 @@
 	nameGenerationPresets = []
 	#Set to REGULAR to have waystones spawn in some villages. Set to FREQUENT to have waystones spawn in most villages. Set to DISABLED to disable waystone generation in villages. Waystones will only spawn in vanilla or supported villages.
 	#Allowed Values: DISABLED, REGULAR, FREQUENT
-	spawnInVillages = "REGULAR"
+	spawnInVillages = "FREQUENT"
 
 [teleports]
 	#Set to false to simply disable all xp costs. See warpRequirements for more fine-grained control.
-	enableCosts = true
+	enableCosts = false
 	#Set to false to simply disable all cooldowns. See warpRequirements for more fine-grained control.
 	enableCooldowns = true
 	#List of warp requirements with comma-separated parameters in parentheses. Conditions can be defined as comma-separated list in square brackets. Will be applied in order.
