@@ -1,6 +1,6 @@
 {
   "COMMON": {
-    "RADIUS_RANGE": 8,
+    "RADIUS_RANGE": 32,
     "IGNORE_ITEM_DAMAGE": false
   },
   "CLIENT": {
