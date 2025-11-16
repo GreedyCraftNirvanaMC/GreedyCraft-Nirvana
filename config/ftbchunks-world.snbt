@@ -16,7 +16,7 @@
 	
 	# Minimap for clients connecting to this server will be disabled
 	# Default: false
-	force_disable_minimap: false
+	force_disable_minimap: true
 	
 	# If true, "Location Visibility" team settings are ignored, and all players can see each other anywhere on the map.
 	# Default: false
@@ -49,7 +49,7 @@
 	# Should PvP combat be allowed in claimed chunks? Default is ALWAYS; NEVER prevents it in all claimed chunks; PER_TEAM allows teams to decide if PvP is allowed in their claims
 	# Default: "always"
 	# Valid values: "always", "never", "per_team"
-	pvp_mode: "always"
+	pvp_mode: "per_team"
 	
 	# If true, the player must have the 'ftbchunks_mapping' Game stage to be able to use the map and minimap.
 	# Requires KubeJS and/or Gamestages to be installed.
@@ -73,7 +73,7 @@
 		# You can override this with FTB Ranks 'ftbchunks.max_claimed' permission
 		# Default: 500
 		# Range: -∞ ~ +∞
-		max_claimed_chunks: 500
+		max_claimed_chunks: 2147483647
 		
 		# Maximum time (in real-world days) where if no player in a team logs in, the team automatically loses their claims.
 		# Prevents chunks being claimed indefinitely by teams who no longer play.
@@ -118,7 +118,7 @@
 		# Maximum time in days to keep logs of prevented fakeplayer access to a team's claims.
 		# Default: 7
 		# Range: 1 ~ 2147483647
-		max_prevented_log_age: 7
+		max_prevented_log_age: 2147483647
 	}
 	force_loading: {
 		# Control how force-loaded chunks work.
@@ -127,7 +127,7 @@
 		# DEFAULT: allow force-loading IF the team has at least one player with the 'ftbchunks.chunk_load_offline' FTB Ranks permission.
 		# Default: "default"
 		# Valid values: "default", "always", "never"
-		force_load_mode: "default"
+		force_load_mode: "always"
 		
 		# Hard limit for the number of chunks a team can force-load, regardless of how many members. Default of 0 means no hard limit.
 		# Default: 0
@@ -138,7 +138,7 @@
 		# You can override this with FTB Ranks 'ftbchunks.max_force_loaded' permission
 		# Default: 25
 		# Range: -∞ ~ +∞
-		max_force_loaded_chunks: 25
+		max_force_loaded_chunks: 2147483647
 		
 		# Maximum time (in real-world days) where if no player in a team logs in, any forceloaded chunks owned by the team are no longer forceloaded.
 		# Prevents chunks being forceloaded indefinitely by teams who no longer play.
