@@ -88,19 +88,19 @@
 		# Allows users to access an Anvil GUI without needing an Anvil.
 		anvil: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		
 		# Allows users to access a Crafting Table GUI without needing a Crafting Table.
 		crafting: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		
 		# Allows users to access their ender chest, as well as admins to manage other players' ender chests.
 		enderchest: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		
 		# Allows users to set a custom hat as their head item by using a command
@@ -130,25 +130,25 @@
 		# Allows users to change their display name, as well as admins to change nicknames for other users
 		nick: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		
 		# Allows users to announce their recording or streaming status to the server by using commands
 		rec: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		
 		# Allows users to access a Smithing Table GUI without needing a Smithing Table.
 		smithing: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		
 		# Allows users to access a Stonecutter GUI without needing a Stonecutter.
 		stonecutter: {
 			# Default: true
-			enabled: true
+			enabled: false
 		}
 		
 		# Enables usage of a trash can inventory, which can be used to void unneeded items
@@ -172,7 +172,7 @@
 			# You can override this with FTB Ranks using ftbessentials.back.cooldown
 			# Default: 30
 			# Range: 0 ~ 604800
-			cooldown: 30
+			cooldown: 0
 			
 			# Default: true
 			enabled: true
@@ -181,17 +181,17 @@
 			# You can override this with FTB Ranks using ftbessentials.back.max
 			# Default: 10
 			# Range: 0 ~ 2147483647
-			max: 10
+			max: 1
 			
 			# Should be the /back command only be used for returning to the last death point?
 			# Default: false
-			only_on_death: false
+			only_on_death: true
 			
 			# Warm-up time before /back command executes (in seconds)
 			# You can override this with FTB Ranks using ftbessentials.back.warmup
 			# Default: 0
 			# Range: 0 ~ 604800
-			warmup: 0
+			warmup: 3
 		}
 		
 		# Blacklists for all teleport commands
@@ -212,7 +212,7 @@
 			# You can override this with FTB Ranks using ftbessentials.home.cooldown
 			# Default: 10
 			# Range: 0 ~ 604800
-			cooldown: 10
+			cooldown: 0
 			
 			# Default: true
 			enabled: true
@@ -232,7 +232,7 @@
 			# You can override this with FTB Ranks using ftbessentials.home.warmup
 			# Default: 0
 			# Range: 0 ~ 604800
-			warmup: 0
+			warmup: 3
 		}
 		
 		# Allows admins to jump (teleport) to the focused block
@@ -248,7 +248,7 @@
 			cooldown: 10
 			
 			# Default: true
-			enabled: true
+			enabled: false
 			
 			# Warm-up time before /playerspawn command executes (in seconds)
 			# You can override this with FTB Ranks using ftbessentials.playerspawn.warmup
@@ -274,7 +274,7 @@
 			# You can override this with FTB Ranks using ftbessentials.rtp.cooldown
 			# Default: 600
 			# Range: 0 ~ 604800
-			cooldown: 600
+			cooldown: 10
 			
 			# Blacklisted dimension ID's for /rtp (player *must not* be in any of these dimensions)
 			# Wildcarded dimensions (e.g. 'somemod:*') are supported
@@ -308,7 +308,7 @@
 			# You can override this with FTB Ranks using ftbessentials.rtp.warmup
 			# Default: 0
 			# Range: 0 ~ 604800
-			warmup: 0
+			warmup: 3
 		}
 		spawn: {
 			# Cooldown between /spawn commands (in seconds)
@@ -343,7 +343,7 @@
 			# You can override this with FTB Ranks using ftbessentials.tpa.warmup
 			# Default: 0
 			# Range: 0 ~ 604800
-			warmup: 0
+			warmup: 3
 		}
 		
 		# Allows admins to teleport to the location a user was last seen at
@@ -364,7 +364,7 @@
 			# You can override this with FTB Ranks using ftbessentials.warp.cooldown
 			# Default: 10
 			# Range: 0 ~ 604800
-			cooldown: 10
+			cooldown: 0
 			
 			# Default: true
 			enabled: true
@@ -373,7 +373,7 @@
 			# You can override this with FTB Ranks using ftbessentials.warp.warmup
 			# Default: 0
 			# Range: 0 ~ 604800
-			warmup: 0
+			warmup: 3
 		}
 	}
 }
