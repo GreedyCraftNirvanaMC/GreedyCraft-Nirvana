@@ -45,7 +45,7 @@ jobs:
           # curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
           # Github
-          github-tag:: ${{ github.ref_name }}
+          github-tag: ${{ github.ref_name }}
           github-prerelease: false
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
