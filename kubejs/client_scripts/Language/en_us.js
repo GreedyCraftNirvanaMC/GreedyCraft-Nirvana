@@ -2,6 +2,7 @@
 
 ClientEvents.lang("en_us", (event) => {
     event.add("greedycraft.modepack.name", "§bGreedyCraft§7: §c§lNIRVANA")
+    event.add("greedycraft.commands.setpackmode.noupdate", "§cYou are already using this mode.")
     event.add("greedycraft.commands.setpackmode", "§6Pack mode has been changed to: ")
     event.add("greedycraft.commands.error.permissions", "§cYou do not have permission to execute this command!")
     event.add("greedycraft.packmode.casual", "§aCasual")
