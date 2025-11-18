@@ -1,4 +1,4 @@
-name: Push-CuresForge-ModPack
+name: Test-Push-CuresForge-ModPack
 
 on:
   push:
