@@ -32,7 +32,7 @@ jobs:
         run: wget https://mediafilez.forgecdn.net/files/6153/239/DarkMode-ResourcePack-1.20.3_1.zip -P ActionsTemp/overrides/config/openloader/packs/resources
 
       - name: Zip Pack
-        run: zip -r GreedyCraft-Nirvana-${{ github.ref_name }}.zip ActionsTemp/overrides
+        run: zip GreedyCraft-Nirvana-${{ github.ref_name }}.zip ActionsTemp/overrides
 
       - name: Remove Files
         run: rm -rf Repository ActionsTemp
