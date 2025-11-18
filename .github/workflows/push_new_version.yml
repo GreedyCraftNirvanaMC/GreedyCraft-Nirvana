@@ -1,9 +1,6 @@
 name: Push-CuresForge-ModPack
 
 on:
-  push:
-    tags:
-      - 'v*'
   workflow_dispatch:
 
 jobs:
