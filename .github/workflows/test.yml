@@ -1,0 +1,48 @@
+name: Push-CuresForge-ModPack
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  Pack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          path: Repository
+
+      - name: Remove Files
+        run: rm -rf Repository/customresources
+
+      - name: Create overrides Folder
+        run: mkdir -p ActionsTemp/overrides
+
+      - name: Move Files
+        run: mv Repository/* ActionsTemp/overrides
+
+      - name: Download ResourcesPack
+        run: wget https://mediafilez.forgecdn.net/files/6153/239/DarkMode-ResourcePack-1.20.3_1.zip ActionsTemp/overrides/resourcepacks
+
+      - name: Zip Pack
+        run: zip -r GreedyCraft-Nirvana-${{ github.ref_name }}.zip ActionsTemp/*
+
+      - name: Remove Files
+        run: rm -rf Repository ActionsTemp
+
+      - name: mc-publish
+        uses: Kira-NT/mc-publish@v3.3.0
+        with:
+          # Modrinth.
+          # modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          # CurseForge
+          # curseforge-id: 占位
+          # curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          # Github
+          github-token: ${{ secrets.GITHUB_TOKEN }}
