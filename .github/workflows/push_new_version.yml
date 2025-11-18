@@ -25,7 +25,7 @@ jobs:
           mv ActionsTemp/overrides/manifest.json ActionsTemp/
 
       - name: Download ResourcesPack
-      - run: wget https://mediafilez.forgecdn.net/files/6153/239/DarkMode-ResourcePack-1.20.3_1.zip ActionsTemp/overrides/resourcepacks
+        run: wget https://mediafilez.forgecdn.net/files/6153/239/DarkMode-ResourcePack-1.20.3_1.zip ActionsTemp/overrides/resourcepacks
 
       - name: Zip Pack
         run: zip -r GreedyCraft-Nirvana-${{ github.ref_name }}.zip ActionsTemp/*
