@@ -43,8 +43,8 @@ jobs:
           # modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           # CurseForge
-          curseforge-id: 占位
-          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          # curseforge-id: 占位
+          # curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
           # Github
           github-token: ${{ secrets.GITHUB_TOKEN }}
