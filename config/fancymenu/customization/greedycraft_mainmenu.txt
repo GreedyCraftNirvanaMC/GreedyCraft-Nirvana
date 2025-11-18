@@ -189,9 +189,9 @@ element {
   sticky_anchor = false
   anchor_point = bottom-left
   x = 2
-  y = -60
+  y = -72
   width = 200
-  height = 57
+  height = 68
   stretch_x = false
   stretch_y = false
   stay_on_screen = true
