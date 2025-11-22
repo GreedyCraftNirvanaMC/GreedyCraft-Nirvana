@@ -85,7 +85,7 @@
 	#No impact on performance.
 	# Default: 10.0
 	# Range: 0.0 ~ 32.0
-	shadowRadius = 10.0
+	shadowRadius = 0.0
 	#The shadow opacity of tooltip, if rounded. No impact on performance.
 	# Default: 0.25
 	# Range: 0.0 ~ 1.0
