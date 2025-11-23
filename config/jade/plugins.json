@@ -2,13 +2,13 @@
   "minecraft": {
     "item_storage.show_name_amount": 5,
     "furnace": true,
-    "harvest_tool.show_unbreakable": false,
+    "harvest_tool.show_unbreakable": true,
     "animal_owner": true,
     "harvest_tool.effective_tool": true,
     "energy_storage.style": "PROGRESS_BAR",
     "item_storage": true,
     "item_storage.normal_amount": 9,
-    "harvest_tool": true,
+    "harvest_tool": false,
     "armor_stand": true,
     "fluid_storage.detailed": false,
     "next_entity_drop": true,
@@ -24,7 +24,7 @@
     "waxed": true,
     "harvest_tool.new_line": false,
     "entity_health.max_for_render": 40,
-    "entity_health.show_fractions": false,
+    "entity_health.show_fractions": true,
     "mob_spawner": true,
     "redstone": true,
     "fluid_storage": true,
@@ -38,7 +38,7 @@
     "player_head": true,
     "lectern": true,
     "entity_armor": true,
-    "harvest_tool.creative": false,
+    "harvest_tool.creative": true,
     "horse_stats": true,
     "item_tooltip": true,
     "entity_health": true,
@@ -53,11 +53,11 @@
     "chiseled_bookshelf": true
   },
   "compactmachines": {
-    "show_owner": false,
+    "show_owner": true,
     "bound_machine": true
   },
   "champions": {
-    "enable_affix_compact": true
+    "enable_affix_compact": false
   },
   "jade_access": {
     "held_item": true,
@@ -81,9 +81,9 @@
     "registry_name.special": false,
     "block_states": false,
     "distance": false,
-    "block_face": false,
-    "coordinates": false,
-    "registry_name": "OFF",
+    "block_face": true,
+    "coordinates": true,
+    "registry_name": "ON",
     "block_properties": false,
     "mod_name": true
   },
