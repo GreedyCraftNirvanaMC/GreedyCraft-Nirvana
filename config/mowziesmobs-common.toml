@@ -25,11 +25,11 @@
 			#Multiply armor damage reduction by this amount. See official Minecraft Wiki for an explanation of how armor damage reduction works.
 			# Default: 1.0
 			# Range: 0.0 ~ 1.7976931348623157E308
-			damage_reduction_multiplier = 1.0
+			damage_reduction_multiplier = 2.0
 			#Multiply armor toughness by this amount. See official Minecraft Wiki for an explanation of how armor toughness works.
 			# Default: 1.0
 			# Range: 0.0 ~ 1.7976931348623157E308
-			toughness_multiplier = 1.0
+			toughness_multiplier = 0.0
 
 	[tools_and_abilities.axe_of_a_thousand_metals]
 		#Set to true for the Axe of a Thousand Metals to have limited durability.
@@ -57,11 +57,11 @@
 			#Multiply armor damage reduction by this amount. See official Minecraft Wiki for an explanation of how armor damage reduction works.
 			# Default: 1.0
 			# Range: 0.0 ~ 1.7976931348623157E308
-			damage_reduction_multiplier = 1.0
+			damage_reduction_multiplier = 2.0
 			#Multiply armor toughness by this amount. See official Minecraft Wiki for an explanation of how armor toughness works.
 			# Default: 1.0
 			# Range: 0.0 ~ 1.7976931348623157E308
-			toughness_multiplier = 1.0
+			toughness_multiplier = 0.0
 
 	[tools_and_abilities.ice_crystal]
 		#Multiply all damage done with the ice crystal by this amount.
@@ -88,7 +88,7 @@
 			#Multiply armor toughness by this amount. See official Minecraft Wiki for an explanation of how armor toughness works.
 			# Default: 1.0
 			# Range: 0.0 ~ 1.7976931348623157E308
-			toughness_multiplier = 1.0
+			toughness_multiplier = 0.0
 
 		[tools_and_abilities.geomancerArmor.armor_config]
 			#Multiply armor damage reduction by this amount. See official Minecraft Wiki for an explanation of how armor damage reduction works.
@@ -98,7 +98,7 @@
 			#Multiply armor toughness by this amount. See official Minecraft Wiki for an explanation of how armor toughness works.
 			# Default: 1.0
 			# Range: 0.0 ~ 1.7976931348623157E308
-			toughness_multiplier = 1.0
+			toughness_multiplier = 0.0
 
 		[tools_and_abilities.spear.tool_config]
 			#Tool attack damage
@@ -118,7 +118,7 @@
 		#Damage multiplier when attacking from behind
 		# Default: 2.0
 		# Range: 0.0 ~ 1.7976931348623157E308
-		backstab_damage_mult = 2.0
+		backstab_damage_mult = 3.0
 
 		[tools_and_abilities.naga_fang_dagger.tool_config]
 			#Tool attack damage
@@ -199,7 +199,7 @@
 			#A blank entry means all biomes. No entries means no biomes.
 			#For example, 'minecraft:is_forest,c:is_spooky,!c:is_snowy' would mean all biomes that are spooky forests but not snowy forests
 			#'!minecraft:is_mountain' would mean all non-mountain biomes
-			biome_tags = ["c:is_snowy,!c:is_ocean,!c:is_river,!c:is_beach,!c:is_forest,!c:is_taiga"]
+			biome_tags = ["c:is_snowy,!c:is_ocean,!c:is_river,!c:is_beach"]
 			#Allow spawns in these biomes regardless of the biome tag settings
 			biome_whitelist = []
 			#Prevent spawns in these biomes regardless of the biome tag settings
@@ -326,7 +326,7 @@
 			#A blank entry means all biomes. No entries means no biomes.
 			#For example, 'minecraft:is_forest,c:is_spooky,!c:is_snowy' would mean all biomes that are spooky forests but not snowy forests
 			#'!minecraft:is_mountain' would mean all non-mountain biomes
-			biome_tags = ["!c:is_ocean"]
+			biome_tags = []
 			#Allow spawns in these biomes regardless of the biome tag settings
 			biome_whitelist = []
 			#Prevent spawns in these biomes regardless of the biome tag settings
@@ -349,11 +349,11 @@
 			#Maximum height for generation placement. -65 to ignore
 			# Default: 50.0
 			# Range: -65.0 ~ 256.0
-			height_max = 50.0
+			height_max = 55.0
 			#Minimum height for generation placement. -65 to ignore
 			# Default: 20.0
 			# Range: -65.0 ~ 256.0
-			height_min = 20.0
+			height_min = 30.0
 			#Names of structures this mob/structure will avoid when generating.
 			#NO LONGER USED! USE DATAPACK INSTEAD
 			avoid_structures = []
@@ -448,7 +448,7 @@
 			#A blank entry means all biomes. No entries means no biomes.
 			#For example, 'minecraft:is_forest,c:is_spooky,!c:is_snowy' would mean all biomes that are spooky forests but not snowy forests
 			#'!minecraft:is_mountain' would mean all non-mountain biomes
-			biome_tags = ["!c:is_mushroom"]
+			biome_tags = []
 			#Allow spawns in these biomes regardless of the biome tag settings
 			biome_whitelist = []
 			#Prevent spawns in these biomes regardless of the biome tag settings
@@ -481,7 +481,7 @@
 			#Maximum height for this spawn. -65 to ignore.
 			# Default: 16
 			# Range: -65 ~ 256
-			height_max = 16
+			height_max = 55
 			#Minimum height for this spawn. -65 to ignore.
 			# Default: -65
 			# Range: -65 ~ 256
@@ -515,7 +515,7 @@
 			#'!minecraft:is_mountain' would mean all non-mountain biomes
 			biome_tags = ["c:is_forest,mowziesmobs:is_magical,!c:is_snowy"]
 			#Allow spawns in these biomes regardless of the biome tag settings
-			biome_whitelist = []
+			biome_whitelist = ["minecraft:dark_forest"]
 			#Prevent spawns in these biomes regardless of the biome tag settings
 			biome_blacklist = []
 
@@ -528,11 +528,11 @@
 			#Minimum number of mobs that appear in a spawn group
 			# Default: 2
 			# Range: > 1
-			min_group_size = 2
+			min_group_size = 1
 			#Maximum number of mobs that appear in a spawn group
 			# Default: 4
 			# Range: > 1
-			max_group_size = 4
+			max_group_size = 2
 			#Probability of a spawn attempt succeeding. 1 for normal spawning, 0 will prevent spawning. Used to make mobs extra rare.
 			# Default: 1.0
 			# Range: 0.0 ~ 1.0
@@ -540,7 +540,7 @@
 			#Names of dimensions this mob can spawn in
 			dimensions = ["minecraft:overworld"]
 			#Names of blocks this mob is allowed to spawn on. Leave blank to ignore block names.
-			allowed_blocks = []
+			allowed_blocks = ["grass", "leaves", "leaves2", "log", "log2"]
 			#Tags of blocks this mob is allowed to spawn on. Leave blank to ignore block tags.
 			allowed_block_tags = ["minecraft:animals_spawnable_on", "minecraft:leaves", "minecraft:logs"]
 			#Maximum height for this spawn. -65 to ignore.
@@ -657,7 +657,7 @@
 			#Smaller number causes less spawning, 0 to disable spawning
 			# Default: 20
 			# Range: > 0
-			spawn_rate = 20
+			spawn_rate = 3
 			#Minimum number of mobs that appear in a spawn group
 			# Default: 1
 			# Range: > 1
@@ -665,7 +665,7 @@
 			#Maximum number of mobs that appear in a spawn group
 			# Default: 2
 			# Range: > 1
-			max_group_size = 2
+			max_group_size = 3
 			#Probability of a spawn attempt succeeding. 1 for normal spawning, 0 will prevent spawning. Used to make mobs extra rare.
 			# Default: 1.0
 			# Range: 0.0 ~ 1.0
@@ -673,7 +673,7 @@
 			#Names of dimensions this mob can spawn in
 			dimensions = ["minecraft:overworld"]
 			#Names of blocks this mob is allowed to spawn on. Leave blank to ignore block names.
-			allowed_blocks = []
+			allowed_blocks = ["grass", "stone", "sand"]
 			#Tags of blocks this mob is allowed to spawn on. Leave blank to ignore block tags.
 			allowed_block_tags = ["minecraft:animals_spawnable_on", "minecraft:base_stone_overworld"]
 			#Maximum height for this spawn. -65 to ignore.
@@ -722,7 +722,7 @@
 			#Smaller number causes less spawning, 0 to disable spawning
 			# Default: 70
 			# Range: > 0
-			spawn_rate = 70
+			spawn_rate = 20
 			#Minimum number of mobs that appear in a spawn group
 			# Default: 1
 			# Range: > 1
@@ -730,7 +730,7 @@
 			#Maximum number of mobs that appear in a spawn group
 			# Default: 4
 			# Range: > 1
-			max_group_size = 4
+			max_group_size = 3
 			#Probability of a spawn attempt succeeding. 1 for normal spawning, 0 will prevent spawning. Used to make mobs extra rare.
 			# Default: 1.0
 			# Range: 0.0 ~ 1.0
@@ -738,7 +738,7 @@
 			#Names of dimensions this mob can spawn in
 			dimensions = ["minecraft:overworld"]
 			#Names of blocks this mob is allowed to spawn on. Leave blank to ignore block names.
-			allowed_blocks = []
+			allowed_blocks = ["grass", "leaves", "leaves2", "log", "log2"]
 			#Tags of blocks this mob is allowed to spawn on. Leave blank to ignore block tags.
 			allowed_block_tags = ["minecraft:animals_spawnable_on", "minecraft:leaves", "minecraft:logs"]
 			#Maximum height for this spawn. -65 to ignore.
