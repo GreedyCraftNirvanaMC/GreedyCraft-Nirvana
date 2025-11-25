@@ -3,7 +3,7 @@
 	#The percentage chance that a Wither will drop a Withering Soul when killed.
 	# Default: 0.35
 	# Range: 0.0 ~ 1.0
-	witheringSoulChance = 0.35
+	witheringSoulChance = 0.30
 	#The amount of Dragon Scales that an Ender Dragon will drop when killed.
 	# Default: 8
 	# Range: 0 ~ 64
