@@ -22,6 +22,6 @@
 	#How long to mouse over an element (in ticks) before showing a tooltip.
 	# Default: 10
 	# Range: 0 ~ 6000
-	bnsTooltipCooldown = 10
+	bnsTooltipCooldown = 1
 	#Theme to use for Boxes & Stuff
 	bnsTheme = "default"
