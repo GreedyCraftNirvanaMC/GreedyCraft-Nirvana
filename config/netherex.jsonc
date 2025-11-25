@@ -6,6 +6,6 @@
          * How common NetherEx biomes are in the Nether
          * Range: 1 - 64
          */
-        "terraBlender_regionWeight": 4
+        "terraBlender_regionWeight": 15
     }
 }
