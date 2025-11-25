@@ -24,7 +24,7 @@
 	# 1000 units represents the capacity of a bucket, while it's 81000 on Fabric. So if you
 	# want 3 buckets worth of storage, it will be 3000 (Forge) or 243000 (Fabric)
 	# Valid range: 1 to 9223372036854775807 (inclusive)
-	fluidCapacity = 3000
+	fluidCapacity = 9223372036854775807
 	# If enabled, when interacting with this block it will dispense free water into
 	# it's fluid tank, assuming the tank is empty or contains water but has not reached it's
 	# capacity.
@@ -37,7 +37,7 @@
 	# There should be no reason this should happen, none at all. It might be a good idea
 	# to turn your television off until it clears up.
 	# Valid values: true, false
-	looseSignalDuringThunderstorm = true
+	looseSignalDuringThunderstorm = false
 
 # Electricity related properties
 [electricity]
