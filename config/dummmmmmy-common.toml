@@ -14,16 +14,16 @@
 	#Allowed Values: DYNAMIC, STATIC, OFF
 	DPS_mode = "DYNAMIC"
 	#Enable this to prevent your equipment from getting damaged when attacking the dummy
-	disable_equipment_damage = true
+	disable_equipment_damage = false
 	#Makes monsters target a dummy that is wearing a player head
-	dummy_decoy = false
+	dummy_decoy = true
 	#Health bar color when in boss mode
 	#Allowed Values: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
 	boss_health_bar_color = "YELLOW"
 	#Makes dummy drop xp when hit. Training yay! Depends on damage done
 	# Default: 0.0
 	# Range: 0.0 ~ 100.0
-	xp_per_damage_on_hit = 0.0
+	xp_per_damage_on_hit = 0.5
 	#How much health the dummy should have when in boss mode (when given a banner)
 	# Default: 200
 	# Range: 1 ~ 1000000

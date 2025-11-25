@@ -15,7 +15,7 @@
 	#Allowed Values: OFF, COLOR, COLOR_AND_MULTIPLIER
 	crit_mode = "COLOR_AND_MULTIPLIER"
 	#Make critical hit damage numbers bold
-	crit_bold = false
+	crit_bold = true
 	#Show hay particles when dealing damage
 	hay_particles = true
 	#Skin used by the dummy
