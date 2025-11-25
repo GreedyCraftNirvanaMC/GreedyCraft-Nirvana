@@ -1,0 +1,11 @@
+{
+    // The version of the config file. Do not change this unless you know what you are doing.
+    "rconfig:version": 0,
+    "netherex:terra_blender": {
+        /*
+         * How common NetherEx biomes are in the Nether
+         * Range: 1 - 64
+         */
+        "terraBlender_regionWeight": 4
+    }
+}
