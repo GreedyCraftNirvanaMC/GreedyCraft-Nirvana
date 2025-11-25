@@ -1,20 +1,20 @@
 #When losing the ability to fly, should the player receive a slow fall effect or simply negate the fall damage?
 #Allowed Values: SLOW_FALL, NEGATE_FALL_DAMAGE
-too_close_to_the_sun_behavior = "NEGATE_FALL_DAMAGE"
+too_close_to_the_sun_behavior = "SLOW_FALL"
 
 [range_computation]
 	#How the beacon range is calculated vertically. JAVA = Vanilla Java Behavior. FULL_HEIGHT = expand vertical range to maximum
 	#Allowed Values: JAVA, FULL_HEIGHT
-	vertical_range_type = "FULL_HEIGHT"
+	vertical_range_type = "JAVA"
 	#What is the beacon base range?
 	# Default: 10
 	# Range: > -2147483648
-	base_range = 10
+	base_range = 20
 	#How many seconds of flight should the Primeval Feather provide before breaking?
 	# Default: 128
 	# Range: > -2147483648
-	range_step = 128
+	range_step = 300
 
 [item]
 	#If curios is installed, the magic feather will need to be installed in its charm slot to function.
-	requires_curios = true
+	requires_curios = false
