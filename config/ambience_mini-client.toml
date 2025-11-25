@@ -1,7 +1,5 @@
 #Ambience Mini Mod Configurations
 [AmbienceMini]
-	#If enabled, upon joining a multiplayer server the client will notify whether the server has support for Ambience Mini. If no support, server-dependent features will be disabled. [Default: true]
-	Enabled = true
 	#The interval in milliseconds between checking the environment and possibly picking new music. [Default: 150]
 	# Default: 150
 	# Range: 50 ~ 10000
@@ -74,3 +72,7 @@
 	# Default: 20
 	# Range: 10 ~ 50
 	Leaving_Combat_Distance = 20
+	#If enabled, upon joining a multiplayer server the client will notify whether the server has support for Ambience Mini. If no support, server-dependent features will be disabled. [Default: true]
+	Notify_Server_Support = true
+	#If enabled, the mod will print debugging information to the terminal whenever the current playlist changes. Used for troubleshooting. [Default: false]
+	Verbose_Mode = false
