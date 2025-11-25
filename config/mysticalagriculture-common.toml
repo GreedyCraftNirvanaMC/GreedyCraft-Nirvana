@@ -11,13 +11,13 @@
 	#The amount of time in seconds between each Growth Accelerator growth tick.
 	# Default: 10
 	# Range: > 1
-	growthAcceleratorCooldown = 10
+	growthAcceleratorCooldown =40
 	#The percentage chance that harvesting a Resource Crop will drop a Fertilized Essence.
 	# Default: 0.1
 	# Range: 0.0 ~ 1.0
 	fertilizedEssenceChance = 0.1
 	#Should crops have a chance of dropping a second seed when harvested?
-	secondarySeedDrops = true
+	secondarySeedDrops = false
 	#Should resource crops need to be planted on their effective Farmland to grow?
 	requiresEffectiveFarmland = false
 	#Should the Wither drop essence when killed with an essence weapon?
