@@ -3,4 +3,4 @@
 	#Enable tag list tooltips for blocks/items?
 	tagTooltips = true
 	#Enable Data Component tooltips for items?
-	dataComponentTooltips = false
+	dataComponentTooltips = true
