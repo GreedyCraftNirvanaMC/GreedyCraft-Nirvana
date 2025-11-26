@@ -1,7 +1,7 @@
 #Ambience Mini Mod Configurations
 [AmbienceMini]
-	#The interval in milliseconds between checking the environment and possibly picking new music. [Default: 150]
-	# Default: 150
+	#The interval in milliseconds between checking the environment and possibly picking new music. [Default: 100]
+	# Default: 100
 	# Range: 50 ~ 10000
 	Update_Interval = 150
 	#The delay in milliseconds from when some music reaches the end until the next music begins. [Default: 4000]
@@ -76,3 +76,5 @@
 	Notify_Server_Support = true
 	#If enabled, the mod will print debugging information to the terminal whenever the current playlist changes. Used for troubleshooting. [Default: false]
 	Verbose_Mode = false
+	#If enabled, the mod will double-check playlist selections before switching. This can be helpful to counteract unpredictable/sporadic effects from mod-interactions. Note that this option doubles the time it takes to change to a new playlist, but this can be corrected by decreasing the 'Update_Interval' if you feel the need. [Default: false]
+	Meticulous_Playlist_Selector = false

@@ -1,0 +1,118 @@
+[encoder]
+	#How many pattern slots should the Package Recipe Encoder have.
+	#Warning: Changing this value when world is running may cause client crashes.
+	# Default: 20
+	# Range: 1 ~ 20
+	pattern_slots = 20
+	#The list of recipe types to disable in the Package Recipe Encoder.
+	disabled_recipe_types = []
+
+[packager]
+	#How much FE the Packager should hold.
+	# Default: 5000
+	# Range: > 0
+	energy_capacity = 5000
+	#How much total FE the Packager should use per operation.
+	# Default: 500
+	# Range: > 0
+	energy_req = 500
+	#How much FE/t maximum the Packager can use.
+	# Default: 100
+	# Range: > 0
+	energy_usage = 100
+	#How many ticks should the Packager wait between each refresh.
+	# Default: 4
+	# Range: 1 ~ 40
+	refresh_interval = 4
+	#Should the Packager draw energy from ME systems.
+	draw_me_energy = true
+
+[packager_extension]
+	#How much FE the Packager Extension should hold.
+	# Default: 5000
+	# Range: > 0
+	energy_capacity = 5000
+	#How much total FE the Packager Extension should use per operation.
+	# Default: 500
+	# Range: > 0
+	energy_req = 500
+	#How much FE/t maximum the Packager Extension can use.
+	# Default: 100
+	# Range: > 0
+	energy_usage = 100
+	#How many ticks should the Packager Extension wait between each refresh.
+	# Default: 4
+	# Range: 1 ~ 40
+	refresh_interval = 4
+	#Should the Packager Extension draw energy from ME systems.
+	draw_me_energy = true
+
+[unpackager]
+	#How much FE the Unpackager should hold.
+	# Default: 5000
+	# Range: > 0
+	energy_capacity = 5000
+	#How much total FE the Unpackager should use per operation.
+	# Default: 50
+	# Range: > 0
+	energy_usage = 50
+	#How many ticks should the Unpackager wait between each refresh.
+	# Default: 4
+	# Range: 1 ~ 40
+	refresh_interval = 4
+	#Should the Unpackager draw energy from ME systems.
+	draw_me_energy = true
+
+[distributor]
+	#How large the range of the Positioned Package Distributor should be.
+	# Default: 16
+	# Range: > 1
+	range = 16
+	#How many ticks should the Positioned Package Distributor wait between each refresh.
+	# Default: 4
+	# Range: 1 ~ 40
+	refresh_interval = 4
+
+[crafting_proxy]
+	#How large the range of the Package Crafting Machine Proxy should be.
+	# Default: 8
+	# Range: > 1
+	range = 8
+
+[crafter]
+	#How much FE the Package Crafter should hold.
+	# Default: 5000
+	# Range: > 0
+	energy_capacity = 5000
+	#How much total FE the Package Crafter should use per operation.
+	# Default: 500
+	# Range: > 0
+	energy_req = 500
+	#How much FE/t maximum the Package Crafter can use.
+	# Default: 100
+	# Range: > 0
+	energy_usage = 100
+	#How many ticks should the Package Crafter wait between each refresh.
+	# Default: 4
+	# Range: 1 ~ 40
+	refresh_interval = 4
+	#Should the Package Crafter draw energy from ME systems.
+	draw_me_energy = true
+
+[fluid_package_filler]
+	#How much FE the Fluid Package Filler should hold.
+	# Default: 5000
+	# Range: > 0
+	energy_capacity = 5000
+	#How much total FE the Fluid Package Filler should use per operation.
+	# Default: 500
+	# Range: > 0
+	energy_req = 500
+	#How much FE/t maximum the Fluid Package Filler can use.
+	# Default: 100
+	# Range: > 0
+	energy_usage = 100
+	#How many ticks should the Fluid Package Filler wait between each refresh.
+	# Default: 4
+	# Range: 1 ~ 40
+	refresh_interval = 4

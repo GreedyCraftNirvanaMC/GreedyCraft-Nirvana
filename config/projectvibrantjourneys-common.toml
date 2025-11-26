@@ -1,0 +1,251 @@
+["World Generation"]
+	#Enable generation of rocks
+	enableRocks = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	rocksWeight = 1.0
+	#Enable generation of twigs
+	enableTwigs = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	twigsWeight = 1.0
+	#Enable generation of fallen leaves
+	enableFallenLeaves = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	fallenLeavesWeight = 1.0
+	#Enable generation of bones
+	enableBones = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	bonesWeight = 1.0
+	#Enable generation of charred bones
+	enableCharredBones = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	charredBonesWeight = 1.0
+	#Enable generation of ice chunks
+	enableIceChunks = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	iceChunksWeight = 1.0
+	#Enable generation of pinecones
+	enablePinecones = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	pineconesWeight = 1.0
+	#Enable generation of seashells
+	enableSeashells = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	seashellsWeight = 1.0
+	#Enable generation of fallen trees
+	enableFallenTrees = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	fallenTreesWeight = 1.0
+	#Enable generation of sea oats
+	enableSeaOats = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	seaOatsWeight = 1.0
+	#Enable generation of cattails
+	enableCattails = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	cattailsWeight = 1.0
+	#Enable generation of beach grass
+	enableBeachGrass = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	beachGrassWeight = 1.0
+	#Enable generation of bark mushrooms
+	enableBarkMushrooms = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	barkMushroomsWeight = 1.0
+	#Enable generation of glowcap
+	enableGlowcap = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	glowcapWeight = 1.0
+	#Enable generation of cindercane
+	enableCindercane = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	cindercaneWeight = 1.0
+	#Enable generation of nether nettles
+	enableNetherNettles = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	netherNettlesWeight = 1.0
+	#Enable generation of short grass
+	enableShortGrass = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	shortGrassWeight = 1.0
+	#Enable generation of natural cobwebs
+	enableNaturalCobwebs = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	naturalCobwebsWeight = 1.0
+	#Enable generation of small cacti
+	enableSmallCacti = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	smallCactiWeight = 1.0
+	#Enable generation of prickly bushes
+	enablePricklyBush = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	pricklyBushWeight = 1.0
+	#Enable generation of reeds
+	enableReeds = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	reedsWeight = 1.0
+	#Enable generation of icicles
+	enableIcicles = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	iciclesWeight = 1.0
+	#Enable generation of sandy sprouts
+	enableSandySprouts = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	sandySproutsWeight = 1.0
+	#Enable generation of watergrass
+	enableWatergrass = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	watergrassWeight = 1.0
+	#Enable generation of gravel pits
+	enableGravelPits = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	gravelPitWeight = 1.0
+	#Enable generation of gold pits
+	enableGoldPits = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	goldPitWeight = 1.0
+	#Enable generation of beached kelp
+	enableBeachedKelp = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	beachedKelpWeight = 1.0
+	#Enable generation of extra lilypads in lakes
+	enableExtraLilypads = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	extraLilypadsWeight = 1.0
+	#Enable generation of extra seagrass in lakes
+	enableExtraSeagrass = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	extraSeagrassWeight = 1.0
+	#Enable generation of extra grass in rivers
+	enableExtraRiverGrass = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	extraRiverGrassWeight = 1.0
+	#Enable moss carpets in old growth taiga biomes
+	enableMossCarpets = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	mossCarpetsWeight = 1.0
+	#Enable of tide pools in stony shores
+	enableTidePools = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	tidePoolsWeight = 1.0
+	#Enable cave roots
+	enableCaveRoots = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	caveRootsWeight = 1.0
+	#Enable better ruined nether portals
+	enableBetterRuinedNetherPortals = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	betterRuinedNetherPortalsWeight = 1.0
+	#Enable generation of dried beached kelp
+	enableDriedBeachedKelp = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	driedBeachedKelpWeight = 1.0
+	#Enable generation of glowing blue fungus
+	enableGlowingBlueFungus = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	glowingBlueFungusWeight = 1.0
+	#Enable generation of bamboo in cherry groves
+	enableCherryGroveBamboo = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	cherryGroveBambooWeight = 1.0
+	#Enable generation of muddy bones
+	enableMuddyBones = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	muddyBonesWeight = 1.0
+	#Enable generation of lotus ponds in cherry groves
+	enableLotusPonds = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	lotusPondWeight = 1.0
+	#Enable generation of pink lotuses in flower forests
+	enableFloatingPinkLotus = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	floatingPinkLotusWeight = 1.0
+	#Enable generation of hot springs
+	enableHotSprings = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	hotSpringsWeight = 1.0
+	#Enable generation of bushes
+	enableBushes = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	bushWeight = 1.0
+	#Enable generation of wildflowers
+	enableWildflowers = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	wildflowersWeight = 1.0
+	#Enable generation of bogged remains
+	enableBoggedRemains = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	boggedRemainsWeight = 1.0
+	#Enable generation of slime nodules
+	enableSlimeNodules = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	slimeNodulesWeight = 1.0
+	#Enable generation of pink vines
+	enablePinkVines = true
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	pinkVinesWeight = 1.0
+
+["Entity Options"]
+	#Enable spawning of tropical fish in jungles
+	enableJungleTropicalFish = true
+
+["Feature Options"]
+	#Allow bogged to spawn from bogged remains
+	allowBoggedFromBoggedRemains = true
+	#Chance for a bogged to spawn from bogged remains
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	boggedChance = 0.15
+	#Allow short grass to grow when use bone meal grass blocks
+	shortGrassFromBoneMeal = true
+	#Enable replaceable groundcover behavior - i.e. makes it behave like tall grass when placing blocks
+	replaceableGroundcover = true
+	#Max generation height for glowcap and some groundcover in the nether
+	# Default: 127
+	# Range: 0 ~ 500
+	bedrockRoofHeight = 127

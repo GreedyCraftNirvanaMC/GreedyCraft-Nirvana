@@ -1,0 +1,9 @@
+#Enable more verbose debug logging.
+debugLogging = false
+
+#Settings for configuring crafting requirements of specific ProjectE recipes.
+[crafting]
+	#Enable crafting the Tome of Knowledge.
+	craftableTome = false
+	#Require full omega klein stars in the tome of knowledge and gem armor recipes. This is the same behavior that EE2 had.
+	fullKleinStars = false

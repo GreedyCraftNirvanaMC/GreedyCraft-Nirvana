@@ -1,0 +1,280 @@
+#Want to take a look at the internals of EMC Calculation? Enable this to write all the conversions and setValue-Commands to config/ProjectE/mapping_dump.json
+dumpToFile = false
+#When the next EMC mapping occurs write the results to config/ProjectE/pregenerated_emc.json and only ever run the mapping again when that file does not exist, this setting is set to false, or an error occurred parsing that file.
+usePregenerated = false
+#Logs known EMC Exploits. This can not and will not find all possible exploits. This will only find exploits that result in fixed/custom emc values that the algorithm did not overwrite. Exploits that derive from conversions that are unknown to ProjectE will not be found.
+logFoundExploits = true
+
+#Used to configure settings for the various EMC Mappers.
+[mappers]
+
+	#Loads json files within datapacks (data/<domain>/pe_custom_conversions/*.json) to add values and conversions.
+	[mappers.Custom-Conversion-Mapper]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
+	#Add Conversions for Brewing Recipes.
+	[mappers.Brewing-Mapper]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
+	#Add Conversions for all oxidizable blocks.
+	[mappers.Oxidization-Mapper]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
+	#Uses the `custom_emc.json` File to add EMC values.
+	[mappers.Custom-EMC-Mapper]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
+	#Add Conversions for all waxable blocks
+	[mappers.Waxable-Mapper]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
+	#Add Conversions for Crafting Recipes gathered from net.minecraft.world.item.crafting.RecipeManager
+	[mappers.Crafting-Mapper]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
+		#Adds conversions for all the different types of suspicious stews.
+		[mappers.Crafting-Mapper.Suspicious-Stew-Mapper]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#This mapper does not actually map anything, but instead just marks recipe classes as having been handled, if we either expose a processor for them, or they are self referencing (for example map cloning recipes).
+		[mappers.Crafting-Mapper.Mark-Special-Recipes-Handled]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Propagates shulker box values to colored variants.
+		[mappers.Crafting-Mapper.Shulker-Recoloring-Mapper]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Add conversions for all lingering potions to arrow recipes.
+		[mappers.Crafting-Mapper.Tipped-Arrow-Mapper]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps the different vanilla recipe types.
+		[mappers.Crafting-Mapper.Vanilla-Recipe-Types]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps smithing recipes.
+		[mappers.Crafting-Mapper.Smithing]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism sawmill recipes. (Disabled by default, due to causing various EMC values to be removed pertaining to charcoal/wood)
+		[mappers.Crafting-Mapper.Mekanism-Sawing]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = false
+
+		#Maps Mekanism rotary condensentrator recipes.
+		[mappers.Crafting-Mapper.Mekanism-Rotary]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism pressurized reaction recipes. (Disabled by default)
+		[mappers.Crafting-Mapper.Mekanism-PRC]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = false
+
+		#Maps Mekanism Machine recipes that go from item to item. (Crushing, Enriching, Smelting)
+		[mappers.Crafting-Mapper.Mekanism-Item-To-Item]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism item stack to chemical recipes. (Chemical conversion, Oxidizing, Pigment Extracting)
+		[mappers.Crafting-Mapper.Mekanism-I2C]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism Machine recipes that go from item, chemical to item. (Compressing, Purifying, Injecting, Metallurgic Infusing, Painting, Nucleosynthesizing)
+		[mappers.Crafting-Mapper.Mekanism-IC2I]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism evaporating recipes.
+		[mappers.Crafting-Mapper.Mekanism-Evaporating]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism washing recipes.
+		[mappers.Crafting-Mapper.Mekanism-Washing]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism electrolytic separator recipes.
+		[mappers.Crafting-Mapper.Mekanism-Electrolysis]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism combiner recipes.
+		[mappers.Crafting-Mapper.Mekanism-Combiner]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism activating and centrifuging recipes.
+		[mappers.Crafting-Mapper.Mekanism-C2C]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism dissolution recipes.
+		[mappers.Crafting-Mapper.Mekanism-Dissolution]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism crystallizing recipes.
+		[mappers.Crafting-Mapper.Mekanism-Crystallizer]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps Mekanism chemical infuser and pigment mixer recipes.
+		[mappers.Crafting-Mapper.Mekanism-CC2C]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps avaritia recipes.
+		[mappers.Crafting-Mapper.Avaritia-Extreme]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Maps avaritia recipes.
+		[mappers.Crafting-Mapper.Avaritia-Compressor]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+		#Fallback for default handling of recipes that extend ICraftingRecipe, AbstractCookingRecipe, SingleItemRecipe, or SmithingRecipe. This will catch modded extensions of the vanilla recipe classes, and if the VanillaRecipeTypes mapper is disabled, this mapper will still catch the vanilla recipes.
+		[mappers.Crafting-Mapper.Fallback]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
+	#Set EMC=0 for everything in the c:raw_materials tag.
+	[mappers.Raw-Ore-Blacklist-Mapper]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
+	#Set EMC=0 for everything in the c:ores tag.
+	[mappers.Ore-Blacklist-Mapper]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
+	#Adds back and forth conversions of objects and their Tag variant. (EMC values assigned to tags will not behave properly if this mapper is disabled)
+	[mappers.Tag-Mapper]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
+#Used to configure settings for the various Data Component Processors.
+[processors]
+
+	#Reduces the EMC value the more damaged an item is.
+	[processors.Damage-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+
+	#Calculates EMC value of items stored in bundles.
+	[processors.Bundle-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = false
+
+	#Factors in the EMC value of Klein Stars stored in Mercurial eyes.
+	[processors.Mercurial-Eye-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = false
+
+	#Increases the EMC value of the item to take into account any EMC the item has stored.
+	[processors.Stored-EMC-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+
+	#Allows persisting the contents of written books. Does not change the EMC value.
+	[processors.Written-Book-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = true
+
+	#Allows persisting the contents of writable books. Does not change the EMC value.
+	[processors.Writable-Book-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = true
+
+	#Calculates EMC value of patterned banners.
+	[processors.Banner-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = true
+
+	#Takes the different sherds into account for each decorated pot.
+	[processors.Decorated-Pot-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = true
+
+	#Increases the EMC value to take into account any enchantments on an item.
+	[processors.Enchantment-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = false
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = false
+		#The amount (scaled by rarity) to increase EMC value by for enchantments.
+		# Default: 5000
+		# Range: 0 ~ 9223372036854775807
+		enchantment_emc_bonus = 5000
+
+	#Calculates EMC value of decorated shield.
+	[processors.Decorated-Shield-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = true
+
+	#Calculates EMC value of fireworks.
+	[processors.Firework-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = true
+
+	#Calculates EMC value of items stored in vanilla's container component. For example shulker boxes.
+	[processors.Container-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = false
+
+	#Calculates EMC value of trimmed armor.
+	[processors.Armor-Trim-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = true
+
+	#Calculates the EMC value of Firework Stars, based on what was required to craft them.
+	[processors.Firework-Star-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+		#Determines whether this Data Component Processor can affect the persistent data that gets saved to knowledge/copied in a condenser.
+		persistent = true
+
+	#Increases the EMC value of maps that have had their range extended.
+	[processors.Map-Extension-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true
+
+	#Increases the EMC value of any Mekanism items by the value of the stored or installed contents
+	[processors.Mek-Contents-Processor]
+		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
+		enabled = true

@@ -1,0 +1,18 @@
+{
+  "plantEnable": true,
+  "plantLarge": true,
+  "multiThread": true,
+  "showTitleOnOpConnected": false,
+  "ignoreShape": false,
+  "warnTaskQueue": true,
+  "autoBlackList": true,
+  "plantDelay": 40,
+  "avoidDense": 2,
+  "playerAround": 2,
+  "maxTask": 1000,
+  "language": "en_us",
+  "blacklist": [],
+  "whitelist": [
+    "#minecraft:saplings"
+  ]
+}

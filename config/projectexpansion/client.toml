@@ -1,0 +1,15 @@
+#If EMC should be formatted as M/B/T/etc
+formatEMC = true
+#If full number names (Million/Billion/Trillion) should be used instead of abbreviations
+fullNumberNames = true
+#Displays your current emc and gained emc per second in the top left corner.
+emcDisplay = true
+#The Position of the emc display.
+#Allowed Values: TOP_LEFT, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_RIGHT
+emcDisplayPosition = "TOP_LEFT"
+#If a tooltip should be shown on items which can be learned, denoting if the item has been learned or not. Note: ProjectE's client.shiftEmcToolTips applies to this.
+enableLearnedTooltip = true
+#If a sound should be played when something is collected with Alchemical Collection.
+alchemicalCollectionSound = true
+#Allowed Values: NORMAL, AUTOSELECTED, NORMAL_JEI, AUTOSELECTED_JEI
+searchType = "NORMAL"

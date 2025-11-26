@@ -1,0 +1,17 @@
+#The Philosopher's Stone overlay softly pulsates.
+pulsatingOverlay = false
+
+#Settings for configuring Tooltips provided by ProjectE.
+[tooltips]
+	#Show the EMC value as a tooltip on items and blocks.
+	emc = true
+	#Requires holding shift to display the EMC value as a tooltip on items and blocks. Note: this does nothing if EMC Tooltips are disabled.
+	shift_emc = false
+	#Requires holding shift to display the learned/unlearned text as a tooltip on items and blocks. Note: this does nothing if EMC Tooltips are disabled.
+	shift_learned = true
+	#Show Dark Matter Pedestal functions in item tooltips.
+	pedestal = true
+	#Show stats as tooltips for various ProjectE blocks.
+	statToolTips = true
+	#Show item tags in tooltips (useful for custom EMC registration).
+	tag = false

@@ -1,0 +1,63 @@
+[sculk_crafter]
+	#How much FE the Sculk Package Crafter should hold.
+	# Default: 5000
+	# Range: > 0
+	energy_capacity = 5000
+	#How much total FE the Sculk Package Crafter should use per operation.
+	# Default: 500
+	# Range: > 0
+	energy_req = 500
+	#How much FE/t maximum the Sculk Package Crafter can use.
+	# Default: 100
+	# Range: > 0
+	energy_usage = 100
+	#Should the Sculk Package Crafter draw energy from ME systems.
+	draw_me_energy = true
+
+[nether_crafter]
+	#How much FE the Nether Package Crafter should hold.
+	# Default: 5000
+	# Range: > 0
+	energy_capacity = 5000
+	#How much total FE the Nether Package Crafter should use per operation.
+	# Default: 1000
+	# Range: > 0
+	energy_req = 1000
+	#How much FE/t maximum the Nether Package Crafter can use.
+	# Default: 125
+	# Range: > 0
+	energy_usage = 125
+	#Should the Nether Package Crafter draw energy from ME systems.
+	draw_me_energy = true
+
+[end_crafter]
+	#How much FE the End Package Crafter should hold.
+	# Default: 5000
+	# Range: > 0
+	energy_capacity = 5000
+	#How much total FE the End Package Crafter should use per operation.
+	# Default: 2500
+	# Range: > 0
+	energy_req = 2500
+	#How much FE/t maximum the End Package Crafter can use.
+	# Default: 250
+	# Range: > 0
+	energy_usage = 250
+	#Should the End Package Crafter draw energy from ME systems.
+	draw_me_energy = true
+
+[extreme_crafter]
+	#How much FE the Extreme Package Crafter should hold.
+	# Default: 5000
+	# Range: > 0
+	energy_capacity = 5000
+	#How much total FE the Extreme Package Crafter should use per operation.
+	# Default: 5000
+	# Range: > 0
+	energy_req = 5000
+	#How much FE/t maximum the Extreme Package Crafter can use.
+	# Default: 500
+	# Range: > 0
+	energy_usage = 500
+	#Should the Extreme Package Crafter draw energy from ME systems.
+	draw_me_energy = true
