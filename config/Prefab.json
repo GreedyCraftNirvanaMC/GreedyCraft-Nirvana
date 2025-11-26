@@ -1,12 +1,12 @@
 {
   "startingItem": "StartingHouse",
-  "newPlayersGetStartingItem": true,
+  "newPlayersGetStartingItem": false,
   "includeSpawnersInMasher": true,
   "enableStructurePreview": true,
   "allowBulldozerToCreateDrops": true,
-  "allowWaterInNonOverworldDimensions": true,
+  "allowWaterInNonOverworldDimensions": false,
   "includeMineshaftChest": true,
-  "playBuildingSound": true,
+  "playBuildingSound": false,
   "recipes": {
     "Grassy Plains": true,
     "Upgrade": true,
