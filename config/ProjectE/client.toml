@@ -1,5 +1,5 @@
 #The Philosopher's Stone overlay softly pulsates.
-pulsatingOverlay = false
+pulsatingOverlay = true
 
 #Settings for configuring Tooltips provided by ProjectE.
 [tooltips]

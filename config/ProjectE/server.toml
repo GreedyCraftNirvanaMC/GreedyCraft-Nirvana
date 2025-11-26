@@ -74,7 +74,7 @@
 #Settings for configuring Difficulty options provided by ProjectE.
 [difficulty]
 	#Set to false to disable Gem Armor offensive abilities (helmet zap and chestplate explosion).
-	offensiveAbilities = false
+	offensiveAbilities = true
 	#Amount of damage the Katar's Extra Function deals.
 	# Default: 1000.0
 	# Range: 0.0 ~ 2.147483647E9
@@ -82,9 +82,9 @@
 	#Adjusting this ratio changes how much EMC is received when burning a item. For example setting this to 0.5 will return half of the EMC cost.
 	# Default: 1.0
 	# Range: 0.1 ~ 1.0
-	covalenceLoss = 1.0
+	covalenceLoss = 0.2
 	#How rounding occurs when Covalence Loss results in a burn value less than 1 EMC. If true the value will be rounded up to 1. If false the value will be rounded down to 0.
-	covalenceLossRounding = true
+	covalenceLossRounding = false
 
 #Settings for configuring Effect options provided by ProjectE.
 [effects]
