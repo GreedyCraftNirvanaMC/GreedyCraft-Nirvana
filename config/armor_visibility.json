@@ -10,7 +10,7 @@
   "save_between_launches": false,
   "save_data": {
     "hide_my_armor": true,
-    "hide_all_armor": false
+    "hide_all_armor": true
   },
   "version": 3
 }
