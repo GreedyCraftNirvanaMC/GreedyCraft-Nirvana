@@ -1,0 +1,12 @@
+#Maximum health of the common blob
+# Default: 30
+# Range: > 0
+commonBlobMaxHealth = 30
+#Maximum health of the rare blob
+# Default: 250
+# Range: > 0
+rareBlobMaxHealth = 250
+#Maximum health of the legendary blob
+# Default: 5000
+# Range: > 0
+legendaryBlobMaxHealth = 5000

@@ -1,0 +1,194 @@
+# Global Options for the Ruins mod
+#
+# tries_per_chunk is the number of times, per chunk, that the generator will
+#     attempt to create a ruin.
+#
+# chance_to_spawn is the chance, out of 100, that a ruin will be generated per
+#     try in this chunk.  This may still fail if the ruin does not have a
+#     suitable place to generate.
+#
+# specific_<biome name> is the chance, out of 100, that a ruin spawning in the
+#     specified biome will be chosen from the biome specific folder.  If not,
+#     it will choose a generic ruin from the folder of the same name.
+#
+tries_per_chunk_normal=6
+chance_to_spawn_normal=10
+tries_per_chunk_nether=6
+chance_to_spawn_nether=10
+#
+# prevent a message from being logged every time a ruin is built
+disableRuinSpawnCoordsLogging=true
+#
+# minimum distance a template must have from instances of itself
+templateInstancesMinDistance=256
+#
+# minimum distance a template must have from any other template
+anyRuinsMinDistance=64
+#
+# min/max distances overworld templates can have from world spawn (0 = no limit)
+anySpawnMinDistance=32
+anySpawnMaxDistance=0
+#
+# allow displaying a block's data by hitting it with a stick
+enableStick=true
+#
+# dimension IDs whitelisted for ruins spawning, add custom dimensions IDs here as needed
+allowedDimensions=overworld,the_end,the_nether
+#
+# make /parseruin rule IDs line up nicely in template files
+# note: overworld (i.e., dimension 0) setting applies to all dimensions
+enableFixedWidthRuleIds=false
+#
+# tileentity blocks, those (nonvanilla)blocks which cannot function without storing their nbt data, full name as stick dictates, seperated by commata
+teblocks=
+
+specific_old_growth_pine_taiga=75
+specific_dead_forest=75
+specific_wetland=75
+specific_cherry_grove=75
+specific_frozen_peaks=75
+specific_dune_beach=75
+specific_pasture=75
+specific_fungal_jungle=75
+specific_dryland=75
+specific_spider_nest=75
+specific_jacaranda_glade=75
+specific_sparse_jungle=75
+specific_wooded_badlands=75
+specific_rocky_rainforest=75
+specific_end_wilds=75
+specific_end_highlands=75
+specific_snowy_taiga=75
+specific_basalt_deltas=75
+specific_desert=75
+specific_soul_sand_valley=75
+specific_flower_forest=75
+specific_maple_woods=75
+specific_skyroot_meadow=75
+specific_defiled_desert=75
+specific_field=75
+specific_volcano=75
+specific_rainforest=75
+specific_wasteland=75
+specific_end_corruption=75
+specific_lush_caves=75
+specific_snowy_plains=75
+specific_old_growth_dead_forest=75
+specific_wasteland_steppe=75
+specific_old_growth_woodland=75
+specific_defiled_hills=75
+specific_plains=75
+specific_windswept_forest=75
+specific_torrid_wasteland=75
+specific_ice_spikes=75
+specific_deep_ocean=75
+specific_lavender_field=75
+specific_defiled_snowy_plains=75
+specific_forested_field=75
+specific_sunflower_plains=75
+specific_woodland=75
+specific_lush_desert=75
+specific_jade_cliffs=75
+specific_origin_valley=75
+specific_crimson_forest=75
+specific_the_end=75
+specific_gravel_beach=75
+specific_skyroot_grove=75
+specific_grove=75
+specific_lush_savanna=75
+specific_seasonal_forest=75
+specific_snowy_fir_clearing=75
+specific_river=75
+specific_dark_forest=75
+specific_bamboo_jungle=75
+specific_moor=75
+specific_snowblossom_grove=75
+specific_mystic_grove=75
+specific_highland=75
+specific_old_growth_birch_forest=75
+specific_scrubland=75
+specific_windswept_savanna=75
+specific_vilespine_forest=75
+specific_aspen_glade=75
+specific_undergrowth=75
+specific_floodplain=75
+specific_mediterranean_forest=75
+specific_ruthless_sands=75
+specific_tenebra_forest=75
+specific_jungle=75
+specific_tundra=75
+specific_forest=75
+specific_auroral_garden=75
+specific_windswept_gravelly_hills=75
+specific_cold_desert=75
+specific_nether_wastes=75
+specific_end_midlands=75
+specific_spatial_storage=75
+specific_defiled_plains=75
+specific_end_barrens=75
+specific_eroded_badlands=75
+specific_snowy_slopes=75
+specific_deep_frozen_ocean=75
+specific_overgrown_greens=75
+specific_volcanic_plains=75
+specific_deferred_placeholder=75
+specific_jagged_peaks=75
+specific_savanna_plateau=75
+specific_windswept_hills=75
+specific_the_void=75
+specific_birch_forest=75
+specific_glowing_grotto=75
+specific_stony_shore=75
+specific_prairie=75
+specific_small_end_islands=75
+specific_crag=75
+specific_beach=75
+specific_machine=75
+specific_shrubland=75
+specific_withered_abyss=75
+specific_dripstone_caves=75
+specific_mushroom_fields=75
+specific_crystalline_chasm=75
+specific_skyroot_forest=75
+specific_spectre_void=75
+specific_fir_clearing=75
+specific_deep_lukewarm_ocean=75
+specific_lukewarm_ocean=75
+specific_muskeg=75
+specific_warm_ocean=75
+specific_rocky_shrubland=75
+specific_skyroot_woodland=75
+specific_warped_forest=75
+specific_taiga=75
+specific_savanna=75
+specific_hot_springs=75
+specific_tropics=75
+specific_frozen_river=75
+specific_end_reef=75
+specific_pumpkin_patch=75
+specific_snowy_coniferous_forest=75
+specific_meadow=75
+specific_ocean=75
+specific_ominous_woods=75
+specific_wintry_origin_valley=75
+specific_bog=75
+specific_grassland=75
+specific_snowy_maple_woods=75
+specific_swamp=75
+specific_visceral_heap=75
+specific_erupting_inferno=75
+specific_fungi_forest=75
+specific_old_growth_spruce_taiga=75
+specific_orchard=75
+specific_redwood_forest=75
+specific_frozen_ocean=75
+specific_marsh=75
+specific_mangrove_swamp=75
+specific_cold_ocean=75
+specific_badlands=75
+specific_coniferous_forest=75
+specific_snowy_beach=75
+specific_deep_cold_ocean=75
+specific_bayou=75
+specific_deep_dark=75
+specific_stony_peaks=75
