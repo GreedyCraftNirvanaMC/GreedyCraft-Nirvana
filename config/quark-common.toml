@@ -1,5 +1,5 @@
 [general]
-	"Enable 'q' Button" = true
+	"Enable 'q' Button" = false
 	"'q' Button on the Right" = false
 	"Disable Q Menu Effects" = false
 	#How many advancements deep you can see in the advancement screen. Vanilla is 2.
@@ -8,7 +8,7 @@
 	#Blocks that Quark should treat as Shulker Boxes.
 	"Shulker Boxes" = ["minecraft:white_shulker_box", "minecraft:orange_shulker_box", "minecraft:magenta_shulker_box", "minecraft:light_blue_shulker_box", "minecraft:yellow_shulker_box", "minecraft:lime_shulker_box", "minecraft:pink_shulker_box", "minecraft:gray_shulker_box", "minecraft:light_gray_shulker_box", "minecraft:cyan_shulker_box", "minecraft:purple_shulker_box", "minecraft:blue_shulker_box", "minecraft:brown_shulker_box", "minecraft:green_shulker_box", "minecraft:red_shulker_box", "minecraft:black_shulker_box"]
 	#Should Quark treat anything with 'shulker_box' in its item identifier as a shulker box?
-	"Interpret Shulker Box Like Blocks" = true
+	"Interpret Shulker Box Like Blocks" = false
 	#Set to true if you need to find the class name for a screen that's causing problems
 	"Print Screen Classnames" = false
 	#A list of screens that can accept quark's buttons. Use "Print Screen Classnames" to find the names of any others you'd want to add.
@@ -52,7 +52,7 @@
 [automation]
 	"Chains Connect Blocks" = true
 	Chute = true
-	"Dispensers Place Blocks" = true
+	"Dispensers Place Blocks" = false
 	"Ender Watcher" = true
 	"Feeding Trough" = true
 	Gravisand = true
@@ -442,9 +442,9 @@
 			#How long it takes before the Pickarang starts returning to the player if it doesn't hit anything.
 			Timeout = 20
 			#Pickarang harvest level. 2 is Iron, 3 is Diamond, 4 is Netherite.
-			"Harvest Level" = 3
+			"Harvest Level" = 2
 			#Pickarang durability. Set to -1 to have the Pickarang be unbreakable.
-			Durability = 800
+			Durability = 400
 			#Pickarang max hardness breakable. 22.5 is ender chests, 25.0 is monster boxes, 50 is obsidian. Most things are below 5.
 			"Max Hardness" = 20.0
 			#How much damage the Pickarang deals when swung as an item
@@ -719,7 +719,7 @@
 
 	[tweaks.utility_recipes]
 		#Can other stone-like materials be used for crafting stone tools?
-		"Better Stone Tool Crafting" = true
+		"Better Stone Tool Crafting" = false
 		#Can a dispenser be crafted by adding a bow to a dropper?
 		"Enable Dispenser" = true
 		#Can a repeater be crafted with the pattern for a redstone torch?
@@ -1114,19 +1114,19 @@
 		"Min Mob Count" = 5
 		"Max Mob Count" = 8
 		"Enable Extra Loot Table" = true
-		"Activation Range" = 2.5
+		"Activation Range" = 6.0
 		#How many blocks to search vertically from a position before trying to place a block. Higher means you'll get more boxes in open spaces.
 		"Search Range" = 15
 
 		[world.monster_box.dimensions]
 			"Is Blacklist" = false
-			Dimensions = ["minecraft:overworld"]
+			Dimensions = ["minecraft:overworld", "minecraft:the_nether", "twilightforest:twilight_forest", "lostcities:lostcity", "tofucraft:tofu_world"]
 
 	[world.nether_obsidian_spikes]
 		#The chance for a chunk to contain spikes (1 is 100%, 0 is 0%)
 		"Chance Per Chunk" = 0.1
 		#The chance for a spike to be big (1 is 100%, 0 is 0%)
-		"Big Spike Chance" = 0.03
+		"Big Spike Chance" = 0.2
 		#Should a chunk have spikes, how many would the generator try to place
 		"Tries Per Chunk" = 4
 		"Big Spike Spawners" = true
