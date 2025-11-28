@@ -1,0 +1,22 @@
+{
+  "name": "singularity.avaritia.bronze",
+  "colors": [
+    "d99f43",
+    "bb6b3b"
+  ],
+  "timeRequired": 240,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "tag": "c:ingots/bronze",
+        "type": "neoforge:tag_empty"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "c:ingots/bronze"
+  },
+  "enabled": true,
+  "recipeEnabled": true
+}

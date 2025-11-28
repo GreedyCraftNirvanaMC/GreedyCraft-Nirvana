@@ -1,0 +1,22 @@
+{
+  "name": "singularity.avaritia.uranium",
+  "colors": [
+    "d2f9d1",
+    "a6c5a4"
+  ],
+  "timeRequired": 240,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "tag": "c:ingots/uranium",
+        "type": "neoforge:tag_empty"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "c:ingots/uranium"
+  },
+  "enabled": true,
+  "recipeEnabled": true
+}

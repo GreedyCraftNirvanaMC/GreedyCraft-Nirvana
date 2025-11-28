@@ -1,0 +1,22 @@
+{
+  "name": "singularity.avaritia.platinum",
+  "colors": [
+    "6feaef",
+    "57b8bc"
+  ],
+  "timeRequired": 240,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "tag": "c:ingots/platinum",
+        "type": "neoforge:tag_empty"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "c:ingots/platinum"
+  },
+  "enabled": true,
+  "recipeEnabled": true
+}

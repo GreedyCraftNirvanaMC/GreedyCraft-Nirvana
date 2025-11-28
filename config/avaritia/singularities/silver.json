@@ -1,0 +1,22 @@
+{
+  "name": "singularity.avaritia.silver",
+  "colors": [
+    "c0cdd2",
+    "5f6e7c"
+  ],
+  "timeRequired": 240,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "tag": "c:ingots/silver",
+        "type": "neoforge:tag_empty"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "c:ingots/silver"
+  },
+  "enabled": true,
+  "recipeEnabled": true
+}

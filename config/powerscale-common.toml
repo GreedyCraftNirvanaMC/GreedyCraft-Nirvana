@@ -1,0 +1,289 @@
+#Prints additional (and often excessive amounts of) information to the log.
+#Do not use this unless you are diagnosing development issues.
+detailed_logging = false
+
+[item]
+	#Allows the ingredients for attribute booster tonics (crystals) to be used directly
+	simple_attribute_boosters = false
+	#Allows the ingredients for difficulty mutator brews (cursed/enchanted hearts) to be used directly
+	simple_difficulty_mutators = false
+
+	[item.crystal_drops]
+		#Allow blights to drop crystals.
+		#If you want to customize drops beyond simply turning them off, you must use a data pack to override the blight drops loot table.
+		blights_drop_crystals = true
+		#Allow bosses to drop crystals.
+		#If you want to customize drops beyond simply turning them off, you must use a data pack to override the boss drops loot table.
+		bosses_drop_crystals = true
+		#The amount of time (in minutes) after getting a random crystal drop before another can be found.
+		#This does not affect guaranteed crystal drops, like those from blights and bosses.
+		# Default: 10.0
+		# Range: 0.0 ~ 1440.0
+		cooldown_time = 10.0
+
+		[item.crystal_drops.hostile_chance]
+			#The chance (out of 1.0, without looting) that a hostile mob will roll a drop from the random crystals loot pool.
+			#If you want to customize drops beyond this, you must use a data pack to override the loot tables!
+			# Default: 0.06
+			# Range: 0.0 ~ 1.0
+			base = 0.06
+			#The bonus per level of looting that the base chance is increased for crystal drops.
+			#If you want to customize drops beyond this, you must use a data pack to override the loot tables!
+			# Default: 0.005
+			# Range: 0.0 ~ 1.0
+			looting_bonus = 0.005
+
+	[item.difficulty_meter]
+		#If set to true, the difficulty meter will display the exact difficulty value instead of a loose percentage
+		show_exact_value = false
+
+		[item.attribute_boosters.change_amount]
+			#The amount that health booster tonics (or heart crystals when using simple attribute boosters) will increase health
+			#1 heart = 2 health
+			# Default: 2.0
+			# Range: -999999.0 ~ 999999.0
+			health = 2.0
+			#The amount that power booster tonics (or power crystals when using simple attribute boosters) will increase attack damage
+			# Default: 0.5
+			# Range: -999999.0 ~ 999999.0
+			power = 0.5
+			#The amount that arrow power booster tonics (or archer crystals when using simple attribute boosters) will increase arrow damage
+			# Default: 0.25
+			# Range: -999999.0 ~ 999999.0
+			arrow_power = 0.25
+			#The amount that speed booster tonics (or wing crystals when using simple attribute boosters) will increase movement speed
+			#Small numbers produce big results, change with caution!
+			# Default: 0.01
+			# Range: -999999.0 ~ 999999.0
+			speed = 0.01
+
+	[difficulty.player_difficulty]
+		#The starting difficulty for new players
+		# Default: 0.0
+		# Range: -999999.0 ~ 999999.0
+		initial = 0.0
+		#The highest value that a player's difficulty can reach
+		# Default: 250.0
+		# Range: -999999.0 ~ 999999.0
+		max = 250.0
+		#The lowest value that a player's difficulty can reach
+		# Default: 0.0
+		# Range: -999999.0 ~ 999999.0
+		min = 0.0
+		#(EvalEx) The expression that returns a player's difficulty value.
+		#By default, this simply gets the value stored on the player. It can be changed to incorporate different functions if desired.
+		expression = "value"
+
+		[difficulty.player_difficulty.mutator]
+			#(EvalEx) The expression that modifies a player's difficulty every second
+			per_second = "difficulty + 0.0011575 * IDLE_MULTIPLIER(0.5)"
+
+	[difficulty.boss_difficulty]
+		#The highest value that a boss mob's difficulty can reach
+		# Default: 250.0
+		# Range: -999999.0 ~ 999999.0
+		max = 250.0
+		#The lowest value that a boss mob's difficulty can reach
+		# Default: 0.0
+		# Range: -999999.0 ~ 999999.0
+		min = 0.0
+
+	[difficulty.hostile_difficulty]
+		#The highest value that a hostile mob's difficulty can reach
+		# Default: 250.0
+		# Range: -999999.0 ~ 999999.0
+		max = 250.0
+		#The lowest value that a hostile mob's difficulty can reach
+		# Default: 0.0
+		# Range: -999999.0 ~ 999999.0
+		min = 0.0
+
+	[difficulty.peaceful_difficulty]
+		#The highest value that a peaceful mob's difficulty can reach
+		# Default: 250.0
+		# Range: -999999.0 ~ 999999.0
+		max = 250.0
+		#The lowest value that a peaceful mob's difficulty can reach
+		# Default: 0.0
+		# Range: -999999.0 ~ 999999.0
+		min = 0.0
+
+	[difficulty.local_difficulty]
+		#The highest difficulty that can be computed and applied to a mob
+		# Default: 250.0
+		# Range: -999999.0 ~ 999999.0
+		max = 250.0
+		#The lowest difficulty that can be computed and applied to a mob
+		# Default: 0.0
+		# Range: -999999.0 ~ 999999.0
+		min = 0.0
+		#If enabled, local difficulty will be calculated using the override expression. Otherwise, difficulty is calculated using the expressions under "parts", with each part being added/multiplied together in a specific order.
+		#Use the override expression only if you need very fine control over how difficulty is calculated.
+		use_override = false
+		#(EvalEx) The expression that calculates local (mob) difficulty.
+		#Only used when "use_override" is set to true. Otherwise, the expressions under "parts" are used instead.
+		override_expression = "(WEIGHTED_AVERAGE_PLAYER_DIFFICULTY(256) + 0.0025 * DISTANCE_FROM_SPAWN() + 0.25 * DEPTH_BELOW(64)) * LUNAR_CYCLES(1.1, 1.075, 1.05, 1.0, 0.95, 1.0, 1.05, 1.075) * (1 + 0.05 * (LOCAL_PLAYER_COUNT(128) - 1))"
+
+		[difficulty.local_difficulty.parts]
+			from_players = "WEIGHTED_AVERAGE_PLAYER_DIFFICULTY(256)"
+			from_distance = "0.0025 * DISTANCE_FROM_SPAWN() + 0.25 * DEPTH_BELOW(64)"
+			lunar_multipliers = "LUNAR_CYCLES(1.1, 1.075, 1.05, 1.0, 0.95, 1.0, 1.05, 1.075)"
+			group_bonus = "1 + 0.05 * (LOCAL_PLAYER_COUNT(128) - 1)"
+
+	[difficulty.blight]
+		#Increase the size of blight mobs if they are in the `powerscale:blights/make_giant` tag.
+		#By default, this makes some types of blight zombies into giants.
+		make_giants = true
+		#Strike mobs with lightning if they are in the `powerscale:blights/strike_with_lightning` tag.
+		#This has the same effect as supercharge_creepers, but is limited to entities in the tag.
+		strike_with_lightning = true
+		#Supercharge blight creepers, making their explosions more powerful.
+		#This should affect modded creepers.
+		supercharge_creepers = true
+
+		[difficulty.blight.spawn_chance]
+			#(EvalEx) The expression that determines the chance of a hostile mob spawning as a blight.
+			#The default expression prevents blights from spawning if the mob has a power level less than 30.
+			hostile = "IF(level >= 30, 0.00006 * level, 0)"
+			#(EvalEx) The expression that determines the chance of a peaceful mob spawning as a blight.
+			#The default expression gives no chance of peaceful mobs spawning as blights.
+			peaceful = "0"
+			#(EvalEx) The expression that determines the chance of a boss mob spawning as a blight.
+			#The default expression gives no chance of boss mobs spawning as blights.
+			boss = "0"
+
+	[difficulty.player]
+		#The time (in seconds) until a player is considered idle, which affects the per second difficulty mutator.
+		#Set to 0 to disable idling.
+		# Default: 120
+		# Range: > 0
+		time_until_idle = 120
+		#Notify a player when they become idle
+		send_idle_notification = true
+
+	[notifications.attribute_changes]
+		#Send a message to players if their attributes change after dying
+		on_death = true
+		#Send a message to players if their attributes change after sleeping
+		on_sleep = true
+		#Send a message to players if their attributes change after killing a non-boss mob
+		on_mob_kill = true
+		#Send a message to players if their attributes change after killing a boss
+		on_boss_kill = true
+
+[player]
+	#(EvalEx) The expression that computes the SP required to reach a given level
+	#This is currently unused and may or may not be used in the future...
+	levelCurve = "500(level * level) - 500*level"
+
+		[scaling_attributes.arrow_damage.mob_scaling]
+			#(EvalEx) Scaling expression for hostile mobs
+			hostile = "0.1 * (level - 1)"
+			#(EvalEx) Scaling expression for peaceful mobs
+			peaceful = "0.0"
+			#(EvalEx) Scaling expression for boss mobs
+			boss = "0.1 * (level - 1)"
+
+		[scaling_attributes.arrow_damage.blight_scaling]
+			#(EvalEx) Scaling expression for hostile blight mobs
+			hostile = "0.15 * (level - 1)"
+			#(EvalEx) Scaling expression for peaceful blight mobs
+			peaceful = "0.0"
+			#(EvalEx) Scaling expression for boss blight mobs
+			boss = "0.15 * (level - 1)"
+
+		[scaling_attributes.arrow_damage.mutator]
+			#(EvalEx) Player bonus change when a mob is killed
+			player_kills_mob = "value"
+			#(EvalEx) Player bonus change when a boss is killed
+			player_kills_boss = "value"
+			#(EvalEx) Player bonus change when the player dies
+			player_dies = "value"
+			#(EvalEx) Player bonus change when the player sleeps
+			player_sleeps = "value"
+
+		[scaling_attributes.attack_damage.mob_scaling]
+			#(EvalEx) Scaling expression for hostile mobs
+			hostile = "0.1 * (level - 1)"
+			#(EvalEx) Scaling expression for peaceful mobs
+			peaceful = "0.0"
+			#(EvalEx) Scaling expression for boss mobs
+			boss = "0.1 * (level - 1)"
+
+		[scaling_attributes.attack_damage.blight_scaling]
+			#(EvalEx) Scaling expression for hostile blight mobs
+			hostile = "0.17 * (level - 1)"
+			#(EvalEx) Scaling expression for peaceful blight mobs
+			peaceful = "0.0"
+			#(EvalEx) Scaling expression for boss blight mobs
+			boss = "0.17 * (level - 1)"
+
+		[scaling_attributes.attack_damage.mutator]
+			#(EvalEx) Player bonus change when a mob is killed
+			player_kills_mob = "value"
+			#(EvalEx) Player bonus change when a boss is killed
+			player_kills_boss = "value"
+			#(EvalEx) Player bonus change when the player dies
+			player_dies = "value"
+			#(EvalEx) Player bonus change when the player sleeps
+			player_sleeps = "value"
+
+		[scaling_attributes.max_health.mob_scaling]
+			#(EvalEx) Scaling expression for hostile mobs
+			hostile = "REDUCED_SCALING(0.375 * (level - 1), 0.5, 20)"
+			#(EvalEx) Scaling expression for peaceful mobs
+			peaceful = "REDUCED_SCALING(0.125 * (level - 1), 0.5, 20)"
+			#(EvalEx) Scaling expression for boss mobs
+			boss = "REDUCED_SCALING(0.375 * (level - 1), 0.5, 20)"
+
+		[scaling_attributes.max_health.blight_scaling]
+			#(EvalEx) Scaling expression for hostile blight mobs
+			hostile = "REDUCED_SCALING(0.625 * (level - 1), 0.5, 20)"
+			#(EvalEx) Scaling expression for peaceful blight mobs
+			peaceful = "REDUCED_SCALING(0.175 * (level - 1), 0.5, 20)"
+			#(EvalEx) Scaling expression for boss blight mobs
+			boss = "REDUCED_SCALING(0.625 * (level - 1), 0.5, 20)"
+
+		[scaling_attributes.max_health.mutator]
+			#(EvalEx) Player bonus change when a mob is killed
+			player_kills_mob = "value"
+			#(EvalEx) Player bonus change when a boss is killed
+			player_kills_boss = "value"
+			#(EvalEx) Player bonus change when the player dies
+			player_dies = "value"
+			#(EvalEx) Player bonus change when the player sleeps
+			player_sleeps = "value"
+
+		[scaling_attributes.max_health.player]
+			#Overrides the player's starting health in new worlds. Only applies to newly spawned players.
+			#If set to zero, this option is ignored.
+			#Vanilla player health is 20 (equal to 10 hearts)
+			# Default: 0.0
+			# Range: 0.0 ~ 2.147483647E9
+			starting_amount = 0.0
+
+		[scaling_attributes.movement_speed.mob_scaling]
+			#(EvalEx) Scaling expression for hostile mobs
+			hostile = "base_value * 0.05 * FLOOR((level - 51) / 50)"
+			#(EvalEx) Scaling expression for peaceful mobs
+			peaceful = "0.0"
+			#(EvalEx) Scaling expression for boss mobs
+			boss = "0.0"
+
+		[scaling_attributes.movement_speed.blight_scaling]
+			#(EvalEx) Scaling expression for hostile blight mobs
+			hostile = "base_value * 1.2"
+			#(EvalEx) Scaling expression for peaceful blight mobs
+			peaceful = "base_value * 0.08"
+			#(EvalEx) Scaling expression for boss blight mobs
+			boss = "0.0"
+
+		[scaling_attributes.movement_speed.mutator]
+			#(EvalEx) Player bonus change when a mob is killed
+			player_kills_mob = "value"
+			#(EvalEx) Player bonus change when a boss is killed
+			player_kills_boss = "value"
+			#(EvalEx) Player bonus change when the player dies
+			player_dies = "value - MAX(0.01, value / 4)"
+			#(EvalEx) Player bonus change when the player sleeps
+			player_sleeps = "value"

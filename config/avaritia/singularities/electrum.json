@@ -1,0 +1,22 @@
+{
+  "name": "singularity.avaritia.electrum",
+  "colors": [
+    "f5f18e",
+    "9e8d3e"
+  ],
+  "timeRequired": 240,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "tag": "c:ingots/electrum",
+        "type": "neoforge:tag_empty"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "c:ingots/electrum"
+  },
+  "enabled": true,
+  "recipeEnabled": true
+}

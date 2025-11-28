@@ -1,0 +1,22 @@
+{
+  "name": "singularity.avaritia.lead",
+  "colors": [
+    "6c7d92",
+    "323562"
+  ],
+  "timeRequired": 240,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "tag": "c:ingots/lead",
+        "type": "neoforge:tag_empty"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "c:ingots/lead"
+  },
+  "enabled": true,
+  "recipeEnabled": true
+}

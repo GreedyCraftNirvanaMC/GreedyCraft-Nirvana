@@ -1,0 +1,22 @@
+{
+  "name": "singularity.avaritia.aluminum",
+  "colors": [
+    "caccda",
+    "9a9ca6"
+  ],
+  "timeRequired": 240,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "tag": "c:ingots/aluminum",
+        "type": "neoforge:tag_empty"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "c:ingots/aluminum"
+  },
+  "enabled": true,
+  "recipeEnabled": true
+}

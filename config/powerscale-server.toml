@@ -1,0 +1,17 @@
+[quick_toggles]
+	#Enables the difficulty system, which makes mobs progressively stronger over time
+	difficulty = true
+	#Enables the scaling attribute system, which allows players and mobs to gain attribute bonuses, such as extra health and attack damage
+	scaling_attributes = true
+
+[power_level_display]
+	#Determines when a player can view a mob's level. By default, levels are only displayed when looking through a spyglass.
+	#NEVER: Nothing is displayed
+	#USING_ITEM: Only displayed when the player is using an item in the powerscale:power_level_detectors tag (must be an item with a use action)
+	#HOLDING_ITEM: Only displayed when the player is holding an item in the powerscale:power_level_detectors tag (any item will work)
+	#ALWAYS: Levels are always displayed
+	restriction = "USING_ITEM"
+	#The range that a mob's level can be seen from (depending on restriction)
+	# Default: 100
+	# Range: 0 ~ 256
+	range = 100
