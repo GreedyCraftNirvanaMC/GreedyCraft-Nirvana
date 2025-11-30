@@ -1,6 +1,0 @@
-{
-  "type": "scalinghealth:dimension",
-  "dimension": "minecraft:the_nether",
-  "operation": "add",
-  "value": 25.0
-}
