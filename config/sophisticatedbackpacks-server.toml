@@ -1,7 +1,7 @@
 #Server Settings
 [server]
 	#List of items that are not allowed to be put in backpacks - e.g. "minecraft:shulker_box"
-	disallowedItems = []
+	disallowedItems = ["minecraft:shulker_box", "#dankstorage:dank_storages"]
 	#Determines if container items (those that override canFitInsideContainerItems to false) are able to fit in backpacks
 	containerItemsDisallowed = false
 	#List of blocks that inventory interaction upgrades can't interact with - e.g. "minecraft:shulker_box"
@@ -513,7 +513,7 @@
 		#Chance of an entity spawning with Backpack
 		# Default: 0.01
 		# Range: 0.0 ~ 1.0
-		chance = 0.01
+		chance = 0.0
 		#Turns on/off addition of loot into backpacks
 		addLoot = true
 		#Turns on/off buffing the entity that wears backpack with potion effects. These are scaled based on how much loot is added.
