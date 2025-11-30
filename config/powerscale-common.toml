@@ -26,7 +26,7 @@ detailed_logging = false
 			#If you want to customize drops beyond this, you must use a data pack to override the loot tables!
 			# Default: 0.06
 			# Range: 0.0 ~ 1.0
-			base = 0.06
+			base = 0.005
 			#The bonus per level of looting that the base chance is increased for crystal drops.
 			#If you want to customize drops beyond this, you must use a data pack to override the loot tables!
 			# Default: 0.005
@@ -35,7 +35,7 @@ detailed_logging = false
 
 	[item.difficulty_meter]
 		#If set to true, the difficulty meter will display the exact difficulty value instead of a loose percentage
-		show_exact_value = false
+		show_exact_value = true
 
 		[item.attribute_boosters.change_amount]
 			#The amount that health booster tonics (or heart crystals when using simple attribute boosters) will increase health
@@ -65,7 +65,7 @@ detailed_logging = false
 		#The highest value that a player's difficulty can reach
 		# Default: 250.0
 		# Range: -999999.0 ~ 999999.0
-		max = 250.0
+		max = 2400.0
 		#The lowest value that a player's difficulty can reach
 		# Default: 0.0
 		# Range: -999999.0 ~ 999999.0
@@ -76,13 +76,13 @@ detailed_logging = false
 
 		[difficulty.player_difficulty.mutator]
 			#(EvalEx) The expression that modifies a player's difficulty every second
-			per_second = "difficulty + 0.0011575 * IDLE_MULTIPLIER(0.5)"
+			per_second = "difficulty"
 
 	[difficulty.boss_difficulty]
 		#The highest value that a boss mob's difficulty can reach
 		# Default: 250.0
 		# Range: -999999.0 ~ 999999.0
-		max = 250.0
+		max = 2400.0
 		#The lowest value that a boss mob's difficulty can reach
 		# Default: 0.0
 		# Range: -999999.0 ~ 999999.0
@@ -92,7 +92,7 @@ detailed_logging = false
 		#The highest value that a hostile mob's difficulty can reach
 		# Default: 250.0
 		# Range: -999999.0 ~ 999999.0
-		max = 250.0
+		max = 2400.0
 		#The lowest value that a hostile mob's difficulty can reach
 		# Default: 0.0
 		# Range: -999999.0 ~ 999999.0
@@ -102,7 +102,7 @@ detailed_logging = false
 		#The highest value that a peaceful mob's difficulty can reach
 		# Default: 250.0
 		# Range: -999999.0 ~ 999999.0
-		max = 250.0
+		max = 2400.0
 		#The lowest value that a peaceful mob's difficulty can reach
 		# Default: 0.0
 		# Range: -999999.0 ~ 999999.0
@@ -112,7 +112,7 @@ detailed_logging = false
 		#The highest difficulty that can be computed and applied to a mob
 		# Default: 250.0
 		# Range: -999999.0 ~ 999999.0
-		max = 250.0
+		max = 2400.0
 		#The lowest difficulty that can be computed and applied to a mob
 		# Default: 0.0
 		# Range: -999999.0 ~ 999999.0
@@ -126,9 +126,9 @@ detailed_logging = false
 
 		[difficulty.local_difficulty.parts]
 			from_players = "WEIGHTED_AVERAGE_PLAYER_DIFFICULTY(256)"
-			from_distance = "0.0025 * DISTANCE_FROM_SPAWN() + 0.25 * DEPTH_BELOW(64)"
-			lunar_multipliers = "LUNAR_CYCLES(1.1, 1.075, 1.05, 1.0, 0.95, 1.0, 1.05, 1.075)"
-			group_bonus = "1 + 0.05 * (LOCAL_PLAYER_COUNT(128) - 1)"
+			from_distance = "0"
+			lunar_multipliers = "1.0"
+			group_bonus = "1.0"
 
 	[difficulty.blight]
 		#Increase the size of blight mobs if they are in the `powerscale:blights/make_giant` tag.
@@ -144,7 +144,7 @@ detailed_logging = false
 		[difficulty.blight.spawn_chance]
 			#(EvalEx) The expression that determines the chance of a hostile mob spawning as a blight.
 			#The default expression prevents blights from spawning if the mob has a power level less than 30.
-			hostile = "IF(level >= 30, 0.00006 * level, 0)"
+			hostile = "0"
 			#(EvalEx) The expression that determines the chance of a peaceful mob spawning as a blight.
 			#The default expression gives no chance of peaceful mobs spawning as blights.
 			peaceful = "0"
@@ -204,7 +204,7 @@ detailed_logging = false
 
 		[scaling_attributes.attack_damage.mob_scaling]
 			#(EvalEx) Scaling expression for hostile mobs
-			hostile = "0.1 * (level - 1)"
+			hostile = "0.1 * level"
 			#(EvalEx) Scaling expression for peaceful mobs
 			peaceful = "0.0"
 			#(EvalEx) Scaling expression for boss mobs
@@ -230,15 +230,15 @@ detailed_logging = false
 
 		[scaling_attributes.max_health.mob_scaling]
 			#(EvalEx) Scaling expression for hostile mobs
-			hostile = "REDUCED_SCALING(0.375 * (level - 1), 0.5, 20)"
+			hostile = "REDUCED_SCALING(0.315 * level, 0.5, 20)"
 			#(EvalEx) Scaling expression for peaceful mobs
-			peaceful = "REDUCED_SCALING(0.125 * (level - 1), 0.5, 20)"
+			peaceful = "REDUCED_SCALING(0.34 * level, 0.5, 20)"
 			#(EvalEx) Scaling expression for boss mobs
-			boss = "REDUCED_SCALING(0.375 * (level - 1), 0.5, 20)"
+			boss = "REDUCED_SCALING(0.315 * level, 0.5, 20)"
 
 		[scaling_attributes.max_health.blight_scaling]
 			#(EvalEx) Scaling expression for hostile blight mobs
-			hostile = "REDUCED_SCALING(0.625 * (level - 1), 0.5, 20)"
+			hostile = "REDUCED_SCALING(0.315 * level * 1.2, 0.5, 20)"
 			#(EvalEx) Scaling expression for peaceful blight mobs
 			peaceful = "REDUCED_SCALING(0.175 * (level - 1), 0.5, 20)"
 			#(EvalEx) Scaling expression for boss blight mobs
