@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "betterslimes:quazar",
+    "minecraft:wither",
+    "minecraft:ender_dragon",
+    "minecraft:villager",
+    "minecolonies:citizen"
+  ]
+}

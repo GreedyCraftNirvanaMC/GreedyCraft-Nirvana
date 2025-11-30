@@ -1,0 +1,6 @@
+{
+  "type": "scalinghealth:dimension",
+  "dimension": "aether:the_aether",
+  "operation": "add",
+  "value": 30.0
+}

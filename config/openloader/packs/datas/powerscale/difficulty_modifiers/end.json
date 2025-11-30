@@ -1,0 +1,6 @@
+{
+  "type": "scalinghealth:dimension",
+  "dimension": "minecraft:the_end",
+  "operation": "add",
+  "value": 50.0
+}
