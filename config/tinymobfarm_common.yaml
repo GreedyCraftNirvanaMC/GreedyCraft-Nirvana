@@ -1,0 +1,32 @@
+lasso:
+  #The durability of the lasso.
+  #Minimum value: 1, Maximum value: 2147483647, Default value: 256
+  lassoDurability: 256
+  #Whether the looting enchantment will be taken into consideration when generating mob loot.
+  #Default value: true
+  allowLassoLooting: true
+farms:
+  #The speed of the wood farm.
+  #Minimum value: 0.001, Maximum value: 1.7976931348623157E308, Default value: 50.0
+  woodFarmSpeed: 50.0
+  #The speed of the stone farm.
+  #Minimum value: 0.001, Maximum value: 1.7976931348623157E308, Default value: 40.0
+  stoneFarmSpeed: 40.0
+  #The speed of the iron farm.
+  #Minimum value: 0.001, Maximum value: 1.7976931348623157E308, Default value: 30.0
+  ironFarmSpeed: 30.0
+  #The speed of the gold farm.
+  #Minimum value: 0.001, Maximum value: 1.7976931348623157E308, Default value: 20.0
+  goldFarmSpeed: 20.0
+  #The speed of the diamond farm.
+  #Minimum value: 0.001, Maximum value: 1.7976931348623157E308, Default value: 10.0
+  diamondFarmSpeed: 10.0
+  #The speed of the emerald farm.
+  #Minimum value: 0.001, Maximum value: 1.7976931348623157E308, Default value: 5.0
+  emeraldFarmSpeed: 5.0
+  #The speed of the inferno farm.
+  #Minimum value: 0.001, Maximum value: 1.7976931348623157E308, Default value: 2.5
+  infernoFarmSpeed: 2.5
+  #The speed of the ultimate farm.
+  #Minimum value: 0.001, Maximum value: 1.7976931348623157E308, Default value: 0.5
+  ultimateFarmSpeed: 0.5

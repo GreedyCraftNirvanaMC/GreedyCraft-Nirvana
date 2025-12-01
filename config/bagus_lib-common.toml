@@ -1,0 +1,6 @@
+#Enable the camera shake for vanilla mobs. [true / false]
+"Enable Shake Camera for Vanilla" = true
+#Enable April Feature. [true / false]
+"Enable AprilFool Joke" = true
+#Enable First Person Animation(When you using model change mod. should be turn off). [true / false]
+"Enable First Person Animation" = true
