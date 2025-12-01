@@ -3,7 +3,7 @@
 
 	[client.blocked_toasts]
 		#If advancement toasts are blocked.
-		advancements = true
+		advancements = false
 		#If recipe toasts are blocked.
 		recipes = true
 		#If system toasts are blocked.
@@ -17,7 +17,7 @@
 		#If all toasts are blocked.
 		global = false
 		#Toast Classes that are blocked from being shown.
-		blocked_classes = []
+		blocked_classes = ["com.legacy.aether.client.gui.toast.GuiAetherToast"]
 
 	[client.visual_options]
 		#How long a toast must be on the screen for, in ticks.  Use 0 to use the default time.
@@ -25,13 +25,13 @@
 		# Range: 0 ~ 4000
 		force_time = 0
 		#If toasts are translucent.
-		translucent = true
+		translucent = false
 		#If toasts are transparent.  Overrides translucency.
 		transparent = false
 		#How many toasts will be displayed on screen at once.
 		# Default: 3
 		# Range: 1 ~ 7
-		toast_count = 3
+		toast_count = 5
 		#The X offset for toasts to be drawn at.
 		# Default: 0
 		# Range: -8192 ~ 8192
