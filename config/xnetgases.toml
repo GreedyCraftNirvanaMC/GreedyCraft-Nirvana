@@ -1,0 +1,10 @@
+#General settings
+[general]
+	#Maximum chemical per operation that a normal connector can input or output
+	# Default: 1000
+	# Range: 1 ~ 1000000000
+	maxChemicalRateNormal = 1000
+	#Maximum chemical per operation that an advanced connector can input or output
+	# Default: 5000
+	# Range: 1 ~ 1000000000
+	maxChemicalRateAdvanced = 5000
