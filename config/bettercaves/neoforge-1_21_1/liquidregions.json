@@ -1,0 +1,9 @@
+{
+  "liquidRegions": {
+    "minecraft:overworld": {
+      "liquid_region_size": 0.001,
+      "water_region_spawn_chance": 40.0,
+      "liquid_altitude": -55
+    }
+  }
+}
