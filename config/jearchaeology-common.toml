@@ -1,4 +1,4 @@
 #Enable compatibility with ATM
-atm_compat = true
+atm_compat = false
 #Enable compatibility with Better Archeology
-betterarcheology_compat = true
+betterarcheology_compat = false
