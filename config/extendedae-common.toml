@@ -6,7 +6,7 @@
 	#The max range between two wireless connector
 	# Default: 1000.0
 	# Range: 10.0 ~ 10000.0
-	wireless_connector_max_range = 1000.0
+	wireless_connector_max_range = 10000.0
 	#Power usage multiplier for wireless connectors
 	# Default: 1.0
 	# Range: 0.0 ~ 100.0
