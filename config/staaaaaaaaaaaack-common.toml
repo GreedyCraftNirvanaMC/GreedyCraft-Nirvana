@@ -3,7 +3,7 @@
 	#Default: 1.25, Minecraft default: 0.5
 	# Default: 1.25
 	# Range: 0.5 ~ 10.0
-	maxMergeDistanceHorizontal = 0.0
+	maxMergeDistanceHorizontal = 0.5
 	#The maximum vertical block distance over which dropped items attempt to merge with each other.
 	#Default: 0.0, Minecraft default: 0.0
 	# Default: 0.0
