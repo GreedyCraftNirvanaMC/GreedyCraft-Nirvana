@@ -1,0 +1,197 @@
+playlist main_menu = [
+  "village1.mp3",
+  "village2.mp3", 
+  "village5.mp3",
+  "village6.mp3"
+];
+
+playlist loading_world = [
+  "village1.mp3",
+  "village2.mp3",
+  "village3.mp3",
+  "village5.mp3",
+  "village6.mp3",
+  "village7.mp3",
+  "twilight.mp3",
+  "day4.mp3"
+];
+
+playlist boss_fight = [
+  "boss0.mp3",
+  "boss1.mp3",
+  "boss2.mp3",
+  "boss3.mp3",
+  "boss4.mp3",
+  "boss5.mp3",
+  "boss6.mp3",
+  "boss7.mp3"
+];
+
+playlist frostmaw_boss = [
+  "boss3.mp3",
+  "boss2.mp3",
+  "boss7.mp3"
+];
+
+playlist silence_boss = [
+  "silence0.mp3"
+];
+
+playlist horde_combat = [
+  "battle0.mp3",
+  "battle1.mp3",
+  "battle2.mp3",
+  "battle3.mp3",
+  "battle4.mp3"
+];
+
+playlist wither_boss = [
+  "boss2.mp3",
+  "boss3.mp3",
+  "boss6.mp3",
+  "boss7.mp3"
+];
+
+playlist ender_dragon_boss = [
+  "boss0.mp3",
+  "boss1.mp3",
+  "boss4.mp3",
+  "boss5.mp3"
+];
+
+playlist the_nether = [
+  "nether0.mp3",
+  "nether1.mp3",
+  "nether2.mp3",
+  "nether3.mp3",
+  "nether4.mp3"
+];
+
+playlist the_end = [
+  "end0.mp3",
+  "end1.mp3",
+  "end2.mp3"
+];
+
+playlist twilight_forest = [
+  "twilight.mp3"
+];
+
+playlist underground = [
+  "underground0.mp3",
+  "underground1.mp3",
+  "underground2.mp3",
+  "underground3.mp3",
+  "underground4.mp3",
+  "underground5.mp3",
+  "underground6.mp3"
+];
+
+playlist village = [
+  "village0.mp3",
+  "village3.mp3",
+  "village4.mp3",
+  "village7.mp3",
+  "day4.mp3"
+];
+
+playlist village_night = [
+  "village1.mp3",
+  "village2.mp3",
+  "village5.mp3",
+  "village6.mp3"
+];
+
+playlist fishing = [
+  "village1.mp3",
+  "village2.mp3",
+  "village5.mp3",
+  "village6.mp3"
+];
+
+playlist night = [
+  "silence0.mp3",
+  "silence1.mp3",
+  "silence2.mp3",
+  "silence3.mp3",
+  "silence4.mp3",
+  "silence5.mp3",
+  "silence6.mp3",
+  "silence7.mp3",
+  "silence8.mp3",
+  "silence9.mp3",
+  "village1.mp3",
+  "village2.mp3",
+  "village5.mp3",
+  "village6.mp3",
+  "night0.mp3",
+  "night1.mp3",
+  "night2.mp3",
+  "night3.mp3",
+  "night4.mp3"
+];
+
+playlist generic = [
+  "silence0.mp3",
+  "silence1.mp3",
+  "silence2.mp3",
+  "silence3.mp3",
+  "silence4.mp3",
+  "silence5.mp3",
+  "silence6.mp3",
+  "silence7.mp3",
+  "silence8.mp3",
+  "silence9.mp3",
+  "day0.mp3",
+  "day1.mp3",
+  "day2.mp3",
+  "day3.mp3",
+  "day4.mp3",
+  "village3.mp3",
+  "village7.mp3"
+];
+
+playlist defiled_lands = [
+  "corruption.mp3"
+];
+
+begin
+  when ( @in_combat )
+  begin
+    when ( @boss_fight )
+    begin
+      when ( $boss ~~ "frostmaw" ) play frostmaw_boss;
+      when ( $boss ~~ "doppleganger" ) play silence_boss;
+      when ( $boss ~~ "ender_dragon" ) play ender_dragon_boss;
+      when ( $boss ~~ "wither" ) play wither_boss;
+      default play boss_fight;
+    end
+    interrupt default play horde_combat;
+  end
+
+  when ( @village && @night ) play village_night;
+  when ( @night ) play night;
+  when ( @village ) play village;
+
+  when ( @in_game )
+  begin
+    when ( $dimension == "minecraft:the_nether" ) play the_nether;
+    when ( $dimension == "minecraft:the_end" ) play the_end;
+    when ( $dimension == "minecraft:overworld" )
+    begin
+      when ( $elevation < 60.0 && 0.4 < $cave_score ) play underground;
+    end
+    when ( $dimension == "twilightforest:twilight_forest" ) play twilight_forest
+    default play loading_world;
+  end
+  when ( @credits ) play [ ];
+
+  interrupt when ( @fishing ) play fishing;
+
+  when ( any tag in $biome_tags where (tag == "#defiled_lands_reborn:is_defiled") end )
+    play defiled_lands;
+
+  when ( @main_menu ) play main_menu;
+  
+  default play generic;
+end
