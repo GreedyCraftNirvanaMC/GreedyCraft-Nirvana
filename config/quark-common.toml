@@ -1596,6 +1596,9 @@
 		"Shiny Animal Chance" = 2048
 		#If a shiny animal should emit occasional sparkles.
 		"Shiny Sparkles" = true
+		"Enable Allay" = true
+		"Enable Shiny Armadillo" = true
+		"Enable Shiny Frog" = true
 
 [experimental]
 	"Adjustable Chat" = false
