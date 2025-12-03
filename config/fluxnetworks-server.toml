@@ -11,7 +11,7 @@
 	#Players have permission level 3 or 4 can use commands to set others as Super Admin whether others have this permission level or not.
 	# Default: 1
 	# Range: 0 ~ 3
-	superAdminRequiredPermission = 4
+	superAdminRequiredPermission = 3
 
 [general]
 	#Enables redstone being compressed with the bedrock and obsidian to get flux dusts.
