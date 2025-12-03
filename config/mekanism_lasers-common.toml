@@ -1,0 +1,15 @@
+["Mekanism Lasers Config"]
+	#Cooldown of the ore generator (in seconds)
+	# Default: 4
+	# Range: > 0
+	oreGeneratorCooldown = 4
+	#Energy cost of fabricating ore/ores
+	# Default: 16000000
+	# Range: 0 ~ 2147483647
+	oreGeneratorFabricationCost = 16000000
+	#How much ores do you get from one cycle
+	# Default: 1
+	# Range: > 1
+	oreGeneratorNumberOfOres = 1
+	#List of ores to blacklist from generation
+	blacklistedOres = ["justdirethings:raw_ferricore_ore", "justdirethings:raw_blazegold_ore", "justdirethings:raw_celestigem_ore", "justdirethings:raw_eclipsealloy_ore", "justdirethings:raw_coal_t1_ore", "justdirethings:raw_coal_t2_ore", "justdirethings:raw_coal_t3_ore", "justdirethings:raw_coal_t4_ore"]
