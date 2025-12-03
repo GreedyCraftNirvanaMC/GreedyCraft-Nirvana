@@ -1,0 +1,7 @@
+[client]
+	#是否显示样板编码玩家
+	#开启后将在样板 HoverText 上添加样板的编码玩家
+	showEncoderPatternPlayer = true
+	#样板终端默认是否显示槽位
+	#影响进入界面时SlotsRow的默认可见性，仅影响客户端显示
+	patternTerminalShowSlotsDefault = true
