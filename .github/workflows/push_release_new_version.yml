@@ -37,7 +37,7 @@ jobs:
       - name: Zip Pack
         run: |
           cd ActionsTemp
-          zip -r GreedyCraft-Nirvana-${{ github.ref_name }}.zip overrides/*
+          zip -r GreedyCraft-Nirvana-${{ github.ref_name }}.zip overrides/* manifest.json modlist.html
           cd ..
           mv ActionsTemp/GreedyCraft-Nirvana-${{ github.ref_name }}.zip .
 
