@@ -17,7 +17,7 @@
 		#If all toasts are blocked.
 		global = false
 		#Toast Classes that are blocked from being shown.
-		blocked_classes = ["com.legacy.aether.client.gui.toast.GuiAetherToast"]
+		blocked_classes = []
 
 	[client.visual_options]
 		#How long a toast must be on the screen for, in ticks.  Use 0 to use the default time.

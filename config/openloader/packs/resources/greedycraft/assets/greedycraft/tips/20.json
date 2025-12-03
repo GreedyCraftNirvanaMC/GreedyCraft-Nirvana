@@ -1,5 +1,6 @@
 {
-  "tip": {
+  "type": "tipsmod:simple",
+  "text": {
     "translate": "greedycraft.tips.text.20"
   }
 }
