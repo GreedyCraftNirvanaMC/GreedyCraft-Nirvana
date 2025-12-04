@@ -181,7 +181,7 @@ begin
     begin
       when ( $elevation < 60.0 && 0.4 < $cave_score ) play underground;
     end
-    when ( $dimension == "twilightforest:twilight_forest" ) play twilight_forest
+    when ( $dimension == "twilightforest:twilight_forest" ) play twilight_forest;
     default play loading_world;
   end
   when ( @credits ) play [ ];
