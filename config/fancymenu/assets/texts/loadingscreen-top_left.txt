@@ -1,1 +1,1 @@
-{"placeholder":"local","values":{"key":"greedycraft.fancymenu.custom.loadingscreen.text.loadingtime"}}: {"placeholder":"uptime_duration","values":{"output_as_millis":"false"}}s
+Loading Time: {"placeholder":"uptime_duration","values":{"output_as_millis":"false"}}s
