@@ -1,0 +1,2 @@
+{"placeholder":"local","values":{"key":"greedycraft.fancymenu.custom.loadingscreen.text.memoryusage"}}: {"placeholder":"usedram"} MB/{"placeholder":"maxram"} MB
+{"placeholder":"local","values":{"key":"greedycraft.fancymenu.custom.loadingscreen.text.used"}}: {"placeholder":"percentram"} %
