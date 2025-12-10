@@ -50,7 +50,7 @@
 	#Whether to enable Modern UI enhanced tooltip, or back to vanilla default.
 	enable = true
 	#Whether to use rounded tooltip shapes, or to use vanilla style.
-	roundedShape = true
+	roundedShape = false
 	#True to center the tooltip title if rendering an item's tooltip.
 	#Following lines are not affected by this option.
 	centerTitle = true
@@ -63,12 +63,12 @@
 	#Can be one to four values representing top left, top right, bottom right and bottom left color.
 	#Multiple values produce a gradient effect, whereas one value produces a solid color.
 	#If less than 4 are provided, repeat the last value.
-	colorFill = ["#E6000000"]
+	colorFill = ["#D9000000"]
 	#The tooltip border color in #RRGGBB or #AARRGGBB format. Default: #F0AADCF0, #F0DAD0F4, #F0FFC3F7 and #F0DAD0F4
 	#Can be one to four values representing top left, top right, bottom right and bottom left color.
 	#Multiple values produce a gradient effect, whereas one value produces a solid color.
 	#If less than 4 are provided, repeat the last value.
-	colorStroke = ["#FFC2D0D6", "#FFE7DAE5", "#FFCCDAC8", "#FFC8B9AC"]
+	colorStroke = ["#FF28007F", "#FF28007F", "#FF14003F", "#FF14003F"]
 	#The cycle time of tooltip border color in milliseconds. (0 = OFF)
 	# Default: 1000
 	# Range: 0 ~ 5000

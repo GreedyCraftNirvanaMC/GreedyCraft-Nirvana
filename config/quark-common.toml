@@ -1495,7 +1495,7 @@
 	"Chest Searching" = true
 	"Elytra Indicator" = true
 	"Greener Grass" = true
-	"Improved Tooltips" = true
+	"Improved Tooltips" = false
 	"Long Range Pick Block" = true
 	"Microcrafting Helper" = true
 	"Soul Candles" = true
@@ -1541,12 +1541,12 @@
 			B = [0.0, 0.0, 1.22]
 
 	[client.improved_tooltips]
-		"Attribute Tooltips" = true
-		"Food Tooltips" = true
-		"Shulker Tooltips" = true
-		"Map Tooltips" = true
-		"Enchanting Tooltips" = true
-		"Fuel Time Tooltips" = true
+		"Attribute Tooltips" = false
+		"Food Tooltips" = false
+		"Shulker Tooltips" = false
+		"Map Tooltips" = false
+		"Enchanting Tooltips" = false
+		"Fuel Time Tooltips" = false
 		"Shulker Box Use Colors" = true
 		"Shulker Box Require Shift" = false
 		"Map Require Shift" = false
