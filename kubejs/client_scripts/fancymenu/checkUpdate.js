@@ -1,4 +1,4 @@
-KJSutils.FMsetVariable("packLocalVersion",global.localPackVersionName)
+KJSutils.FMsetVariable("packLocalVersion", global.localPackVersionName)
 
 if (global.checkVersionUpdate == "true") {
     let newVersionCode = KJSutils.Analysis("config/greedycraft/version.json", "$.versionCode")

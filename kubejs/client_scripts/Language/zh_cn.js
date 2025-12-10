@@ -8,4 +8,6 @@ ClientEvents.lang("zh_cn", (event) => {
     event.add("greedycraft.packmode.casual", "§a休闲")
     event.add("greedycraft.packmode.adventure", "§e冒险")
     event.add("greedycraft.packmode.expert", "§c§l专家")
+    event.add("greedycraft.creativetab.greedycraft_material.name", "贪婪整合包·材料")
+    event.add("greedycraft.creativetab.greedycraft_ore.name", "贪婪整合包·矿石")
 })

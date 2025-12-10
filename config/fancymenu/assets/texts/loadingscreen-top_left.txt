@@ -1,1 +1,1 @@
-Loading Time: {"placeholder":"uptime_duration","values":{"output_as_millis":"false"}}s
+Game Time: {"placeholder":"uptime_duration","values":{"output_as_millis":"false"}}s
