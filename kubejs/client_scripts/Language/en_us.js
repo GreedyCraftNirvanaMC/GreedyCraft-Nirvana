@@ -10,4 +10,5 @@ ClientEvents.lang("en_us", (event) => {
     event.add("greedycraft.packmode.expert", "§c§lExpert")
     event.add("greedycraft.creativetab.greedycraft_material.name", "GreedyCraft Material")
     event.add("greedycraft.creativetab.greedycraft_ore.name", "GreedyCraft Ore")
+    event.add("greedycraft.creativetab.greedycraft_block.name", "GreedyCraft Block")
 })

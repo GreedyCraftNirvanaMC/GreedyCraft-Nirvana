@@ -10,4 +10,5 @@ ClientEvents.lang("zh_cn", (event) => {
     event.add("greedycraft.packmode.expert", "§c§l专家")
     event.add("greedycraft.creativetab.greedycraft_material.name", "贪婪整合包·材料")
     event.add("greedycraft.creativetab.greedycraft_ore.name", "贪婪整合包·矿石")
+    event.add("greedycraft.creativetab.greedycraft_block.name", "贪婪整合包·方块")
 })

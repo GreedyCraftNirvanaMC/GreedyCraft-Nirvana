@@ -12,6 +12,7 @@ function registryMetals(name, color) {
 	this.name = name
 	this.color = color
 	this.types = []
+	this.beaconPayment = false
 
 	materialList.push(this)
 }
@@ -69,6 +70,11 @@ registryMetals.prototype.slurry = function () {
 	return this
 }
 
+registryMetals.prototype.beaconPaymentItem = function () {
+	this.beaconPayment = true
+	return this
+}
+
 StartupEvents.registry("item", event => {
 	materialList.forEach(material => {
 		material.types.forEach(type => {
@@ -91,9 +97,13 @@ StartupEvents.registry("item", event => {
 						.tag("greedycraft:dirtydust")
 				}
 			} else if (type == "ingot") {
-				event.create(`greedycraft:${material.name}_ingot`)
-					.texture(`greedycraft:item/ingot/${material.name}`)
-					.tag("greedycraft:ingot")
+				let create = event.create(`greedycraft:${material.name}_ingot`)
+					create.texture(`greedycraft:item/ingot/${material.name}`)
+					create.tag("greedycraft:ingot")
+
+				if (material.beaconPayment) {
+					create.tag("minecraft:beacon_payment_items")
+				}
 			} else {
 				if (!(material.name == "aqualite" || material.name == "astral_metal" || material.name == "chromasteel" || material.name == "cosmilite" || material.name == "cryonium" || material.name == "electronium" || material.name == "manganese_steel" || material.name == "protonium" || material.name == "shadowium" || material.name == "terra_alloy")) {
 					event.create(`greedycraft:${material.name}_${type}`)
