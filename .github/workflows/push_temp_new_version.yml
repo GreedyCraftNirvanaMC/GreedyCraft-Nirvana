@@ -34,12 +34,11 @@ jobs:
       - name: Download Shaders
         run: wget https://cdn.modrinth.com/data/R6NEzAwj/versions/d8rcvDTp/ComplementaryUnbound_r5.7.1.zip -P ActionsTemp/overrides/shaderpacks
 
-      - name: Zip Pack
+      - name: Copy Files
         run: |
-          cd ActionsTemp
-          zip -r GreedyCraft-Nirvana-temp-${{ github.run_number }}.zip overrides/* manifest.json modlist.html
-          cd ..
-          mv ActionsTemp/GreedyCraft-Nirvana-temp-${{ github.run_number }}.zip .
+          mv ActionsTemp/overrides .
+          mv ActionsTemp/manifest.json .
+          mv ActionsTemp/modlist.html .
 
       - name: Remove Files
         run: rm -rf Repository ActionsTemp
