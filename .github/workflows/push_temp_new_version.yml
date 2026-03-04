@@ -1,4 +1,4 @@
-name: Push-Test-ModPack
+name: Push-Temp-ModPack
 
 on:
   workflow_dispatch:
