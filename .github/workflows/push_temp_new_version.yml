@@ -47,4 +47,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: GreedyCraft-Nirvana-temp-${{ github.run_number }}.zip
-          path: GreedyCraft-Nirvana-temp-${{ github.run_number }}.zip
+          path: |
+            overrides
+            manifest.json
+            modlist.html
