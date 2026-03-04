@@ -1,0 +1,51 @@
+name: Push-Test-ModPack
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  Pack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          path: Repository
+
+      - name: Remove Files
+        run: rm -rf Repository/customresources Repository/version.json
+
+      - name: Create overrides Folder
+        run: mkdir -p ActionsTemp/overrides
+
+      - name: Move Files
+        run: |
+          mv Repository/* ActionsTemp/overrides
+          mv ActionsTemp/overrides/manifest.json ActionsTemp
+          mv ActionsTemp/overrides/modlist.html ActionsTemp
+
+      - name: Download ResourcesPack
+        run: wget https://mediafilez.forgecdn.net/files/6153/239/DarkMode-ResourcePack-1.20.3_1.zip -P ActionsTemp/overrides/config/openloader/packs/resources
+
+      - name: Download Shaders
+        run: wget https://cdn.modrinth.com/data/R6NEzAwj/versions/d8rcvDTp/ComplementaryUnbound_r5.7.1.zip -P ActionsTemp/overrides/shaderpacks
+
+      - name: Zip Pack
+        run: |
+          cd ActionsTemp
+          zip -r GreedyCraft-Nirvana-temp-${{ github.run_number }}.zip overrides/* manifest.json modlist.html
+          cd ..
+          mv ActionsTemp/GreedyCraft-Nirvana-temp-${{ github.run_number }}.zip .
+
+      - name: Remove Files
+        run: rm -rf Repository ActionsTemp
+
+      - name: Upload Pack as Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: GreedyCraft-Nirvana-temp-${{ github.run_number }}.zip
+          path: GreedyCraft-Nirvana-temp-${{ github.run_number }}.zip
