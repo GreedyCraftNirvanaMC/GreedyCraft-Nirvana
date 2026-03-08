@@ -319,3 +319,14 @@ ItemEvents.rightClicked("greedycraft:skill_reset_scroll", event => {
         server.tell(Component.translatable("greedycraft.message.right_clicked.skill_reset_scroll", `§6${xp}`))
     })
 })
+
+// 史莱姆皇冠
+ItemEvents.rightClicked("greedycraft:slime_crown", event => {
+    let level = event.level
+    let player = event.player
+
+    level.spawnEntity("minecraft:slime", entity => {
+        entity.setPos(player.x, player.y + 3.0, player.z)
+        entity.setBoundingBox([0.0, 0.0, 0.0, 16.0, 16.0, 16.0])
+    })
+})
