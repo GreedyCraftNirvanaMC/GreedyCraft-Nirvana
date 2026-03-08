@@ -334,14 +334,19 @@ ItemEvents.rightClicked("greedycraft:slime_crown", event => {
         entity.setBoundingBox([0.0, 0.0, 0.0, 16.0, 16.0, 16.0])
     })
 
+    player.tell(Component.translatable("greedycraft.message.right_clicked.slime_crown"))
+
     event.item.shrink(1)
 })
 
 // 晴天娃娃
 ItemEvents.rightClicked("greedycraft:sunny_doll", event => {
     let server = event.server
+    let player = event.player
 
     server.runCommandSilent("weaher clear")
+
+    server.tell(Component.translatable("greedycraft.message.right_clicked.sunny_doll", "§6" + player.name))
 
     event.item.shrink(1)
 })
