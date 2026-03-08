@@ -13,7 +13,7 @@ startingCost = 20
 #Global scaling multiplier for XP costs.
 # Default: 1.0
 # Range: 0.1 ~ 10.0
-xpScalingMultiplier = 2.0
+xpScalingMultiplier = 1.2
 #Maximum level each skill can be upgraded to.
 # Default: 32
 # Range: 2 ~ 100
