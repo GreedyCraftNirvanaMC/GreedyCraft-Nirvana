@@ -2,6 +2,8 @@
 
 let MobEffectInstance = Java.loadClass("net.minecraft.world.effect.MobEffectInstance")
 let MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
+let SkillsType = Java.loadClass("net.bandit.reskillable.common.skills.Skill")
+let SkillModel = Java.loadClass("net.bandit.reskillable.common.capabilities.SkillModel")
 
 // 为拥有 unlock_stage tag的物品右键解锁对应进度
 ItemEvents.rightClicked(event => {
@@ -300,4 +302,20 @@ ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
     } else {
         player.tell(Component.translatable("greedycraft.message.right_clicked.purifying_dust.1"))
     }
+})
+
+// 技能重置卷轴
+ItemEvents.rightClicked("greedycraft:skill_reset_scroll", event => {
+    let server = event.server
+    let player = event.player
+
+    let skills = SkillsType.values()
+    let model = SkillModel.get(player)
+    skills.forEach(skill => {
+        let skillLevel = model.getSkillLevel(skill)
+        let xp = Math.floor(20 * ((Math.pow(1.2, skillLevel - 1) - 1) / (1.2 - 1)))
+        server.runCommandSilent(`skills set ${player.username} ${skill} 1`)
+        player.addXP(xp)
+        server.tell(Component.translatable("greedycraft.message.right_clicked.skill_reset_scroll", `§6${xp}`))
+    })
 })

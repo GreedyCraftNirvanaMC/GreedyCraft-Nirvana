@@ -1066,14 +1066,15 @@
     "greedycraft.message.stagesunlock.truehero.lore": "§5§o§nThank you for playing §bGreedyCraft§7·§c§lNirvana",
     "greedycraft.message.stagesunlock.truehero.unlock": "§a§lThere is nothing left for you to unlock",
 
-    "greedycraft.message.right_clicked.has_stage": "§e§lThis stage is unlock",
-    "greedycraft.message.right_clicked.cryonic_artifact": "§c§lNot Found Sun Spirit",
-    "greedycraft.message.right_clicked.emergency_button": "§c§lPlayer %s §c§lused the [Emergency Button] to remove all entities in %s §c§l",
-    "greedycraft.message.right_clicked.infinity_stone": "§c§lYou are not yet able to master this power",
-    "greedycraft.message.right_clicked.item_purger": "§e§lPlayer %s §e§lis preparing to clear dropped items using the [Item Purger]",
-    "greedycraft.message.right_clicked.purifying_dust": "§e§lConverted %s §e§lblocks in %s§e§lms",
-    "greedycraft.message.right_clicked.purifying_dust.1": "§c§lNo convertible blocks found",
-    "greedycraft.message.right_clicked.purifying_dust.2": "§e§lPlease right-click on a block",
+    "greedycraft.message.right_clicked.has_stage": "§cThis stage has already been unlocked",
+    "greedycraft.message.right_clicked.cryonic_artifact": "§cSun Colossus not found!",
+    "greedycraft.message.right_clicked.emergency_button": "§c§lPlayer %s §c§l used [Emergency Button] to delete all entities of %s",
+    "greedycraft.message.right_clicked.infinity_stone": "§c§lYou cannot wield this power yet",
+    "greedycraft.message.right_clicked.item_purger": "§e§lPlayer %s §e§l used [Time-Space Broom] to prepare clearing dropped items",
+    "greedycraft.message.right_clicked.purifying_dust": "§eConverted %s §eblocks, took %sms",
+    "greedycraft.message.right_clicked.purifying_dust.1": "§cNo blocks found to convert",
+    "greedycraft.message.right_clicked.purifying_dust.2": "§cPlease right-click on a block",
+    "greedycraft.message.right_clicked.skill_reset_scroll": "§eSkill reset completed, returned %s experience points",
 
     "greedycraft.message.firstleftclicked.emergency_button": "§c§lPlayer %s §c§lused the [Emergency Button] to remove all hostile entities in %s §c§l",
 
