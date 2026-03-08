@@ -1,31 +1,44 @@
 {
   "skillLocks": {
-    "minecraft:iron_sword": ["attack:5"],
-    "minecraft:iron_shovel": ["gathering:5"],
-    "minecraft:iron_pickaxe": ["mining:5"],
-    "minecraft:iron_axe": ["gathering:5"],
-    "minecraft:iron_hoe": ["farming:5"],
-    "minecraft:iron_helmet": ["defense:5"],
-    "minecraft:iron_chestplate": ["defense:5"],
-    "minecraft:iron_leggings": ["defense:5"],
-    "minecraft:iron_boots": ["defense:5"],
-    "minecraft:diamond_sword": ["attack:15"],
-    "minecraft:diamond_shovel": ["gathering:15"],
-    "minecraft:diamond_pickaxe": ["mining:15"],
-    "minecraft:diamond_axe": ["gathering:15"],
-    "minecraft:diamond_hoe": ["farming:15"],
-    "minecraft:diamond_helmet": ["defense:15"],
-    "minecraft:diamond_chestplate": ["defense:15"],
-    "minecraft:diamond_leggings": ["defense:15"],
-    "minecraft:diamond_boots": ["defense:15"],
-    "minecraft:netherite_sword": ["attack:30"],
-    "minecraft:netherite_shovel": ["gathering:30"],
-    "minecraft:netherite_pickaxe": ["mining:30"],
-    "minecraft:netherite_axe": ["gathering:30"],
-    "minecraft:netherite_hoe": ["farming:30"],
-    "minecraft:netherite_helmet": ["defense:30"],
-    "minecraft:netherite_chestplate": ["defense:30"],
-    "minecraft:netherite_leggings": ["defense:30"],
-    "minecraft:netherite_boots": ["defense:30"]
+    "minecraft:golden_shovel": ["gathering:5","magic:5"],
+    "minecraft:golden_axe": ["gathering:5","magic:5"],
+    "minecraft:golden_sword": ["attack:5","magic:5"],
+    "minecraft:golden_pickaxe": ["mining:5","magic:5"],
+    "minecraft:golden_hoe": ["farming:5","magic:5"],
+
+    "minecraft:golden_helmet": ["defense:5","magic:5"],
+    "minecraft:golden_chestplate": ["defense:5","magic:5"],
+    "minecraft:golden_leggings": ["defense:5","magic:5"],
+    "minecraft:golden_boots": ["defense:5","magic:5"],
+
+    "minecraft:diamond_shovel": ["gathering:6"],
+    "minecraft:diamond_axe": ["gathering:6"],
+    "minecraft:diamond_sword": ["attack:6"],
+    "minecraft:diamond_pickaxe": ["mining:6"],
+    "minecraft:diamond_hoe": ["farming:6"],
+
+    "minecraft:diamond_helmet": ["defense:6"],
+    "minecraft:diamond_chestplate": ["defense:6"],
+    "minecraft:diamond_leggings": ["defense:6"],
+    "minecraft:diamond_boots": ["defense:6"],
+
+    "minecraft:fishing_rod": ["gathering:5"],
+    "minecraft:shield": ["defense:6"],
+    "minecraft:bow": ["attack:5"],
+
+    "minecraft:ender_pearl": ["magic:5"],
+    "minecraft:end_crystal": ["building:8","magic:12"],
+
+    "minecraft:iron_horse_armor": ["defense:5","agility:3"],
+    "minecraft:golden_horse_armor": ["defense:5","magic:5","agility:6"],
+    "minecraft:diamond_horse_armor": ["defense:16","agility:8"],
+
+    "minecraft:saddle": ["agility:6"],
+
+    "minecraft:redstone": ["building:3"],
+    "minecraft:redstone_torch": ["building:4"],
+
+    "cyclicmagic:emerald_sword": ["attack:10"],
+    "cyclicmagic:emerald_axe": ["gathering:10"]
   }
 }

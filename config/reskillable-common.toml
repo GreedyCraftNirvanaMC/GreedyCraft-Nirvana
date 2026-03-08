@@ -9,15 +9,15 @@ showTabButtons = true
 #Starting cost of upgrading to level 2, in experience points.
 # Default: 7
 # Range: 0 ~ 1000
-startingCost = 7
+startingCost = 20
 #Global scaling multiplier for XP costs.
 # Default: 1.0
 # Range: 0.1 ~ 10.0
-xpScalingMultiplier = 1.0
+xpScalingMultiplier = 2.0
 #Maximum level each skill can be upgraded to.
 # Default: 32
 # Range: 2 ~ 100
-maximumLevel = 32
+maximumLevel = 50
 #List of substitutions to perform in names in skill lock lists.
 #Useful if you're using a resource pack to change the names of skills, this config doesn't affect gameplay, just accepted values in other configs so it's easier to think about
 #Format: key=value
