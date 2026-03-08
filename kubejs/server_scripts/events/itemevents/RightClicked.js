@@ -311,13 +311,17 @@ ItemEvents.rightClicked("greedycraft:skill_reset_scroll", event => {
 
     let skills = SkillsType.values()
     let model = SkillModel.get(player)
+
+    let totalXP = 0
     skills.forEach(skill => {
         let skillLevel = model.getSkillLevel(skill)
         let xp = Math.floor(20 * ((Math.pow(1.2, skillLevel - 1) - 1) / (1.2 - 1)))
         server.runCommandSilent(`skills set ${player.username} ${skill} 1`)
         player.addXP(xp)
-        server.tell(Component.translatable("greedycraft.message.right_clicked.skill_reset_scroll", `§6${xp}`))
+        totalXP += xp
     })
+    server.tell(Component.translatable("greedycraft.message.right_clicked.skill_reset_scroll", `§6${totalXP}`))
+    event.item.shrink(1)
 })
 
 // 史莱姆皇冠
@@ -329,6 +333,8 @@ ItemEvents.rightClicked("greedycraft:slime_crown", event => {
         entity.setPos(player.x, player.y + 3.0, player.z)
         entity.setBoundingBox([0.0, 0.0, 0.0, 16.0, 16.0, 16.0])
     })
+
+    event.item.shrink(1)
 })
 
 // 晴天娃娃
@@ -336,4 +342,6 @@ ItemEvents.rightClicked("greedycraft:sunny_doll", event => {
     let server = event.server
 
     server.runCommandSilent("weaher clear")
+
+    event.item.shrink(1)
 })
