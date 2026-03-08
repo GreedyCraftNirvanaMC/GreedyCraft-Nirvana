@@ -5,6 +5,8 @@ let MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
 let SkillsType = Java.loadClass("net.bandit.reskillable.common.skills.Skill")
 let SkillModel = Java.loadClass("net.bandit.reskillable.common.capabilities.SkillModel")
 
+let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
+
 // 为拥有 unlock_stage tag的物品右键解锁对应进度
 ItemEvents.rightClicked(event => {
     let player = event.player
@@ -317,9 +319,11 @@ ItemEvents.rightClicked("greedycraft:skill_reset_scroll", event => {
         let skillLevel = model.getSkillLevel(skill)
         let xp = Math.floor(20 * ((Math.pow(1.2, skillLevel - 1) - 1) / (1.2 - 1)))
         server.runCommandSilent(`skills set ${player.username} ${skill} 1`)
-        player.addXP(xp)
         totalXP += xp
     })
+    if (packMode == "expert") {
+        totalXP = totalXP / 0.5
+    }
     server.tell(Component.translatable("greedycraft.message.right_clicked.skill_reset_scroll", `§6${totalXP}`))
     event.item.shrink(1)
 })
