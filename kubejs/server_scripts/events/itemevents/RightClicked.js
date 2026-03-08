@@ -330,3 +330,10 @@ ItemEvents.rightClicked("greedycraft:slime_crown", event => {
         entity.setBoundingBox([0.0, 0.0, 0.0, 16.0, 16.0, 16.0])
     })
 })
+
+// 晴天娃娃
+ItemEvents.rightClicked("greedycraft:sunny_doll", event => {
+    let server = event.server
+
+    server.runCommandSilent("weaher clear")
+})
