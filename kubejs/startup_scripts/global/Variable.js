@@ -665,3 +665,22 @@ global.purifyingDustRecipes = {
     "minecraft:sand": ["minecraft:soul_sand"],
     "minecraft:snow_block": ["minecraft:water"]
 }
+
+global.grassList = new Set([
+    "minecraft:short_grass",
+    "minecraft:tall_grass",
+    "minecraft:fern",
+    "minecraft:large_fern",
+    "minecraft:seagrass",
+    "biomesoplenty:clover",
+    "biomesoplenty:lavender",
+    "biomesoplenty:tall_lavender",
+    "biomesoplenty:goldenrod",
+    "quark:chorus_weeds",
+    "quark:chorus_twist"
+])
+
+global.rockList = new Set([
+    "projectvibrantjourneys:rocks",
+    "projectvibrantjourneys:mossy_rocks"
+])
