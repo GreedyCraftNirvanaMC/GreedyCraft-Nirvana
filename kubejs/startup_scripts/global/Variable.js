@@ -321,7 +321,8 @@ global.modList = new Set([
     "blur",
     "midnightlib",
     "olddraconicmodels",
-    "reskillable"
+    "reskillable",
+    "lootjs"
 ])
 
 global.commandWhiteList = [
