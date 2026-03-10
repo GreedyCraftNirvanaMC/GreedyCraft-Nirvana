@@ -13,6 +13,7 @@ PlayerEvents.advancement("greedycraft:stages/init", event => {
             // 给予玩家 init_creative 进度
             server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/init_creative`)
             // 给予玩家全部阶段
+            AStages.addStageToPlayer("init_creative", player)
             givePlayerAllStage(server, player)
         }
         // 如果没有，则判断服务器是否有 init_start 阶段
@@ -41,6 +42,7 @@ PlayerEvents.advancement("greedycraft:stages/init", event => {
         // 给予玩家 init_creative 进度
         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/init_creative`)
         // 给予玩家全部阶段
+        AStages.addStageToPlayer("init_creative", player)
         givePlayerAllStage(server, player)
     } else {
         // 否则是以生存或冒险模式创建的存档
