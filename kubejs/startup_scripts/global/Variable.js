@@ -667,7 +667,7 @@ global.purifyingDustRecipes = {
     "minecraft:snow_block": ["minecraft:water"]
 }
 
-global.grassList = new Set([
+global.grassList = [
     "minecraft:short_grass",
     "minecraft:tall_grass",
     "minecraft:fern",
@@ -680,9 +680,9 @@ global.grassList = new Set([
     "biomesoplenty:sprout",
     "quark:chorus_weeds",
     "quark:chorus_twist"
-])
+]
 
-global.rockList = new Set([
+global.rockList = [
     "projectvibrantjourneys:rocks",
     "projectvibrantjourneys:mossy_rocks"
-])
+]

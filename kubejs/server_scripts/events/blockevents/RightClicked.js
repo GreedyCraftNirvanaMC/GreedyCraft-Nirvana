@@ -5,7 +5,7 @@ BlockEvents.rightClicked(event => {
     let level = event.level
     let player = event.player
 
-    if (global.grassList.has(block.getId())) {
+    if (global.grassList.includes(block.getId())) {
         let pos = block.getPos()
 
         level.destroyBlock(pos, false)
@@ -15,7 +15,7 @@ BlockEvents.rightClicked(event => {
         }
     }
 
-    if (global.rockList.has(block.getId())) {
+    if (global.rockList.includes(block.getId())) {
         let pos = block.getPos()
 
         level.destroyBlock(pos, false)
