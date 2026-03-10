@@ -41,8 +41,7 @@ ItemEvents.modifyTooltips(event => {
                                 }
                             })
                         })
-                        event.add(restrictionItemList, Component.literal(""))
-                        event.add(restrictionItemList, Component.translatable("greedycraft.scoreboard.stage.text", stageName))
+                        event.add(restrictionItemList, Component.literal("\n").append(Component.translatable("greedycraft.scoreboard.stage.text", stageName)))
                         break;
                     }
                 }

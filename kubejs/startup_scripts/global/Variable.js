@@ -677,6 +677,7 @@ global.grassList = new Set([
     "biomesoplenty:lavender",
     "biomesoplenty:tall_lavender",
     "biomesoplenty:goldenrod",
+    "biomesoplenty:sprout",
     "quark:chorus_weeds",
     "quark:chorus_twist"
 ])

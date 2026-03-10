@@ -6,7 +6,6 @@ global.stages = {
         getting_started: [
             "#c:chests",
             "#c:player_workstations/crafting_tables",
-            "#c:cobblestones",
             "#minecraft:planks",
             "minecraft:crafting_table",
             "minecraft:wooden_pickaxe",
