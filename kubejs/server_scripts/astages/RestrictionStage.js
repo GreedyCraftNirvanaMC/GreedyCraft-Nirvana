@@ -1,4 +1,4 @@
-// priority: 900
+// priority: 20
 
 let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 

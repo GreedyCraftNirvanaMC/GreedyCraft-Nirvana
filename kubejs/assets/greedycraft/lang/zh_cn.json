@@ -19,6 +19,7 @@
     "greedycraft.packmode.casual": "§a休闲",
     "greedycraft.packmode.adventure": "§e冒险",
     "greedycraft.packmode.expert": "§c§l专家",
+    "greedycraft.scoreboard.stage.text": "§c§l所需阶段：%s",
 
     "greedycraft.modpack.name": "§b贪婪整合包§7·§c§l涅槃",
     "greedycraft.commands.setpackmode.noupdate": "§c当前已处于该模式",
