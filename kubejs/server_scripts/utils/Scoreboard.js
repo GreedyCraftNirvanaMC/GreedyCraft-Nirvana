@@ -13,14 +13,14 @@ function getScoreBoardGameMode(packMode, player, server) {
             // 判断是否存在非官方模组
             if (unofficialModList.length != 0) {
                 // 休闲模式只在存在非官方模组时才判定为作弊
-                gameMode = gameMode.append(Component.string("§7·").append(Component.translatable("greedycraft.scoreboard.packmode.cheat")))
+                gameMode = gameMode.append(Component.literal("·").color(0xAAAAAA)).append(Component.translatable("greedycraft.scoreboard.packmode.cheat"))
             }
         } else {
-            gameMode = gameMode.append(Component.string("§7·").append(Component.translatable("greedycraft.scoreboard.packmode.cheat")))
+            gameMode = gameMode.append(Component.literal("·").color(0xAAAAAA).append(Component.translatable("greedycraft.scoreboard.packmode.cheat")))
         }
         // 判断是否是以创造模式创建的存档
     } else if (AStages.serverHasStage("init_creative", server)) {
-        gameMode = gameMode.append(Component.string("§7·").append(Component.translatable("greedycraft.scoreboard.packmode.creative")))
+        gameMode = gameMode.append(Component.literal("·").color(0xAAAAAA).append(Component.translatable("greedycraft.scoreboard.packmode.creative")))
     }
 
     // 返回
@@ -31,7 +31,7 @@ function getScoreBoardGameMode(packMode, player, server) {
 function addScoreBoard(player, server) {
     let cheat = checkCheat(player, server)
     let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
-    let packName = Component.translatable("greedycraft.modpack.name").append(Component.string(` §a§lv${global.localPackVersionName}`)).getString()
+    let packName = Component.translatable("greedycraft.modpack.name").append(Component.literal(` v${global.localPackVersionName}`).color(0x55FF55).bold()).getString()
     let original = Component.translatable("greedycraft.scoreboard.original").getString()
     let author = Component.translatable("greedycraft.scoreboard.author").getString()
 

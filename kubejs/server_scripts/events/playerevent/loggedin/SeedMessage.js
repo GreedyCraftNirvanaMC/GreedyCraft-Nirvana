@@ -11,7 +11,7 @@ PlayerEvents.loggedIn(event => {
     let antiCheat = KJSutils.Analysis("config/greedycraft/config.json", "$.antiCheat")
 
     let messageTitle = Component.translatable("greedycraft.message.playerlogging.system.title")
-    let messageText1 = Component.translatable("greedycraft.message.playerlogging.system.text.1").append(Component.string(`§6${player.username}`))
+    let messageText1 = Component.translatable("greedycraft.message.playerlogging.system.text.1").append(Component.literal(player.username).color(0xFFAA00))
     let messageText2 = Component.translatable("greedycraft.message.playerlogging.system.text.2")
     let messageText3 = Component.translatable("greedycraft.message.playerlogging.system.text.3")
     let messageText4 = Component.translatable("greedycraft.message.playerlogging.system.text.4")
@@ -56,7 +56,7 @@ PlayerEvents.loggedIn(event => {
 
     // 判断反作弊是否开启
     if (antiCheat) {
-        player.tell(Component.translatable("greedycraft.message.anticheat.runing.text").append(Component.string(antiCheatMode)))
+        player.tell(Component.translatable("greedycraft.message.anticheat.runing.text").append(Component.literal(antiCheatMode)))
     } else {
         player.tell(Component.translatable("greedycraft.message.anticheat.off.text"))
     }

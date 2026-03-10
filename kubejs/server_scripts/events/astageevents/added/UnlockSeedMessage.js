@@ -16,10 +16,10 @@ AStageEvents.added(event => {
 
             player.tell(borderText)
             player.tell(Component.translatable("greedycraft.message.stage.unlock.title"))
-            stageUnlockMessageData.title.forEach(message => player.tell(Component.string(`§6§o${stage}§r`).append(Component.string(" - ")).append(Component.translatable(message))))
+            stageUnlockMessageData.title.forEach(message => player.tell(Component.literal(stage).color(0xFFAA00).italic().append(Component.literal(" - ")).append(Component.translatable(message))))
             stageUnlockMessageData.lore.forEach(message => player.tell(Component.translatable(message)))
             player.tell(Component.translatable("greedycraft.message.stage.unlock.message"))
-            stageUnlockMessageData.unlock.forEach(message => player.tell(Component.string("§2✔ §r").append(Component.translatable(message))))
+            stageUnlockMessageData.unlock.forEach(message => player.tell(Component.literal("✔").color(0x00AA00).append(Component.translatable(message))))
             player.tell(borderText)
         }
     }

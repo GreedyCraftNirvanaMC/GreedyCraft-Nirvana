@@ -31,7 +31,7 @@ ItemEvents.firstLeftClicked("greedycraft:emergency_button", event => {
 
     player.removeAllEffects()
 
-    server.tell(Component.translatable("greedycraft.message.firstleftclicked.emergency_button", `§e§l${player.username}`, `§d§l${level.displayName}`))
+    server.tell(Component.translatable("greedycraft.message.firstleftclicked.emergency_button", Component.literal(player.username).color(0xFFFF55).bold(), Component.literal(level.displayName).color(0xFF55FF).bold()))
 
     event.item.shrink(1)
 })

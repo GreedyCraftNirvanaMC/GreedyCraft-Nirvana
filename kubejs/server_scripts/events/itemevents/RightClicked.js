@@ -149,7 +149,7 @@ ItemEvents.rightClicked("greedycraft:emergency_button", event => {
     })
 
     // 发送消息
-    server.tell(Component.translatable("greedycraft.message.right_clicked.emergency_button", `§e§l${player.username}`, `§d§l${level.displayName}`))
+    server.tell(Component.translatable("greedycraft.message.right_clicked.emergency_button", Component.literal(player.username).color(0xFFFF55).bold(), Component.literal(level.displayName).color(0xFF55FF).bold()))
 
     // 将物品减 1
     event.item.shrink(1)
@@ -201,7 +201,7 @@ ItemEvents.rightClicked("greedycraft:item_purger", event => {
     // 判断权限
     if (player.hasPermissions(4)) {
         // 发送消息
-        server.tell(Component.translatable("greedycraft.message.right_clicked.item_purger", `§6§l${player.username}`))
+        server.tell(Component.translatable("greedycraft.message.right_clicked.item_purger", Component.literal(player.username).color(0xFFAA00).bold()))
         // 清理掉落物
         cleanServerDroppedItem(server)
     } else {
@@ -298,7 +298,7 @@ ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
 
     // 判断是否有方块被替换
     if (setBlockNumber > 0) {
-        player.tell(Component.translatable("greedycraft.message.right_clicked.purifying_dust", `§6${setBlockNumber}`, endTime - startTime))
+        player.tell(Component.translatable("greedycraft.message.right_clicked.purifying_dust", Component.literal(setBlockNumber).color(0xFFAA00), endTime - startTime))
         level.spawnParticles("minecraft:poof", true, player.x, player.y, player.z, 8.0, 8.0, 8.0, 1500, 0.2)
         event.item.shrink(1)
     } else {
@@ -350,7 +350,7 @@ ItemEvents.rightClicked("greedycraft:sunny_doll", event => {
 
     server.runCommandSilent("weaher clear")
 
-    server.tell(Component.translatable("greedycraft.message.right_clicked.sunny_doll", "§6" + player.name))
+    server.tell(Component.translatable("greedycraft.message.right_clicked.sunny_doll", Component.literal(player.name).color(0xFFAA00)))
 
     event.item.shrink(1)
 })

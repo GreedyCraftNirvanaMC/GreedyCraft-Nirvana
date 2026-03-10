@@ -76,7 +76,7 @@ ServerEvents.commandRegistry(event => {
                                 }
 
                                 // 发送服务器消息
-                                server.tell(Component.translatable(`greedycraft.commands.setpackmode`, `§6${player.username}`).append(Component.translatable(`greedycraft.packmode.${options}`)))
+                                server.tell(Component.translatable("greedycraft.commands.setpackmode", Component.literal(player.username).color(0xFFAA00)).append(Component.translatable(`greedycraft.packmode.${options}`)))
 
                                 // 修改配置文件的值
                                 KJSutils.ModifyJsonValue("config/greedycraft/config.json", "$.packMode", options)
@@ -118,12 +118,12 @@ ServerEvents.commandRegistry(event => {
                                         player.tell(Component.translatable("greedycraft.message.showscoreboard.display"))
                                     } else {
                                         addScoreBoard(player, server)
-                                        server.tell(Component.translatable("greedycraft.message.showscoreboard.show", `§6${player.username}`))
+                                        server.tell(Component.translatable("greedycraft.message.showscoreboard.show", Component.literal(player.username).color(0xFFAA00)))
                                     }
                                 } else {
                                     if (scoreboard != null) {
                                         server.scoreboard.removeObjective(scoreboard)
-                                        server.tell(Component.translatable("greedycraft.message.showscoreboard.hide", `§6${player.username}`))
+                                        server.tell(Component.translatable("greedycraft.message.showscoreboard.hide", Component.literal(player.username).color(0xFFAA00)))
                                     } else {
                                         player.tell(Component.translatable("greedycraft.message.showscoreboard.null"))
                                     }

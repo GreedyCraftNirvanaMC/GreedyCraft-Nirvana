@@ -24,7 +24,7 @@ ServerEvents.command(event => {
                         // 判断执行的命令是否在黑名单里
                         if (global.commandBlackList.includes(command)) {
                             // 发送消息并取消
-                            player.tell(Component.translatable("greedycraft.message.anticheat.text").append(Component.string(command)))
+                            player.tell(Component.translatable("greedycraft.message.anticheat.text").append(Component.literal(command)))
                             console.warn(`The Player Tried to Execute an Illegal Command: ${command}.\nPlayer Name: ${playerName}\nPlayer UUID: ${playerUUID}`)
                             event.cancel()
                         }
@@ -33,7 +33,7 @@ ServerEvents.command(event => {
                         // 判断执行的命令是否不在白名单里
                         if (!(global.commandWhiteList.includes(command))) {
                             // 发送消息并取消
-                            player.tell(Component.translatable("greedycraft.message.anticheat.text").append(Component.string(command)))
+                            player.tell(Component.translatable("greedycraft.message.anticheat.text").append(Component.literal(command)))
                             console.warn(`The Player Tried to Execute an Illegal Command: ${command}.\nPlayer Name: ${playerName}\nPlayer UUID: ${playerUUID}`)
                             event.cancel()
                         }
