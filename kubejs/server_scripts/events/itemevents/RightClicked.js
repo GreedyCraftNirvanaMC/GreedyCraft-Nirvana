@@ -127,7 +127,7 @@ ItemEvents.rightClicked("greedycraft:delivery_order", event => {
         // 设置位置为玩家 y 轴 + 1
         entity.setPos(player.x, player.y + 1.0, player.z)
         // 设置 nbt 战利品列表为 minecraft:chests/simple_dungeon
-        entity.mergeNbt({ LootTable: "minecraft:chests/simple_dungeon" })
+        entity.mergeNbt({LootTable: "minecraft:chests/simple_dungeon"})
     })
     // 将物品减 1
     event.item.shrink(1)
@@ -335,7 +335,7 @@ ItemEvents.rightClicked("greedycraft:slime_crown", event => {
 
     level.spawnEntity("minecraft:slime", entity => {
         entity.setPos(player.x, player.y + 3.0, player.z)
-        entity.setBoundingBox([0.0, 0.0, 0.0, 16.0, 16.0, 16.0])
+        entity.mergeNbt({size: 16})
     })
 
     player.tell(Component.translatable("greedycraft.message.right_clicked.slime_crown"))
