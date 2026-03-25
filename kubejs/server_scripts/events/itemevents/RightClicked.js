@@ -5,6 +5,9 @@ let MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
 let SkillsType = Java.loadClass("net.bandit.reskillable.common.skills.Skill")
 let SkillModel = Java.loadClass("net.bandit.reskillable.common.capabilities.SkillModel")
 
+let SeasonHelper = Java.loadClass("sereneseasons.api.season.SeasonHelper")
+let Season = Java.loadClass("sereneseasons.api.season.Season")
+
 let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 
 // 为拥有 unlock_stage tag的物品右键解锁对应进度
@@ -127,7 +130,7 @@ ItemEvents.rightClicked("greedycraft:delivery_order", event => {
         // 设置位置为玩家 y 轴 + 1
         entity.setPos(player.x, player.y + 1.0, player.z)
         // 设置 nbt 战利品列表为 minecraft:chests/simple_dungeon
-        entity.mergeNbt({LootTable: "minecraft:chests/simple_dungeon"})
+        entity.mergeNbt({ LootTable: "minecraft:chests/simple_dungeon" })
     })
     // 将物品减 1
     event.item.shrink(1)
@@ -333,9 +336,10 @@ ItemEvents.rightClicked("greedycraft:slime_crown", event => {
     let level = event.level
     let player = event.player
 
+    // 生成一个原版的史莱姆并设置 NBT 为 {size: 16}
     level.spawnEntity("minecraft:slime", entity => {
         entity.setPos(player.x, player.y + 3.0, player.z)
-        entity.mergeNbt({size: 16})
+        entity.mergeNbt({ size: 16 })
     })
 
     player.tell(Component.translatable("greedycraft.message.right_clicked.slime_crown"))
@@ -348,9 +352,90 @@ ItemEvents.rightClicked("greedycraft:sunny_doll", event => {
     let server = event.server
     let player = event.player
 
+    // 没啥好说的，直接用原版指令简单方便不是吗
     server.runCommandSilent("weaher clear")
 
     server.tell(Component.translatable("greedycraft.message.right_clicked.sunny_doll", Component.literal(player.name).color(0xFFAA00)))
 
     event.item.shrink(1)
+})
+
+// 巨兽之手
+ItemEvents.rightClicked("greedycraft:beast_hand", event => {
+    let level = event.level
+    let player = event.player
+
+    // 获取当前世界的季节
+    let season = SeasonHelper.getSeasonState(level).getSeason()
+
+    let hasSpawn = false
+
+    // 判断当前群系是否是雪地
+    level.getBiome(player.blockPosition()).tags().forEach(tag => {
+        if (tag.toString() == "c:is_snowy") {
+            hasSpawn = true
+        }
+    })
+
+    // 必须要下雨和在主世界时才能召唤
+    if (!(level.isRaining()) || !(level.isOverworld())) {
+        hasSpawn = false
+    }
+
+    // 判断季节与群系是否满足条件
+    if (season != Season.WINTER && !(hasSpawn)) {
+        player.tell(Component.translatable("greedycraft.message.right_clicked.beast_hand"))
+        return
+    }
+
+    // 生成霜冻巨兽
+    level.spawnEntity("mowziesmobs:frostmaw", entity => {
+        // 确保是活动实体
+        if (!(entity.isLiving())) {
+            return
+        }
+
+        // 根据整合包模式设置最大血量
+        let maxHealth = entity.getMaxHealth()
+        if (packMode == "casual") {
+            maxHealth = Math.floor(maxHealth / 2)
+        }
+        if (packMode == "adventure") {
+            maxHealth = Math.floor(maxHealth * 1.5)
+        }
+        if (packMode == "expert") {
+            maxHealth = Math.floor(maxHealth * 2)
+        }
+
+        // 在玩家 y 轴加 4 格位置生成
+        entity.setPos(player.x, player.y + 4, player.z)
+
+        // 设置最大血量
+        entity.setAttributeBaseValue(Attributes.MAX_HEALTH, maxHealth)
+        entity.setHealth(maxHealth)
+    })
+
+    // 根据整合包模式设置召唤雪怪的数量
+    let maxCount = 6;
+    if (packMode == "casual") {
+        maxCount = 3
+    }
+    if (packMode == "expert") {
+        maxCount = 10
+    }
+
+    for (let i = 0; i < maxCount; i++) {
+        // 获取玩家周围随机的格子
+        let pos = randomSpawnAroundPlayer(player, 10)
+
+        // 如果不是空气跳过这个循环
+        if (!(level.getBlock(pos).getBlock().isEmpty())) {
+            continue
+        }
+
+        // 生成
+        level.spawnEntity("twilightforest:yeti", entity => {
+            entity.setPos(pos)
+        })
+    }
 })

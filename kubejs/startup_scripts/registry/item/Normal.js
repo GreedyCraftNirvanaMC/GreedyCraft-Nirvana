@@ -53,7 +53,7 @@ new registryItem("awakened_eye")
 // 赞助者之箱碎片 合成材料
 new registryItem("sponsors_chest_fragment")
 
-// 禁忌秘典 召唤祭坛召唤TC
+// 禁忌秘典 右键使用以召唤TC
 new registryItem("forbidden_bible")
     .setGlow()
     .setTooltips(2)
@@ -83,7 +83,7 @@ new registryItem("creative_shard")
     .setGlow()
     .setTooltips(1)
 
-// 巨兽之手 召唤祭坛召唤冰霜巨兽
+// 巨兽之手 右键使用以召唤冰霜巨兽
 new registryItem("beast_hand")
     .setTooltips(1)
 
@@ -92,7 +92,7 @@ new registryItem("solarium_star")
     .setStageUnlockItem("descendant_of_the_sun")
     .setTooltips(2)
 
-// 太阳图腾 召唤祭坛召唤太阳鸟
+// 太阳图腾 右键使用以召唤太阳鸟
 new registryItem("sun_totem")
     .setTooltips(1)
 
