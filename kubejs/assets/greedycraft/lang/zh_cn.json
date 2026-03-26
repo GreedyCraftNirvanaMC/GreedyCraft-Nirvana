@@ -1079,6 +1079,7 @@
     "greedycraft.message.right_clicked.slime_crown": "§e史莱姆之神已出现！",
     "greedycraft.message.right_clicked.sunny_doll": "%s §e使用§l晴天娃娃§r§e设置天气为§l晴天",
     "greedycraft.message.right_clicked.beast_hand": "§c霜冻巨兽不愿回应你的召唤，这里太热了！",
+    "greedycraft.message.right_clicked.sun_totem": "§c太阳鸟不愿回应你的召唤，这里太冷了！",
 
     "greedycraft.message.firstleftclicked.emergency_button": "§c§l玩家 %s §c§l使用【应急按钮】删除了 %s §c§l的所有敌对实体",
 

@@ -1079,6 +1079,7 @@
     "greedycraft.message.right_clicked.slime_crown": "§eThe Slime God has appeared!",
     "greedycraft.message.right_clicked.sunny_doll": "%s §eused the §lSunny Doll§r§e to set the weather to §lSunny",
     "greedycraft.message.right_clicked.beast_hand": "§cThe Frost Beast refuses to respond to your summon—it’s too hot here!",
+    "greedycraft.message.right_clicked.sun_totem": "§cThe Sun Bird refuses to answer your summons—it's too cold here!",
 
     "greedycraft.message.firstleftclicked.emergency_button": "§c§lPlayer %s §c§lused the [Emergency Button] to remove all hostile entities in %s §c§l",
 

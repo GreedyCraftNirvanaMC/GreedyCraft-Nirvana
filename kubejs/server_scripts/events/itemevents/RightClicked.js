@@ -439,3 +439,78 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
         })
     }
 })
+
+// 太阳图腾
+ItemEvents.rightClicked("greedycraft:sun_totem", event => {
+    let level = event.level
+    let player = event.player
+
+    let hasSpawn = false
+
+    // 必须在晴天和在主世界时才能召唤
+    if (level.isRaining() || !(level.isOverworld())) {
+        hasSpawn = false
+    }
+
+    // 必须是白天
+    if (!(level.isDay())) {
+        hasSpawn = false
+    }
+
+    // 判断季节与群系是否满足条件
+    if (!(hasSpawn)) {
+        player.tell(Component.translatable("greedycraft.message.right_clicked.sun_totem"))
+        return
+    }
+
+    // 生成太阳鸟
+    level.spawnEntity("mowziesmobs:umvuthi", entity => {
+        // 确保是活动实体
+        if (!(entity.isLiving())) {
+            return
+        }
+
+        // 根据整合包模式设置最大血量
+        let maxHealth = entity.getMaxHealth()
+        if (packMode == "casual") {
+            maxHealth = Math.floor(maxHealth / 2)
+        }
+        if (packMode == "adventure") {
+            maxHealth = Math.floor(maxHealth * 1.5)
+        }
+        if (packMode == "expert") {
+            maxHealth = Math.floor(maxHealth * 2)
+        }
+
+        // 在玩家 y 轴加 4 格位置生成
+        entity.setPos(player.x, player.y + 4, player.z)
+
+        // 设置最大血量
+        entity.setAttributeBaseValue(Attributes.MAX_HEALTH, maxHealth)
+        entity.setHealth(maxHealth)
+    })
+
+    // 根据整合包模式设置召唤随从的数量
+    let maxCount = 4;
+    if (packMode == "casual") {
+        maxCount = 2
+    }
+    if (packMode == "expert") {
+        maxCount = 8
+    }
+
+    for (let i = 0; i < maxCount; i++) {
+        // 获取玩家周围随机的格子
+        let pos = randomSpawnAroundPlayer(player, 5)
+
+        // 如果不是空气跳过这个循环
+        if (!(level.getBlock(pos).getBlock().isEmpty())) {
+            continue
+        }
+
+        // 生成
+        level.spawnEntity("mowziesmobs:umvuthana_raptor", entity => {
+            entity.setPos(pos)
+        })
+    }
+})
