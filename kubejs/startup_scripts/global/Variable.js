@@ -322,7 +322,8 @@ global.modList = new Set([
     "midnightlib",
     "olddraconicmodels",
     "reskillable",
-    "lootjs"
+    "lootjs",
+    "kubejsprojecte"
 ])
 
 global.commandWhiteList = [
@@ -686,3 +687,5 @@ global.rockList = [
     "projectvibrantjourneys:rocks",
     "projectvibrantjourneys:mossy_rocks"
 ]
+
+global.customEMC = {}
