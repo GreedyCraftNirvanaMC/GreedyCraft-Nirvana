@@ -27,7 +27,7 @@ ItemEvents.modifyTooltips(event => {
                         // 合并两个数组
                         let restrictionItemList = normalItemList.concat(tagItemList)
                         // 添加 tooltip
-                        event.add(restrictionItemList, Component.translatable("greedycraft.scoreboard.stage.text", stageName))
+                        event.add(restrictionItemList, Component.literal("\n").append(Component.translatable("greedycraft.scoreboard.stage.text", stageName)))
                         break;
                     }
                     case "mod": {
