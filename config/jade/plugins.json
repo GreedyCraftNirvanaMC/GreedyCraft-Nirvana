@@ -134,6 +134,10 @@
     "milk_jar": true,
     "toaster": true
   },
+  "reskillable": {
+    "requirements_entity": true,
+    "requirements_block": true
+  },
   "storagedrawers": {
     "display.stacklimit": true,
     "main": true,

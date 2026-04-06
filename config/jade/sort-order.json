@@ -116,6 +116,8 @@
   "powerscale:mob": null,
   "projecte:emc_provider": null,
   "projectexpansion:provider": null,
+  "reskillable:requirements_block": null,
+  "reskillable:requirements_entity": null,
   "storagedrawers:main": null,
   "twilightforest:chiseled_bookshelf_spawner": null,
   "twilightforest:drying_rack": null,
