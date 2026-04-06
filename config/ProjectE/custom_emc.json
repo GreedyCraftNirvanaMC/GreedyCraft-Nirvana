@@ -16,6 +16,10 @@
     {
       "id": "minecraft:bedrock",
       "emc": 10
+    },
+    {
+      "id": "avaritia:full_matter_cluster",
+      "emc": 0
     }
   ]
 }

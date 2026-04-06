@@ -173,6 +173,11 @@ logFoundExploits = true
 		#Determines whether this EMC Mapper is enabled.
 		enabled = true
 
+	#Allows KubeJS ProjectE to function
+	[mappers.KubeJSProjectE]
+		#Determines whether this EMC Mapper is enabled.
+		enabled = true
+
 #Used to configure settings for the various Data Component Processors.
 [processors]
 
