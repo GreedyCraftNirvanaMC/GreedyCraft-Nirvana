@@ -2,5 +2,6 @@ kubejs/config/web_server.json
 kubejs/config/probe-settings.json
 .probe
 .vscode
-kubejs/*/jsconfig.json
-icon-exports-x32
+kubejs/*/jsconfig.jsonc
+mods/*
+shaderpacks/*
