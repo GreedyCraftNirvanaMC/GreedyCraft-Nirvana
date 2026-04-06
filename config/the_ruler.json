@@ -1,3 +1,4 @@
 {
-    "keepInventory": true
+    "keepInventory": true,
+    "showDeathMessages": false
 }
