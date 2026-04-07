@@ -5,6 +5,10 @@ BlockEvents.rightClicked(event => {
     let level = event.level
     let player = event.player
 
+    if (player.getMainHandItem() != "minecraft:air") {
+        return
+    }
+
     if (global.grassList.includes(block.getId())) {
         let pos = block.getPos()
 
