@@ -689,3 +689,46 @@ global.rockList = [
 ]
 
 global.customEMC = {}
+
+global.bossList = [
+    "minecraft:ender_dragon",
+    "minecraft:wither",
+    "botania:doppleganger",
+    "mowziesmobs:frostmaw",
+    "mowziesmobs:ferrous_wroughtnaut",
+    "mowziesmobs:umvuthi",
+    "mowziesmobs:sculptor",
+    "aether:slider",
+    "aether:valkyrie_queen",
+    "aether:sun_spirit",
+    "twilightforest:naga",
+    "twilightforest:lich",
+    "twilightforest:minoshroom",
+    "twilightforest:hydra",
+    "twilightforest:knight_phantom",
+    "twilightforest:ur_ghast",
+    "wilightforest:alpha_yeti",
+    "twilightforest:snow_queen",
+    "twilightforest:plateau_boss",
+    "tofucraft:shudofuspider"
+]
+
+global.spiderList = [
+    "minecraft:spider",
+    "minecraft:cave_spider",
+    "twilightforest:hedge_spider",
+    "twilightforest:king_spider",
+    "twilightforest:swarm_spider",
+    "tofucraft:tofuspider",
+    "tofucraft:shudofuspider",
+    "defiled_lands_reborn:scuttler"
+]
+
+global.skeletonList = [
+    "minecraft:skeleton",
+    "minecraft:wither_skeleton",
+    "twilightforest:skeleton_druid"
+]
+
+global.damageBlackList = [
+]
