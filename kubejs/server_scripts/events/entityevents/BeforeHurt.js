@@ -1,3 +1,5 @@
+// 实体受伤事件
+
 EntityEvents.beforeHurt(event => {
     let entity = event.entity
     let source = event.source
