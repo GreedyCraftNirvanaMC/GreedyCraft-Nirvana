@@ -1,4 +1,4 @@
-// priority: 150
+// priority: 300
 
 // 玩家进入游戏时给予基础进度
 PlayerEvents.loggedIn(event => {

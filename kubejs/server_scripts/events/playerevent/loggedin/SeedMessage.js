@@ -48,10 +48,6 @@ PlayerEvents.loggedIn(event => {
         // 发送消息
         player.tell(Component.translatable("greedycraft.message.creative.text"))
         // 保险
-    } else if (!(AStages.serverHasStage("init_start", server))) {
-        if (player.isCreative()) {
-            player.tell(Component.translatable("greedycraft.message.creative.text"))
-        }
     }
 
     // 判断反作弊是否开启
