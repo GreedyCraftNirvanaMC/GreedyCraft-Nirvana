@@ -707,7 +707,7 @@ global.bossList = [
     "twilightforest:hydra",
     "twilightforest:knight_phantom",
     "twilightforest:ur_ghast",
-    "wilightforest:alpha_yeti",
+    "twilightforest:alpha_yeti",
     "twilightforest:snow_queen",
     "twilightforest:plateau_boss",
     "tofucraft:shudofuspider"
