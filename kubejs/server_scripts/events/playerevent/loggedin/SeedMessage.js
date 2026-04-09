@@ -73,7 +73,5 @@ PlayerEvents.loggedIn(event => {
     // 判断是否是 "真英雄"
     if (AStages.playerHasStage("truehero", player) && !(checkCheat(player, server))) {
         player.tell(Component.translatable("greedycraft.message.playerlogging.truehero"))
-    } else if (checkCheat(player, server)) {
-        
     }
 })
