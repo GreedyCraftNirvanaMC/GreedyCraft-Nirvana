@@ -2,6 +2,7 @@
 
 EntityEvents.death("minecraft:player", event => {
     let server = event.server
+    let level = event.level
     let source = event.source
     let player = event.player
     let entity = event.entity
@@ -22,4 +23,31 @@ EntityEvents.death("minecraft:player", event => {
 
     // 向服务器发送自定义死亡消息
     server.tell(Component.literal(message))
+
+    // 判断攻击来源是否是以下 boss
+    if (actual.type == "mowziesmobs:frostmaw" || actual.type == "mowziesmobs:umvuthi" || actual.type == "twilightforest:alpha_yeti") {
+        // 将范围设置为以玩家为中心周围 20 格
+        let box = player.boundingBox.inflate(20.0)
+
+        // 获取该 20 格内的所有实体列表
+        let entitys = level.getEntitiesWithin(box)
+
+        // 设置基础数量为 0
+        let count = 0
+
+        // 遍历实体列表
+        entitys.forEach(e => {
+            // 判断实体是否是玩家
+            if (e.type == "minecraft:player") {
+                // 自增加
+                count++
+            }
+        })
+        
+        // 如果玩家数量不大于一
+        if (!(count > 1)) {
+            // 删除实体
+            actual.discard()
+        }
+    }
 })
