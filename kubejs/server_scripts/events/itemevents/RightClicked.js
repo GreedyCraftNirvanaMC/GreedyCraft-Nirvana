@@ -368,23 +368,24 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
     // 获取当前世界的季节
     let season = SeasonHelper.getSeasonState(level).getSeason()
 
-    let hasReturn = false
+    // 判断季节是否是冬季
+    if (season != Season.WINTER) {
+        // 判断当前群系是否是雪地
+        if (!(level.getBiome(player.blockPosition()).tags().anyMatch(tag => tag.registry().path == "is_snowy"))) {
+            player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.biome"))
+            return
+        }
 
-    // 判断当前群系是否是雪地
-    if (!(level.getBiome(player.blockPosition()).tags().anyMatch(tag => tag.registry().path == "is_snowy"))) {
-        
-        hasReturn = true
-    }
+        // 必须要下雨和在主世界时才能召唤
+        if (!(level.isRaining())) {
+            player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.world"))
+            return
+        }
 
-    // 必须要下雨和在主世界时才能召唤
-    if (!(level.isRaining()) || !(level.isOverworld())) {
-        hasReturn = true
-    }
-
-    // 判断季节与其它条件是否满足
-    if (season != Season.WINTER || hasReturn) {
-        player.tell(Component.translatable("greedycraft.message.right_clicked.beast_hand"))
-        return
+        if (!(level.isOverworld())) {
+            player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.weather"))
+            return
+        }
     }
 
     // 生成霜冻巨兽

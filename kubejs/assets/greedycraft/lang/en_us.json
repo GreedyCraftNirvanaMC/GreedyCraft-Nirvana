@@ -1079,12 +1079,14 @@
     "greedycraft.message.right_clicked.skill_reset_scroll": "§eSkill reset completed, returned %s experience points",
     "greedycraft.message.right_clicked.slime_crown": "§eThe Slime God has appeared!",
     "greedycraft.message.right_clicked.sunny_doll": "%s §eused the §lSunny Doll§r§e to set the weather to §lSunny",
-    "greedycraft.message.right_clicked.beast_hand": "§cThe Frost Beast refuses to respond to your summon—it’s too hot here!",
-    "greedycraft.message.right_clicked.sun_totem": "§cThe Sun Bird refuses to answer your summons—it's too cold here!",
 
     "greedycraft.message.firstleftclicked.emergency_button": "§c§lPlayer %s §c§lused the [Emergency Button] to remove all hostile entities in %s §c§l",
 
     "greedycraft.message.scheduleinticks.item_purger.1": "§e§lDropped items will be cleared in 10 seconds",
     "greedycraft.message.scheduleinticks.item_purger.2": "§c§lDropped items will be cleared in 5 seconds",
-    "greedycraft.message.scheduleinticks.item_purger.3": "§a§lDropped items have been cleared"
+    "greedycraft.message.scheduleinticks.item_purger.3": "§a§lDropped items have been cleared",
+
+    "greedycraft.message.spawn.error.frostmaw.biome": "§c§lThe Frostmaw refuses to respond to your summon—the biome is too hot!",
+    "greedycraft.message.spawn.error.frostmaw.world": "§c§lThe Frostmaw refuses to respond to your summon—this world does not allow it to appear!",
+    "greedycraft.message.spawn.error.frostmaw.weather": "§c§lThe Frostmaw refuses to respond to your summon—the weather is too hot!"
 }

@@ -1079,12 +1079,14 @@
     "greedycraft.message.right_clicked.skill_reset_scroll": "§e技能重置完成，返还了 %s 点经验",
     "greedycraft.message.right_clicked.slime_crown": "§e史莱姆之神已出现！",
     "greedycraft.message.right_clicked.sunny_doll": "%s §e使用§l晴天娃娃§r§e设置天气为§l晴天",
-    "greedycraft.message.right_clicked.beast_hand": "§c霜冻巨兽不愿回应你的召唤，这里太热了！",
-    "greedycraft.message.right_clicked.sun_totem": "§c太阳鸟不愿回应你的召唤，这里太冷了！",
 
     "greedycraft.message.firstleftclicked.emergency_button": "§c§l玩家 %s §c§l使用【应急按钮】删除了 %s §c§l的所有敌对实体",
 
     "greedycraft.message.scheduleinticks.item_purger.1": "§e§l10秒后开始清理服务器掉落物",
     "greedycraft.message.scheduleinticks.item_purger.2": "§c§l5秒后开始清理服务器掉落物",
-    "greedycraft.message.scheduleinticks.item_purger.3": "§a§l掉落物清理完成"
+    "greedycraft.message.scheduleinticks.item_purger.3": "§a§l掉落物清理完成",
+
+    "greedycraft.message.spawn.error.frostmaw.biome": "§c§l霜冻巨兽不愿回应你的召唤，这个群系太热了！",
+    "greedycraft.message.spawn.error.frostmaw.world": "§c§l霜冻巨兽不愿回应你的召唤，这个世界不允许它出现！",
+    "greedycraft.message.spawn.error.frostmaw.weather": "§c§l霜冻巨兽不愿回应你的召唤，现在的天气太热了！"
 }
