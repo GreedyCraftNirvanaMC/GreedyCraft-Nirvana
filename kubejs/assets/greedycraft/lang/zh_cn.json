@@ -1094,5 +1094,7 @@
 
     "greedycraft.message.spawn.error.umvuthi.time": "§c§l太阳鸟不愿回应你的召唤，现在没有太阳！",
     "greedycraft.message.spawn.error.umvuthi.world": "§c§l太阳鸟不愿回应你的召唤，这个世界不允许它出现！",
-    "greedycraft.message.spawn.error.umvuthi.weather": "§c§l太阳鸟不愿回应你的召唤，它不喜欢这个天气！"
+    "greedycraft.message.spawn.error.umvuthi.weather": "§c§l太阳鸟不愿回应你的召唤，它不喜欢这个天气！",
+
+    "greedycraft.message.warn.deep_ocean": "§bGCTN 终端系统§7: §c警告！深海的压力隔绝了一切氧气，使你无法呼吸"
 }

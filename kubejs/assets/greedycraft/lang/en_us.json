@@ -1094,5 +1094,7 @@
 
     "greedycraft.message.spawn.error.umvuthi.time": "§c§lThe Sunbird refuses to answer your summon—there is no sun right now!",
     "greedycraft.message.spawn.error.umvuthi.world": "§c§lThe Sunbird refuses to answer your summon—this world does not allow it to appear!",
-    "greedycraft.message.spawn.error.umvuthi.weather": "§c§lThe Sunbird refuses to answer your summon—it does not like this weather!"
+    "greedycraft.message.spawn.error.umvuthi.weather": "§c§lThe Sunbird refuses to answer your summon—it does not like this weather!",
+
+    "greedycraft.message.warn.deep_ocean": "§bGCTN Terminal System§7: §cWarning! The pressure of the deep ocean has cut off all oxygen, making it impossible for you to breathe."
 }
