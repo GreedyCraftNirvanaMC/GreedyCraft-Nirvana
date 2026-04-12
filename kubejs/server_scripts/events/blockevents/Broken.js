@@ -20,12 +20,8 @@ BlockEvents.broken(event => {
         return
     }
 
-    if (!(isReturn)) {
-        return
-    }
-
     // 判断生物群系 tag 是否包含 is_ocean
-    if (!(biome.tags().anyMatch(tag => tag.registry().path == "is_ocean"))) {
+    if (!(biome.isTag("c:is_ocean"))) {
         return
     }
 
