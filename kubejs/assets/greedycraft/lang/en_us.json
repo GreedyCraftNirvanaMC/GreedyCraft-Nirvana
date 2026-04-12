@@ -1080,6 +1080,7 @@
     "greedycraft.message.right_clicked.slime_crown": "§eThe Slime God has appeared!",
     "greedycraft.message.right_clicked.sunny_doll": "%s §eused the §lSunny Doll§r§e to set the weather to §lSunny",
     "greedycraft.message.right_clicked.beast_hand": "§bThe Frost Beast has spawned",
+    "greedycraft.message.right_clicked.sun_totem": "§bThe umvuthi has spawned",
 
     "greedycraft.message.firstleftclicked.emergency_button": "§c§lPlayer %s §c§lused the [Emergency Button] to remove all hostile entities in %s §c§l",
 
@@ -1089,5 +1090,9 @@
 
     "greedycraft.message.spawn.error.frostmaw.biome": "§c§lThe Frostmaw refuses to respond to your summon—the biome is too hot!",
     "greedycraft.message.spawn.error.frostmaw.world": "§c§lThe Frostmaw refuses to respond to your summon—this world does not allow it to appear!",
-    "greedycraft.message.spawn.error.frostmaw.weather": "§c§lThe Frostmaw refuses to respond to your summon—the weather is too hot!"
+    "greedycraft.message.spawn.error.frostmaw.weather": "§c§lThe Frostmaw refuses to respond to your summon—the weather is too hot!",
+
+    "greedycraft.message.spawn.error.umvuthi.time": "§c§lThe Sunbird refuses to answer your summon—there is no sun right now!",
+    "greedycraft.message.spawn.error.umvuthi.world": "§c§lThe Sunbird refuses to answer your summon—this world does not allow it to appear!",
+    "greedycraft.message.spawn.error.umvuthi.weather": "§c§lThe Sunbird refuses to answer your summon—it does not like this weather!"
 }

@@ -376,14 +376,15 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
             return
         }
 
-        // 必须要下雨和在主世界时才能召唤
+        // 必须要下雨
         if (!(level.isRaining())) {
-            player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.world"))
+            player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.weather"))
             return
         }
 
+        // 必须在主世界时才能召唤
         if (!(level.isOverworld())) {
-            player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.weather"))
+            player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.world"))
             return
         }
     }
@@ -440,6 +441,8 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
             entity.setPos(pos)
         })
     }
+
+    player.tell(Component.translatable("greedycraft.message.right_clicked.beast_hand"))
 })
 
 // 太阳图腾
@@ -449,19 +452,21 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
 
     let hasReturn = false
 
-    // 必须在晴天和在主世界时才能召唤
-    if (level.isRaining() || !(level.isOverworld())) {
-        hasSpawn = true
+    // 必须在晴天
+    if (level.isRaining()) {
+        player.tell(Component.translatable("greedycraft.message.spawn.error.umvuthi.weather"))
+        return
+    }
+
+    // 必须在主世界时才能召唤
+    if (!(level.isOverworld())) {
+        player.tell(Component.translatable("greedycraft.message.spawn.error.umvuthi.world"))
+        return
     }
 
     // 必须是白天
     if (!(level.isDay())) {
-        hasSpawn = true
-    }
-
-    // 判断是否满足条件
-    if (!(hasSpawn)) {
-        player.tell(Component.translatable("greedycraft.message.right_clicked.sun_totem"))
+        player.tell(Component.translatable("greedycraft.message.spawn.error.umvuthi.time"))
         return
     }
 
@@ -503,10 +508,12 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
 
     for (let i = 0; i < maxCount; i++) {
         // 获取玩家周围随机的格子
-        let pos = randomSpawnAroundPlayer(player, 5)
+        let pos = randomSpawnAroundPlayer(player, 10)
+
+        let levelBlock = level.getBlock(pos)
 
         // 如果不是空气跳过这个循环
-        if (!(level.getBlock(pos).getBlock().isEmpty())) {
+        if (!(levelBlock.getBlock().isEmpty(levelBlock.getBlockState()))) {
             continue
         }
 
@@ -515,4 +522,6 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
             entity.setPos(pos)
         })
     }
+
+    player.tell(Component.translatable("greedycraft.message.right_clicked.sun_totem"))
 })
