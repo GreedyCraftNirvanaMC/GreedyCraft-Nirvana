@@ -371,7 +371,7 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
     // 判断季节是否是冬季
     if (season != Season.WINTER) {
         // 判断当前群系是否是雪地
-        if (!(level.getBiome(player.blockPosition()).tags().anyMatch(tag => tag.registry().path == "is_snowy"))) {
+        if (!(level.getBiome(player.blockPosition()).tags().anyMatch(tag => tag.location() == "c:is_snowy"))) {
             player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.biome"))
             return
         }
@@ -411,7 +411,7 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
         entity.setPos(player.x, player.y + 4, player.z)
 
         // 设置最大血量
-        entity.setAttributeBaseValue(Attributes.MAX_HEALTH, maxHealth)
+        entity.setMaxHealth(maxHealth)
         entity.setHealth(maxHealth)
     })
 
@@ -428,8 +428,10 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
         // 获取玩家周围随机的格子
         let pos = randomSpawnAroundPlayer(player, 10)
 
+        let levelBlock = level.getBlock(pos)
+
         // 如果不是空气跳过这个循环
-        if (!(level.getBlock(pos).getBlock().isEmpty())) {
+        if (!(levelBlock.getBlock().isEmpty(levelBlock.getBlockState()))) {
             continue
         }
 
@@ -486,7 +488,7 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
         entity.setPos(player.x, player.y + 4, player.z)
 
         // 设置最大血量
-        entity.setAttributeBaseValue(Attributes.MAX_HEALTH, maxHealth)
+        entity.setMaxHealth(maxHealth)
         entity.setHealth(maxHealth)
     })
 
