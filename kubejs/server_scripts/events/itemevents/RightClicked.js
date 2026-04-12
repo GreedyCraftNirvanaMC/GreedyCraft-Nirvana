@@ -164,7 +164,7 @@ ItemEvents.rightClicked("greedycraft:fake_philosopher_stone", event => {
     let level = event.level
 
     // 判断右键的方块是否是沙子
-    if (block != null && block.getId() == "minecraft:sand") {
+    if (block && block.getId() == "minecraft:sand") {
         // 重新设置为玻璃
         level.setBlock(block.getPos(), "minecraft:glass", 3)
     }
@@ -371,7 +371,7 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
     // 判断季节是否是冬季
     if (season != Season.WINTER) {
         // 判断当前群系是否是雪地
-        if (!(level.getBiome(player.blockPosition()).tags().anyMatch(tag => tag.location() == "c:is_snowy"))) {
+        if (!(level.getBiome(player.blockPosition()).isTag("c:is_ocean"))) {
             player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.biome"))
             return
         }

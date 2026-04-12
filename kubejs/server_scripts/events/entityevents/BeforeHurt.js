@@ -123,7 +123,7 @@ EntityEvents.beforeHurt(event => {
     }
 
     // 判断造成伤害的是否是 Boss 并且不在黑名单中
-    if ( source.actual && global.bossList.includes(source.actual.type) && !(global.damageBlackList.includes(source.actual.type))) {
+    if (source.actual && global.bossList.includes(source.actual.type) && !(global.damageBlackList.includes(source.actual.type))) {
         // 根据难度设置伤害
         event.setDamage(event.damage * (1.0 + 0.0032 * entity.getData(PsAttachmentTypes.DIFFICULTY)))
     }

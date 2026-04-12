@@ -114,14 +114,14 @@ ServerEvents.commandRegistry(event => {
                                 // 判断是显示还是隐藏
                                 if (options) {
                                     // 判空
-                                    if (scoreboard != null) {
+                                    if (scoreboard) {
                                         player.tell(Component.translatable("greedycraft.message.showscoreboard.display"))
                                     } else {
                                         addScoreBoard(player, server)
                                         server.tell(Component.translatable("greedycraft.message.showscoreboard.show", Component.literal(player.username).color(0xFFAA00)))
                                     }
                                 } else {
-                                    if (scoreboard != null) {
+                                    if (scoreboard) {
                                         server.scoreboard.removeObjective(scoreboard)
                                         server.tell(Component.translatable("greedycraft.message.showscoreboard.hide", Component.literal(player.username).color(0xFFAA00)))
                                     } else {
