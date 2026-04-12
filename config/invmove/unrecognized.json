@@ -1,6 +1,7 @@
 {
   "allowMovement": {
-    "mezz.jei.gui.recipes.RecipesGui": true
+    "mezz.jei.gui.recipes.RecipesGui": true,
+    "xaero.common.gui.GuiMinimapMain": true
   },
   "hideBackground": {
     "mezz.jei.gui.recipes.RecipesGui": false
