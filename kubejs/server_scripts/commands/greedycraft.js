@@ -1,4 +1,4 @@
-// 注册切换整合包专属命令
+// 注册整合包命令
 
 // 注册主命令
 ServerEvents.commandRegistry(event => {
@@ -46,29 +46,20 @@ ServerEvents.commandRegistry(event => {
                                 }
 
                                 if (options == "expert") {
-                                    if (!(Platform.isClientEnvironment())) {
-                                        let players = server.players
-                                        players.forEach(player => {
-                                            AStages.addStageToPlayer("expert", player)
-                                        })
-                                    } else {
+                                    let players = server.players
+                                    players.forEach(player => {
                                         AStages.addStageToPlayer("expert", player)
-                                    }
+                                    })
                                 }
 
                                 if (options == "adventure") {
-                                    if (!(Platform.isClientEnvironment())) {
-                                        let players = server.players
-                                        players.forEach(player => {
-                                            if (AStages.playerHasStage("expert", player)) {
-                                                server.runCommandSilent(`advancement revoke ${playerName} only greedycraft:stages/expert`)
-                                                AStages.removeStageFromPlayer("expert", player)
-                                            }
-                                        })
-                                    } else {
-                                        server.runCommandSilent(`advancement revoke ${playerName} only greedycraft:stages/expert`)
-                                        AStages.removeStageFromPlayer("expert", player)
-                                    }
+                                    let players = server.players
+                                    players.forEach(player => {
+                                        if (AStages.playerHasStage("expert", player)) {
+                                            server.runCommandSilent(`advancement revoke ${playerName} only greedycraft:stages/expert`)
+                                            AStages.removeStageFromPlayer("expert", player)
+                                        }
+                                    })
                                 }
 
                                 // 发送服务器消息
@@ -127,9 +118,9 @@ ServerEvents.commandRegistry(event => {
                     )
             )
             .then(
+                // 自杀
                 Commands.literal("suicide")
                     .executes(ctx => {
-                        let options = Arguments.PLAYER.getResult(ctx, "player")
                         let source = ctx.source
 
                         if (!(source.isPlayer())) {
@@ -139,6 +130,16 @@ ServerEvents.commandRegistry(event => {
 
                         source.player.kill()
                         return 1
+                    })
+            )
+            .then(
+                // 清理垃圾
+                Commands.literal("purge").requires(source => source.hasPermission(4))
+                    .executes(ctx => {
+                        let source = ctx.source
+                        let server = source.server
+
+                        cleanServerDroppedItem(server)
                     })
             )
     )
