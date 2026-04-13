@@ -3,7 +3,7 @@
 	#What kind of message should we send players when they die?
 	#Accepts: NONE, SHORT, LONG
 	#Allowed Values: NONE, SHORT, LONG
-	messageType = "LONG"
+	messageType = "NONE"
 	#Should we broadcast the leaderboard to the player when they die?
 	#Accepts: NONE, SELF, ALL
 	#Allowed Values: NONE, SELF, ALL
