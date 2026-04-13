@@ -1,7 +1,5 @@
 // 注册切换整合包专属命令
 
-let permission = 4
-
 // 注册主命令
 ServerEvents.commandRegistry(event => {
     const { commands: Commands, arguments: Arguments } = event
@@ -11,7 +9,7 @@ ServerEvents.commandRegistry(event => {
             // 子参数
             .then(
                 // 修改整合包模式
-                Commands.literal("setpackmode")
+                Commands.literal("setpackmode").requires(source => source.hasPermission(4))
                     // 子参数
                     .then(
                         // 创建名为 packmode 的 String 类型参数输入
@@ -24,8 +22,6 @@ ServerEvents.commandRegistry(event => {
                                     .suggest("expert")
                                     .buildFuture()
                             })
-                            // 权限检查
-                            .requires(source => source.hasPermission(permission))
                             // 执行操作
                             .executes(ctx => {
                                 let options = Arguments.STRING.getResult(ctx, "packmode")
@@ -96,12 +92,10 @@ ServerEvents.commandRegistry(event => {
             // 子参数
             .then(
                 // 隐藏计分板
-                Commands.literal("showscoreboard")
+                Commands.literal("showscoreboard").requires(source => source.hasPermission(4))
                     .then(
                         // 创建名为 boolean 的 Boolean 类型参数输入
                         Commands.argument("boolean", Arguments.BOOLEAN.create(event))
-                            // 权限检查
-                            .requires(source => source.hasPermission(permission))
                             // 执行操作
                             .executes(ctx => {
                                 let options = Arguments.BOOLEAN.getResult(ctx, "boolean")
@@ -131,6 +125,21 @@ ServerEvents.commandRegistry(event => {
                                 return 1
                             })
                     )
+            )
+            .then(
+                Commands.literal("suicide")
+                    .executes(ctx => {
+                        let options = Arguments.PLAYER.getResult(ctx, "player")
+                        let source = ctx.source
+
+                        if (!(source.isPlayer())) {
+                            source.sendSystemMessage(Component.translatable("greedycraft.commands.suicide.execute_notplayer"))
+                            return 1
+                        }
+
+                        source.player.kill()
+                        return 1
+                    })
             )
     )
 })

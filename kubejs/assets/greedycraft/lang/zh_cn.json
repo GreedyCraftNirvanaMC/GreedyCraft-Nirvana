@@ -871,6 +871,7 @@
     "greedycraft.message.showscoreboard.hide": "§e玩家 %s §e设置计分板状态为: 隐藏",
     "greedycraft.message.showscoreboard.null": "§c当前不存在计分板，请先使用/greedycraft showscoreboard true命令开启计分板",
     "greedycraft.commands.setpackmode.casual": "§c§l无法在游戏中切换为休闲模式，可能造成未知的后果，如果要体验休闲模式请关闭游戏后前往 'config/greedycraft/config.json' 修改游戏模式并创建一个新存档",
+    "greedycraft.commands.suicide.execute_notplayer": "§c§l该命令仅允许玩家执行",
 
     "greedycraft.message.loggingtips.1": "§e感到卡顿？请在内存占用较高时使用§6R§e键菜单中的§6释放内存§e按钮手动清理内存！",
     "greedycraft.message.loggingtips.2": "§e感谢游玩贪婪整合包！如果你在游戏中遇到了问题，请先查阅§6《贪婪整合包——从入门到精通》。",

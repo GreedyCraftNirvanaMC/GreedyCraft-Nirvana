@@ -871,6 +871,7 @@
     "greedycraft.message.showscoreboard.hide": "§ePlayer %s §eset the scoreboard status to: Hidden",
     "greedycraft.message.showscoreboard.null": "§cNo scoreboard currently exists. Please use /greedycraft showscoreboard true to enable the scoreboard first.",
     "greedycraft.commands.setpackmode.casual": "§c§lYou cannot switch to Casual Mode while in-game. Doing so may cause unknown consequences. If you want to experience Casual Mode, please close the game, go to 'config/greedycraft/config.json' to change the game mode, and then create a new save.",
+    "greedycraft.commands.suicide.execute_notplayer": "§c§lThis command can only be executed by a player",
 
     "greedycraft.message.loggingtips.1": "§eExperiencing lag? When memory usage is high, use the §6Free Memory§e button in the §6R§e key menu to manually clear memory!",
     "greedycraft.message.loggingtips.2": "§eThanks for playing GreedyCraft! If you encounter any issues, please refer to the §6'GreedyCraft – From Beginner to Master'§e guide first.",
