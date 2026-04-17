@@ -2,9 +2,11 @@
   "allowMovement": {
     "mezz.jei.gui.recipes.RecipesGui": true,
     "xaero.common.gui.GuiMinimapMain": true,
-    "xaero.map.gui.GuiMap": true
+    "xaero.map.gui.GuiMap": true,
+    "net.bandit.reskillable.client.screen.SkillScreen": true
   },
   "hideBackground": {
-    "mezz.jei.gui.recipes.RecipesGui": false
+    "mezz.jei.gui.recipes.RecipesGui": false,
+    "net.bandit.reskillable.client.screen.SkillScreen": true
   }
 }
