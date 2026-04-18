@@ -10,6 +10,9 @@ let Season = Java.loadClass("sereneseasons.api.season.Season")
 
 let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 
+let hasPrePurifyingDustRecipes = false
+let PrePurifyingDustRecipes = {}
+
 // 为拥有 unlock_stage tag的物品右键解锁对应进度
 ItemEvents.rightClicked(event => {
     let player = event.player
@@ -256,20 +259,29 @@ ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
 
     let setBlockNumber = 0
 
-    // 预处理净化之尘配方展开 tag 并反向映射
     let recipesMap = {}
-    Object.entries(global.purifyingDustRecipes).forEach(([product, sources]) => {
-        sources.forEach(source => {
-            if (source.startsWith("#")) {
-                let tag = source.substring(1)
-                Block.getTaggedIds(tag).forEach(blockID => {
-                    recipesMap[blockID.toString()] = product
-                })
-            } else {
-                recipesMap[source] = product
-            }
+
+    // 预处理净化之尘配方展开 tag 并反向映射
+    if (hasPrePurifyingDustRecipes) {
+        recipesMap = PrePurifyingDustRecipes
+        player.tell("本次使用缓存")
+    } else {
+        Object.entries(global.purifyingDustRecipes).forEach(([product, sources]) => {
+            sources.forEach(source => {
+                if (source.startsWith("#")) {
+                    let tag = source.substring(1)
+                    Block.getTaggedIds(tag).forEach(blockID => {
+                        recipesMap[blockID.toString()] = product
+                    })
+                } else {
+                    recipesMap[source] = product
+                }
+            })
         })
-    })
+        hasPrePurifyingDustRecipes = true
+        PrePurifyingDustRecipes = recipesMap
+        player.tell("下次使用缓存")
+    }
 
     // 遍历以右键方块为中心的 15x15x15 范围内的所有方块
     for (let dx = -15; dx <= 15; dx++) {
