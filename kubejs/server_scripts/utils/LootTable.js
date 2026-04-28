@@ -15,17 +15,17 @@ function mainLootTableAddModifier(weight, quality, min, max) {
     lootMapList.push(this)
 }
 
+mainLootTableAddModifier.prototype.isHardMode = function () {
+    this.hardmode = true
+    return this
+}
+
 mainLootTableAddModifier.prototype.item = function (item) {
     if (!(this.hardmode)) {
         this.items.push(item)
     } else {
         this.HDitems.push(item)
     }
-    return this
-}
-
-mainLootTableAddModifier.prototype.isHardMode = function (boolean) {
-    this.hardmode = boolean
     return this
 }
 
