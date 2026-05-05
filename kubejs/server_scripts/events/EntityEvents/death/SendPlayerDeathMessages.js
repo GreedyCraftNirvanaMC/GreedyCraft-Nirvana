@@ -29,33 +29,4 @@ EntityEvents.death("minecraft:player", event => {
     // 从全局变量中随机选一条消息发送
     let msg = global.MESSAGE_PLAYER_DEATH[randomInt(0, global.MESSAGE_PLAYER_DEATH.length - 1)]
     player.tell(Component.translatable(msg, Component.literal(player.username).color(0xFFAA00).underlined()))
-
-    // 判断攻击来源是否是以下 boss
-    if (actual && actual.isLiving()) {
-        if (actual.type == "mowziesmobs:frostmaw" || actual.type == "mowziesmobs:umvuthi" || actual.type == "twilightforest:alpha_yeti") {
-            // 将范围设置为以玩家为中心周围 20 格
-            let box = player.boundingBox.inflate(20.0)
-
-            // 获取该 20 格内的所有实体列表
-            let entitys = level.getEntitiesWithin(box)
-
-            // 设置基础数量为 0
-            let count = 0
-
-            // 遍历实体列表
-            entitys.forEach(e => {
-                // 判断实体是否是玩家
-                if (e.type == "minecraft:player") {
-                    // 自增加
-                    count++
-                }
-            })
-
-            // 如果玩家数量不大于一
-            if (!(count > 1)) {
-                // 删除实体
-                actual.discard()
-            }
-        }
-    }
 })
