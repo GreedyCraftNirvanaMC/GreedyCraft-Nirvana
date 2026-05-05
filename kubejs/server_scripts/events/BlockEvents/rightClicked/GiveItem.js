@@ -27,5 +27,6 @@ BlockEvents.rightClicked(event => {
         level.destroyBlock(pos, false)
 
         player.give("greedycraft:pebble")
+        event.cancel()
     }
 })
