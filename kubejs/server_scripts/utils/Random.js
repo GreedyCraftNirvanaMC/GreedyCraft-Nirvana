@@ -1,4 +1,4 @@
-// priority: 1000
+// priority: 32767
 
 // 函数：生成随机整数。要求提供最小值和最大值两个形参
 function randomInt(min, max) {

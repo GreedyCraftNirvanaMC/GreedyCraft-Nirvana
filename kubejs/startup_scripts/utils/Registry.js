@@ -1,4 +1,4 @@
-// priority: 1000
+// priority: 32767
 
 // 函数：注册材料，无返回值，使用链式调用
 global.materialList = []

@@ -1,4 +1,4 @@
-// priority: 1000
+// priority: 32767
 
 // 函数：检查是否有非官方模组，返回非官方模组列表
 function checkModList() {
@@ -7,7 +7,7 @@ function checkModList() {
     // 获取模组列表
     Platform.mods.forEach((MOD_ID, MOD_INFO) => {
         // 判断模组是否在全局变量 modList 中
-        if (!(global.modList.has(MOD_ID))) {
+        if (!(global.VARIABLE_OFFICIAL_MOD_LIST.has(MOD_ID))) {
             // 不在则是非官方模组，添加到数组 MOD_ID
             unofficialModList.push(MOD_ID)
         }

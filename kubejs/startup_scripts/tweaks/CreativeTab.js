@@ -1,6 +1,6 @@
-// priority: 700
+// 此脚本用于为整合包创造模式物品栏修改名称
+// priority: 30
 
-// 修改创造模式菜单名称
 StartupEvents.modifyCreativeTab("kubejs:greedycraft_material", event => {
     event.displayName = Text.darkAqua(Component.translatable("greedycraft.creativetab.greedycraft_material.name"))
 })

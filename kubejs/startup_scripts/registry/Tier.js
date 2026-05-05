@@ -1,6 +1,6 @@
-// priority: 950
+// 此脚本用于为整合包注册自定义工具等级
+// priority: 60
 
-// 注册自定义等级
 ItemEvents.toolTierRegistry(event => {
     event.add("pebble", tier => {
         tier.uses = 6

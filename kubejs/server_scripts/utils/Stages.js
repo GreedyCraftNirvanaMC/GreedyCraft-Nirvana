@@ -4,9 +4,8 @@
 function givePlayerAllStage(server, player) {
     let playerName = player.username
 
-    Object.entries(global.stageListMap).forEach(([stageName, data]) => {
+    Object.entries(global.MAP_STAGE_LIST).forEach(([stageName, data]) => {
         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/${stageName}`)
-        AStages.addStageToPlayer(stageName, player)
     })
 }
 
@@ -14,7 +13,7 @@ function givePlayerAllStage(server, player) {
 function removePlayerAllStage(server, player) {
     let playerName = player.username
 
-    Object.entries(global.stageListMap).forEach(([stageName, data]) => {
+    Object.entries(global.MAP_STAGE_LIST).forEach(([stageName, data]) => {
         server.runCommandSilent(`advancement revoke ${playerName} only greedycraft:stages/${stageName}`)
         AStages.removeStageFromPlayer(stageName, player)
     })

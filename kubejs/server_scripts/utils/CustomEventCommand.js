@@ -1,4 +1,4 @@
-// priority: 1000
+// priority: 32767
 
 // 函数：延迟清理服务器掉落物，需要提供 event.server 形参
 function cleanServerDroppedItem(server) {

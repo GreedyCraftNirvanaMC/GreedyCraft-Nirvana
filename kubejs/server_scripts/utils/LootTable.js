@@ -1,4 +1,4 @@
-// priority: 1000
+// priority: 32767
 
 let lootMapList = []
 
@@ -30,7 +30,7 @@ mainLootTableAddModifier.prototype.item = function (item) {
 }
 
 LootJS.lootTables(event => {
-    global.mainLootTable.forEach(mainloots => {
+    global.VARIABLE_MAIN_LOOTTABLE_LIST.forEach(mainloots => {
         lootMapList.forEach(lootmap => {
             if (lootmap.hardmode) {
                 event.getLootTable(mainloots).createPool(pool => {
