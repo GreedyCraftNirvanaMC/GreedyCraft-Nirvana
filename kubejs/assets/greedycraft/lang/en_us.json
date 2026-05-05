@@ -19,7 +19,7 @@
     "greedycraft.packmode.casual": "§aCasual",
     "greedycraft.packmode.adventure": "§eAdventure",
     "greedycraft.packmode.expert": "§c§lExpert",
-    "greedycraft.scoreboard.stage.text": "§c§lStage: %s",
+    "greedycraft.tooltip.stage.text": "§c§lStage:",
 
     "greedycraft.modpack.name": "§bGreedyCraft§7·§c§lNIRVANA",
     "greedycraft.commands.setpackmode.noupdate": "§cYou are already using this mode.",
