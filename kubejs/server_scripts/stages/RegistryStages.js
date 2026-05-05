@@ -18,85 +18,58 @@ if (packMode != "casual") {
             // 按类型分别注册
             switch (stageType) {
                 case "item": {
-                    let tagItemList = []
-                    let normalItemList = []
                     stageData.forEach(data => {
-                        // 判断是否有 # 开头的数据，是则为Tag
                         if (data.startsWith("#")) {
-                            // 从Tag中获取物品列表并合并到数组 tagItemList
-                            let arr = Ingredient.of(data).itemIds.toArray()
-                            for (let i = 0; i < arr.length; i++) {
-                                tagItemList.push(String(arr[i]))
-                            }
+                            Ingredient.of(data).itemIds.forEach(id => {
+                                AStages.addRestrictionForItem(`greedycraft/stage/id/item/tag/${data}/${id}`, stageName, id)
+                                    .setHideInJEI(false)
+                                    .setHideTooltip(true)
+                            })
                         } else {
-                            // 直接添加物品到数组 normalItemList
-                            normalItemList.push(data)
+                            AStages.addRestrictionForItem(`greedycraft/stage/id/item/${data}/${stageName}`, stageName, data)
+                                .setHideInJEI(false)
+                                .setHideTooltip(true)
                         }
                     })
-                    // 合并两个数组
-                    let restrictionItemList = normalItemList.concat(tagItemList)
-                    // 注册阶段
-                    AStages.addRestrictionForItem(`greedycraft/stage/item/${stageName}`, stageName, restrictionItemList)
-                        .setHideInJEI(false)
-                        .setHideTooltip(true)
-                    console.log(`reg item stage, ID: greedycraft/stage/item/${stageName}. item list: ${restrictionItemList}`)
                     break;
                 }
                 case "ore": {
-                    // 从阶段数据里提取对应关系
                     Object.entries(stageData).forEach(([ore, block]) => {
-                        // 判断是不是Tag，与 item 类型同理
                         if (ore.startsWith("#")) {
                             let tag = ore.substring(1)
                             Block.getTaggedIds(tag).forEach(blockID => {
-                                // 根据对应关系注册阶段
-                                AStages.addRestrictionForOre(`greedycraft/stage/ore/tag/${stageName}/id/${blockID}`, stageName, Block.getBlock(blockID).defaultBlockState(), Block.getBlock(block).defaultBlockState())
-                                console.log(`reg ore stage: ${blockID} remodel block: ${block}`)
+                                AStages.addRestrictionForOre(`greedycraft/stage/id/ore/tag/${blockID}/${stageName}`, stageName, Block.getBlock(blockID).defaultBlockState(), Block.getBlock(block).defaultBlockState())
                             })
                         } else {
-                            // 根据对应关系注册阶段
-                            AStages.addRestrictionForOre(`greedycraft/stage/ore/${stageName}/id/${ore}`, stageName, Block.getBlock(ore).defaultBlockState(), Block.getBlock(block).defaultBlockState())
-                            console.log(`reg ore stage: ${ore} remodel block: ${block}`)
+                            AStages.addRestrictionForOre(`greedycraft/stage/id/ore/${ore}/${stageName}`, stageName, Block.getBlock(ore).defaultBlockState(), Block.getBlock(block).defaultBlockState())
                         }
                     })
                     break;
                 }
                 case "dimension": {
                     stageData.forEach(data => {
-                        // 直接注册阶段
-                        AStages.addRestrictionForDimension(`greedycraft/stage/dimension/${stageName}/id/${data}`, stageName, data)
-                        console.log(`reg dimension stage: ${data}`)
+                        AStages.addRestrictionForDimension(`greedycraft/stage/id/dimension/${stageName}/${data}`, stageName, data)
                     })
                     break;
                 }
                 case "mod": {
-                    let restrictionItemList = []
                     stageData.forEach(data => {
                         allItems.forEach(item => {
-                            // 获取该模组的所有物品
                             if (item.id.startsWith(`${data}:`)) {
-                                let itemID = item.id.toString()
-                                restrictionItemList.push(itemID)
-                                // 注册阶段
-                                console.log(`reg mod stage: ${itemID}`)
+                                AStages.addRestrictionForItem(`greedycraft/stage/id/mod/${stageName}/${item.id.toString()}`, stageName, item.id.toString())
+                                    .setHideInJEI(false)
+                                    .setHideTooltip(true)
                             }
                         })
                     })
-                    AStages.addRestrictionForItem(`greedycraft/stage/mod/${stageName}`, stageName, restrictionItemList)
-                        .setHideInJEI(false)
-                        .setHideTooltip(true)
                     break;
                 }
                 case "mob": {
                     stageData.forEach(data => {
-                        // 直接注册阶段
-                        AStages.addRestrictionForMob(`greedycraft/stage/mob/${stageName}/id/${data}`, stageName, data)
-                        console.log(`reg mob stage: ${data}`)
+                        AStages.addRestrictionForMob(`greedycraft/stage/id/mob/${stageName}/${data}`, stageName, data)
                     })
                     break;
                 }
-                default:
-                    console.error(`Reg Stage ${stageName}: Does not exist Type ${stageType}`)
             }
         })
     })
