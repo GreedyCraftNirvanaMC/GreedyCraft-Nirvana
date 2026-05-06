@@ -873,6 +873,8 @@
     "greedycraft.commands.setpackmode.casual": "§c§lYou cannot switch to Casual Mode while in-game. Doing so may cause unknown consequences. If you want to experience Casual Mode, please close the game, go to 'config/greedycraft/config.json' to change the game mode, and then create a new save.",
     "greedycraft.commands.suicide.execute_notplayer": "§c§lThis command can only be executed by a player",
 
+    "greedycraft.messages.death.kill": "§7Entity §e§o%s §7was removed from the Elysian Public Interface",
+
     "greedycraft.message.loggingtips.1": "§eExperiencing lag? When memory usage is high, use the §6Free Memory§e button in the §6R§e key menu to manually clear memory!",
     "greedycraft.message.loggingtips.2": "§eThanks for playing GreedyCraft! If you encounter any issues, please refer to the §6'GreedyCraft – From Beginner to Master'§e guide first.",
     "greedycraft.message.loggingtips.3": "§eIf you encounter mod-related issues, please check the §6Encyclopedia§e! Guides for all mods can be found there.",

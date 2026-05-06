@@ -15,12 +15,10 @@ EntityEvents.death("minecraft:player", event => {
 
     // 判断造成死亡的是否是实体
     if (actual) {
-        // 判断是否是玩家
-        if (actual.isPlayer()) {
-            message = message.replace(actual.name.getString(), "☻" + ` §n§e${actual.name.getString()} ` + "§7")
-        } else {
-            message = message.replace(actual.name.getString(), "§c" + ` §n§e${actual.name.getString()} ` + "§7")
-        }
+        message = message.replace(actual.name.getString(), `§c§n${actual.name.getString()}§7`)
+        // 判断是否是被 kill 的
+    } else if (source.getType() == "genericKill") {
+        message = Component.literal("§c☠ ").append(Component.translatable("greedycraft.messages.death.kill", Component.literal(player.username).color(0xFFAA00).italic())).getString().toString()
     }
 
     // 向服务器发送自定义死亡消息
