@@ -9,8 +9,6 @@ AStageEvents.added(event => {
     
     let borderText = "§9§l=================================================="
 
-    console.log(`Astage added ${stage}`)
-
     // 排除掉基础阶段
     if (stage != "init_start" && stage != "init_creative") {
         // 非创造模式创建的存档才发送解锁消息
@@ -26,4 +24,5 @@ AStageEvents.added(event => {
             player.tell(borderText)
         }
     }
+    console.log(`Added stage: ${stage} to ${player.username}. Player X:${player.x} Y:${player.y} Z:${player.z}`)
 })

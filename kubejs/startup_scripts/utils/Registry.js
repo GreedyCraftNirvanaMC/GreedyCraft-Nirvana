@@ -203,6 +203,6 @@ StartupEvents.registry("item", event => {
 		item.maxStackSize(normalItem.maxCount)
 		item.burnTime(normalItem.burnTime)
 		item.tag("greedycraft:item")
-		console.log(`reg normal item: ${normalItem.name}`)
+		console.log(`reg normal item: greedycraft:${normalItem.name}`)
 	})
 })

@@ -28,6 +28,7 @@ function checkCheat(player, server) {
     if (player.isCreative()) {
         // 判断玩家在创造模式下有没有 init_creative 阶段
         if (!(AStages.serverHasStage("init_creative", server)) && AStages.playerHasStage("init", player)) {
+            console.warn(`${player.name} is in a cheating state`)
             return true
         }
     }

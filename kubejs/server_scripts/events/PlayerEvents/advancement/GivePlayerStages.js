@@ -28,7 +28,6 @@ PlayerEvents.advancement(event => {
                     // 创造模式不播放
                     if (!(AStages.serverHasStage("init_server", server))) {
                         player.playNotifySound("minecraft:ui.toast.challenge_complete", "music", 1.0, 1.0)
-                        console.log(`Give Advancement for ${advancementID} to ${playerName}`)
                     }
                 }
             }

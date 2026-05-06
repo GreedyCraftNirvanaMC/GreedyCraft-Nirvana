@@ -1,5 +1,5 @@
 // 服务器事件-命令事件
-// 此脚本用于反作弊系统
+// 此脚本用于反作弊系统拦截命令执行
 // priority: 50
 
 ServerEvents.command(event => {
@@ -28,7 +28,7 @@ ServerEvents.command(event => {
                         if (global.VARIABLE_COMMANDBLACK_LIST.includes(command)) {
                             // 发送消息并取消
                             player.tell(Component.translatable("greedycraft.message.anticheat.text").append(Component.literal(command)))
-                            console.warn(`The Player Tried to Execute an Illegal Command: ${command}.\nPlayer Name: ${playerName}\nPlayer UUID: ${playerUUID}`)
+                            console.warn(`${playerName} attempted to execute an illegal command: ${command}`)
                             event.cancel()
                         }
                         // 判断反作弊模式模式是否为专家模式
@@ -37,7 +37,7 @@ ServerEvents.command(event => {
                         if (!(global.VARIABLE_COMMANDWHITE_LIST.includes(command))) {
                             // 发送消息并取消
                             player.tell(Component.translatable("greedycraft.message.anticheat.text").append(Component.literal(command)))
-                            console.warn(`The Player Tried to Execute an Illegal Command: ${command}.\nPlayer Name: ${playerName}\nPlayer UUID: ${playerUUID}`)
+                            console.warn(`${playerName} attempted to execute an illegal command: ${command}`)
                             event.cancel()
                         }
                     }

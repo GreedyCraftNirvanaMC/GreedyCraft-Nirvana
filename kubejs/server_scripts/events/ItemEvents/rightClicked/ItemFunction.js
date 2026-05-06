@@ -22,6 +22,7 @@ ItemEvents.rightClicked("greedycraft:difficulty_changer", event => {
 
     // 增加10难度
     server.runCommandSilent(`ps_difficulty add ${playerName} 10`)
+    console.log(`${playerName} used greedycraft:difficulty_changer to increase their own difficulty by 10. Player X:${player.x} Y:${player.y} Z:${player.z}`)
 })
 
 // 创造模式控制器
@@ -31,6 +32,7 @@ ItemEvents.rightClicked("greedycraft:creative_controller", event => {
 
     // 切换为创造模式
     server.runCommandSilent(`gamemode creative ${playerName}`)
+    console.log(`${playerName} used greedycraft:creative_controller to set their game mode to Creative. Player X:${player.x} Y:${player.y} Z:${player.z}`)
 })
 
 // 肾上腺素
@@ -70,6 +72,10 @@ ItemEvents.rightClicked("greedycraft:cryonic_artifact", event => {
             event.item.shrink(1)
 
             trigger = true
+
+            console.log(`${player.username} used greedycraft:cryonic_artifact to set the health of aether:sun_spirit to 1.
+                Player X:${player.x} Y:${player.y} Z:${player.z}
+                Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
         }
     })
 
@@ -102,6 +108,8 @@ ItemEvents.rightClicked("greedycraft:delivery_order", event => {
     })
     // 将物品减 1
     event.item.shrink(1)
+
+    console.log(`${player.username} used greedycraft:delivery_order to summon a reward minecart at X:${player.x} Y:${player.y + 1.0} Z:${player.z}`)
 })
 
 // 应急按钮
@@ -116,11 +124,13 @@ ItemEvents.rightClicked("greedycraft:emergency_button", event => {
         if (!(entity.isPlayer())) {
             // 删除（非 Kill）
             entity.discard()
+            console.debug(`greedycraft:emergency_button removed entity ${entity.type} from world ${level.name.getString()}. Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
         }
     })
 
     // 发送消息
     server.tell(Component.translatable("greedycraft.message.right_clicked.emergency_button", Component.literal(player.username).color(0xFFFF55).bold(), Component.literal(level.displayName).color(0xFF55FF).bold()))
+    console.log("You can check the debug log to view the list of removed entities")
 
     // 将物品减 1
     event.item.shrink(1)
@@ -135,6 +145,7 @@ ItemEvents.rightClicked("greedycraft:fake_philosopher_stone", event => {
     if (block && block.getId() == "minecraft:sand") {
         // 重新设置为玻璃
         level.setBlock(block.getPos(), "minecraft:glass", 3)
+        console.debug(`${player.username} used greedycraft:fake_philosopher_stone to convert the sand at ${block.getX()} ${block.getY()} ${block.getZ()} into glass. Player X:${player.x} Y:${player.y} Z:${player.z}`)
     }
 })
 
@@ -278,6 +289,7 @@ ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
     if (setBlockNumber > 0) {
         player.tell(Component.translatable("greedycraft.message.right_clicked.purifying_dust", Component.literal(setBlockNumber).color(0xFFAA00), endTime - startTime))
         level.spawnParticles("minecraft:poof", true, player.x, player.y, player.z, 8.0, 8.0, 8.0, 1500, 0.2)
+        console.log(`${player.username} used greedycraft:purifying_dust at X:${player.x} Y:${player.y} Z:${player.z}, causing ${endTime - startTime}ms of lag`)
         event.item.shrink(1)
     } else {
         player.tell(Component.translatable("greedycraft.message.right_clicked.purifying_dust.1"))
@@ -318,6 +330,7 @@ ItemEvents.rightClicked("greedycraft:slime_crown", event => {
     })
 
     player.tell(Component.translatable("greedycraft.message.right_clicked.slime_crown"))
+    console.log(`${player.username} used greedycraft:slime_crown at X:${player.x} Y:${player.y} Z:${player.z}`)
 
     event.item.shrink(1)
 })

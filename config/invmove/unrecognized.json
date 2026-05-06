@@ -3,10 +3,13 @@
     "mezz.jei.gui.recipes.RecipesGui": true,
     "xaero.common.gui.GuiMinimapMain": true,
     "xaero.map.gui.GuiMap": true,
-    "net.bandit.reskillable.client.screen.SkillScreen": true
+    "net.bandit.reskillable.client.screen.SkillScreen": true,
+    "net.minecraft.client.gui.screens.PauseScreen": true,
+    "com.aetherteam.aether.client.gui.screen.inventory.AetherAccessoriesScreen": true
   },
   "hideBackground": {
     "mezz.jei.gui.recipes.RecipesGui": false,
-    "net.bandit.reskillable.client.screen.SkillScreen": true
+    "net.bandit.reskillable.client.screen.SkillScreen": true,
+    "com.aetherteam.aether.client.gui.screen.inventory.AetherAccessoriesScreen": true
   }
 }
