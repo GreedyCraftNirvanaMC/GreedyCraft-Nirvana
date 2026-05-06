@@ -11,7 +11,7 @@ EntityEvents.beforeHurt(event => {
         entity.kill()
         // 输出日志
         console.log(`${source.player.username} killed ${entity.type} using greedycraft:one_punch.
-            Player X:${player.x} Y:${player.y} Z:${player.z}
+            Player X:${source.player.x} Y:${source.player.y} Z:${source.player.z}
             Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
     }
 })

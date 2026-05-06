@@ -465,7 +465,7 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
         let pos = randomSpawnAroundPlayer(player, 10)
 
         // 如果不是空气跳过这个循环
-        if (!(levelBlock.getBlock().isEmpty(levelBlock.getBlockState()))) {
+        if (!(level.isEmptyBlock(pos))) {
             continue
         }
 
@@ -551,13 +551,11 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
     }
 
     for (let i = 0; i < maxCount; i++) {
-        let levelBlock = level.getBlock(pos)
-
         // 获取玩家周围随机的格子
         let pos = randomSpawnAroundPlayer(player, 10)
 
         // 如果不是空气跳过这个循环
-        if (!(levelBlock.getBlock().isEmpty(levelBlock.getBlockState()))) {
+        if (!(level.isEmptyBlock(pos))) {
             continue
         }
 

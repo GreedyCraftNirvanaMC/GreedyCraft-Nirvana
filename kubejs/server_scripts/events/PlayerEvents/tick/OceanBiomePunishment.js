@@ -9,7 +9,7 @@ PlayerEvents.tick(event => {
     let player = event.player
     let level = event.level
     let server = player.server
-    let biome = level.getBiome(player.block.getPos())
+    let biome = level.getBiome(player.blockPosition())
 
     // 判断是否在主世界
     if (!(level.isOverworld())) {
