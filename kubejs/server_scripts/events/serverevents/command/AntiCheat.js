@@ -26,18 +26,22 @@ ServerEvents.command(event => {
                     if (antiCheatMode == "adventure") {
                         // 判断执行的命令是否在黑名单里
                         if (global.VARIABLE_COMMANDBLACK_LIST.includes(command)) {
-                            // 发送消息并取消
+                            // 发送消息
                             player.tell(Component.translatable("greedycraft.message.anticheat.text").append(Component.literal(command)))
+                            // 输出日志
                             console.warn(`${playerName} attempted to execute an illegal command: ${command}`)
+                            // 取消事件
                             event.cancel()
                         }
                         // 判断反作弊模式模式是否为专家模式
                     } else if (antiCheatMode == "expert") {
                         // 判断执行的命令是否不在白名单里
                         if (!(global.VARIABLE_COMMANDWHITE_LIST.includes(command))) {
-                            // 发送消息并取消
+                            // 发送消息
                             player.tell(Component.translatable("greedycraft.message.anticheat.text").append(Component.literal(command)))
+                            // 输出日志
                             console.warn(`${playerName} attempted to execute an illegal command: ${command}`)
+                            // 取消事件
                             event.cancel()
                         }
                     }

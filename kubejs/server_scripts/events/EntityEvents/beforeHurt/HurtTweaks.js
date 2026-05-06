@@ -82,6 +82,7 @@ EntityEvents.beforeHurt(event => {
                 }
             }
         } else {
+            // 没有则直接给予缓慢效果
             player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 0))
         }
     }

@@ -22,6 +22,7 @@ ItemEvents.rightClicked("greedycraft:difficulty_changer", event => {
 
     // 增加10难度
     server.runCommandSilent(`ps_difficulty add ${playerName} 10`)
+    // 输出日志
     console.log(`${playerName} used greedycraft:difficulty_changer to increase their own difficulty by 10. Player X:${player.x} Y:${player.y} Z:${player.z}`)
 })
 
@@ -32,6 +33,7 @@ ItemEvents.rightClicked("greedycraft:creative_controller", event => {
 
     // 切换为创造模式
     server.runCommandSilent(`gamemode creative ${playerName}`)
+    // 输出日志
     console.log(`${playerName} used greedycraft:creative_controller to set their game mode to Creative. Player X:${player.x} Y:${player.y} Z:${player.z}`)
 })
 
@@ -73,6 +75,7 @@ ItemEvents.rightClicked("greedycraft:cryonic_artifact", event => {
 
             trigger = true
 
+            // 输出日志
             console.log(`${player.username} used greedycraft:cryonic_artifact to set the health of aether:sun_spirit to 1.
                 Player X:${player.x} Y:${player.y} Z:${player.z}
                 Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
@@ -109,6 +112,7 @@ ItemEvents.rightClicked("greedycraft:delivery_order", event => {
     // 将物品减 1
     event.item.shrink(1)
 
+    // 输出日志
     console.log(`${player.username} used greedycraft:delivery_order to summon a reward minecart at X:${player.x} Y:${player.y + 1.0} Z:${player.z}`)
 })
 
@@ -124,12 +128,14 @@ ItemEvents.rightClicked("greedycraft:emergency_button", event => {
         if (!(entity.isPlayer())) {
             // 删除（非 Kill）
             entity.discard()
+            // 输出日志
             console.debug(`greedycraft:emergency_button removed entity ${entity.type} from world ${level.name.getString()}. Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
         }
     })
 
     // 发送消息
     server.tell(Component.translatable("greedycraft.message.right_clicked.emergency_button", Component.literal(player.username).color(0xFFFF55).bold(), Component.literal(level.displayName).color(0xFF55FF).bold()))
+    // 输出日志
     console.log("You can check the debug log to view the list of removed entities")
 
     // 将物品减 1
@@ -145,6 +151,7 @@ ItemEvents.rightClicked("greedycraft:fake_philosopher_stone", event => {
     if (block && block.getId() == "minecraft:sand") {
         // 重新设置为玻璃
         level.setBlock(block.getPos(), "minecraft:glass", 3)
+        // 输出日志
         console.debug(`${player.username} used greedycraft:fake_philosopher_stone to convert the sand at ${block.getX()} ${block.getY()} ${block.getZ()} into glass. Player X:${player.x} Y:${player.y} Z:${player.z}`)
     }
 })
@@ -237,10 +244,11 @@ ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
 
     let recipesMap = {}
 
-    // 预处理净化之尘配方展开 tag 并反向映射
+    // 判断是否使用缓存
     if (hasPrePurifyingDustRecipes) {
         recipesMap = PrePurifyingDustRecipes
     } else {
+        // 预处理净化之尘配方展开 tag 并反向映射
         Object.entries(global.MAP_PURIFYINGDUST_RECIPES).forEach(([product, sources]) => {
             sources.forEach(source => {
                 if (source.startsWith("#")) {
@@ -253,6 +261,7 @@ ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
                 }
             })
         })
+        // 将结果缓存
         hasPrePurifyingDustRecipes = true
         PrePurifyingDustRecipes = recipesMap
     }
@@ -287,11 +296,16 @@ ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
 
     // 判断是否有方块被替换
     if (setBlockNumber > 0) {
+        // 发送消息
         player.tell(Component.translatable("greedycraft.message.right_clicked.purifying_dust", Component.literal(setBlockNumber).color(0xFFAA00), endTime - startTime))
+        // 生成粒子
         level.spawnParticles("minecraft:poof", true, player.x, player.y, player.z, 8.0, 8.0, 8.0, 1500, 0.2)
+        // 输出日志
         console.log(`${player.username} used greedycraft:purifying_dust at X:${player.x} Y:${player.y} Z:${player.z}, causing ${endTime - startTime}ms of lag`)
+        // 将物品减 1
         event.item.shrink(1)
     } else {
+        // 发送消息
         player.tell(Component.translatable("greedycraft.message.right_clicked.purifying_dust.1"))
     }
 })
@@ -305,16 +319,28 @@ ItemEvents.rightClicked("greedycraft:skill_reset_scroll", event => {
     let model = SkillModel.get(player)
 
     let totalXP = 0
+    // 遍历所有技能
     skills.forEach(skill => {
         let skillLevel = model.getSkillLevel(skill)
         let xp = Math.floor(20 * ((Math.pow(1.2, skillLevel - 1) - 1) / (1.2 - 1)))
+
+        // 设置技能等级
         server.runCommandSilent(`skills set ${player.username} ${skill} 1`)
+
+        // 计算经验
         totalXP += xp
     })
+
+    // 判断整合包模式是否是专家
     if (packMode == "expert") {
+        // 只返还一半经验
         totalXP = totalXP / 0.5
     }
+
+    // 发送消息
     player.tell(Component.translatable("greedycraft.message.right_clicked.skill_reset_scroll", `§6${totalXP}`))
+
+    // 将物品减一
     event.item.shrink(1)
 })
 
@@ -325,13 +351,20 @@ ItemEvents.rightClicked("greedycraft:slime_crown", event => {
 
     // 生成一个原版的史莱姆并设置 NBT 为 {size: 16}
     level.spawnEntity("minecraft:slime", entity => {
+        // 设置坐标
         entity.setPos(player.x, player.y + 3.0, player.z)
+
+        // 设置 NBT
         entity.mergeNbt({ size: 16 })
     })
 
+    // 发送消息
     player.tell(Component.translatable("greedycraft.message.right_clicked.slime_crown"))
+
+    // 输出日志
     console.log(`${player.username} used greedycraft:slime_crown at X:${player.x} Y:${player.y} Z:${player.z}`)
 
+    // 将物品减 1
     event.item.shrink(1)
 })
 
@@ -343,8 +376,10 @@ ItemEvents.rightClicked("greedycraft:sunny_doll", event => {
     // 没啥好说的，直接用原版指令简单方便不是吗
     server.runCommandSilent("weaher clear")
 
+    // 发送消息
     server.tell(Component.translatable("greedycraft.message.right_clicked.sunny_doll", Component.literal(player.name).color(0xFFAA00)))
 
+    // 将物品减 1
     event.item.shrink(1)
 })
 
@@ -360,18 +395,21 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
     if (season != Season.WINTER) {
         // 判断当前群系是否是雪地
         if (!(level.getBiome(player.blockPosition()).isTag("c:is_ocean"))) {
+            // 发送消息
             player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.biome"))
             return
         }
 
         // 必须要下雨
         if (!(level.isRaining())) {
+            // 发送消息
             player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.weather"))
             return
         }
 
         // 必须在主世界时才能召唤
         if (!(level.isOverworld())) {
+            // 发送消息
             player.tell(Component.translatable("greedycraft.message.spawn.error.frostmaw.world"))
             return
         }
@@ -386,12 +424,16 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
 
         // 根据整合包模式设置最大血量
         let maxHealth = entity.getMaxHealth()
+
         if (packMode == "casual") {
             maxHealth = Math.floor(maxHealth / 2)
         }
+
         if (packMode == "adventure") {
-            maxHealth = Math.floor(maxHealth * 1.5)
+            maxHeal
+            th = Math.floor(maxHealth * 1.5)
         }
+
         if (packMode == "expert") {
             maxHealth = Math.floor(maxHealth * 2)
         }
@@ -401,6 +443,8 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
 
         // 设置最大血量
         entity.setMaxHealth(maxHealth)
+
+        // 设置血量
         entity.setHealth(maxHealth)
     })
 
@@ -409,15 +453,16 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
     if (packMode == "casual") {
         maxCount = 3
     }
+
     if (packMode == "expert") {
         maxCount = 10
     }
 
     for (let i = 0; i < maxCount; i++) {
+        let levelBlock = level.getBlock(pos)
+
         // 获取玩家周围随机的格子
         let pos = randomSpawnAroundPlayer(player, 10)
-
-        let levelBlock = level.getBlock(pos)
 
         // 如果不是空气跳过这个循环
         if (!(levelBlock.getBlock().isEmpty(levelBlock.getBlockState()))) {
@@ -426,10 +471,12 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
 
         // 生成
         level.spawnEntity("twilightforest:yeti", entity => {
+            // 设置坐标
             entity.setPos(pos)
         })
     }
 
+    // 发送消息
     player.tell(Component.translatable("greedycraft.message.right_clicked.beast_hand"))
 })
 
@@ -442,18 +489,21 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
 
     // 必须在晴天
     if (level.isRaining()) {
+        // 发送消息
         player.tell(Component.translatable("greedycraft.message.spawn.error.umvuthi.weather"))
         return
     }
 
     // 必须在主世界时才能召唤
     if (!(level.isOverworld())) {
+        // 发送消息
         player.tell(Component.translatable("greedycraft.message.spawn.error.umvuthi.world"))
         return
     }
 
     // 必须是白天
     if (!(level.isDay())) {
+        // 发送消息
         player.tell(Component.translatable("greedycraft.message.spawn.error.umvuthi.time"))
         return
     }
@@ -467,12 +517,15 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
 
         // 根据整合包模式设置最大血量
         let maxHealth = entity.getMaxHealth()
+
         if (packMode == "casual") {
             maxHealth = Math.floor(maxHealth / 2)
         }
+
         if (packMode == "adventure") {
             maxHealth = Math.floor(maxHealth * 1.5)
         }
+
         if (packMode == "expert") {
             maxHealth = Math.floor(maxHealth * 2)
         }
@@ -482,23 +535,26 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
 
         // 设置最大血量
         entity.setMaxHealth(maxHealth)
+        // 设置血量
         entity.setHealth(maxHealth)
     })
 
     // 根据整合包模式设置召唤随从的数量
     let maxCount = 4;
+
     if (packMode == "casual") {
         maxCount = 2
     }
+
     if (packMode == "expert") {
         maxCount = 8
     }
 
     for (let i = 0; i < maxCount; i++) {
+        let levelBlock = level.getBlock(pos)
+
         // 获取玩家周围随机的格子
         let pos = randomSpawnAroundPlayer(player, 10)
-
-        let levelBlock = level.getBlock(pos)
 
         // 如果不是空气跳过这个循环
         if (!(levelBlock.getBlock().isEmpty(levelBlock.getBlockState()))) {
@@ -507,9 +563,11 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
 
         // 生成
         level.spawnEntity("mowziesmobs:umvuthana_raptor", entity => {
+            // 设置坐标
             entity.setPos(pos)
         })
     }
 
+    // 发送消息
     player.tell(Component.translatable("greedycraft.message.right_clicked.sun_totem"))
 })

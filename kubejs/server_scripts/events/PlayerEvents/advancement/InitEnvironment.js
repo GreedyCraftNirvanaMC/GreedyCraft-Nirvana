@@ -47,5 +47,6 @@ PlayerEvents.advancement("greedycraft:stages/init", event => {
         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/expert`)
     }
 
+    // 输出日志
     console.log(`New player ${player.name} joined the game at X:${player.x} Y:${player.y} Z:${player.z}`)
 })

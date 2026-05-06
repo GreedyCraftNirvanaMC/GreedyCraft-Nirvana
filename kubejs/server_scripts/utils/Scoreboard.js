@@ -35,6 +35,7 @@ function addScoreBoard(player, server) {
     // 获取计分板的游戏模式项文本 *此为自定义函数*
     let gameModeText = getScoreBoardgameModeText(packMode, player, server).getString()
 
+    // 创建计分板
     server.runCommandSilent(`scoreboard objectives add packinfo dummy "${packName}"`)
     server.runCommandSilent("scoreboard objectives modify packinfo numberformat blank")
     server.runCommandSilent("scoreboard players set original packinfo 4")

@@ -24,5 +24,6 @@ AStageEvents.added(event => {
             player.tell(borderText)
         }
     }
+    // 输出日志
     console.log(`Added stage: ${stage} to ${player.username}. Player X:${player.x} Y:${player.y} Z:${player.z}`)
 })

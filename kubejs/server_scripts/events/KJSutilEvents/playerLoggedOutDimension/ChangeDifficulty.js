@@ -8,7 +8,9 @@ KJSutilEvents.playerLoggedOutDimension(event => {
     let playerName = player.username
     let loggedOutDimension = event.loggedOut
 
+    // 获取维度与难度的对应关系
     Object.entries(global.MAP_DIMENSION_DIFFICULTY).forEach(([dimension, difficulty]) => {
+        // 判断进入的哪个维度
         if (loggedOutDimension == dimension) {
             // 增加难度，但是难度为负数，所以就变成减了
             server.runCommandSilent(`ps_difficulty add ${playerName} -${difficulty}`)

@@ -21,17 +21,23 @@ function checkModList() {
 function checkCheat(player, server) {
     let unofficialModList = checkModList()
 
+    // 检查是否有非官方模组
     if (unofficialModList.length > 0) {
+        // 返回结果
         return true
     }
     
+    // 判断玩家是否是创造模式
     if (player.isCreative()) {
-        // 判断玩家在创造模式下有没有 init_creative 阶段
-        if (!(AStages.serverHasStage("init_creative", server)) && AStages.playerHasStage("init", player)) {
+        // 判断服务器是否没有 init_creative 阶段并且玩家没有 graduated 阶段
+        if (!(AStages.serverHasStage("init_creative", server)) && !(AStages.playerHasStage("graduated", player))) {
+            // 输出日志
             console.warn(`${player.name} is in a cheating state`)
+            // 返回结果
             return true
         }
     }
 
+    // 返回结果
     return false
 }

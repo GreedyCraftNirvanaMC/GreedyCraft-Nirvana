@@ -1,5 +1,5 @@
 // 物品事件-修改 Tooltips 事件
-// 此脚本用于给阶段物品添加阶段名 Tooltips
+// 此脚本用于给物品 Tooltips
 // priority: 50
 
 ItemEvents.modifyTooltips(event => {

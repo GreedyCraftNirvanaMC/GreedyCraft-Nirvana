@@ -17,15 +17,21 @@ if (packMode != "casual") {
         Object.entries(stageMap).forEach(([stageName, stageData]) => {
             // 按类型分别注册
             switch (stageType) {
+                // item 类型
                 case "item": {
+                    // 遍历阶段对象数据
                     stageData.forEach(data => {
+                        // 判断对象开头是否是 #
                         if (data.startsWith("#")) {
+                            // 是则判断为 tag 并展开
                             Ingredient.of(data).itemIds.forEach(id => {
+                                // 添加阶段
                                 AStages.addRestrictionForItem(`greedycraft/stage/id/item/tag/${data}/${id}`, stageName, id)
                                     .setHideInJEI(false)
                                     .setHideTooltip(true)
                             })
                         } else {
+                            // 不是 tag 则直接添加阶段
                             AStages.addRestrictionForItem(`greedycraft/stage/id/item/${data}/${stageName}`, stageName, data)
                                 .setHideInJEI(false)
                                 .setHideTooltip(true)
@@ -33,29 +39,44 @@ if (packMode != "casual") {
                     })
                     break;
                 }
+                // ore 类型
                 case "ore": {
+                    // 遍历阶段对象数据
                     Object.entries(stageData).forEach(([ore, block]) => {
+                        // 判断对象开头是否是 #
                         if (ore.startsWith("#")) {
+                            // 截断字符
                             let tag = ore.substring(1)
+                            // 展开 tag
                             Block.getTaggedIds(tag).forEach(blockID => {
+                                // 添加阶段
                                 AStages.addRestrictionForOre(`greedycraft/stage/id/ore/tag/${blockID}/${stageName}`, stageName, Block.getBlock(blockID).defaultBlockState(), Block.getBlock(block).defaultBlockState())
                             })
                         } else {
+                            // 直接添加阶段
                             AStages.addRestrictionForOre(`greedycraft/stage/id/ore/${ore}/${stageName}`, stageName, Block.getBlock(ore).defaultBlockState(), Block.getBlock(block).defaultBlockState())
                         }
                     })
                     break;
                 }
+                // dimension 类型
                 case "dimension": {
+                    // 遍历阶段对象数据
                     stageData.forEach(data => {
+                        // 添加阶段
                         AStages.addRestrictionForDimension(`greedycraft/stage/id/dimension/${stageName}/${data}`, stageName, data)
                     })
                     break;
                 }
+                // mod 类型
                 case "mod": {
+                    // 遍历阶段对象数据
                     stageData.forEach(data => {
+                        // 遍历所有物品
                         allItems.forEach(item => {
+                            // 判断是否符合规则
                             if (item.id.startsWith(`${data}:`)) {
+                                // 添加阶段
                                 AStages.addRestrictionForItem(`greedycraft/stage/id/mod/${stageName}/${item.id.toString()}`, stageName, item.id.toString())
                                     .setHideInJEI(false)
                                     .setHideTooltip(true)
@@ -64,8 +85,11 @@ if (packMode != "casual") {
                     })
                     break;
                 }
+                // mob 类型
                 case "mob": {
+                    // 遍历阶段对象数据
                     stageData.forEach(data => {
+                        // 添加阶段
                         AStages.addRestrictionForMob(`greedycraft/stage/id/mob/${stageName}/${data}`, stageName, data)
                     })
                     break;

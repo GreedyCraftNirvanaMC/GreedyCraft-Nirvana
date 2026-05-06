@@ -10,7 +10,9 @@ function cleanServerDroppedItem(server) {
             server.tell(Component.translatable("greedycraft.message.scheduleinticks.item_purger.2"))
             // 延迟100 tick
             server.scheduleInTicks(100, e => {
+                // 清除凋落物
                 server.runCommandSilent("kill @e[type=item]")
+                // 发送消息
                 server.tell(Component.translatable("greedycraft.message.scheduleinticks.item_purger.3"))
             })
         })

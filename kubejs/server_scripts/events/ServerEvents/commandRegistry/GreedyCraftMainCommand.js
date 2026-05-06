@@ -47,23 +47,33 @@ ServerEvents.commandRegistry(event => {
                                     return 1
                                 }
 
+                                // 判断游戏模式是否是专家
                                 if (options == "expert") {
                                     let players = server.players
+                                    // 给服务器上所有玩家 expert 进度
                                     players.forEach(player => {
                                         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/expert`)
                                     })
+                                    // 给服务器 expert 阶段
                                     AStages.addStageToServer("expert", server)
                                 }
 
+                                // 判断游戏模式是否是冒险
                                 if (options == "adventure") {
                                     let players = server.players
+                                    // 清除多余信息
                                     players.forEach(player => {
+                                        // 如果玩家有 expert 阶段
                                         if (AStages.playerHasStage("expert", player)) {
+                                            // 删除 expert 进度
                                             server.runCommandSilent(`advancement revoke ${playerName} only greedycraft:stages/expert`)
+                                            // 删除玩家 expert 阶段
                                             AStages.removeStageFromPlayer("expert", player)
                                         }
                                     })
+                                    // 如果服务器有 expert 阶段
                                     if (AStages.serverHasStage("expert", server)) {
+                                        // 删除服务器上的 expert 阶段
                                         AStages.removeStageFromServer("expert", server)
                                     }
                                 }
@@ -81,8 +91,13 @@ ServerEvents.commandRegistry(event => {
                                 let gameMode = getScoreBoardGameMode(options, player, server).getString()
                                 server.runCommandSilent(`scoreboard players display name gamemode packinfo "${gameMode}"`)
 
+                                // 发送消息
                                 server.tell(Component.translatable("greedycraft.commands.setpackmode.success").append(Component.translatable(`greedycraft.packmode.${options}`)))
+                                
+                                // 输出日志
                                 console.warn(`${playerName} set the modpack mode to ${options}`)
+                                
+                                // 返回
                                 return 1
                             })
                     )
@@ -107,19 +122,27 @@ ServerEvents.commandRegistry(event => {
                                 if (options) {
                                     // 判空
                                     if (scoreboard) {
+                                        // 发送消息
                                         player.tell(Component.translatable("greedycraft.message.showscoreboard.display"))
                                     } else {
+                                        // 添加计分板
                                         addScoreBoard(player, server)
+                                        // 发送消息
                                         server.tell(Component.translatable("greedycraft.message.showscoreboard.show", Component.literal(player.username).color(0xFFAA00)))
                                     }
                                 } else {
+                                    // 判空
                                     if (scoreboard) {
+                                        // 删除计分板
                                         server.scoreboard.removeObjective(scoreboard)
+                                        // 发送消息
                                         server.tell(Component.translatable("greedycraft.message.showscoreboard.hide", Component.literal(player.username).color(0xFFAA00)))
                                     } else {
+                                        // 发送消息
                                         player.tell(Component.translatable("greedycraft.message.showscoreboard.null"))
                                     }
                                 }
+                                // 返回
                                 return 1
                             })
                     )
@@ -130,12 +153,17 @@ ServerEvents.commandRegistry(event => {
                     .executes(ctx => {
                         let source = ctx.source
 
+                        // 判断执行命令的是否是玩家
                         if (!(source.isPlayer())) {
+                            // 向执行者发送消息
                             source.sendSystemMessage(Component.translatable("greedycraft.commands.suicide.execute_notplayer"))
+                            //返回
                             return 1
                         }
 
+                        // 击杀玩家
                         source.player.kill()
+                        // 返回
                         return 1
                     })
             )
@@ -148,11 +176,15 @@ ServerEvents.commandRegistry(event => {
                         let player = ctx.source.player
                         let playerName = player.username
 
-                        if (!(player)) {
+                        // 判断执行命令的是否是玩家
+                        if (!(source.isPlayer())) {
+                            // 不是则设置名称为 Server
                             playerName = "Server"
                         }
 
+                        // 发送消息
                         server.tell(Component.translatable("greedycraft.message.right_clicked.item_purger", Component.literal(playerName).color(0xFFAA00).bold()))
+                        // 清理凋落物
                         cleanServerDroppedItem(server)
                     })
             )

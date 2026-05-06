@@ -41,6 +41,7 @@ ItemEvents.firstLeftClicked("greedycraft:emergency_button", event => {
 
     // 发送服务器消息
     server.tell(Component.translatable("greedycraft.message.firstleftclicked.emergency_button", Component.literal(player.username).color(0xFFFF55).bold(), Component.literal(level.displayName).color(0xFF55FF).bold()))
+    // 输出日志
     console.log("You can check the debug log to view the list of removed entities")
 
     // 将物品减 1

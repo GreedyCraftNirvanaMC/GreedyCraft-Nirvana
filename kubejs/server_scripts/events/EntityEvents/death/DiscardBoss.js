@@ -33,6 +33,7 @@ EntityEvents.death("minecraft:player", event => {
             if (!(count > 1)) {
                 // 删除实体
                 actual.discard()
+                // 输出日志
                 console.log(`The boss ${actual.type} has been removed because there were no other players nearby. Entity X:${actual.x} Y:${actual.y} Z:${actual.z}`)
             }
         }
