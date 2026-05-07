@@ -20,8 +20,8 @@ PlayerEvents.tick(event => {
     if (biome.isTag("c:is_ocean")) {
         // 限制 20 tick 执行一次
         if (server.overworld().time % 20 == 0) {
-            // 判断玩家是否不在水中或玩家头部不是水
-            if (!(player.inWater) || level.getBlock(player.blockX, player.blockY + 1, player.blockZ).getId() != "minecraft:water") {
+            // 判断玩家眼睛是否不在水中
+            if (!player.isUnderWater()) {
                 // 判断 Y 轴是否小于 40 并且没有水下呼吸效果
                 if (player.y < 40.0 && !(player.hasEffect("minecraft:water_breathing"))) {
                     // 计算“深度”（只在高度低于 40 时才开始计算）
