@@ -12,7 +12,6 @@ usernamecache.json
 *STOP_MOD_REPOSTS.txt
 powerscale-server*.toml.bak
 
-mods
 shaderpacks
 _IAS_ACCOUNTS_DO_NOT_SEND_TO_ANYONE
 logs
@@ -46,6 +45,7 @@ config/openloader/packs/resources/DarkMode-ResourcePack-1.20.3_1.zip
 
 backups
 
+mods/*
 !mods/botania*.jar
 !mods/Zeta*.jar
 !mods/Quark*.jar
