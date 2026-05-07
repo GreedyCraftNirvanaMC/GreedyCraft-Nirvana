@@ -1,0 +1,28 @@
+// 物品事件-首次左键事件
+// 此脚本用于实现整合包内自定义物品的功能-应急按钮
+// priority: 50
+
+ItemEvents.firstLeftClicked("greedycraft:emergency_button", event => {
+    let server = event.server
+    let player = event.player
+    let level = event.level
+
+    // 清除当前世界所有的生物（非 Kill）
+    level.entities.forEach(entity => {
+        if (entity.isMonster() && !(entity.isPlayer())) {
+            entity.discard()
+            console.debug(`greedycraft:emergency_button removed entity ${entity.type} from world ${level.displayName.getString()}. Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
+        }
+    })
+
+    // 删除玩家的所有状态
+    player.removeAllEffects()
+
+    // 发送服务器消息
+    server.tell(Component.translatable("greedycraft.message.firstleftclicked.emergency_button", Component.literal(player.username).color(0xFFFF55).bold(), Component.literal(level.displayName.getString()).color(0xFF55FF).bold()))
+    // 输出日志
+    console.log("You can check the debug log to view the list of removed entities")
+
+    // 将物品减 1
+    event.item.shrink(1)
+})
