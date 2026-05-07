@@ -45,3 +45,8 @@ config/chancecubes/custom_rewards/CustomSounds-Resourcepack.zip
 config/openloader/packs/resources/DarkMode-ResourcePack-1.20.3_1.zip
 
 backups
+
+!mods/botania*.jar
+!mods/Zeta*.jar
+!mods/Quark*.jar
+!mods/IAS*.jar
