@@ -54,8 +54,6 @@ ServerEvents.commandRegistry(event => {
                                     players.forEach(player => {
                                         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/expert`)
                                     })
-                                    // 给服务器 expert 阶段
-                                    AStages.addStageToServer("expert", server)
                                 }
 
                                 // 判断游戏模式是否是冒险
@@ -71,11 +69,6 @@ ServerEvents.commandRegistry(event => {
                                             AStages.removeStageFromPlayer("expert", player)
                                         }
                                     })
-                                    // 如果服务器有 expert 阶段
-                                    if (AStages.serverHasStage("expert", server)) {
-                                        // 删除服务器上的 expert 阶段
-                                        AStages.removeStageFromServer("expert", server)
-                                    }
                                 }
 
                                 // 发送服务器消息

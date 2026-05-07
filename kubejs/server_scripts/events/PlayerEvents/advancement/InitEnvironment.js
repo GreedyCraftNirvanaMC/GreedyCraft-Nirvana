@@ -20,11 +20,6 @@ PlayerEvents.advancement("greedycraft:stages/init", event => {
         // 给予玩家 init_start 进度
         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/init_start`)
 
-        // 判断服务器上是否有 expert 阶段
-        if (AStages.serverHasStage("expert", server)) {
-            // 给予玩家 expert 进度
-            server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/expert`)
-        }
         // 如果以上条件全部未达到则判定为这是一个新世界，用以下条件判断
         // 判断玩家是否是创造模式
     } else if (player.isCreative()) {
@@ -39,19 +34,15 @@ PlayerEvents.advancement("greedycraft:stages/init", event => {
         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/init_start`)
     }
 
-    // 判断整合包模式是否等于 expert 且服务器上没有 expert 阶段
-    if (packMode == "expert" && !(AStages.serverHasStage("expert", server))) {
-        // 给予服务器 expert 阶段
-        AStages.addStageToServer("expert", server)
+    // 判断整合包模式是否等于 expert 且玩家没有 expert 阶段
+    if (packMode == "expert" && !(AStages.playerHasStage("expert", player))) {
         // 给予玩家 expert 进度
         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/expert`)
     }
 
-    // 如果整合包模式不是 expert 但是服务器上有 expert 阶段则修正
-    if (!(packMode == "expert") && AStages.serverHasStage("expert", server)) {
-        // 删除服务器 expert 阶段
-        AStages.removeStageFromServer("expert", server)
-        // 删除服务器 expert 阶段
+    // 如果整合包模式不是 expert 但是玩家有 expert 阶段则修正
+    if (!(packMode == "expert") && AStages.playerHasStage("expert", player)) {
+        // 删除玩家 expert 阶段
         AStages.removeStageFromPlayer("expert", player)
         // 删除玩家进度
         server.runCommandSilent(`advancement revoke ${playerName} only greedycraft:stages/expert`)
