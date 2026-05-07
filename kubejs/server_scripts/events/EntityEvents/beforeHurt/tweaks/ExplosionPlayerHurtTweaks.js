@@ -4,6 +4,7 @@
 
 EntityEvents.beforeHurt("minecraft:player", event => {
     let source = event.source
+    let player = event.player
 
     if (source.getType() == "explosion.player") {
         // 判断玩家是否有 nether 阶段

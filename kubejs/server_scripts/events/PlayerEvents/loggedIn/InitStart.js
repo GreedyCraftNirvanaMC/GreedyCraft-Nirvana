@@ -19,7 +19,7 @@ PlayerEvents.loggedIn(event => {
     let messageText9 = Component.translatable("greedycraft.message.playerlogging.system.text.9")
     let messageEnd = Component.translatable("greedycraft.message.playerlogging.system.text.end")
 
-    let randomMessage = global.MESSAGE_PLAYERLOGGEDIN[randomInt(0, global.MESSAGE_PLAYERLOGGEDIN.length - 1)]
+    let RANDOM_MESSAGE_DATA = global.MESSAGE_PLAYERLOGGEDIN[randomInt(0, global.MESSAGE_PLAYERLOGGEDIN.length - 1)]
 
     let scoreboard = server.scoreboard.getObjective("packinfo")
 
@@ -45,7 +45,7 @@ PlayerEvents.loggedIn(event => {
         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/init`)
     } else {
         // 从全局变量中随机选一条消息发送
-        player.tell(Component.translatable(randomMessage))
+        player.tell(Component.translatable(RANDOM_MESSAGE_DATA))
 
         // 判断是否是以创造模式创建的存档
         if (AStages.serverHasStage("init_creative", server)) {

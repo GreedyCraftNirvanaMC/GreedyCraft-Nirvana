@@ -5,7 +5,7 @@
 let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 let allItems = Item.getList()
 
-let map = {}
+let stageRuleMap = {}
 
 // 从常量 global.MAP_STAGES_RULE 获取阶段规则
 Object.entries(global.MAP_STAGES_RULE).forEach(([stageType, stageMap]) => {
@@ -23,18 +23,18 @@ Object.entries(global.MAP_STAGES_RULE).forEach(([stageType, stageMap]) => {
                             let ids = Ingredient.of(data).itemIds
                             // 展开 tag 添加到 map 中
                             ids.forEach(id => {
-                                if (map[id]) {
-                                    map[id].push(stageName)
+                                if (stageRuleMap[id]) {
+                                    stageRuleMap[id].push(stageName)
                                 } else {
-                                    map[id] = [stageName]
+                                    stageRuleMap[id] = [stageName]
                                 }
                             })
                         } else {
                             // 直接添加到 map 中
-                            if (map[data]) {
-                                map[data].push(stageName)
+                            if (stageRuleMap[data]) {
+                                stageRuleMap[data].push(stageName)
                             } else {
-                                map[data] = [stageName]
+                                stageRuleMap[data] = [stageName]
                             }
                         }
                     })
@@ -47,10 +47,10 @@ Object.entries(global.MAP_STAGES_RULE).forEach(([stageType, stageMap]) => {
                         allItems.forEach(item => {
                             // 如果和规则匹配则加到 map 中
                             if (item.id.startsWith(`${data}:`)) {
-                                if (map[item.id.toString()]) {
-                                    map[item.id.toString()].push(stageName)
+                                if (stageRuleMap[item.id.toString()]) {
+                                    stageRuleMap[item.id.toString()].push(stageName)
                                 } else {
-                                    map[item.id.toString()] = [stageName]
+                                    stageRuleMap[item.id.toString()] = [stageName]
                                 }
                             }
                         })
@@ -64,7 +64,7 @@ Object.entries(global.MAP_STAGES_RULE).forEach(([stageType, stageMap]) => {
 
 ItemEvents.modifyTooltips(event => {
     // 根据 map 添加 tooltips
-    Object.entries(map).forEach(([item, stage]) => {
+    Object.entries(stageRuleMap).forEach(([item, stage]) => {
         event.add(item, Component.literal(""))
         event.add(item, Component.translatable("greedycraft.tooltip.stage.text"))
         stage.forEach(stageName => {

@@ -25,6 +25,6 @@ EntityEvents.death("minecraft:player", event => {
     server.tell(Component.literal(message))
 
     // 从全局变量中随机选一条消息发送
-    let msg = global.MESSAGE_PLAYER_DEATH[randomInt(0, global.MESSAGE_PLAYER_DEATH.length - 1)]
-    player.tell(Component.translatable(msg, Component.literal(player.username).color(0xFFAA00).underlined()))
+    let MESSAGE_DATA = global.MESSAGE_PLAYER_DEATH[randomInt(0, global.MESSAGE_PLAYER_DEATH.length - 1)]
+    player.tell(Component.translatable(MESSAGE_DATA, Component.literal(player.username).color(0xFFAA00).underlined()))
 })
