@@ -12,7 +12,7 @@ ItemEvents.rightClicked("greedycraft:slime_crown", event => {
         entity.setPos(player.x, player.y + 3.0, player.z)
 
         // 设置 NBT
-        entity.mergeNbt({ size: 16 })
+        entity.mergeNbt({Size: 16})
     })
 
     // 发送消息

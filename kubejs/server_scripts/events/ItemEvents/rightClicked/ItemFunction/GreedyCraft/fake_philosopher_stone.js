@@ -5,9 +5,12 @@
 ItemEvents.rightClicked("greedycraft:fake_philosopher_stone", event => {
     let block = event.target.block
     let level = event.level
+    let player = event.player
 
     // 判断右键的方块是否是沙子
     if (block && block.getId() == "minecraft:sand") {
+        // 破坏原本的方块
+        level.destroyBlock(block.getPos(), false)
         // 重新设置为玻璃
         level.setBlock(block.getPos(), "minecraft:glass", 3)
         // 输出日志

@@ -10,7 +10,7 @@ ItemEvents.rightClicked("greedycraft:sunny_doll", event => {
     server.runCommandSilent("weaher clear")
 
     // 发送消息
-    server.tell(Component.translatable("greedycraft.message.right_clicked.sunny_doll", Component.literal(player.name).color(0xFFAA00)))
+    server.tell(Component.translatable("greedycraft.message.right_clicked.sunny_doll", Component.literal(player.username).color(0xFFAA00)))
 
     // 将物品减 1
     event.item.shrink(1)

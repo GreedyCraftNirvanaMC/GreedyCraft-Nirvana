@@ -14,12 +14,12 @@ ItemEvents.rightClicked("greedycraft:emergency_button", event => {
             // 删除（非 Kill）
             entity.discard()
             // 输出日志
-            console.debug(`greedycraft:emergency_button removed entity ${entity.type} from world ${level.name.getString()}. Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
+            console.debug(`greedycraft:emergency_button removed entity ${entity.type} from world ${level.displayName.getString()}. Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
         }
     })
 
     // 发送消息
-    server.tell(Component.translatable("greedycraft.message.right_clicked.emergency_button", Component.literal(player.username).color(0xFFFF55).bold(), Component.literal(level.displayName).color(0xFF55FF).bold()))
+    server.tell(Component.translatable("greedycraft.message.right_clicked.emergency_button", Component.literal(player.username).color(0xFFFF55).bold(), Component.literal(level.displayName.getString()).color(0xFF55FF).bold()))
     // 输出日志
     console.log("You can check the debug log to view the list of removed entities")
 

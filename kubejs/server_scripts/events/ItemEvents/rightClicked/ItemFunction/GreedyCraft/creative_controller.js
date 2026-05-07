@@ -4,7 +4,8 @@
 
 ItemEvents.rightClicked("greedycraft:creative_controller", event => {
     let server = event.server
-    let playerName = event.player.username
+    let player = event.player
+    let playerName = player.username
 
     // 切换为创造模式
     server.runCommandSilent(`gamemode creative ${playerName}`)

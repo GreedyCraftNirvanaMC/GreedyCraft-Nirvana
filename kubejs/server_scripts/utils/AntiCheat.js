@@ -32,7 +32,7 @@ function checkCheat(player, server) {
         // 判断服务器是否没有 init_creative 阶段并且玩家没有 graduated 阶段
         if (!(AStages.serverHasStage("init_creative", server)) && !(AStages.playerHasStage("graduated", player))) {
             // 输出日志
-            console.warn(`${player.name} is in a cheating state`)
+            console.warn(`${player.username} is in a cheating state`)
             // 返回结果
             return true
         }
