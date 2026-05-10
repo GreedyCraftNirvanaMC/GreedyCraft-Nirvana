@@ -1,0 +1,78 @@
+{
+  "customSkills": [
+    {
+      "id": "swimming",
+      "displayName": "Swimming",
+      "perkAttributes": [
+        "neoforge:swim_speed"
+      ],
+      "icon": "reskillable:textures/gui/custom_skills/swimming.png",
+      "perkOperation": "ADDITION",
+      "perkAmountPerStep": 0.1,
+      "perkStep": 5
+    },
+    {
+      "id": "",
+      "displayName": "",
+      "perkAttributes": [],
+      "icon": "",
+      "perkOperation": "ADDITION",
+      "perkAmountPerStep": 0.0,
+      "perkStep": 5
+    },
+    {
+      "id": "",
+      "displayName": "",
+      "perkAttributes": [],
+      "icon": "",
+      "perkOperation": "ADDITION",
+      "perkAmountPerStep": 0.0,
+      "perkStep": 5
+    },
+    {
+      "id": "",
+      "displayName": "",
+      "perkAttributes": [],
+      "icon": "",
+      "perkOperation": "ADDITION",
+      "perkAmountPerStep": 0.0,
+      "perkStep": 5
+    },
+    {
+      "id": "",
+      "displayName": "",
+      "perkAttributes": [],
+      "icon": "",
+      "perkOperation": "ADDITION",
+      "perkAmountPerStep": 0.0,
+      "perkStep": 5
+    },
+    {
+      "id": "",
+      "displayName": "",
+      "perkAttributes": [],
+      "icon": "",
+      "perkOperation": "ADDITION",
+      "perkAmountPerStep": 0.0,
+      "perkStep": 5
+    },
+    {
+      "id": "",
+      "displayName": "",
+      "perkAttributes": [],
+      "icon": "",
+      "perkOperation": "ADDITION",
+      "perkAmountPerStep": 0.0,
+      "perkStep": 5
+    },
+    {
+      "id": "",
+      "displayName": "",
+      "perkAttributes": [],
+      "icon": "",
+      "perkOperation": "ADDITION",
+      "perkAmountPerStep": 0.0,
+      "perkStep": 5
+    }
+  ]
+}

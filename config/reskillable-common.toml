@@ -6,10 +6,6 @@ deathSkillReset = false
 HealthBonus = true
 #Toggle the visibility of the tab buttons in the inventory.
 showTabButtons = true
-#Starting cost of upgrading to level 2, in experience points.
-# Default: 7
-# Range: 0 ~ 1000
-startingCost = 20
 #Global scaling multiplier for XP costs.
 # Default: 1.0
 # Range: 0.1 ~ 10.0
@@ -33,27 +29,11 @@ attackDamageBonus = 0.15
 # Default: 0.15
 # Range: 0.0 ~ 10.0
 armorBonus = 0.15
-# Default: 0.05
-# Range: 0.0 ~ 1.0
-movementSpeedBonus = 0.05
 #The registry ID of the attribute to use for the Magic skill (e.g. 'modid:spell_power')
 magicAttribute = "minecraft:generic.luck"
-# Default: 0.05
-# Range: 0.0 ~ 10.0
-MagicBonus = 0.05
-# Default: 0.25
-# Range: 0.0 ~ 5.0
-blockReachBonus = 0.25
 # Default: 0.25
 # Range: 0.0 ~ 5.0
 miningSpeedMultiplier = 0.25
-# Default: 0.25
-# Range: 0.0 ~ 1.0
-cropGrowthChancePer5Levels = 0.25
-#Bonus XP multiplier per 5 levels of Gathering (e.g., 0.05 = +5% XP per step)
-# Default: 0.05
-# Range: 0.0 ~ 1.0
-gatheringXpBonus = 0.05
 #How many total skill levels are required for each heart gained.
 # Default: 10
 # Range: 1 ~ 100
@@ -69,3 +49,47 @@ healthPerHeart = 2.0
 #You can include multiple: ADV=minecraft:story/mine_diamond,ADV=minecraft:nether/root
 #Tokens: TOTAL=<n>, OTHER_SKILL=<n>, ADV=<advancement_id>
 skill_level_gates = []
+#The registry ID of the attribute to use for the Attack skill.
+attackAttribute = "minecraft:generic.attack_damage"
+#Operation for the Attack skill perk. Valid: ADDITION, MULTIPLY_BASE, MULTIPLY_TOTAL
+attackOperation = "MULTIPLY_TOTAL"
+#The registry ID of the attribute to use for the Defense skill.
+defenseAttribute = "minecraft:generic.armor"
+#Operation for the Defense skill perk. Valid: ADDITION, MULTIPLY_BASE, MULTIPLY_TOTAL
+defenseOperation = "MULTIPLY_TOTAL"
+#The registry ID of the attribute to use for the Agility skill.
+agilityAttribute = "minecraft:generic.movement_speed"
+#Operation for the Agility skill perk. Valid: ADDITION, MULTIPLY_BASE, MULTIPLY_TOTAL
+agilityOperation = "MULTIPLY_TOTAL"
+# Default: 0.05
+# Range: 0.0 ~ 1.0
+"Agility bonus" = 0.05
+#Operation for the Magic skill perk. Valid: ADDITION, MULTIPLY_BASE, MULTIPLY_TOTAL
+magicOperation = "MULTIPLY_TOTAL"
+# Default: 0.05
+# Range: 0.0 ~ 10.0
+"Magic Bonus" = 0.05
+#The registry ID of the attribute to use for the Building skill.
+buildingAttribute = "forge:block_reach"
+#Operation for the Building skill perk. Valid: ADDITION, MULTIPLY_BASE, MULTIPLY_TOTAL
+buildingOperation = "ADDITION"
+# Default: 0.25
+# Range: 0.0 ~ 5.0
+"Building Bonus" = 0.25
+# Default: 0.25
+# Range: 0.0 ~ 1.0
+"Farming Bonus" = 0.25
+#Bonus XP multiplier per 5 levels of Gathering (e.g., 0.05 = +5% XP per step)
+# Default: 0.05
+# Range: 0.0 ~ 1.0
+"gathering Bonus" = 0.05
+#Enable a second skill page for up to 8 custom skills loaded from custom_skills.json.
+enableSecondSkillPage = false
+#Where the built-in/custom page arrows should appear. Valid: TOP, BOTTOM, LEFT, RIGHT.
+subpageNavPosition = "BOTTOM"
+#Toggle the visibility of the built-in/custom subpage titles on the skills screen.
+showSubpageTitles = true
+#Maximum total number of skill levels a player can spend across all skills. Set to -1 for unlimited.
+# Default: -1
+# Range: > -1
+maxTotalSpentLevels = -1

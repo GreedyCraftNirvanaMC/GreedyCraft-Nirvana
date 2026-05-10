@@ -149,7 +149,8 @@
     "bound_machine": true
   },
   "champions": {
-    "enable_affix_compact": false
+    "entity_affixes": true,
+    "entity_champion_property": true
   },
   "jade_access": {
     "held_item": true,

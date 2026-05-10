@@ -23,5 +23,6 @@
 	waypointOffsetX: 0,
 	waypointOffsetY: 0,
 	waypointOffsetZ: 0,
-	disableUpdateCheck: false
+	disableUpdateCheck: false,
+	warnOnAllSetsDisabled: true
 }

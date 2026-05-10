@@ -1,4 +1,28 @@
-#The maximum distance at which an Altar will render its inventory contents.
-# Default: 32
-# Range: 1 ~ 128
-render_distance = 32
+[general]
+	#The maximum distance at which an Altar will render its inventory contents.
+	# Default: 32
+	# Range: 1 ~ 128
+	inventory_render_distance = 32
+	#Whether to render the fire particles on candles on Altars.
+	candle_particles = true
+
+[preview]
+	#The maximum distance to search for an Altar when previewing the block pattern.
+	# Default: 16
+	# Range: 1 ~ 64
+	altar_search_radius = 16
+	#The number of ticks per block to display the block pattern preview for.
+	# Default: 60
+	# Range: 1 ~ 100
+	preview_ticks_per_block = 60
+	#The minimum number of ticks to preview the block pattern for.
+	# Default: 200
+	# Range: 10 ~ 1200
+	preview_ticks_min = 200
+	#The maximum number of ticks to preview the block pattern for.
+	# Default: 1200
+	# Range: 10 ~ 6000
+	preview_ticks_max = 1200
+	#Whether the preview should check for exact matches of block states rather than for the correct block only.
+	#The recipe starting logic will always check for the whole block state.
+	preview_block_state_aware = false

@@ -18,6 +18,8 @@
   "balm:jade": null,
   "bonsaitrees4:jade/bonsai_pot": null,
   "champions:enable_affix_compact": null,
+  "champions:entity_affixes": null,
+  "champions:entity_champion_property": null,
   "compactmachines:bound_machine": null,
   "cookingforblockheads:fridge": null,
   "cookingforblockheads:milk_jar": null,

@@ -25,3 +25,7 @@ triggerInEnd = true
 triggerInNether = false
 #List of additional dimension ids to be deny-listed from Forgiving Void. Options triggerInOverworld etc. take priority. Ignored if dimensionAllowList is set.
 dimensionDenyList = ["the_aether"]
+#Set to true to make Forgiving Void return the player to the sky above their last grounded position instead of their current position. Prevents players from using Forgiving Void to fly across larger distances.
+returnToLastGrounded = true
+#Effects applied to a player when they fall through the void, in the format "effect|duration|amplifier"
+fallThroughVoidEffects = ["minecraft:blindness|60|3"]

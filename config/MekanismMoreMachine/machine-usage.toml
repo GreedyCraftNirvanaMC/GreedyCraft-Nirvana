@@ -30,6 +30,14 @@ largeRotaryCondensentrator = 50
 # Default: 100
 # Range: 0 ~ 9223372036854775807
 largeChemicalInfuser = 100
+#Energy per operation in Joules of: Large Antiprotonic Nucleosynthesizer
+# Default: 100000
+# Range: 0 ~ 9223372036854775807
+largeAntiprotonicNucleosynthesizer = 100000
+#Energy per operation in Joules of: Large Pigment Mixer
+# Default: 100
+# Range: 0 ~ 9223372036854775807
+largePigmentMixer = 100
 
 #Settings for configuring Replicator Energy Usage
 [replicator]

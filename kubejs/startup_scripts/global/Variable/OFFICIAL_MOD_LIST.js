@@ -40,7 +40,7 @@ global.VARIABLE_OFFICIAL_MOD_LIST = new Set([
     "glodium",
     "liblib_core",
     "torchmaster",
-    "the_ruler",
+    "gamerule_manager",
     "fabric_game_rule_api_v1",
     "propertymodifier",
     "supermartijn642corelib",
@@ -317,5 +317,7 @@ global.VARIABLE_OFFICIAL_MOD_LIST = new Set([
     "olddraconicmodels",
     "reskillable",
     "lootjs",
-    "kubejsprojecte"
+    "kubejsprojecte",
+    "server_i18n_api",
+    "commoncapabilities"
 ])

@@ -20,8 +20,6 @@
   "showNotificationsAsChat": false,
   "heartsToBeConsideredAsFriend": 40,
   "enableVillagerMailingPlayers": true,
-  "allowBodyCustomizationInDestiny": true,
-  "allowTraitCustomizationInDestiny": true,
   "enableGenderCheckForPlayers": true,
   "zombieBiteInfectionChance": 0.05,
   "infectionChanceDecreasePerLevel": 0.25,
@@ -30,8 +28,6 @@
   "marriageHeartsRequirement": 100,
   "engagementHeartsRequirement": 50,
   "bouquetHeartsRequirement": 10,
-  "babyItemGrowUpTime": 24000,
-  "villagerMaxAgeTime": 384000,
   "villagerMaxHealth": 20,
   "allowVillagerTeleporting": false,
   "villagerMinTeleportationDistance": 128.0,
@@ -122,7 +118,6 @@
   ],
   "enableAutoScanByDefault": false,
   "immersiveLibraryUrl": "https://mca.conczin.net",
-  "allowEveryoneToAddContentGlobally": false,
   "giftDesaturationQueueLength": 16,
   "giftDesaturationFactor": 0.5,
   "giftDesaturationExponent": 0.85,
@@ -152,7 +147,6 @@
   "forceVillagerPlayerModel": false,
   "allowLimitedPlayerEditor": true,
   "allowFullPlayerEditor": false,
-  "allowPlayerSizeAdjustment": true,
   "useModernUSANamesOnly": false,
   "guardsTargetEntities": {
     "minecraft:creeper": -1,
@@ -206,6 +200,27 @@
     "minecraft:pillager_outpost",
     "minecraft:ancient_city"
   ],
+  "professionConversionsMap": {},
+  "shaderLocationsMap": {
+    "sirben": "mca:shaders/post/sirben.json",
+    "color_blind": "mca:shaders/post/color_blind.json"
+  },
+  "playerRendererBlacklist": {
+    "firstperson": "arms",
+    "firstpersonmod": "arms",
+    "epicfight": "all",
+    "morph": "arms"
+  },
+  "taxesMap": {
+    "minecraft:emerald": 1.0
+  },
+  "scaleEyeHeightWithPlayerHeight": true,
+  "babyItemGrowUpTime": 24000,
+  "villagerMaxAgeTime": 384000,
+  "allowEveryoneToAddContentGlobally": false,
+  "allowPlayerSizeAdjustment": true,
+  "allowBodyCustomizationInDestiny": true,
+  "allowTraitCustomizationInDestiny": true,
   "destinySpawnLocations": [
     "somewhere",
     "minecraft:shipwreck_beached",
@@ -219,17 +234,6 @@
   "destinyLocationsToTranslationMap": {
     "default": "destiny.story.travelling",
     "minecraft:shipwreck_beached": "destiny.story.sailing"
-  },
-  "professionConversionsMap": {},
-  "shaderLocationsMap": {
-    "sirben": "mca:shaders/post/sirben.json",
-    "color_blind": "mca:shaders/post/color_blind.json"
-  },
-  "playerRendererBlacklist": {
-    "firstperson": "arms",
-    "firstpersonmod": "arms",
-    "epicfight": "all",
-    "morph": "arms"
   },
   "enabledTraits": {
     "lactose_intolerance": true,
@@ -251,9 +255,5 @@
     "color_blind": true,
     "diabetes": true,
     "athletic": true
-  },
-  "taxesMap": {
-    "minecraft:emerald": 1.0
-  },
-  "scaleEyeHeightWithPlayerHeight": true
+  }
 }

@@ -15,19 +15,14 @@
 	"Allowed Screens" = []
 	#If set to true, the 'Allowed Screens' option will work as a Blacklist rather than a Whitelist. WARNING: Use at your own risk as some mods may not support this.
 	"Use Screen List Blacklist" = false
-	#If 'true' and TerraBlender is present, Quark will add a TerraBlender region. The region will contain vanilla biomes and the Glimmering Weald.
-	"Terrablender Add Region" = true
-	#Quark will set this weight for its TerraBlender region.
-	"Terrablender Region Weight" = 1
-	#If 'true', Quark will modify the `minecraft:overworld` MultiNoiseBiomeSourceParameterList preset, even when Terrablender is installed.
-	#This will have various knock-on effects but might make the Weald more common, or appear closer to modded biomes. Who knows?
-	"Terrablender Modify Vanilla Anyway" = false
 	#Set to false to disable the popup message telling you that you can config quark in the q menu
 	"Enable Onboarding" = true
 	#The amount of slots the chest button system should seek when trying to figure out if a container should be eligible for them.
 	"Chest Button Slot Target" = 27
-	#Set this to false to not generate the Quark Programmer Art resource pack
+	#Set this to false to not show the Quark Programmer Art resource pack in the resource pack selection screen
 	"Generate Programmer Art" = true
+	#Set this to false to prevent Quark from ever disabling any vanilla data files. This will break certain modules, so only do this if you know what you're doing!
+	"Quark V D O" = true
 
 	[general.chest_button_offsets]
 		"Player X" = 0
@@ -237,6 +232,7 @@
 	[building.variant_bookshelves]
 		"Change Names" = true
 		#This feature disables itself if any of the following mods are loaded:
+		# - carved_wood
 		# - woodster
 		# - woodworks
 		#This is done to prevent content overlap.
@@ -249,6 +245,7 @@
 		#Chests to put in structures. It's preferred to use worldgen tags for this. The format per entry is "structure=chest", where "structure" is a structure ID, and "chest" is a block ID, which must correspond to a standard chest block.
 		"Structure Chests" = []
 		#This feature disables itself if any of the following mods are loaded:
+		# - carved_wood
 		# - woodworks
 		#This is done to prevent content overlap.
 		#You can turn this on to force the feature to be loaded even if the above mods are also loaded.
@@ -257,6 +254,7 @@
 	[building.variant_ladders]
 		"Change Names" = true
 		#This feature disables itself if any of the following mods are loaded:
+		# - carved_wood
 		# - woodster
 		# - woodworks
 		#This is done to prevent content overlap.
@@ -1104,7 +1102,7 @@
 		#Chance for logs to spawn on water
 		"On Water Chance" = 0.1
 		"Sparse Biome Rarity" = 12
-		#Tags that define which biomes can have which wood types
+		#Tags that define which biomes can have which wood types. These are all biome tags under the Quark namespace
 		"Biome Tags" = ["has_fallen_acacia=minecraft:acacia_log", "has_fallen_birch=minecraft:birch_log", "has_fallen_cherry=minecraft:cherry_log", "has_fallen_dark_oak=minecraft:dark_oak_log", "has_fallen_jungle=minecraft:jungle_log", "has_fallen_mangrove=minecraft:mangrove_log", "has_fallen_oak=minecraft:oak_log", "has_fallen_spruce=minecraft:spruce_log"]
 
 		[world.fallen_logs.dimensions]

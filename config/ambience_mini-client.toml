@@ -10,8 +10,6 @@
 	Next_Music_Delay = 4000
 	#Fade out Ambience Mini's music when the game window is unfocused. [Default: true]
 	Lost_Focus_FadeOut = true
-	#If 'true', music volume is not affected by 'Master Volume' to make it easier to balance music volume with everything else. [Default: true]
-	Ignore_Master_Volume = true
 	#The horizontal radius/distance to scan for villagers. [Default: 30]
 	# Default: 30
 	# Range: 10 ~ 100

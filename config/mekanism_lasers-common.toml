@@ -13,3 +13,31 @@
 	oreGeneratorNumberOfOres = 1
 	#List of ores to blacklist from generation
 	blacklistedOres = ["justdirethings:raw_ferricore_ore", "justdirethings:raw_blazegold_ore", "justdirethings:raw_celestigem_ore", "justdirethings:raw_eclipsealloy_ore", "justdirethings:raw_coal_t1_ore", "justdirethings:raw_coal_t2_ore", "justdirethings:raw_coal_t3_ore", "justdirethings:raw_coal_t4_ore"]
+	#Energy config for basic laser
+	# Default: 8000000
+	# Range: 0 ~ 9223372036854775807
+	basicLaserEnergyCap = 8000000
+	# Default: 30000
+	# Range: 0 ~ 9223372036854775807
+	basicLaserEnergyUse = 30000
+	#Energy config for advanced laser
+	# Default: 32000000
+	# Range: 0 ~ 9223372036854775807
+	advancedLaserEnergyCap = 32000000
+	# Default: 120000
+	# Range: 0 ~ 9223372036854775807
+	advancedLaserEnergyUse = 120000
+	#Energy config for elite laser
+	# Default: 128000000
+	# Range: 0 ~ 9223372036854775807
+	eliteLaserEnergyCap = 128000000
+	# Default: 480000
+	# Range: 0 ~ 9223372036854775807
+	eliteLaserEnergyUse = 480000
+	#Energy config for ultimate laser
+	# Default: 512000000
+	# Range: 0 ~ 9223372036854775807
+	ultimateLaserEnergyCap = 512000000
+	# Default: 1920000
+	# Range: 0 ~ 9223372036854775807
+	ultimateLaserEnergyUse = 1920000
