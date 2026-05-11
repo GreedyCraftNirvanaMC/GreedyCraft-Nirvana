@@ -21,8 +21,6 @@ PlayerEvents.loggedIn(event => {
 
     let RANDOM_MESSAGE_DATA = global.MESSAGE_PLAYERLOGGEDIN[randomInt(0, global.MESSAGE_PLAYERLOGGEDIN.length - 1)]
 
-    let scoreboard = server.scoreboard.getObjective("packinfo")
-
     let antiCheatMode = KJSutils.Analysis("config/greedycraft/config.json", "$.antiCheatMode")
     let antiCheat = KJSutils.Analysis("config/greedycraft/config.json", "$.antiCheat")
 
@@ -78,13 +76,4 @@ PlayerEvents.loggedIn(event => {
             player.tell(Component.translatable("greedycraft.message.playerlogging.truehero", Component.literal(player.username).color(0xFFFF55)))
         }
     }
-
-    // 判断是否存在计分板
-    if (scoreboard) {
-        // 如果存在则删除
-        server.runCommandSilent("scoreboard objectives remove packinfo")
-    }
-
-    // 创建计分板 *此为自定义函数*
-    addScoreBoard(player, server)
 })

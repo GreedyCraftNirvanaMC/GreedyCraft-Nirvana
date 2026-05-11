@@ -7,6 +7,8 @@ PlayerEvents.advancement("greedycraft:stages/init", event => {
     let player = event.player
     let playerName = player.username
 
+    let scoreboard = server.scoreboard.getObjective("packinfo")
+
     let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 
     // 判断服务器上是否有 init_creative 阶段
@@ -47,6 +49,15 @@ PlayerEvents.advancement("greedycraft:stages/init", event => {
         // 删除玩家进度
         server.runCommandSilent(`advancement revoke ${playerName} only greedycraft:stages/expert`)
     }
+
+    // 判断是否存在计分板
+    if (scoreboard) {
+        // 如果存在则删除
+        server.runCommandSilent("scoreboard objectives remove packinfo")
+    }
+
+    // 创建计分板 *此为自定义函数*
+    addScoreBoard(player, server)
 
     // 输出日志
     console.log(`New player ${player.username} joined the game at X:${player.x} Y:${player.y} Z:${player.z}`)
