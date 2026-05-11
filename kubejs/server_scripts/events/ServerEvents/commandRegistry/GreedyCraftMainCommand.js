@@ -179,6 +179,7 @@ ServerEvents.commandRegistry(event => {
                         server.tell(Component.translatable("greedycraft.message.right_clicked.item_purger", Component.literal(playerName).color(0xFFAA00).bold()))
                         // 清理凋落物
                         cleanServerDroppedItem(server)
+                        return 1
                     })
             )
     )
