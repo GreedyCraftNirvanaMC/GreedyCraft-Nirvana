@@ -1,4 +1,4 @@
-// priority: 32767
+// priority: 32765
 
 // 下载版本文件
 if (global.CHECK_VERSION_UPDATE) {
