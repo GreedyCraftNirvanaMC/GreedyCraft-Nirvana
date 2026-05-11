@@ -104,6 +104,9 @@
   "hammerlib": {
     "root": true
   },
+  "enderio": {
+    "soul_bound": true
+  },
   "projecte": {
     "emc_provider": true
   },
