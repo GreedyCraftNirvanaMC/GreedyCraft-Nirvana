@@ -7,7 +7,7 @@ if (global.CHECK_VERSION_UPDATE) {
         if (download) {
             break
         } else {
-            console.error(`Error downloading version.json from ${link}. will retry with another link`)
+            console.warn(`Error downloading version.json from ${link}. will retry with another link`)
         }
     }
 }
