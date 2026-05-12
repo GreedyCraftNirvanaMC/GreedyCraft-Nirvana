@@ -50,7 +50,7 @@
 			}
 			"ftblibrary:config": {
 				enabled: true
-				x: 1
+				x: 2
 				y: 1
 			}
 			"ftblibrary:toggle/day": {
