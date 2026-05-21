@@ -1,6 +1,6 @@
 playlist main_menu = [
   "village1.mp3",
-  "village2.mp3", 
+  "village2.mp3",
   "village5.mp3",
   "village6.mp3"
 ];
@@ -35,6 +35,11 @@ playlist frostmaw_boss = [
 
 playlist silence_boss = [
   "silence0.mp3"
+];
+
+playlist barako_boss = [
+  "boss4.mp3",
+  "boss1.mp3"
 ];
 
 playlist horde_combat = [
@@ -156,42 +161,56 @@ playlist defiled_lands = [
 ];
 
 begin
+  interrupt
   when ( @in_combat )
   begin
     when ( @boss_fight )
     begin
+      when ( $boss ~~ "barako" ) play barako_boss;
       when ( $boss ~~ "frostmaw" ) play frostmaw_boss;
+      when ( $boss ~~ "gaiaiii" ) play silence_boss;
       when ( $boss ~~ "doppleganger" ) play silence_boss;
+      when ( $boss ~~ "voidherrscher" ) play silence_boss;
       when ( $boss ~~ "ender_dragon" ) play ender_dragon_boss;
       when ( $boss ~~ "wither" ) play wither_boss;
-      default play boss_fight;
+
+      play boss_fight;
     end
-    interrupt default play horde_combat;
+
+    play horde_combat;
   end
+
+  interrupt when ( @fishing ) play fishing;
 
   when ( @village && @night ) play village_night;
   when ( @night ) play night;
   when ( @village ) play village;
 
+  when ( $biome ~~ "Defiled Lands" ) play defiled_lands;
+  when ( $biome ~~ "Defiled Desert" ) play defiled_lands;
+  when ( $biome ~~ "Defiled Plains" ) play defiled_lands;
+  when ( $biome ~~ "Defiled Forest" ) play defiled_lands;
+  when ( $biome ~~ "Tenebra Forest" ) play defiled_lands;
+  when ( $biome ~~ "Defiled Hills" ) play defiled_lands;
+  when ( $biome ~~ "Defiled Ice Plains" ) play defiled_lands;
+  when ( $biome ~~ "Defiled Swamp" ) play defiled_lands;
+  when ( $biome ~~ "Vilespine Forest" ) play defiled_lands;
+
   when ( @in_game )
   begin
     when ( $dimension == "minecraft:the_nether" ) play the_nether;
     when ( $dimension == "minecraft:the_end" ) play the_end;
+    when ( $dimension == "twilightforest:twilight_forest" ) play twilight_forest;
     when ( $dimension == "minecraft:overworld" )
     begin
-      when ( $elevation < 60.0 && 0.4 < $cave_score ) play underground;
+      when ( $elevation < 60.0 && 0.4 < $cave_score )
+        play underground;
     end
-    when ( $dimension == "twilightforest:twilight_forest" ) play twilight_forest;
-    default play loading_world;
+
+    play loading_world;
   end
-  when ( @credits ) play [ ];
-
-  interrupt when ( @fishing ) play fishing;
-
-  when ( any tag in $biome_tags where (tag == "#defiled_lands_reborn:is_defiled") end )
-    play defiled_lands;
 
   when ( @main_menu ) play main_menu;
-  
-  default play generic;
+
+  play generic;
 end
