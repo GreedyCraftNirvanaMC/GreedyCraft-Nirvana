@@ -5,11 +5,16 @@
     "xaero.map.gui.GuiMap": true,
     "net.bandit.reskillable.client.screen.SkillScreen": true,
     "net.minecraft.client.gui.screens.PauseScreen": true,
-    "com.aetherteam.aether.client.gui.screen.inventory.AetherAccessoriesScreen": true
+    "com.aetherteam.aether.client.gui.screen.inventory.AetherAccessoriesScreen": true,
+    "org.zeith.solarflux.client.screen.SolarPanelScreen": true,
+    "mekanism.client.gui.machine.GuiDigitalMiner": true,
+    "net.conczin.mca.client.gui.InteractScreen": true
   },
   "hideBackground": {
     "mezz.jei.gui.recipes.RecipesGui": false,
     "net.bandit.reskillable.client.screen.SkillScreen": true,
-    "com.aetherteam.aether.client.gui.screen.inventory.AetherAccessoriesScreen": true
+    "com.aetherteam.aether.client.gui.screen.inventory.AetherAccessoriesScreen": true,
+    "org.zeith.solarflux.client.screen.SolarPanelScreen": true,
+    "mekanism.client.gui.machine.GuiDigitalMiner": true
   }
 }
