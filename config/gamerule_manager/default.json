@@ -1,0 +1,16 @@
+{
+  "gamerules": {
+    "keepInventory": {
+      "value": true,
+      "lock": true
+    },
+    "showDeathMessages": {
+      "value": false,
+      "lock": true
+    }
+  },
+  "difficulty": {
+    "value": "hard",
+    "lock": true
+  }
+}
