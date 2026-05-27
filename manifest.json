@@ -7,7 +7,7 @@
             "required": true
         },
         {
-            "fileID": 7794290,
+            "fileID": 8132464,
             "projectID": 318833,
             "required": true
         },
@@ -87,7 +87,7 @@
             "required": true
         },
         {
-            "fileID": 8004779,
+            "fileID": 8127271,
             "projectID": 257814,
             "required": true
         },
@@ -357,12 +357,12 @@
             "required": true
         },
         {
-            "fileID": 8122220,
+            "fileID": 8134779,
             "projectID": 495476,
             "required": true
         },
         {
-            "fileID": 8055566,
+            "fileID": 8146177,
             "projectID": 243121,
             "required": true
         },
@@ -522,7 +522,7 @@
             "required": true
         },
         {
-            "fileID": 8010695,
+            "fileID": 8136882,
             "projectID": 1120180,
             "required": true
         },
@@ -712,7 +712,7 @@
             "required": true
         },
         {
-            "fileID": 7960385,
+            "fileID": 8141724,
             "projectID": 1337639,
             "required": true
         },
@@ -837,7 +837,7 @@
             "required": true
         },
         {
-            "fileID": 7127444,
+            "fileID": 8129788,
             "projectID": 1173950,
             "required": true
         },
@@ -862,7 +862,7 @@
             "required": true
         },
         {
-            "fileID": 7786067,
+            "fileID": 8150234,
             "projectID": 327048,
             "required": true
         },
@@ -902,7 +902,7 @@
             "required": true
         },
         {
-            "fileID": 6816404,
+            "fileID": 8138627,
             "projectID": 899386,
             "required": true
         },
@@ -967,7 +967,7 @@
             "required": true
         },
         {
-            "fileID": 8061457,
+            "fileID": 8132826,
             "projectID": 269024,
             "required": true
         },
@@ -1017,12 +1017,12 @@
             "required": true
         },
         {
-            "fileID": 8099788,
+            "fileID": 8141551,
             "projectID": 790626,
             "required": true
         },
         {
-            "fileID": 8121112,
+            "fileID": 8129552,
             "projectID": 499980,
             "required": true
         },
@@ -1162,7 +1162,7 @@
             "required": true
         },
         {
-            "fileID": 6091021,
+            "fileID": 8141953,
             "projectID": 511319,
             "required": true
         },
@@ -1252,7 +1252,7 @@
             "required": true
         },
         {
-            "fileID": 8084992,
+            "fileID": 8143565,
             "projectID": 394468,
             "required": true
         },
@@ -1272,12 +1272,12 @@
             "required": true
         },
         {
-            "fileID": 8116197,
+            "fileID": 8145672,
             "projectID": 422301,
             "required": true
         },
         {
-            "fileID": 8116154,
+            "fileID": 8145747,
             "projectID": 618298,
             "required": true
         },
@@ -1297,7 +1297,7 @@
             "required": true
         },
         {
-            "fileID": 8103229,
+            "fileID": 8147571,
             "projectID": 671040,
             "required": true
         },
@@ -1352,7 +1352,7 @@
             "required": true
         },
         {
-            "fileID": 6755495,
+            "fileID": 8125054,
             "projectID": 933200,
             "required": true
         },
@@ -1387,7 +1387,7 @@
             "required": true
         },
         {
-            "fileID": 6755580,
+            "fileID": 8125096,
             "projectID": 1128669,
             "required": true
         },
@@ -1407,7 +1407,7 @@
     "minecraft": {
         "modLoaders": [
             {
-                "id": "neoforge-21.1.228",
+                "id": "neoforge-21.1.231",
                 "primary": true
             }
         ],
