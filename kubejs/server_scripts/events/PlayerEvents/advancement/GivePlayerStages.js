@@ -26,7 +26,7 @@ PlayerEvents.advancement(event => {
                     AStages.addStageToPlayer(stage, player)
                     // 播放声音
                     // 创造模式不播放
-                    if (!(AStages.serverHasStage("init_server", server))) {
+                    if (!(AStages.serverHasStage("init_creative", server))) {
                         player.playNotifySound("minecraft:ui.toast.challenge_complete", "music", 1.0, 1.0)
                     }
                 }
