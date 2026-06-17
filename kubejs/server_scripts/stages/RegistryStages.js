@@ -5,9 +5,19 @@ let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 
 let allItems = Item.getList()
 // 注册基础 Astages 阶段
-AStages.addRestrictionForItem("greedycraft_stage/item/init", "init", ["greedycraft:placeholder"])
-AStages.addRestrictionForItem("greedycraft_stage/item/init/init_start", "init_start", ["greedycraft:placeholder"])
-AStages.addRestrictionForItem("greedycraft_stage/item/init/init_creative", "init_creative", ["greedycraft:placeholder", "greedycraft:passport"])
+AStages.addRestrictionForItem("greedycraft_stage/item/init", "init", ["greedycraft:placeholder"]).setHideInJEI(false).setHideTooltip(true)
+
+AStages.addRestrictionForItem("greedycraft_stage/item/init/init_start", "init_start", ["greedycraft:placeholder"]).setHideInJEI(false).setHideTooltip(true)
+
+AStages.addRestrictionForItem("greedycraft_stage/item/init/init_creative", "init_creative", ["greedycraft:placeholder", "greedycraft:passport"]).setHideInJEI(false).setHideTooltip(true)
+
+AStages.addRestrictionForItem("greedycraft_stage/item/init/expert", "expert", [
+    "greedycraft:adrenaline",
+    "greedycraft:fake_philosopher_stone",
+    "greedycraft:goodie_bag"
+]).setHideInJEI(false).setHideTooltip(true)
+
+AStages.addRestrictionForItem("greedycraft_stage/item/init/truehero", "truehero", ["greedycraft:placeholder"]).setHideInJEI(false).setHideTooltip(true)
 
 // 判断整合包模式是否为休闲模式
 if (packMode != "casual") {
