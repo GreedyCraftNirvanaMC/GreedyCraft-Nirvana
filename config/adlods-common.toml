@@ -37,3 +37,7 @@
 [Stripper]
 	#Automatically dress previously stripped chunks before unloading them to prevent data loss
 	dressUnloadedChunks = true
+
+[Vanilla]
+	#Fixes ocean floor heightmap returning incorrect values in frozen biomes
+	fixOceanFloorHeightmap = true
