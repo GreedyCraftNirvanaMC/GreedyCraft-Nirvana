@@ -8,7 +8,8 @@
     "com.aetherteam.aether.client.gui.screen.inventory.AetherAccessoriesScreen": true,
     "org.zeith.solarflux.client.screen.SolarPanelScreen": true,
     "mekanism.client.gui.machine.GuiDigitalMiner": true,
-    "net.conczin.mca.client.gui.InteractScreen": true
+    "net.conczin.mca.client.gui.InteractScreen": true,
+    "moe.wolfgirl.probejs.misc.gui.DumpScreen": true
   },
   "hideBackground": {
     "mezz.jei.gui.recipes.RecipesGui": false,

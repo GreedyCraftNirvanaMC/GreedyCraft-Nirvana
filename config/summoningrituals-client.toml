@@ -26,3 +26,6 @@
 	#Whether the preview should check for exact matches of block states rather than for the correct block only.
 	#The recipe starting logic will always check for the whole block state.
 	preview_block_state_aware = false
+	#Whether to register the blocks of the block pattern in recipe viewers as usages.
+	#This will allow the player to check the usages of the blocks in the block pattern to find the Altar recipe.
+	blocks_as_recipe_viewer_usages = true

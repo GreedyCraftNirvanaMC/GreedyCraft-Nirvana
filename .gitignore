@@ -49,4 +49,3 @@ backups
 
 mods/*
 !mods/botania*.jar
-!mods/IAS*.jar

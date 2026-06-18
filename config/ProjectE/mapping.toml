@@ -153,6 +153,11 @@ logFoundExploits = true
 			#Determines whether this Recipe Type Mapper is enabled.
 			enabled = true
 
+		#Maps Avaritia Extreme Smithing recipes to EMC values.
+		[mappers.Crafting-Mapper.Avaritia-Extreme-Smithing]
+			#Determines whether this Recipe Type Mapper is enabled.
+			enabled = true
+
 	#Set EMC=0 for everything in the c:raw_materials tag.
 	[mappers.Raw-Ore-Blacklist-Mapper]
 		#Determines whether this EMC Mapper is enabled.
