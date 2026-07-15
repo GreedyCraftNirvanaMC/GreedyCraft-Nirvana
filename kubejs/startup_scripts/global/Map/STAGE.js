@@ -10,7 +10,7 @@ global.MAP_STAGE_LIST = {
         parent: "init",
         icon: "greedycraft:fake_philosopher_stone"
     },
-    truehero: {
+    end: {
         parent: "init_start",
         icon: "greedycraft:executor_terminal"
     }

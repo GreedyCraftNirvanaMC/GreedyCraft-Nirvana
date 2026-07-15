@@ -895,9 +895,9 @@
     "greedycraft.message.stagesunlock.expert.title": "§c§o§n§lExpert Mode",
     "greedycraft.message.stagesunlock.expert.lore": "§5§o§nSalute to the fearless",
     "greedycraft.message.stagesunlock.expert.unlock": "§a§lExpert Mode exclusive items unlocked",
-    "greedycraft.message.stagesunlock.truehero.title": "§a§o§n§lThe End",
-    "greedycraft.message.stagesunlock.truehero.lore": "§5§o§nThank you for playing §bGreedyCraft§7·§c§lNirvana",
-    "greedycraft.message.stagesunlock.truehero.unlock": "§a§lThere is nothing left for you to unlock",
+    "greedycraft.message.stagesunlock.end.title": "§a§o§n§lThe End",
+    "greedycraft.message.stagesunlock.end.lore": "§5§o§nThank you for playing §bGreedyCraft§7·§c§lNirvana",
+    "greedycraft.message.stagesunlock.end.unlock": "§a§lThere is nothing left for you to unlock",
 
     "greedycraft.message.right_clicked.has_stage": "§cThis stage has already been unlocked",
     "greedycraft.message.right_clicked.cryonic_artifact": "§cSun Colossus not found!",

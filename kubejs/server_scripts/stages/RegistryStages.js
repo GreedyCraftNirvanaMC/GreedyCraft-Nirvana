@@ -17,7 +17,7 @@ AStages.addRestrictionForItem("greedycraft_stage/item/init/expert", "expert", [
     "greedycraft:goodie_bag"
 ]).setHideInJEI(false).setHideTooltip(true)
 
-AStages.addRestrictionForItem("greedycraft_stage/item/init/truehero", "truehero", ["greedycraft:placeholder"]).setHideInJEI(false).setHideTooltip(true)
+AStages.addRestrictionForItem("greedycraft_stage/item/init/end", "end", ["greedycraft:placeholder"]).setHideInJEI(false).setHideTooltip(true)
 
 // 判断整合包模式是否为休闲模式
 if (packMode != "casual") {

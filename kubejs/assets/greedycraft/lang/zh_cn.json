@@ -895,9 +895,9 @@
     "greedycraft.message.stagesunlock.expert.title": "§c§o§n§l专家模式",
     "greedycraft.message.stagesunlock.expert.lore": "§5§o§n向无畏者致敬",
     "greedycraft.message.stagesunlock.expert.unlock": "§a§l专家模式专属物品解锁",
-    "greedycraft.message.stagesunlock.truehero.title": "§a§o§n§l尽头",
-    "greedycraft.message.stagesunlock.truehero.lore": "§5§o§n感谢游玩§b贪婪整合包§7·§c§l涅槃",
-    "greedycraft.message.stagesunlock.truehero.unlock": "§a§l你已经没有什么能解锁的了",
+    "greedycraft.message.stagesunlock.end.title": "§a§o§n§l尽头",
+    "greedycraft.message.stagesunlock.end.lore": "§5§o§n感谢游玩§b贪婪整合包§7·§c§l涅槃",
+    "greedycraft.message.stagesunlock.end.unlock": "§a§l你已经没有什么能解锁的了",
 
     "greedycraft.message.right_clicked.has_stage": "§c该阶段已解锁",
     "greedycraft.message.right_clicked.cryonic_artifact": "§c没有找到太阳巨灵！",
