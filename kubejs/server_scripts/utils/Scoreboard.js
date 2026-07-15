@@ -9,7 +9,7 @@ function getScoreBoardgameModeText(packMode, player, server) {
         // 判断整合包模式是否等于休闲模式
         if (packMode == "casual") {
             // 判断是否存在非官方模组 *此为自定义函数*
-            if (checkModList().length != 0) {
+            if (checkModList().length > 0) {
                 // 休闲模式只在存在非官方模组时才判定为作弊
                 gameModeText = gameModeText.append(Component.literal("·").color(0xAAAAAA)).append(Component.translatable("greedycraft.scoreboard.packmode.cheat"))
             }

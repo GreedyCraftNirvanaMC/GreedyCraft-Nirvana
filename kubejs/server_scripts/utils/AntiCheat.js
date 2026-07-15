@@ -23,6 +23,10 @@ function checkCheat(player, server) {
 
     // 检查是否有非官方模组
     if (unofficialModList.length > 0) {
+        player.tell(Component.translatable("greedycraft.message.cheat.modlist.text"))
+        unofficialModList.forEach(modID => player.tell(modID))
+        console.warn(`Unofficial mods detected: ${unofficialModList}`)
+
         // 返回结果
         return true
     }

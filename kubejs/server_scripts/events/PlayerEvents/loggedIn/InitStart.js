@@ -58,17 +58,8 @@ PlayerEvents.loggedIn(event => {
             player.tell(Component.translatable("greedycraft.message.anticheat.off.text"))
         }
 
-        // 判断是否作弊
         if (checkCheat(player, server)) {
-            // 判断作弊类型是否是安装了非官方模组并发送对应消息
-            if (checkModList().length != 0) {
-                player.tell(Component.translatable("greedycraft.message.cheat.modlist.text"))
-                unofficialModList.forEach(modID => player.tell(modID))
-                console.warn(`UnofficialModList: ${unofficialModList}`)
-            } else {
-                // 否则发送默认作弊消息
-                player.tell(Component.translatable("greedycraft.message.cheat.text"))
-            }
+            player.tell(Component.translatable("greedycraft.message.cheat.text"))
         }
 
         // 判断是否是 "真英雄"
