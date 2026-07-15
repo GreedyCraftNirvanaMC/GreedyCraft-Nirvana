@@ -314,5 +314,6 @@ global.VARIABLE_OFFICIAL_MOD_LIST = new Set([
     "chiselsandbits",
     "armor_visibility",
     "openloader",
-    "betterfoliage"
+    "betterfoliage",
+    "codecui"
 ])
