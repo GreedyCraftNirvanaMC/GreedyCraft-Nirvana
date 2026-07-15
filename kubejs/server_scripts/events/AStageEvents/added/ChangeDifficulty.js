@@ -11,10 +11,10 @@ if (packMode == "expert") {
 }
 
 AStageEvents.added(event => {
-    let playerName = event.player.username
-    let server = event.server
+    let playerName = event.getPlayer().getUsername()
+    let server = event.getServer()
 
-    if (DIFFICULTY_MAP[event.stage]) {
-        server.runCommandSilent(`ps_difficulty set ${playerName} ${DIFFICULTY_MAP[event.stage]}`)
+    if (DIFFICULTY_MAP[event.getStage()]) {
+        server.runCommandSilent(`ps_difficulty set ${playerName} ${DIFFICULTY_MAP[event.getStage()]}`)
     }
 })

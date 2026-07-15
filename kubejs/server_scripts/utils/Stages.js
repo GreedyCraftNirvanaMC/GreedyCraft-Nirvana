@@ -7,7 +7,7 @@
  * @param {import("@package/net/minecraft/server/level").$ServerPlayer} player - 玩家对象
  */
 function givePlayerAllStage(server, player) {
-    let playerName = player.username
+    let playerName = player.getUsername()
 
     Object.entries(global.MAP_STAGE_LIST).forEach(([stageName, data]) => {
         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/${stageName}`)
@@ -21,7 +21,7 @@ function givePlayerAllStage(server, player) {
  * @param {import("@package/net/minecraft/server/level").$ServerPlayer} player - 玩家对象
  */
 function removePlayerAllStage(server, player) {
-    let playerName = player.username
+    let playerName = player.getUsername()
 
     Object.entries(global.MAP_STAGE_LIST).forEach(([stageName, data]) => {
         server.runCommandSilent(`advancement revoke ${playerName} only greedycraft:stages/${stageName}`)

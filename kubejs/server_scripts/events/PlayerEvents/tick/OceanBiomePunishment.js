@@ -6,9 +6,9 @@ let MobEffectInstance = Java.loadClass("net.minecraft.world.effect.MobEffectInst
 let MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
 
 PlayerEvents.tick(event => {
-    let player = event.player
-    let level = event.level
-    let server = player.server
+    let player = event.getPlayer()
+    let level = event.getLevel()
+    let server = player.getServer()
     let biome = level.getBiome(player.blockPosition())
 
     // 限制 20 tick 执行一次

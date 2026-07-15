@@ -7,7 +7,7 @@ ServerEvents.commandRegistry(event => {
     event.register(
         Commands.literal("gctdev")
             .then(
-                Commands.literal("showmodlist").requires(source => global.VARIABLE_CREATOR_LIST.includes(source.player.uuid.toString()))
+                Commands.literal("showmodlist").requires(source => global.VARIABLE_CREATOR_LIST.includes(source.getPlayer().getUuid().toString()))
                     .executes(ctx => {
                         Platform.mods.forEach((MOD_ID, MOD_INFO) => {
                             console.log('"' + MOD_ID + '"')

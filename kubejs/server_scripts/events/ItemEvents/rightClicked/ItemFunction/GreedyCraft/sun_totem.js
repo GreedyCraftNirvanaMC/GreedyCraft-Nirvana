@@ -5,8 +5,8 @@
 let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 
 ItemEvents.rightClicked("greedycraft:sun_totem", event => {
-    let level = event.level
-    let player = event.player
+    let level = event.getLevel()
+    let player = event.getPlayer()
 
     let hasReturn = false
 
@@ -54,7 +54,7 @@ ItemEvents.rightClicked("greedycraft:sun_totem", event => {
         }
 
         // 在玩家 y 轴加 4 格位置生成
-        entity.setPos(player.x, player.y + 4, player.z)
+        entity.setPos(player.getX(), player.getY() + 4, player.getZ())
 
         // 设置最大血量
         entity.setMaxHealth(maxHealth)

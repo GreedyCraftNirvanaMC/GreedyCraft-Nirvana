@@ -3,11 +3,11 @@
 // priority: 50
 
 PlayerEvents.advancement("greedycraft:stages/init", event => {
-    let server = event.server
-    let player = event.player
-    let playerName = player.username
+    let server = event.getServer()
+    let player = event.getPlayer()
+    let playerName = player.getUsername()
 
-    let scoreboard = server.scoreboard.getObjective("packinfo")
+    let scoreboard = server.getScoreboard().getObjective("packinfo")
 
     let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 
@@ -60,5 +60,5 @@ PlayerEvents.advancement("greedycraft:stages/init", event => {
     addScoreBoard(player, server)
 
     // 输出日志
-    console.log(`New player ${player.username} joined the game at X:${player.x} Y:${player.y} Z:${player.z}`)
+    console.log(`New player ${player.getUsername()} joined the game at X:${player.getX()} Y:${player.getY()} Z:${player.getZ()}`)
 })

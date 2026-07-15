@@ -22,9 +22,9 @@ function randomSpawnAroundPlayer(player, radius) {
     let angle = Math.random() * Math.PI * 2
     let distance = Math.random() * radius
 
-    let x = player.x + Math.cos(angle) * distance
-    let z = player.z + Math.sin(angle) * distance
-    let y = player.y
+    let x = player.getX() + Math.cos(angle) * distance
+    let z = player.getZ() + Math.sin(angle) * distance
+    let y = player.getY()
 
     let pos = [x, y, z]
 

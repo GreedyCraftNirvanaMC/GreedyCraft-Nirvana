@@ -3,13 +3,13 @@
 // priority: 50
 
 ItemEvents.rightClicked("greedycraft:cryonic_artifact", event => {
-    let player = event.player
-    let level = event.level
+    let player = event.getPlayer()
+    let level = event.getLevel()
 
     let trigger = false
 
     // 将范围设置为以玩家为中心周围 20 格
-    let box = player.boundingBox.inflate(20.0)
+    let box = player.getBoundingBox().inflate(20.0)
 
     // 获取该 20 格内的所有实体列表
     let entitys = level.getEntitiesWithin(box)
@@ -17,22 +17,22 @@ ItemEvents.rightClicked("greedycraft:cryonic_artifact", event => {
     // 从列表提取单个实体
     entitys.forEach(entity => {
         // 判断实体 id 是否等于 aether:sun_spirit 并且处于活动状态
-        if (entity.type == "aether:sun_spirit" && entity.isLiving()) {
+        if (entity.getType() == "aether:sun_spirit" && entity.isLiving()) {
             // 设置血量为 1
             entity.setHealth(1.0)
 
             // 生成粒子
-            level.spawnParticles("minecraft:snowflake", true, player.x, player.y, player.z, 2.0, 2.0, 2.0, 200, 0.1)
+            level.spawnParticles("minecraft:snowflake", true, player.getX(), player.getY(), player.getZ(), 2.0, 2.0, 2.0, 200, 0.1)
 
             // 将物品减 1
-            event.item.shrink(1)
+            event.getItem().shrink(1)
 
             trigger = true
 
             // 输出日志
-            console.log(`${player.username} used greedycraft:cryonic_artifact to set the health of aether:sun_spirit to 1.
-                Player X:${player.x} Y:${player.y} Z:${player.z}
-                Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
+            console.log(`${player.getUsername()} used greedycraft:cryonic_artifact to set the health of aether:sun_spirit to 1.
+                Player X:${player.getX()} Y:${player.getY()} Z:${player.getZ()}
+                Entity X:${entity.getX()} Y:${entity.getY()} Z:${entity.getZ()}`)
         }
     })
 

@@ -3,8 +3,8 @@
 // priority: 50
 
 ItemEvents.rightClicked("greedycraft:passport", event => {
-    let player = event.player
-    let server = event.server
+    let player = event.getPlayer()
+    let server = event.getServer()
 
     // 给予全部阶段与进度
     givePlayerAllStage(server, player)

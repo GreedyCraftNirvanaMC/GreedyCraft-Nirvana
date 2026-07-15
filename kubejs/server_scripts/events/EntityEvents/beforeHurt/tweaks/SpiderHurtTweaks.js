@@ -6,20 +6,20 @@ let MobEffectInstance = Java.loadClass("net.minecraft.world.effect.MobEffectInst
 let MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
 
 EntityEvents.beforeHurt("minecraft:player", event => {
-    let source = event.source
-    let entity = event.entity
-    let player = event.player
-    let level = event.level
+    let source = event.getSource()
+    let entity = event.getEntity()
+    let player = event.getPlayer()
+    let level = event.getLevel()
 
     // 判断造成伤害的是否是蜘蛛
     // 防止空指针并判断攻击的对象是否在常量 global.VARIABLE_SPIDER_LIST 中
-    if (source.actual && global.VARIABLE_SPIDER_LIST.includes(source.actual.type)) {
+    if (source.getActual() && global.VARIABLE_SPIDER_LIST.includes(source.getActual().getType())) {
         // 判断玩家是否有缓慢效果
         if (player.hasEffect("minecraft:slowness")) {
             // 66% 的概率执行以下操作
             if (Math.random() < 0.66) {
                 // 获取缓慢效果等级
-                let effectLevel = player.getEffect("minecraft:slowness").amplifier
+                let effectLevel = player.getEffect("minecraft:slowness").getAmplifier()
 
                 // 如果等级小于 3 级
                 if (effectLevel < 3) {

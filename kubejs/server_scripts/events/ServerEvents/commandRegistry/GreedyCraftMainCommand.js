@@ -27,9 +27,9 @@ ServerEvents.commandRegistry(event => {
                             // 执行操作
                             .executes(ctx => {
                                 let options = Arguments.STRING.getResult(ctx, "packmode")
-                                let server = ctx.source.server
-                                let player = ctx.source.player
-                                let playerName = player.username
+                                let server = ctx.getSource().getServer()
+                                let player = ctx.getSource().getPlayer()
+                                let playerName = player.getUsername()
 
                                 // 从配置文件获取 packMode 的值
                                 let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
@@ -49,7 +49,7 @@ ServerEvents.commandRegistry(event => {
 
                                 // 判断游戏模式是否是专家
                                 if (options == "expert") {
-                                    let players = server.players
+                                    let players = server.getPlayers()
                                     // 给服务器上所有玩家 expert 进度
                                     players.forEach(player => {
                                         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/expert`)
@@ -58,7 +58,7 @@ ServerEvents.commandRegistry(event => {
 
                                 // 判断游戏模式是否是冒险
                                 if (options == "adventure") {
-                                    let players = server.players
+                                    let players = server.getPlayers()
                                     // 清除多余信息
                                     players.forEach(player => {
                                         // 如果玩家有 expert 阶段
@@ -72,7 +72,7 @@ ServerEvents.commandRegistry(event => {
                                 }
 
                                 // 发送服务器消息
-                                server.tell(Component.translatable("greedycraft.commands.setpackmode", Component.literal(player.username).color(0xFFAA00)).append(Component.translatable(`greedycraft.packmode.${options}`)))
+                                server.tell(Component.translatable("greedycraft.commands.setpackmode", Component.literal(player.getUsername()).color(0xFFAA00)).append(Component.translatable(`greedycraft.packmode.${options}`)))
 
                                 // 修改配置文件的值
                                 KJSutils.ModifyJsonValue("config/greedycraft/config.json", "$.packMode", options)
@@ -105,8 +105,8 @@ ServerEvents.commandRegistry(event => {
                             // 执行操作
                             .executes(ctx => {
                                 let options = Arguments.BOOLEAN.getResult(ctx, "boolean")
-                                let server = ctx.source.server
-                                let player = ctx.source.player
+                                let server = ctx.getSource().getServer()
+                                let player = ctx.getSource().getPlayer()
 
                                 // 获取计分板项
                                 let scoreboard = server.scoreboard.getObjective("packinfo")
@@ -121,7 +121,7 @@ ServerEvents.commandRegistry(event => {
                                         // 添加计分板
                                         addScoreBoard(player, server)
                                         // 发送消息
-                                        server.tell(Component.translatable("greedycraft.message.showscoreboard.show", Component.literal(player.username).color(0xFFAA00)))
+                                        server.tell(Component.translatable("greedycraft.message.showscoreboard.show", Component.literal(player.getUsername()).color(0xFFAA00)))
                                     }
                                 } else {
                                     // 判空
@@ -129,7 +129,7 @@ ServerEvents.commandRegistry(event => {
                                         // 删除计分板
                                         server.scoreboard.removeObjective(scoreboard)
                                         // 发送消息
-                                        server.tell(Component.translatable("greedycraft.message.showscoreboard.hide", Component.literal(player.username).color(0xFFAA00)))
+                                        server.tell(Component.translatable("greedycraft.message.showscoreboard.hide", Component.literal(player.getUsername()).color(0xFFAA00)))
                                     } else {
                                         // 发送消息
                                         player.tell(Component.translatable("greedycraft.message.showscoreboard.null"))
@@ -144,7 +144,7 @@ ServerEvents.commandRegistry(event => {
                 // 自杀
                 Commands.literal("suicide")
                     .executes(ctx => {
-                        let source = ctx.source
+                        let source = ctx.getSource()
 
                         // 判断执行命令的是否是玩家
                         if (!(source.isPlayer())) {
@@ -155,7 +155,7 @@ ServerEvents.commandRegistry(event => {
                         }
 
                         // 击杀玩家
-                        source.player.kill()
+                        source.getPlayer().kill()
                         // 返回
                         return 1
                     })
@@ -164,10 +164,10 @@ ServerEvents.commandRegistry(event => {
                 // 清理垃圾
                 Commands.literal("purge").requires(source => source.hasPermission(4))
                     .executes(ctx => {
-                        let source = ctx.source
-                        let server = source.server
-                        let player = ctx.source.player
-                        let playerName = player.username
+                        let source = ctx.getSource()
+                        let server = source.getServer()
+                        let player = source.getPlayer()
+                        let playerName = player.getUsername()
 
                         // 判断执行命令的是否是玩家
                         if (!(source.isPlayer())) {

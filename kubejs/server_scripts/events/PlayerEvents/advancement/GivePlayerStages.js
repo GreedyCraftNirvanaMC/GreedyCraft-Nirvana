@@ -3,12 +3,11 @@
 // priority: 50
 
 PlayerEvents.advancement(event => {
-    let player = event.player
-    let playerName = player.username
-    let server = event.server
-    let advancementID = event.advancement.id.toString()
-    let advancementNamespace = event.advancement.id.namespace
-    let advancementPath = event.advancement.id.path.toString()
+    let player = event.getPlayer()
+    let playerName = player.getUsername()
+    let server = event.getServer()
+    let advancementNamespace = event.getAdvancement().getId().getNamespace()
+    let advancementPath = event.getAdvancement().getId().getPath()
 
     let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 

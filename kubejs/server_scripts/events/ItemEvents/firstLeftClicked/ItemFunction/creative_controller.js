@@ -3,12 +3,12 @@
 // priority: 50
 
 ItemEvents.firstLeftClicked("greedycraft:creative_controller", event => {
-    let server = event.server
-    let player = event.player
-    let playerName = player.username
+    let server = event.getServer()
+    let player = event.getPlayer()
+    let playerName = player.getUsername()
 
     // 切换生存模式
     server.runCommandSilent(`gamemode survival ${playerName}`)
     // 输出日志
-    console.log(`${playerName} used greedycraft:creative_controller to set their game mode to Survival. Player X:${player.x} Y:${player.y} Z:${player.z}`)
+    console.log(`${playerName} used greedycraft:creative_controller to set their game mode to Survival. Player X:${player.getX()} Y:${player.getY()} Z:${player.getZ()}`)
 })

@@ -6,9 +6,9 @@ let hasPrePurifyingDustRecipes = false
 let PrePurifyingDustRecipes = {}
 
 ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
-    let level = event.level
-    let player = event.player
-    let blockTarget = event.target.block
+    let level = event.getLevel()
+    let player = event.getPlayer()
+    let blockTarget = event.getTarget().block
 
     // 判断是否右键的方块
     if (blockTarget == null) {
@@ -80,11 +80,11 @@ ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
         // 发送消息
         player.tell(Component.translatable("greedycraft.message.right_clicked.purifying_dust", Component.literal(setBlockNumber).color(0xFFAA00), endTime - startTime))
         // 生成粒子
-        level.spawnParticles("minecraft:poof", true, player.x, player.y, player.z, 8.0, 8.0, 8.0, 1500, 0.2)
+        level.spawnParticles("minecraft:poof", true, player.getX(), player.getY(), player.getZ(), 8.0, 8.0, 8.0, 1500, 0.2)
         // 输出日志
-        console.log(`${player.username} used greedycraft:purifying_dust at X:${player.x} Y:${player.y} Z:${player.z}, causing ${endTime - startTime}ms of lag`)
+        console.log(`${player.username} used greedycraft:purifying_dust at X:${player.getX()} Y:${player.getY()} Z:${player.getZ()}, causing ${endTime - startTime}ms of lag`)
         // 将物品减 1
-        event.item.shrink(1)
+        event.getItem().shrink(1)
     } else {
         // 发送消息
         player.tell(Component.translatable("greedycraft.message.right_clicked.purifying_dust.1"))

@@ -3,26 +3,26 @@
 // priority: 50
 
 ItemEvents.rightClicked("greedycraft:emergency_button", event => {
-    let player = event.player
-    let server = event.server
-    let level = event.level
+    let player = event.getPlayer()
+    let server = event.getServer()
+    let level = event.getLevel()
 
     // 获取当前世界所有实体
-    level.entities.forEach(entity => {
+    level.getEntities().forEach(entity => {
         // 排除玩家
         if (!(entity.isPlayer())) {
             // 删除（非 Kill）
             entity.discard()
             // 输出日志
-            console.debug(`greedycraft:emergency_button removed entity ${entity.type} from world ${level.displayName.getString()}. Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
+            console.debug(`greedycraft:emergency_button removed entity ${entity.getType()} from world ${level.getDisplayName().getString()}. Entity X:${entity.getX()} Y:${entity.getY()} Z:${entity.getZ()}`)
         }
     })
 
     // 发送消息
-    server.tell(Component.translatable("greedycraft.message.right_clicked.emergency_button", Component.literal(player.username).color(0xFFFF55).bold(), Component.literal(level.displayName.getString()).color(0xFF55FF).bold()))
+    server.tell(Component.translatable("greedycraft.message.right_clicked.emergency_button", Component.literal(player.getUsername()).color(0xFFFF55).bold(), Component.literal(level.getDisplayName().getString()).color(0xFF55FF).bold()))
     // 输出日志
     console.log("You can check the debug log to view the list of removed entities")
 
     // 将物品减 1
-    event.item.shrink(1)
+    event.getItem().shrink(1)
 })

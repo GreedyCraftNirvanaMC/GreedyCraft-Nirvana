@@ -3,12 +3,12 @@
 // priority: 50
 
 BlockEvents.broken(event => {
-    let level = event.level
-    let block = event.block
+    let level = event.getLevel()
+    let block = event.getBlock()
     let biome = level.getBiome(block.getPos())
 
     // 判断是不是玩家破坏的 && 判断被破坏方块的 Y 坐标是否小于 40 && 判断是不是主世界 && 判断生物群系 Tag 是否包含 is_ocean
-    if (event.entity.isPlayer() && block.getY() < 40 && level.isOverworld() && biome.isTag("c:is_ocean")) {
+    if (event.getEntity().isPlayer() && block.getY() < 40 && level.isOverworld() && biome.isTag("c:is_ocean")) {
         // 设置方块为水
         level.setBlock(block.getPos(), "minecraft:water", 3)
     }

@@ -3,12 +3,12 @@
 // priority: 50
 
 ItemEvents.rightClicked("greedycraft:creative_controller", event => {
-    let server = event.server
-    let player = event.player
-    let playerName = player.username
+    let server = event.getServer()
+    let player = event.getPlayer()
+    let playerName = player.getUsername()
 
     // 切换为创造模式
     server.runCommandSilent(`gamemode creative ${playerName}`)
     // 输出日志
-    console.log(`${playerName} used greedycraft:creative_controller to set their game mode to Creative. Player X:${player.x} Y:${player.y} Z:${player.z}`)
+    console.log(`${playerName} used greedycraft:creative_controller to set their game mode to Creative. Player X:${player.getX()} Y:${player.getY()} Z:${player.getZ()}`)
 })

@@ -3,13 +3,13 @@
 // priority: 50
 
 ItemEvents.rightClicked("greedycraft:item_purger", event => {
-    let player = event.player
-    let server = event.server
+    let player = event.getPlayer()
+    let server = event.getServer()
 
     // 判断权限
     if (player.hasPermissions(4)) {
         // 发送消息
-        server.tell(Component.translatable("greedycraft.message.right_clicked.item_purger", Component.literal(player.username).color(0xFFAA00).bold()))
+        server.tell(Component.translatable("greedycraft.message.right_clicked.item_purger", Component.literal(player.getUsername()).color(0xFFAA00).bold()))
         // 清理掉落物
         cleanServerDroppedItem(server)
     } else {

@@ -12,8 +12,8 @@ ServerEvents.tags("item", event => {
     ]
 
     Item.getList().forEach(item => {
-        let id = item.id.toString()
-        let namespace = item.mod
+        let id = item.getId().toString()
+        let namespace = item.getMod()
 
         rules.forEach(rule => {
             let modMatch = !rule.mods || rule.mods.includes(namespace)

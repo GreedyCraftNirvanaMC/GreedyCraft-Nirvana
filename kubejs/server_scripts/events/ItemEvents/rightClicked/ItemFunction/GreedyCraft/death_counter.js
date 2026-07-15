@@ -3,7 +3,7 @@
 // priority: 50
 
 ItemEvents.rightClicked("greedycraft:death_counter", event => {
-    let player = event.player
+    let player = event.getPlayer()
 
     // 显示死亡计分板
     player.runCommandSilent("deathcounter broadcast")

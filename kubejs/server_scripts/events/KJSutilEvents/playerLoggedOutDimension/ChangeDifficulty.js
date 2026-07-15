@@ -3,10 +3,10 @@
 // priority: 50
 
 KJSutilEvents.playerLoggedOutDimension(event => {
-    let server = event.player.server
-    let player = event.player
-    let playerName = player.username
-    let loggedOutDimension = event.loggedOut
+    let player = event.getPlayer()
+    let server = player.getServer()
+    let playerName = player.getUsername()
+    let loggedOutDimension = event.getLoggedOut()
 
     // 获取维度与难度的对应关系
     Object.entries(global.MAP_DIMENSION_DIFFICULTY).forEach(([dimension, difficulty]) => {

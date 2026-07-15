@@ -7,9 +7,9 @@ let MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
 
 ItemEvents.rightClicked("greedycraft:adrenaline", event => {
     // 速度效果
-    event.player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 4))
+    event.getPlayer().addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 4))
     // 力量效果
-    event.player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 3))
+    event.getPlayer().addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 3))
     // 将物品减 1
-    event.item.shrink(1)
+    event.getItem().shrink(1)
 })

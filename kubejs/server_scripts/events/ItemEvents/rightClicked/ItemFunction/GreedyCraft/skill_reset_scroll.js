@@ -6,8 +6,8 @@ let SkillsType = Java.loadClass("net.bandit.reskillable.common.skills.Skill")
 let SkillModel = Java.loadClass("net.bandit.reskillable.common.capabilities.SkillModel")
 
 ItemEvents.rightClicked("greedycraft:skill_reset_scroll", event => {
-    let server = event.server
-    let player = event.player
+    let server = event.getServer()
+    let player = event.getPlayer()
 
     let skills = SkillsType.values()
     let model = SkillModel.get(player)
@@ -19,7 +19,7 @@ ItemEvents.rightClicked("greedycraft:skill_reset_scroll", event => {
         let xp = Math.floor(20 * ((Math.pow(1.2, skillLevel - 1) - 1) / (1.2 - 1)))
 
         // 设置技能等级
-        server.runCommandSilent(`skills set ${player.username} ${skill} 1`)
+        server.runCommandSilent(`skills set ${player.getUsername()} ${skill} 1`)
 
         // 计算经验
         totalXP += xp
@@ -35,5 +35,5 @@ ItemEvents.rightClicked("greedycraft:skill_reset_scroll", event => {
     player.tell(Component.translatable("greedycraft.message.right_clicked.skill_reset_scroll", `§6${totalXP}`))
 
     // 将物品减一
-    event.item.shrink(1)
+    event.getItem().shrink(1)
 })

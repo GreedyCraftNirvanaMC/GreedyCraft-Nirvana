@@ -3,9 +3,9 @@
 // priority: 50
 
 BlockEvents.rightClicked(event => {
-    let block = event.block
-    let level = event.level
-    let player = event.player
+    let block = event.getBlock()
+    let level = event.getLevel()
+    let player = event.getPlayer()
 
     // 判断玩家的主手是不是空的
     if (player.getMainHandItem() != "minecraft:air") {

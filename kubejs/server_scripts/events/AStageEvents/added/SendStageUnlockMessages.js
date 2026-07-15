@@ -3,9 +3,9 @@
 // priority: 50
 
 AStageEvents.added(event => {
-    let server = event.server
-    let player = event.player
-    let stage = event.stage
+    let server = event.getServer()
+    let player = event.getPlayer()
+    let stage = event.getStage()
     
     let borderText = "§9§l=================================================="
 
@@ -25,5 +25,5 @@ AStageEvents.added(event => {
         }
     }
     // 输出日志
-    console.log(`Added stage: ${stage} to ${player.username}. Player X:${player.x} Y:${player.y} Z:${player.z}`)
+    console.log(`Added stage: ${stage} to ${player.getUsername()}. Player X:${player.getX()} Y:${player.getY()} Z:${player.getZ()}`)
 })

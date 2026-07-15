@@ -3,15 +3,15 @@
 // priority: 50
 
 EntityEvents.beforeHurt(event => {
-    let entity = event.entity
-    let source = event.source
+    let entity = event.getEntity()
+    let source = event.getSource()
 
     // 如果造成伤害的是玩家并且是近战造成且主手手持 greedycraft:one_punch 时直接 kill 攻击对象
-    if (source.player && source.direct && source.player.mainHandItem.id.toString() == "greedycraft:one_punch") {
+    if (source.getPlayer() && source.isDirect() && source.getPlayer().getMainHandItem().getId() == "greedycraft:one_punch") {
         entity.kill()
         // 输出日志
-        console.log(`${source.player.username} killed ${entity.type} using greedycraft:one_punch.
-            Player X:${source.player.x} Y:${source.player.y} Z:${source.player.z}
-            Entity X:${entity.x} Y:${entity.y} Z:${entity.z}`)
+        console.log(`${source.getPlayer().getUsername()} killed ${entity.getType()} using greedycraft:one_punch.
+            Player X:${source.getPlayer().getX()} Y:${source.getPlayer().getY()} Z:${source.getPlayer().getZ()}
+            Entity X:${entity.getX()} Y:${entity.getY()} Z:${entity.getZ()}`)
     }
 })

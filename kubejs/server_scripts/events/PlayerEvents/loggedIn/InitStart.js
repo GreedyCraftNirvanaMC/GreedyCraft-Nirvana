@@ -3,12 +3,12 @@
 // priority: 50
 
 PlayerEvents.loggedIn(event => {
-    let server = event.server
-    let player = event.player
-    let playerName = player.username
+    let server = event.getServer()
+    let player = event.getPlayer()
+    let playerName = player.getUsername()
 
     let messageTitle = Component.translatable("greedycraft.message.playerlogging.system.title")
-    let messageText1 = Component.translatable("greedycraft.message.playerlogging.system.text.1").append(Component.literal(player.username).color(0xFFAA00))
+    let messageText1 = Component.translatable("greedycraft.message.playerlogging.system.text.1").append(Component.literal(player.getUsername()).color(0xFFAA00))
     let messageText2 = Component.translatable("greedycraft.message.playerlogging.system.text.2")
     let messageText3 = Component.translatable("greedycraft.message.playerlogging.system.text.3")
     let messageText4 = Component.translatable("greedycraft.message.playerlogging.system.text.4")
@@ -63,8 +63,8 @@ PlayerEvents.loggedIn(event => {
         }
 
         // 判断是否是 "真英雄"
-        if (AStages.playerHasStage("truehero", player) && !(checkCheat(player, server))) {
-            player.tell(Component.translatable("greedycraft.message.playerlogging.truehero", Component.literal(player.username).color(0xFFFF55)))
+        if (AStages.playerHasStage("end", player) && !(checkCheat(player, server))) {
+            player.tell(Component.translatable("greedycraft.message.playerlogging.truehero", Component.literal(player.getUsername()).color(0xFFFF55)))
         }
     }
 })

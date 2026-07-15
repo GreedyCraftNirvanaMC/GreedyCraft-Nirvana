@@ -3,16 +3,16 @@
 // priority: 50
 
 EntityEvents.death("minecraft:player", event => {
-    let source = event.source
-    let actual = source.actual
-    let server = event.server
-    let level = event.level
-    let player = event.player
+    let source = event.getSource()
+    let actual = source.getActual()
+    let server = event.getServer()
+    let level = event.getLevel()
+    let player = event.getPlayer()
 
     if (actual && actual.isLiving()) {
-        if (actual.type == "mowziesmobs:frostmaw" || actual.type == "mowziesmobs:umvuthi" || actual.type == "twilightforest:alpha_yeti") {
+        if (actual.getType() == "mowziesmobs:frostmaw" || actual.getType() == "mowziesmobs:umvuthi" || actual.getType() == "twilightforest:alpha_yeti") {
             // 将范围设置为以玩家为中心周围 20 格
-            let box = player.boundingBox.inflate(20.0)
+            let box = player.getBoundingBox().inflate(20.0)
 
             // 获取该 20 格内的所有实体列表
             let entitys = level.getEntitiesWithin(box)
@@ -23,7 +23,7 @@ EntityEvents.death("minecraft:player", event => {
             // 遍历实体列表
             entitys.forEach(e => {
                 // 判断实体是否是玩家
-                if (e.type == "minecraft:player") {
+                if (e.getType() == "minecraft:player") {
                     // 自增加
                     count++
                 }
@@ -34,7 +34,7 @@ EntityEvents.death("minecraft:player", event => {
                 // 删除实体
                 actual.discard()
                 // 输出日志
-                console.log(`The boss ${actual.type} has been removed because there were no other players nearby. Entity X:${actual.x} Y:${actual.y} Z:${actual.z}`)
+                console.log(`The boss ${actual.getType()} has been removed because there were no other players nearby. Entity X:${actual.getX()} Y:${actual.getY()} Z:${actual.getZ()}`)
             }
         }
     }

@@ -8,8 +8,8 @@ let Season = Java.loadClass("sereneseasons.api.season.Season")
 let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
 
 ItemEvents.rightClicked("greedycraft:beast_hand", event => {
-    let level = event.level
-    let player = event.player
+    let level = event.getLevel()
+    let player = event.getPlayer()
 
     // 获取当前世界的季节
     let season = SeasonHelper.getSeasonState(level).getSeason()
@@ -53,8 +53,7 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
         }
 
         if (packMode == "adventure") {
-            maxHeal
-            th = Math.floor(maxHealth * 1.5)
+            maxHealth = Math.floor(maxHealth * 1.5)
         }
 
         if (packMode == "expert") {
@@ -62,7 +61,7 @@ ItemEvents.rightClicked("greedycraft:beast_hand", event => {
         }
 
         // 在玩家 y 轴加 4 格位置生成
-        entity.setPos(player.x, player.y + 4, player.z)
+        entity.setPos(player.getX(), player.getY() + 4, player.getZ())
 
         // 设置最大血量
         entity.setMaxHealth(maxHealth)

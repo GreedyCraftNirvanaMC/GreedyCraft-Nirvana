@@ -3,10 +3,10 @@
 // priority: 50
 
 ServerEvents.command(event => {
-    let command = event.commandName
-    let commandSource = event.parseResults.context.source
-    let player = commandSource.player
-    let server = commandSource.server
+    let command = event.getCommandName()
+    let commandSource = event.getParseResults().getContext().getSource()
+    let player = commandSource.getPlayer()
+    let server = commandSource.getServer()
 
     // 拦截功能不应随着游戏模式切换而热切换
     let ANTICHEAT_MODE = global.ANTI_CHEAT_MODE
@@ -14,8 +14,8 @@ ServerEvents.command(event => {
 
     // 判断执行命令的是否是玩家
     if (commandSource.isPlayer()) {
-        let playerUUID = player.uuid.toString()
-        let playerName = player.username
+        let playerUUID = player.getUuid().toString()
+        let playerName = player.getUsername()
         // 判断玩家 UUID 是否在开发者列表之外
         if (!(global.VARIABLE_CREATOR_LIST.includes(playerUUID))) {
             // 判断是否是以创造模式创建的存档
