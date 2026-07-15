@@ -23,6 +23,7 @@ ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
 
     let setBlockNumber = 0
 
+    /** @type {Record<string, string>} */
     let recipesMap = {}
 
     // 判断是否使用缓存
