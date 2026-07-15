@@ -5,7 +5,7 @@ global.PACK_MODE = KJSutils.Analysis("config/greedycraft/config.json", "$.packMo
 global.CHECK_VERSION_UPDATE = ConfigFormBoolean("config/greedycraft/config.json", "$.checkVersionUpdate")
 global.ANTI_CHEAT = ConfigFormBoolean("config/greedycraft/config.json", "$.antiCheat")
 global.ANTI_CHEAT_MODE = KJSutils.Analysis("config/greedycraft/config.json", "$.antiCheatMode")
-global.LOCAL_PACKVERSION_CODE = KJSutils.Analysis("config/greedycraft/config.json", "$.localPackVersionCode")
+global.LOCAL_PACKVERSION_CODE = Number(KJSutils.Analysis("config/greedycraft/config.json", "$.localPackVersionCode"))
 global.LOCAL_PACKVERSION_NAME = KJSutils.Analysis("config/greedycraft/config.json", "$.localPackVersionName")
 global.UPDATE_LINK = KJSutils.AnalysisAll("config/greedycraft/config.json", "$.updateLink")
 
