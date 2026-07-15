@@ -11,9 +11,9 @@ global.MESSAGE_STAGES_UNLOCK = {
     lore: ["greedycraft.message.stagesunlock.expert.lore"],
     unlock: ["greedycraft.message.stagesunlock.expert.unlock"]
   },
-  truehero: {
-    title: ["greedycraft.message.stagesunlock.truehero.title"],
-    lore: ["greedycraft.message.stagesunlock.truehero.lore"],
-    unlock: ["greedycraft.message.stagesunlock.truehero.unlock"]
+  end: {
+    title: ["greedycraft.message.stagesunlock.end.title"],
+    lore: ["greedycraft.message.stagesunlock.end.lore"],
+    unlock: ["greedycraft.message.stagesunlock.end.unlock"]
   }
 }
