@@ -19,16 +19,20 @@ AStages.addRestrictionForItem("greedycraft_stage/item/init/expert", "expert", [
 
 AStages.addRestrictionForItem("greedycraft_stage/item/init/end", "end", ["greedycraft:placeholder"]).setHideInJEI(false).setHideTooltip(true)
 
+const stageRuleEntries = /** @type {global.StageRuleEntry[]} */ (
+    Object.entries(global.MAP_STAGES_RULE)
+)
+
 // 判断整合包模式是否为休闲模式
 if (packMode != "casual") {
     // 从全局变量中提取阶段类型与阶段对象
-    Object.entries(global.MAP_STAGES_RULE).forEach(([stageType, stageMap]) => {
-        // 从阶段对象中提取阶段名称与数据
-        Object.entries(stageMap).forEach(([stageName, stageData]) => {
-            // 按类型分别注册
-            switch (stageType) {
-                // item 类型
-                case "item": {
+    stageRuleEntries.forEach(([stageType, stageMap]) => {
+        // 按类型分别注册
+        switch (stageType) {
+            // item 类型
+            case "item": {
+                // 从阶段对象中提取阶段名称与数据
+                Object.entries(stageMap).forEach(([stageName, stageData]) => {
                     // 遍历阶段对象数据
                     stageData.forEach(data => {
                         // 判断对象开头是否是 #
@@ -47,10 +51,13 @@ if (packMode != "casual") {
                                 .setHideTooltip(true)
                         }
                     })
-                    break;
-                }
-                // ore 类型
-                case "ore": {
+                })
+                break;
+            }
+            // ore 类型
+            case "ore": {
+                // 从阶段对象中提取阶段名称与数据
+                Object.entries(stageMap).forEach(([stageName, stageData]) => {
                     // 遍历阶段对象数据
                     Object.entries(stageData).forEach(([ore, block]) => {
                         // 判断对象开头是否是 #
@@ -67,19 +74,25 @@ if (packMode != "casual") {
                             AStages.addRestrictionForOre(`greedycraft/stage/id/ore/${ore}/${stageName}`, stageName, Block.getBlock(ore).defaultBlockState(), Block.getBlock(block).defaultBlockState())
                         }
                     })
-                    break;
-                }
-                // dimension 类型
-                case "dimension": {
+                })
+                break;
+            }
+            // dimension 类型
+            case "dimension": {
+                // 从阶段对象中提取阶段名称与数据
+                Object.entries(stageMap).forEach(([stageName, stageData]) => {
                     // 遍历阶段对象数据
                     stageData.forEach(data => {
                         // 添加阶段
                         AStages.addRestrictionForDimension(`greedycraft/stage/id/dimension/${stageName}/${data}`, stageName, data)
                     })
-                    break;
-                }
-                // mod 类型
-                case "mod": {
+                })
+                break;
+            }
+            // mod 类型
+            case "mod": {
+                // 从阶段对象中提取阶段名称与数据
+                Object.entries(stageMap).forEach(([stageName, stageData]) => {
                     // 遍历阶段对象数据
                     stageData.forEach(data => {
                         // 遍历所有物品
@@ -93,18 +106,21 @@ if (packMode != "casual") {
                             }
                         })
                     })
-                    break;
-                }
-                // mob 类型
-                case "mob": {
+                })
+                break;
+            }
+            // mob 类型
+            case "mob": {
+                // 从阶段对象中提取阶段名称与数据
+                Object.entries(stageMap).forEach(([stageName, stageData]) => {
                     // 遍历阶段对象数据
                     stageData.forEach(data => {
                         // 添加阶段
                         AStages.addRestrictionForMob(`greedycraft/stage/id/mob/${stageName}/${data}`, stageName, data)
                     })
-                    break;
-                }
+                })
+                break;
             }
-        })
+        }
     })
 }

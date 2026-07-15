@@ -35,6 +35,13 @@ declare namespace global {
         burnTime: number;
     }
 
+    type StageRuleEntry = {
+        [K in keyof StageRules]-?: [
+            stageType: K,
+            stageMap: StageRules[K]
+        ];
+    }[keyof StageRules];
+
     let MAP_DIMENSION_DIFFICULTY: Record<string, number>;
     let MAP_STAGE_DIFFICULTY: Record<string, number>;
     let MAP_STAGE_DIFFICULTY_EXPERT: Record<string, number>;
