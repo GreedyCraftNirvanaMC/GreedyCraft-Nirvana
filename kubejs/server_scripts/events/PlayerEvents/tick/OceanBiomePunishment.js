@@ -18,7 +18,7 @@ PlayerEvents.tick(event => {
             return
         }
 
-        if (!(player.isSpectator)) {
+        if (!(player.isSpectator())) {
             // 判断生物群系是否是海洋
             if (biome.isTag("c:is_ocean")) {
                 // 判断玩家眼睛是否不在水中
