@@ -120,6 +120,9 @@
   "projectexpansion": {
     "provider": true
   },
+  "quark": {
+    "oretoise_eating_cooldown": true
+  },
   "waystones": {
     "waystone": true
   },

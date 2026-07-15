@@ -10,6 +10,8 @@ manaEnchanter = true
 relics = true
 #Set this to true to invert the Ring of Magnetization's controls (from shift to stop to shift to work)
 invertMagnetRing = false
+#Set this to false to disable the animation for a flower 'picking up' an item
+flowerItemPickupAnimations = true
 
 [blockBreakingParticles]
 	#Set this to false to remove the block breaking particles from the flowers and other items in the mod.

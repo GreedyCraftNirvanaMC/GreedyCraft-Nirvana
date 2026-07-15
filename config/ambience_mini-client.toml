@@ -58,18 +58,14 @@
 	# Default: 12
 	# Range: 4 ~ 180
 	X_Axis_Granularity = 12
-	#After leaving combat, the 'in_combat' event will stay active for the additional time (in milliseconds) given here, allowing new enemies to join the fight without music switching between combat and non-combat music. [Default: 2500]
+	#After leaving combat, the '@in_combat' event will stay active for the additional time (in milliseconds) given here, allowing new enemies to join the fight without music switching between combat and non-combat music. [Default: 3500]
 	# Default: 3500
 	# Range: 1000 ~ 10000
 	Combat_Grace_Period = 3500
-	#Only used when no server-support is detected. If no interaction has been made between a player and a mob for the time given here (in milliseconds), these will no longer be considered 'in combat'. [Default: 5000]
+	#If no interaction has been made between a player and a mob for the time given here (in milliseconds), these will no longer be considered 'in combat'. [Default: 5000]
 	# Default: 5000
 	# Range: 2500 ~ 15000
 	Combatant_Timeout = 5000
-	#Only used when no server-support is detected. When the player moves the number of blocks away from a mob given here, these will no longer be considered 'in combat'. [Default: 20]
-	# Default: 20
-	# Range: 10 ~ 50
-	Leaving_Combat_Distance = 20
 	#If enabled, upon joining a multiplayer server the client will notify whether the server has support for Ambience Mini. If no support, server-dependent features will be disabled. [Default: true]
 	Notify_Server_Support = true
 	#If enabled, the mod will print debugging information to the terminal whenever the current playlist changes. Used for troubleshooting. [Default: false]
@@ -78,3 +74,5 @@
 	Meticulous_Playlist_Selector = false
 	#Fade out Ambience Mini's music when a jukebox is playing music nearby. [Default true]
 	Fade_On_Jukebox = true
+	#If enabled, the mod will print a message once (each time Minecraft is launched) with all the basic controls of the mod. [Default: false]
+	Print_Basic_Controls = false

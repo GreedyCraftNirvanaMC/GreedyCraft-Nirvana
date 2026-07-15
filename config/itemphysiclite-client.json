@@ -11,5 +11,9 @@
   "blockBelowRequireOffset": {
     "blocks": [],
     "tags": []
+  },
+  "vanillaRendered": {
+    "entries": [],
+    "isWhitelist": true
   }
 }

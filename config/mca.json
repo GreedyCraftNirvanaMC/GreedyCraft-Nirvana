@@ -18,6 +18,7 @@
   "innArrivalNotification": true,
   "villagerRestockNotification": true,
   "showNotificationsAsChat": false,
+  "giveAdvancementBooks": true,
   "heartsToBeConsideredAsFriend": 40,
   "enableVillagerMailingPlayers": true,
   "enableGenderCheckForPlayers": true,
@@ -31,6 +32,8 @@
   "villagerMaxHealth": 20,
   "allowVillagerTeleporting": false,
   "villagerMinTeleportationDistance": 128.0,
+  "villagerPathfindingDistance": 80,
+  "villagerFollowRange": 48,
   "childInitialHearts": 100,
   "greetHeartsThreshold": 75,
   "greetAfterDays": 1,
@@ -59,6 +62,7 @@
   "burnedClothingTickLength": 3600,
   "coloredHairChance": 0.02,
   "heartsRequiredToAutoSpawnGravestone": 10,
+  "defaultHeadstoneType": "cross_headstone",
   "useSmarterDoorAI": false,
   "procreationCooldown": 72000,
   "trackVillagerPosition": true,
@@ -70,6 +74,7 @@
   "villagerChatAIToken": "",
   "villagerChatAIModel": "default",
   "villagerChatAISystemPrompt": "",
+  "villagerChatAIFuseSystemPrompt": false,
   "villagerChatAIUseLongTermMemory": false,
   "villagerChatAIUseSharedLongTermMemory": false,
   "villagerChatAIIncludeSessionInformation": false,
@@ -94,6 +99,58 @@
     "AZnzlk1XvdvUeBnXmlld"
   ],
   "guardSpawnFraction": 0.175,
+  "guardEquipment": {
+    "0": {
+      "mainHand": "iron_sword",
+      "offHand": "air",
+      "head": "air",
+      "chest": "iron_chestplate",
+      "legs": "leather_leggings",
+      "feet": "leather_boots"
+    },
+    "1": {
+      "mainHand": "iron_sword",
+      "offHand": "shield",
+      "head": "iron_helmet",
+      "chest": "iron_chestplate",
+      "legs": "leather_leggings",
+      "feet": "iron_boots"
+    },
+    "2": {
+      "mainHand": "diamond_sword",
+      "offHand": "shield",
+      "head": "iron_helmet",
+      "chest": "iron_chestplate",
+      "legs": "iron_leggings",
+      "feet": "iron_boots"
+    }
+  },
+  "archerEquipment": {
+    "0": {
+      "mainHand": "bow",
+      "offHand": "air",
+      "head": "air",
+      "chest": "leather_chestplate",
+      "legs": "air",
+      "feet": "air"
+    },
+    "1": {
+      "mainHand": "bow",
+      "offHand": "air",
+      "head": "air",
+      "chest": "iron_chestplate",
+      "legs": "leather_leggings",
+      "feet": "leather_boots"
+    },
+    "2": {
+      "mainHand": "bow",
+      "offHand": "air",
+      "head": "air",
+      "chest": "diamond_chestplate",
+      "legs": "leather_leggings",
+      "feet": "iron_boots"
+    }
+  },
   "taxesFactor": 0.5,
   "taxSeason": 168000,
   "marriageChancePerMinute": 0.05,
@@ -167,7 +224,7 @@
     "mca:female_zombie_villager": 3,
     "mca:male_zombie_villager": 3
   },
-  "villagerPathfindingBlacklist": [
+  "unSafeBlocksToTeleportOn": [
     "#minecraft:climbable",
     "#minecraft:fence_gates",
     "#minecraft:fences",
@@ -178,6 +235,10 @@
     "#minecraft:trapdoors",
     "#minecraft:walls"
   ],
+  "villagerPathfindingCollisionCheckBlocks": [
+    "#mca:villager_pathfinding_collision_checks"
+  ],
+  "villagerPathfindingCheckAllNodeCollisions": false,
   "structuresInRumors": [
     "minecraft:igloo",
     "minecraft:pyramid",
@@ -219,6 +280,7 @@
   "villagerMaxAgeTime": 384000,
   "allowEveryoneToAddContentGlobally": false,
   "allowPlayerSizeAdjustment": true,
+  "scalePlayerHitboxWithSizeAndWidth": false,
   "allowBodyCustomizationInDestiny": true,
   "allowTraitCustomizationInDestiny": true,
   "destinySpawnLocations": [
@@ -254,6 +316,9 @@
     "asexual": true,
     "color_blind": true,
     "diabetes": true,
-    "athletic": true
+    "athletic": true,
+    "rainbow_eyes": true,
+    "infertile": true,
+    "no_aging": true
   }
 }

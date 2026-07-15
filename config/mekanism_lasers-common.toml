@@ -41,8 +41,8 @@
 	# Default: 1920000
 	# Range: 0 ~ 9223372036854775807
 	ultimateLaserEnergyUse = 1920000
-	#Progress per tick
-	# Default: 1
+	#Ticks required for ODECM cycle
+	# Default: 200
 	# Range: > 0
 	ODECM_Progress = 1
 	#Energy cost of one tick for ODECM
@@ -57,11 +57,19 @@
 	# Default: 20
 	# Range: 0 ~ 9223372036854775807
 	ODECM_LiquidGasIO = 20
-	#Can ODECM explode if the output tank is full?
+	#Can the ODECM implode (suck in surrounding blocks and blast them back out) when it is starved of water/steam?
 	ODECM_CanExplode = true
-	#Once ODECM explodes what should be the explosion magnitude be
-	# Default: 80
+	#Radius (in blocks) of the ODECM implosion
+	# Default: 12
 	# Range: 1 ~ 9223372036854775807
 	ODECM_Explosion = 80
 	#List should have amount of elements >= the amount of ODECM generator versions, each number tells the generator by how much will it improve
 	ODECM_Generator = [1, 2, 3, 6, 9, 25]
+	#Progress per tick
+	# Default: 1
+	# Range: > 0
+	ODECM_ProgressPerTick = 1
+	#Block IDs the ODECM implosion will NEVER pull in. Takes priority over the whitelist.
+	ODECM_ImplodeBlacklist = []
+	#Blocks with a block entity (tile entities) are excluded from the implosion by default; add block IDs here to allow those specific ones to be pulled in.
+	ODECM_ImplodeWhitelist = ["mekanism:structural_glass"]
