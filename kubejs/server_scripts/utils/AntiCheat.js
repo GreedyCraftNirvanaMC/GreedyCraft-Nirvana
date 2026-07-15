@@ -1,6 +1,10 @@
 // priority: 32767
 
-// 函数：检查是否有非官方模组，返回非官方模组列表
+/**
+ * 检查是否有非官方模组
+ * 
+ * @returns {Array<string>} 返回非官方模组的数组
+ */
 function checkModList() {
     let unofficialModList = []
 
@@ -17,7 +21,13 @@ function checkModList() {
     return unofficialModList
 }
 
-// 函数：检查是否作弊，返回布尔值。要求提供 event.player 和 event.server 两个形参
+/**
+ * 检查玩家是否作弊
+ * 
+ * @param {import("@package/net/minecraft/server/level").$ServerPlayer} player - 玩家对象
+ * @param {import("@package/net/minecraft/server").$MinecraftServer} server - 服务器对象
+ * @returns {boolean} 作弊为 true 否则为 false
+ */
 function checkCheat(player, server) {
     let unofficialModList = checkModList()
 

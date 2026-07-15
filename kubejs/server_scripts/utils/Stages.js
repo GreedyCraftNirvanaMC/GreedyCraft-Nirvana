@@ -1,6 +1,11 @@
 // priority: 1000
 
-// 函数：给玩家添加所有阶段与进度
+/**
+ * 给玩家添加所有阶段与进度
+ * 
+ * @param {import("@package/net/minecraft/server").$MinecraftServer} server - 服务器对象
+ * @param {import("@package/net/minecraft/server/level").$ServerPlayer} player - 玩家对象
+ */
 function givePlayerAllStage(server, player) {
     let playerName = player.username
 
@@ -9,7 +14,12 @@ function givePlayerAllStage(server, player) {
     })
 }
 
-// 函数：删除玩家所有阶段与进度
+/**
+ * 删除玩家所有阶段与进度
+ * 
+ * @param {import("@package/net/minecraft/server").$MinecraftServer} server - 服务器对象
+ * @param {import("@package/net/minecraft/server/level").$ServerPlayer} player - 玩家对象
+ */
 function removePlayerAllStage(server, player) {
     let playerName = player.username
 

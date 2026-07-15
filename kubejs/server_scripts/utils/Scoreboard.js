@@ -1,6 +1,13 @@
 // priority: 32767
 
-// 函数：获取用于计分板的游戏模式项文本，返回 MutableComponent。要求提供整合包模式以及 event.player 和 event.server 三个形参
+/**
+ * 获取用于计分板的游戏模式项文本
+ * 
+ * @param {string} packMode - 整合包模式
+ * @param {import("@package/net/minecraft/server/level").$ServerPlayer} player - 玩家对象
+ * @param {import("@package/net/minecraft/server").$MinecraftServer} server - 服务器对象
+ * @returns {import("@package/net/minecraft/network/chat").$MutableComponent} 计分板游戏模式项文本
+ */
 function getScoreBoardgameModeText(packMode, player, server) {
     let gameModeText = Component.translatable(`greedycraft.packmode.${packMode}`).append(Component.translatable("greedycraft.scoreboard.packmode.name"))
 
@@ -25,7 +32,12 @@ function getScoreBoardgameModeText(packMode, player, server) {
     return gameModeText
 }
 
-// 函数：用于添加计分板，要求提供 event.player 以及 event.server 两个形参
+/**
+ * 创建计分板
+ * 
+ * @param {import("@package/net/minecraft/server/level").$ServerPlayer} player - 玩家对象
+ * @param {import("@package/net/minecraft/server").$MinecraftServer} server - 服务器对象
+ */
 function addScoreBoard(player, server) {
     let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
     let packName = Component.translatable("greedycraft.modpack.name").append(Component.literal(` v${global.LOCAL_PACKVERSION_NAME}`).color(0x55FF55).bold()).getString()

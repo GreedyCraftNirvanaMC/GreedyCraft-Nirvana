@@ -1,6 +1,12 @@
 // priority: 32767
 
-// 函数：用于返回布尔值的配置文件值，要求提供配置文件路径和配置项两个形参，返回布尔值
+/**
+ * 以布尔值的形式返回配置文件中的值
+ * 
+ * @param {string} config_path - 配置文件路径
+ * @param {string} config - 配置项
+ * @returns {boolean} - 布尔值
+ */
 function ConfigFormBoolean(config_path, config) {
     let value = KJSutils.Analysis(config_path, config)
     if (value == "true") {

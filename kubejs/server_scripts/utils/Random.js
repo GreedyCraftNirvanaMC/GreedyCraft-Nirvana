@@ -1,11 +1,23 @@
 // priority: 32767
 
-// 函数：生成随机整数。要求提供最小值和最大值两个形参
+/**
+ * 生成随机整数
+ * 
+ * @param {number} min - 最小值
+ * @param {number} max - 最大值
+ * @returns {number} 随机整数
+ */
 function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// 函数：返回玩家周围的随机坐标，要求提供 Player 对象和半径
+/**
+ * 返回玩家周围的随机坐标
+ * 
+ * @param {import("@package/net/minecraft/server/level").$ServerPlayer} player - 玩家对象
+ * @param {number} radius - 半径
+ * @returns {Array<number>} 随机坐标 [x, y, z]
+ */
 function randomSpawnAroundPlayer(player, radius) {
     let angle = Math.random() * Math.PI * 2
     let distance = Math.random() * radius

@@ -1,77 +1,174 @@
 // priority: 32767
 
-// 函数：注册材料，无返回值，使用链式调用
-global.materialList = []
-global.itemList = []
+/** @type {registryMetals[]} */
+let materialList = []
+
+/** @type {registryItem[]} */
+let itemList = []
+
+global.materialList = materialList
+global.itemList = itemList
+
+/**
+ * 注册材料
+ * 
+ * @constructor
+ * @param {string} name
+ * @param {number} color
+ */
 function registryMetals(name, color) {
 	this.name = name
 	this.color = color
+
+	/** @type {Array<string>} */
 	this.types = []
 	this.beaconPayment = false
 
-	global.materialList.push(this)
+	materialList.push(this)
 }
 
-registryMetals.prototype.dust = function () {
+/**
+ * 粉
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.dust = function() {
 	this.types.push("dust")
 	return this
 }
-registryMetals.prototype.rod = function () {
+
+/**
+ * 杆
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.rod = function() {
 	this.types.push("rod")
 	return this
 }
-registryMetals.prototype.gear = function () {
+
+/**
+ * 齿轮
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.gear = function() {
 	this.types.push("gear")
 	return this
 }
-registryMetals.prototype.dirtyDust = function () {
+
+/**
+ * 污浊粉
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.dirtyDust = function() {
 	this.types.push("dirtydust")
 	return this
 }
-registryMetals.prototype.clump = function () {
+
+/**
+ * 碎块
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.clump = function() {
 	this.types.push("clump")
 	return this
 }
-registryMetals.prototype.shard = function () {
+
+/**
+ * 碎片
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.shard = function() {
 	this.types.push("shard")
 	return this
 }
-registryMetals.prototype.crystal = function () {
+
+/**
+ * 晶体
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.crystal = function() {
 	this.types.push("crystal")
 	return this
 }
-registryMetals.prototype.dirtySlurry = function () {
+
+/**
+ * 污浊浆液
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.dirtySlurry = function() {
 	this.types.push("dirtyslurry")
 	return this
 }
-registryMetals.prototype.ingot = function () {
+
+/**
+ * 锭
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.ingot = function() {
 	this.types.push("ingot")
 	return this
 }
-registryMetals.prototype.nugget = function () {
+
+/**
+ * 粒
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.nugget = function() {
 	this.types.push("nugget")
 	return this
 }
-registryMetals.prototype.rawOre = function () {
+
+/**
+ * 粗矿
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.rawOre = function() {
 	this.types.push("rawore")
 	return this
 }
-registryMetals.prototype.plate = function () {
+
+/**
+ * 板
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.plate = function() {
 	this.types.push("plate")
 	return this
 }
-registryMetals.prototype.slurry = function () {
+
+/**
+ * 矿物浆液
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.slurry = function() {
 	this.types.push("slurry")
 	return this
 }
 
-registryMetals.prototype.beaconPaymentItem = function () {
+/**
+ * 是否能在信标中使用
+ * 
+ * @returns {registryMetals}
+ */
+registryMetals.prototype.beaconPaymentItem = function() {
 	this.beaconPayment = true
 	return this
 }
 
 StartupEvents.registry("item", event => {
-	global.materialList.forEach(material => {
+	materialList.forEach(material => {
 		material.types.forEach(type => {
 			if (type == "dirtydust") {
 				if (material.name != "aqualite" && material.name != "cryonium" && material.name != "shadowium") {
@@ -148,10 +245,19 @@ StartupEvents.registry("item", event => {
 	})
 })
 
+/**
+ * 注册物品
+ * 
+ * @constructor
+ * @param {string} name
+ */
 function registryItem(name) {
 	this.name = name
 	this.isStageUnlockItem = false
+
+	/** @type {string | null} */
 	this.stage = null
+
 	this.tooltipCount = 0
 	this.isGlow = false
 	this.maxCount = 64
@@ -160,34 +266,63 @@ function registryItem(name) {
 	global.itemList.push(this)
 }
 
+/**
+ * 可用于解锁阶段
+ * 
+ * @param {string} stage
+ * @returns {registryItem}
+ */
 registryItem.prototype.setStageUnlockItem = function (stage) {
 	this.isStageUnlockItem = true
 	this.stage = stage
 	return this
 }
 
+/**
+ * tooltip 行数
+ * 
+ * @param {number} count
+ * @returns {registryItem}
+ */
 registryItem.prototype.setTooltips = function (count) {
 	this.tooltipCount = count
 	return this
 }
 
+/**
+ * 附魔光效
+ * 
+ * @returns {registryItem}
+ */
 registryItem.prototype.setGlow = function () {
 	this.isGlow = true
 	return this
 }
 
+/**
+ * 可堆叠数量
+ * 
+ * @param {number} count
+ * @returns {registryItem}
+ */
 registryItem.prototype.setMaxCount = function (count) {
 	this.maxCount = count
 	return this
 }
 
+/**
+ * 可燃烧时间
+ * 
+ * @param {number} time
+ * @returns {registryItem}
+ */
 registryItem.prototype.setBurnTime = function (time) {
 	this.burnTime = time
 	return this
 }
 
 StartupEvents.registry("item", event => {
-	global.itemList.forEach(normalItem => {
+	itemList.forEach(normalItem => {
 		let item = event.create(`greedycraft:${normalItem.name}`)
 		if (normalItem.isStageUnlockItem) {
 			item.tag(`greedycraft:unlock_stage/${normalItem.stage}`)

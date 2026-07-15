@@ -1,7 +1,17 @@
 // priority: 32767
 
+/** @type {mainLootTableAddModifier[]} */
 let lootMapList = []
 
+/**
+ * 添加主战利品表修改器
+ * 
+ * @constructor
+ * @param {number} weight - 权重
+ * @param {number} quality - 质量
+ * @param {number} min - 最小数量
+ * @param {number} max - 最大数量
+ */
 function mainLootTableAddModifier(weight, quality, min, max) {
     this.weight = weight
     this.quality = quality
@@ -9,18 +19,32 @@ function mainLootTableAddModifier(weight, quality, min, max) {
     this.max = max
     this.hardmode = false
 
+    /** @type {Array<string>} */
     this.items = []
+
+    /** @type {Array<string>} */
     this.HDitems = []
 
     lootMapList.push(this)
 }
 
-mainLootTableAddModifier.prototype.isHardMode = function () {
+/**
+ * 困难模式才掉落
+ * 
+ * @returns {mainLootTableAddModifier}
+ */
+mainLootTableAddModifier.prototype.isHardMode = function() {
     this.hardmode = true
     return this
 }
 
-mainLootTableAddModifier.prototype.item = function (item) {
+/**
+ * 添加战利品
+ * 
+ * @param {string} item - 物品 ID
+ * @returns {mainLootTableAddModifier}
+ */
+mainLootTableAddModifier.prototype.item = function(item) {
     if (!(this.hardmode)) {
         this.items.push(item)
     } else {

@@ -1,6 +1,10 @@
 // priority: 32767
 
-// 函数：延迟清理服务器掉落物，需要提供 event.server 形参
+/**
+ * 清理服务器掉落物
+ * 
+ * @param {import("@package/net/minecraft/server").$MinecraftServer} server - 服务器对象
+ */
 function cleanServerDroppedItem(server) {
     // 延迟 20 tick
     server.scheduleInTicks(20, e => {
