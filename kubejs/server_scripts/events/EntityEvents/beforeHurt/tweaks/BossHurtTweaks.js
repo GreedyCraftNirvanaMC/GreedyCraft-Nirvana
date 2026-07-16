@@ -11,6 +11,12 @@ EntityEvents.beforeHurt(event => {
     // 判断造成伤害的是否是 Boss 并且不在黑名单中
     if (source.getActual() && global.VARIABLE_BOSS_LIST.includes(source.getActual().getType()) && !(global.VARIABLE_DAMAGE_BLACK_LIST.includes(source.getActual().getType()))) {
         // 根据难度设置伤害
-        event.setDamage(event.getDamage * (1.0 + 0.0032 * entity.getData(PsAttachmentTypes.DIFFICULTY)))
+        let damage = 1.0
+
+        if (entity.getData(PsAttachmentTypes.DIFFICULTY) >= 1.0) {
+            damage = entity.getData(PsAttachmentTypes.DIFFICULTY)
+        }
+
+        event.setDamage(event.getDamage() * damage)
     }
 })
