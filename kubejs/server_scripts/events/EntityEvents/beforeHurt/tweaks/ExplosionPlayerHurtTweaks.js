@@ -8,13 +8,13 @@ EntityEvents.beforeHurt("minecraft:player", event => {
 
     if (source.getType() == "explosion.player") {
         // 判断玩家是否有 nether 阶段
-        if (AStages.playerHasStage(player, "nether")) {
+        if (AStages.playerHasStage("nether", player)) {
             // 设置伤害为 2.5 倍
             event.setDamage(event.getDamage() * 2.5)
         }
 
         // 判断玩家是否有 hardmode 阶段
-        if (AStages.playerHasStage(player, "hardmode")) {
+        if (AStages.playerHasStage("hardmode", player)) {
             // 设置伤害为 3.0 倍
             event.setDamage(event.getDamage() * 3.0)
         }
