@@ -24,6 +24,8 @@ PlayerEvents.loggedIn(event => {
     let antiCheatMode = KJSutils.Analysis("config/greedycraft/config.json", "$.antiCheatMode")
     let antiCheat = KJSutils.Analysis("config/greedycraft/config.json", "$.antiCheat")
 
+    let scoreboard = server.getScoreboard().getObjective("packinfo")
+
     // 判断玩家是否有 init 阶段
     if (!(AStages.playerHasStage("init", player))) {
         // 没有则是第一次进入游戏，发送消息并触发 Init 操作
@@ -42,6 +44,15 @@ PlayerEvents.loggedIn(event => {
         // init 进度为所有进度的根进度，也是触发其余初始化条件的入口
         server.runCommandSilent(`advancement grant ${playerName} only greedycraft:stages/init`)
     } else {
+        // 判断是否存在计分板
+        if (scoreboard) {
+            // 如果存在则删除
+            server.runCommandSilent("scoreboard objectives remove packinfo")
+        }
+
+        // 创建计分板 *此为自定义函数*
+        addScoreBoard(player, server)
+
         // 从全局变量中随机选一条消息发送
         player.tell(Component.translatable(RANDOM_MESSAGE_DATA))
 
