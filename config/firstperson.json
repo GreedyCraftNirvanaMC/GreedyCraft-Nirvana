@@ -16,7 +16,8 @@
     "twilightforest:filled_magic_map",
     "twilightforest:filled_maze_map",
     "antiqueatlas:antique_atlas",
-    "create:extendo_grip"
+    "create:extendo_grip",
+    "greedycraft:one_punch"
   ],
   "autoToggleModItems": [
     "exposure:camera"
