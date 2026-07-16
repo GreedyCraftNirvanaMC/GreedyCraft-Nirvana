@@ -1397,7 +1397,7 @@
     "minecraft": {
         "modLoaders": [
             {
-                "id": "neoforge-21.1.233",
+                "id": "neoforge-21.1.238",
                 "primary": true
             }
         ],
