@@ -9,13 +9,15 @@
     "org.zeith.solarflux.client.screen.SolarPanelScreen": true,
     "mekanism.client.gui.machine.GuiDigitalMiner": true,
     "net.conczin.mca.client.gui.InteractScreen": true,
-    "moe.wolfgirl.probejs.misc.gui.DumpScreen": true
+    "moe.wolfgirl.probejs.misc.gui.DumpScreen": true,
+    "committee.nova.mods.avaritia.client.screen.InfinityClockScreen": true
   },
   "hideBackground": {
     "mezz.jei.gui.recipes.RecipesGui": false,
     "net.bandit.reskillable.client.screen.SkillScreen": true,
     "com.aetherteam.aether.client.gui.screen.inventory.AetherAccessoriesScreen": true,
     "org.zeith.solarflux.client.screen.SolarPanelScreen": true,
-    "mekanism.client.gui.machine.GuiDigitalMiner": true
+    "mekanism.client.gui.machine.GuiDigitalMiner": true,
+    "committee.nova.mods.avaritia.client.screen.InfinityClockScreen": true
   }
 }

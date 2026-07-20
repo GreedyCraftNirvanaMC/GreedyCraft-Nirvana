@@ -6,6 +6,7 @@
  * @returns {Array<string>} 返回非官方模组的数组
  */
 function checkModList() {
+    /** @type {Array<String>} */
     let unofficialModList = []
 
     // 获取模组列表

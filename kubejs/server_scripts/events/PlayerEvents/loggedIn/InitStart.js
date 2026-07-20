@@ -73,9 +73,9 @@ PlayerEvents.loggedIn(event => {
             player.tell(Component.translatable("greedycraft.message.cheat.text"))
         }
 
-        // 判断是否是 "真英雄"
+        // 判断是否正常完成了任务
         if (AStages.playerHasStage("end", player) && !(checkCheat(player, server))) {
-            player.tell(Component.translatable("greedycraft.message.playerlogging.truehero", Component.literal(player.getUsername()).color(0xFFFF55)))
+            player.tell(Component.translatable("greedycraft.message.playerlogging.end", Component.literal(player.getUsername()).color(0xFFFF55)))
         }
     }
 })

@@ -15,7 +15,7 @@ ItemEvents.rightClicked("greedycraft:infinity_stone", event => {
         player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 50, 5))
         // 力量效果
         player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 50, 10))
-        // 否侧判断是否拥有 truehero 阶段并且没有作弊
+        // 否侧判断是否拥有 end 阶段并且没有作弊
     } else if (!(checkCheat(player, server)) && AStages.playerHasStage("end", player)) {
         // 抗性效果
         player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 50, 4))

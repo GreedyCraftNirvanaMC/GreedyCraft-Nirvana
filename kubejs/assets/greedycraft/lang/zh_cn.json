@@ -856,7 +856,7 @@
     "greedycraft.message.playerlogging.system.text.8": "§e 如果你还能看到这则公告，请想办法脱离埃拉西亚程序，这是弄清发生了什么的唯一方法。",
     "greedycraft.message.playerlogging.system.text.9": "§e 只有你能将人类从错误的道路上拯救回来！",
     "greedycraft.message.playerlogging.system.text.end": "§b ====================================================",
-    "greedycraft.message.playerlogging.truehero": "§6§o欢迎回家，真正的英雄：%s§6§o！",
+    "greedycraft.message.playerlogging.end": "§6§o欢迎回家，真正的英雄：%s§6§o！",
 
     "greedycraft.message.creative.text": "§e由于你以§d§n§l创造模式§e创建了该存档，所有阶段已经解锁，尽情创造吧！",
     "greedycraft.message.cheat.text": "§c§lGCTN反作弊系统: 检测到你正在进行作弊，我们不建议你继续下去，但是这是你的世界，我们不会阻止你，不过如果你能靠自己的努力游玩完该整合包，那何尝不是一件有成就感的事呢？如果你认为是整合包中的内容影响了你正常玩下去的欲望，请联系我们！",
