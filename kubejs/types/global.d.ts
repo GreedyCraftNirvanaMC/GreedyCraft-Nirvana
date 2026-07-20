@@ -5,23 +5,23 @@ declare namespace global {
     }
 
     interface StageRules {
-        item: Record<string, string[]>;
+        item: Record<string, Array<string>>;
         ore: Record<string, Record<string, string>>;
-        dimension: Record<string, string[]>;
-        mob: Record<string, string[]>;
-        mod: Record<string, string[]>;
+        dimension: Record<string, Array<string>>;
+        mob: Record<string, Array<string>>;
+        mod: Record<string, Array<string>>;
     }
 
     interface StageUnlockMessage {
-        title: string[];
-        lore: string[];
-        unlock: string[];
+        title: Array<string>;
+        lore: Array<string>;
+        unlock: Array<string>;
     }
 
     interface MaterialInfo {
         name: string;
         color: number;
-        types: string[];
+        types: Array<string>;
         beaconPayment: boolean;
     }
 
@@ -45,23 +45,26 @@ declare namespace global {
     let MAP_DIMENSION_DIFFICULTY: Record<string, number>;
     let MAP_STAGE_DIFFICULTY: Record<string, number>;
     let MAP_STAGE_DIFFICULTY_EXPERT: Record<string, number>;
-    let MAP_PURIFYINGDUST_RECIPES: Record<string, string[]>;
+    let MAP_PURIFYINGDUST_RECIPES: Record<string, Array<string>>;
     let MAP_STAGE_LIST: Record<string, StageInfo>;
     let MAP_STAGES_RULE: StageRules;
-    let MESSAGE_PLAYERLOGGEDIN: string[];
-    let MESSAGE_PLAYER_DEATH: string[];
+    let MESSAGE_PLAYERLOGGEDIN: Array<string>;
+    let MESSAGE_PLAYER_DEATH: Array<string>;
     let MESSAGE_STAGES_UNLOCK: Record<string, StageUnlockMessage>;
-    let VARIABLE_COMMANDBLACK_LIST: string[];
-    let VARIABLE_COMMANDWHITE_LIST: string[];
-    let VARIABLE_MAIN_LOOTTABLE_LIST: string[];
+    let VARIABLE_COMMANDBLACK_LIST: Array<string>;
+    let VARIABLE_COMMANDWHITE_LIST: Array<string>;
+    let VARIABLE_MAIN_LOOTTABLE_LIST: Array<string>;
     let VARIABLE_OFFICIAL_MOD_LIST: Set<string>;
-    let VARIABLE_CREATOR_LIST: string[];
-    let VARIABLE_GRASS_LIST: string[];
-    let VARIABLE_ROCK_LIST: string[];
-    let VARIABLE_BOSS_LIST: string[];
-    let VARIABLE_SPIDER_LIST: string[];
-    let VARIABLE_SKELETON_LIST: string[];
-    let VARIABLE_DAMAGE_BLACK_LIST: string[];
+    let VARIABLE_CREATOR_LIST: Array<string>;
+    let VARIABLE_GRASS_LIST: Array<string>;
+    let VARIABLE_ROCK_LIST: Array<string>;
+    let VARIABLE_BOSS_LIST: Array<string>;
+    let VARIABLE_SPIDER_LIST: Array<string>;
+    let VARIABLE_SKELETON_LIST: Array<string>;
+    let VARIABLE_DAMAGE_BLACK_LIST: Array<string>;
+    let VARIABLE_CASUAL_MEKANISM_BASEVALUE: Record<string, number>;
+    let VARIABLE_ADVENTURE_MEKANISM_BASEVALUE: Record<string, number>;
+    let VARIABLE_EXPERT_MEKANISM_BASEVALUE: Record<string, number>;
 
     let PACK_MODE: string;
     let CHECK_VERSION_UPDATE: boolean;
