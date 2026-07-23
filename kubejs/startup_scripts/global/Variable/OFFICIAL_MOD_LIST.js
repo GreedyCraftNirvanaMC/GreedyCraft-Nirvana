@@ -136,7 +136,6 @@ global.VARIABLE_OFFICIAL_MOD_LIST = new Set([
     "fabric_renderer_api_v1",
     "netherportalfix",
     "geckolib",
-    "filesjs",
     "new_classic_battle_towers",
     "aether",
     "firstperson",
