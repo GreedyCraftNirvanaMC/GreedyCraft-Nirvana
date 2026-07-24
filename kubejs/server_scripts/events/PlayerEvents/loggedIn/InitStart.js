@@ -26,6 +26,8 @@ PlayerEvents.loggedIn(event => {
 
     let scoreboard = server.getScoreboard().getObjective("packinfo")
 
+    let unofficialModList = checkModList()
+
     // 判断玩家是否有 init 阶段
     if (!(AStages.playerHasStage("init", player))) {
         // 没有则是第一次进入游戏，发送消息并触发 Init 操作
@@ -73,8 +75,9 @@ PlayerEvents.loggedIn(event => {
             player.tell(Component.translatable("greedycraft.message.cheat.text"))
         }
 
-        if (checkModList().length > 0) {
+        if (unofficialModList.length > 0) {
             player.tell(Component.translatable("greedycraft.message.cheat.modlist.text"))
+            unofficialModList.forEach(modID => player.tell(modID))
         }
 
         // 判断是否正常完成了任务
