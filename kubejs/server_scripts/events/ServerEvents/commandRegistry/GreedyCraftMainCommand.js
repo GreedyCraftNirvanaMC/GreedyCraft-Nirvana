@@ -81,7 +81,7 @@ ServerEvents.commandRegistry(event => {
                                 server.runCommandSilent("reload")
 
                                 // 更改计分板
-                                let gameMode = getScoreBoardGameMode(options, player, server).getString()
+                                let gameMode = getScoreBoardgameModeText(options, player, server).getString()
                                 server.runCommandSilent(`scoreboard players display name gamemode packinfo "${gameMode}"`)
 
                                 // 发送消息
