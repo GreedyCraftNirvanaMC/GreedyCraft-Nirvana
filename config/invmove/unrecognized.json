@@ -10,7 +10,21 @@
     "mekanism.client.gui.machine.GuiDigitalMiner": true,
     "net.conczin.mca.client.gui.InteractScreen": true,
     "moe.wolfgirl.probejs.misc.gui.DumpScreen": true,
-    "committee.nova.mods.avaritia.client.screen.InfinityClockScreen": true
+    "committee.nova.mods.avaritia.client.screen.InfinityClockScreen": true,
+    "de.ellpeck.actuallyadditions.mod.inventory.gui.GuiCoffeeMachine": true,
+    "dev.latvian.mods.kubejs.client.KubeJSErrorScreen": true,
+    "com.direwolf20.buildinggadgets2.client.screen.ModeRadialMenu": true,
+    "com.jerry.mekextras.client.gui.GuiExtraFluidTank": true,
+    "mekanism.client.gui.GuiFluidTank": true,
+    "mekanism.client.gui.GuiThermalEvaporationController": true,
+    "mekanism.client.gui.machine.GuiResistiveHeater": true,
+    "mekanism.client.gui.machine.GuiFactory": true,
+    "com.jerry.mekaf.client.gui.machine.GuiAdvancedFactory": true,
+    "mekanism.client.gui.machine.GuiChemicalInfuser": true,
+    "mekanism.client.gui.machine.GuiChemicalCrystallizer": true,
+    "mekanism.client.gui.machine.GuiChemicalWasher": true,
+    "mekanism.client.gui.machine.GuiChemicalDissolutionChamber": true,
+    "mekanism.client.gui.machine.GuiAdvancedElectricMachine": true
   },
   "hideBackground": {
     "mezz.jei.gui.recipes.RecipesGui": false,
@@ -18,6 +32,18 @@
     "com.aetherteam.aether.client.gui.screen.inventory.AetherAccessoriesScreen": true,
     "org.zeith.solarflux.client.screen.SolarPanelScreen": true,
     "mekanism.client.gui.machine.GuiDigitalMiner": true,
-    "committee.nova.mods.avaritia.client.screen.InfinityClockScreen": true
+    "committee.nova.mods.avaritia.client.screen.InfinityClockScreen": true,
+    "de.ellpeck.actuallyadditions.mod.inventory.gui.GuiCoffeeMachine": true,
+    "com.jerry.mekextras.client.gui.GuiExtraFluidTank": true,
+    "mekanism.client.gui.GuiFluidTank": true,
+    "mekanism.client.gui.GuiThermalEvaporationController": true,
+    "mekanism.client.gui.machine.GuiResistiveHeater": true,
+    "mekanism.client.gui.machine.GuiFactory": true,
+    "com.jerry.mekaf.client.gui.machine.GuiAdvancedFactory": true,
+    "mekanism.client.gui.machine.GuiChemicalInfuser": true,
+    "mekanism.client.gui.machine.GuiChemicalCrystallizer": true,
+    "mekanism.client.gui.machine.GuiChemicalWasher": true,
+    "mekanism.client.gui.machine.GuiChemicalDissolutionChamber": true,
+    "mekanism.client.gui.machine.GuiAdvancedElectricMachine": true
   }
 }
