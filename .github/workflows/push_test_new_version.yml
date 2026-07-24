@@ -22,7 +22,7 @@ jobs:
           path: Repository
 
       - name: Remove Files
-        run: rm -rf Repository/customresources Repository/version.json
+        run: rm -rf Repository/customresources Repository/version.json Repository/.github
 
       - name: Create overrides Folder
         run: mkdir -p ActionsTemp/overrides
