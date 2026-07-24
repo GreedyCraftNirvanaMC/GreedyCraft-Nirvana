@@ -3,8 +3,8 @@
   "checkVersionUpdate": true,
   "antiCheat": true,
   "antiCheatMode": "adventure",
-  "localPackVersionCode": 17,
-  "localPackVersionName": "zeta-0.0.2.1",
+  "localPackVersionCode": 18,
+  "localPackVersionName": "zeta-0.0.2.2",
   "updateLink": [
     "https://github.com/GreedyCraftNirvanaMC/GreedyCraft-Nirvana/raw/refs/heads/main/version.json",
     "https://gitee.com/create_xiaoyu/GreedyCraft-Nirvana/raw/main/version.json"
