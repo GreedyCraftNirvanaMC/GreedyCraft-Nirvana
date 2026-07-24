@@ -2,7 +2,7 @@
 // 此脚本用于玩家解锁阶段自动设置难度，根据全局变量 global.MAP_STAGE_DIFFICULTY 或 global.MAP_STAGE_DIFFICULTY_EXPERT
 // priority: 50
 
-let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
+let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
 
 let DIFFICULTY_MAP = global.MAP_STAGE_DIFFICULTY
 

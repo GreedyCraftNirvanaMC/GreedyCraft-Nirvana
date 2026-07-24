@@ -32,7 +32,7 @@ ServerEvents.commandRegistry(event => {
                                 let playerName = player.getUsername()
 
                                 // 从配置文件获取 packMode 的值
-                                let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
+                                let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
 
                                 // 对比配置文件中的值和此次要更改的值是否一致
                                 if (packMode == options) {
@@ -75,7 +75,7 @@ ServerEvents.commandRegistry(event => {
                                 server.tell(Component.translatable("greedycraft.commands.setpackmode", Component.literal(player.getUsername()).color(0xFFAA00)).append(Component.translatable(`greedycraft.packmode.${options}`)))
 
                                 // 修改配置文件的值
-                                KJSutils.ModifyJsonValue("config/greedycraft/config.json", "$.packMode", options)
+                                KJSutilsCommon.ModifyJsonValue("config/greedycraft/config.json", "packMode", options, true)
 
                                 // 热重载
                                 server.runCommandSilent("reload")

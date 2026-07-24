@@ -5,7 +5,7 @@
 let SeasonHelper = Java.loadClass("sereneseasons.api.season.SeasonHelper")
 let Season = Java.loadClass("sereneseasons.api.season.Season")
 
-let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
+let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
 
 ItemEvents.rightClicked("greedycraft:beast_hand", event => {
     let level = event.getLevel()

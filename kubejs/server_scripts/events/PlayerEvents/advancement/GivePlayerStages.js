@@ -9,7 +9,7 @@ PlayerEvents.advancement(event => {
     let advancementNamespace = event.getAdvancement().getId().getNamespace()
     let advancementPath = event.getAdvancement().getId().getPath()
 
-    let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
+    let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
 
     // 休闲模式下不存在阶段，所以不必进行处理
     if (packMode != "casual") {

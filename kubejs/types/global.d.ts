@@ -18,23 +18,6 @@ declare namespace global {
         unlock: Array<string>;
     }
 
-    interface MaterialInfo {
-        name: string;
-        color: number;
-        types: Array<string>;
-        beaconPayment: boolean;
-    }
-
-    interface ItemInfo {
-        name: string;
-        isStageUnlockItem: boolean;
-        stage: string | null;
-        tooltipCount: number;
-        isGlow: boolean;
-        maxCount: number;
-        burnTime: number;
-    }
-
     type StageRuleEntry = {
         [K in keyof StageRules]-?: [
             stageType: K,
@@ -72,8 +55,5 @@ declare namespace global {
     let ANTI_CHEAT_MODE: string;
     let LOCAL_PACKVERSION_CODE: number;
     let LOCAL_PACKVERSION_NAME: string;
-    let UPDATE_LINK: Internal.$List<string>;
-
-    let materialList: MaterialInfo[];
-    let itemList: ItemInfo[];
+    let UPDATE_LINK: Array<string>;
 }

@@ -2,7 +2,7 @@
 // 此脚本用于给阶段物品添加阶段名 Tooltips
 // priority: 50
 
-let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
+let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
 let allItems = Item.getList()
 
 let stageRuleMap = {}

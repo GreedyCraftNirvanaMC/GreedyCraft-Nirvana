@@ -21,8 +21,8 @@ PlayerEvents.loggedIn(event => {
 
     let RANDOM_MESSAGE_DATA = global.MESSAGE_PLAYERLOGGEDIN[randomInt(0, global.MESSAGE_PLAYERLOGGEDIN.length - 1)]
 
-    let antiCheatMode = KJSutils.Analysis("config/greedycraft/config.json", "$.antiCheatMode")
-    let antiCheat = KJSutils.Analysis("config/greedycraft/config.json", "$.antiCheat")
+    let antiCheatMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "antiCheatMode")
+    let antiCheat = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "antiCheat")
 
     let scoreboard = server.getScoreboard().getObjective("packinfo")
 

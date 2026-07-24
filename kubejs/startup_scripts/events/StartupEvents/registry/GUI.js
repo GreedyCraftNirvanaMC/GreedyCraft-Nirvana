@@ -1,4 +1,3 @@
-// 此脚本用于为整合包注册创造模式物品栏
 // priority: 40
 
 StartupEvents.registry("creative_mode_tab", event => {

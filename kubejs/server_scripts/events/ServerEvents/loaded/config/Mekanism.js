@@ -1,6 +1,6 @@
 // priority: 50
 
-let pack_mode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode").toUpperCase()
+let pack_mode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode").toUpperCase()
 
 ServerEvents.loaded(event => {
     let $MekanismConfig = Java.loadClass("mekanism.common.config.MekanismConfig")

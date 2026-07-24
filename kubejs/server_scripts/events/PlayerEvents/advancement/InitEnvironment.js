@@ -9,7 +9,7 @@ PlayerEvents.advancement("greedycraft:stages/init", event => {
 
     let scoreboard = server.getScoreboard().getObjective("packinfo")
 
-    let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
+    let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
 
     // 判断服务器上是否有 init_creative 阶段
     if (AStages.serverHasStage("init_creative", server)) {

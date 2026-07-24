@@ -39,7 +39,7 @@ function getScoreBoardgameModeText(packMode, player, server) {
  * @param {import("@package/net/minecraft/server").$MinecraftServer} server - 服务器对象
  */
 function addScoreBoard(player, server) {
-    let packMode = KJSutils.Analysis("config/greedycraft/config.json", "$.packMode")
+    let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
     let packName = Component.translatable("greedycraft.modpack.name").append(Component.literal(` v${global.LOCAL_PACKVERSION_NAME}`).color(0x55FF55).bold()).getString()
     let original = Component.translatable("greedycraft.scoreboard.original").getString()
     let author = Component.translatable("greedycraft.scoreboard.author").getString()
