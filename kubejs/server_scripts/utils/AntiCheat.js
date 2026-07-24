@@ -30,12 +30,8 @@ function checkModList() {
  * @returns {boolean} 作弊为 true 否则为 false
  */
 function checkCheat(player, server) {
-    let unofficialModList = checkModList()
-
     // 检查是否有非官方模组
-    if (unofficialModList.length > 0) {
-        player.tell(Component.translatable("greedycraft.message.cheat.modlist.text"))
-        unofficialModList.forEach(modID => player.tell(modID))
+    if (checkModList().length > 0) {
         console.warn(`Unofficial mods detected: ${unofficialModList}`)
 
         // 返回结果
