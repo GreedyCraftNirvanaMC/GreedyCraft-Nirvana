@@ -77,4 +77,4 @@
 	#If enabled, the mod will print a message once (each time Minecraft is launched) with all the basic controls of the mod. [Default: false]
 	Print_Basic_Controls = false
 	#If enabled, the mod will show a toast with info about the currently playing music each time the music changes. [Default: false]
-	Print_Now_Playing = true
+	Print_Now_Playing = false
