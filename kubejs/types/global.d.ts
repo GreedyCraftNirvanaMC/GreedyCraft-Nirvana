@@ -12,18 +12,35 @@ declare namespace global {
         mod: Record<string, Array<string>>;
     }
 
-    interface StageUnlockMessage {
-        title: Array<string>;
-        lore: Array<string>;
-        unlock: Array<string>;
-    }
-
     type StageRuleEntry = {
         [K in keyof StageRules]-?: [
             stageType: K,
             stageMap: StageRules[K]
         ];
     }[keyof StageRules];
+
+    interface StageUnlockMessage {
+        title: Array<string>;
+        lore: Array<string>;
+        unlock: Array<string>;
+    }
+
+    interface MaterialInfo {
+        name: string;
+        color: number;
+        types: Array<string>;
+        beaconPayment: boolean;
+    }
+
+    interface ItemInfo {
+        name: string;
+        isStageUnlockItem: boolean;
+        stage: string | null;
+        tooltipCount: number;
+        isGlow: boolean;
+        maxCount: number;
+        burnTime: number;
+    }
 
     let MAP_DIMENSION_DIFFICULTY: Record<string, number>;
     let MAP_STAGE_DIFFICULTY: Record<string, number>;
@@ -55,5 +72,8 @@ declare namespace global {
     let ANTI_CHEAT_MODE: string;
     let LOCAL_PACKVERSION_CODE: number;
     let LOCAL_PACKVERSION_NAME: string;
-    let UPDATE_LINK: Array<string>;
+    let UPDATE_LINK: Internal.$List<string>;
+
+    let materialList: MaterialInfo[];
+    let itemList: ItemInfo[];
 }

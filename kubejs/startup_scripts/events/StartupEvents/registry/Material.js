@@ -312,8 +312,13 @@ new registryMetals("chaotic", 0x828c9a)
 new registryMetals("sodium_chloride", 0xe1e7e0)
     .crystal()
 
+/** @type {registryMetals[]} */
+let materialList = []
+
+materialList = global.materialList
+
 StartupEvents.registry("item", event => {
-    global.materialList.forEach(material => {
+    materialList.forEach(material => {
         material.types.forEach(type => {
             switch (type) {
                 case "dirtydust": {

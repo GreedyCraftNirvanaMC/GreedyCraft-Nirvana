@@ -13,6 +13,7 @@ function registryMetals(name, color) {
 	this.name = name
 	this.color = color
 
+	/** @type {Array<string>} */
 	this.types = []
 	this.beaconPayment = false
 
@@ -22,6 +23,7 @@ function registryMetals(name, color) {
 /**
  * 粉
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.dust = function() {
 	this.types.push("dust")
@@ -31,6 +33,7 @@ registryMetals.prototype.dust = function() {
 /**
  * 杆
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.rod = function() {
 	this.types.push("rod")
@@ -40,6 +43,7 @@ registryMetals.prototype.rod = function() {
 /**
  * 齿轮
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.gear = function() {
 	this.types.push("gear")
@@ -49,6 +53,7 @@ registryMetals.prototype.gear = function() {
 /**
  * 污浊粉
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.dirtyDust = function() {
 	this.types.push("dirtydust")
@@ -58,6 +63,7 @@ registryMetals.prototype.dirtyDust = function() {
 /**
  * 碎块
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.clump = function() {
 	this.types.push("clump")
@@ -67,6 +73,7 @@ registryMetals.prototype.clump = function() {
 /**
  * 碎片
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.shard = function() {
 	this.types.push("shard")
@@ -76,6 +83,7 @@ registryMetals.prototype.shard = function() {
 /**
  * 晶体
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.crystal = function() {
 	this.types.push("crystal")
@@ -85,6 +93,7 @@ registryMetals.prototype.crystal = function() {
 /**
  * 锭
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.ingot = function() {
 	this.types.push("ingot")
@@ -94,6 +103,7 @@ registryMetals.prototype.ingot = function() {
 /**
  * 粒
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.nugget = function() {
 	this.types.push("nugget")
@@ -103,6 +113,7 @@ registryMetals.prototype.nugget = function() {
 /**
  * 粗矿
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.rawOre = function() {
 	this.types.push("rawore")
@@ -112,6 +123,7 @@ registryMetals.prototype.rawOre = function() {
 /**
  * 板
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.plate = function() {
 	this.types.push("plate")
@@ -121,6 +133,7 @@ registryMetals.prototype.plate = function() {
 /**
  * 矿物浆液
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.slurry = function() {
 	this.types.push("slurry")
@@ -130,6 +143,7 @@ registryMetals.prototype.slurry = function() {
 /**
  * 是否能在信标中使用
  * 
+ * @returns {registryMetals}
  */
 registryMetals.prototype.beaconPaymentItem = function() {
 	this.beaconPayment = true
@@ -147,6 +161,8 @@ global.itemList = []
 function registryItem(name) {
 	this.name = name
 	this.isStageUnlockItem = false
+
+	/** @type {string | null} */
 	this.stage = null
 
 	this.tooltipCount = 0
@@ -161,6 +177,7 @@ function registryItem(name) {
  * 可用于解锁阶段
  * 
  * @param {string} stage
+ * @returns {registryItem}
  */
 registryItem.prototype.setStageUnlockItem = function (stage) {
 	this.isStageUnlockItem = true
@@ -172,6 +189,7 @@ registryItem.prototype.setStageUnlockItem = function (stage) {
  * tooltip 行数
  * 
  * @param {number} count
+ * @returns {registryItem}
  */
 registryItem.prototype.setTooltips = function (count) {
 	this.tooltipCount = count
@@ -181,6 +199,7 @@ registryItem.prototype.setTooltips = function (count) {
 /**
  * 附魔光效
  * 
+ * @returns {registryItem}
  */
 registryItem.prototype.setGlow = function () {
 	this.isGlow = true
@@ -191,6 +210,7 @@ registryItem.prototype.setGlow = function () {
  * 可堆叠数量
  * 
  * @param {number} count
+ * @returns {registryItem}
  */
 registryItem.prototype.setMaxCount = function (count) {
 	this.maxCount = count
@@ -201,6 +221,7 @@ registryItem.prototype.setMaxCount = function (count) {
  * 可燃烧时间
  * 
  * @param {number} time
+ * @returns {registryItem}
  */
 registryItem.prototype.setBurnTime = function (time) {
 	this.burnTime = time
