@@ -1,6 +1,6 @@
+// 此脚本用于为整合包下载版本文件用于检查更新
 // priority: 32767
 
-// 下载版本文件
 if (global.CHECK_VERSION_UPDATE) {
     for (let link of global.UPDATE_LINK) {
         let download = KJSutilsCommon.Download(link, "config/greedycraft/version.json")

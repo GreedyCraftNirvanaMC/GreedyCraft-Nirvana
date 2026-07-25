@@ -1,3 +1,4 @@
+// 此脚本用于为整合包注册材料
 // priority: 50
 
 new registryMetals("aeonsteel", 0x42b983)
