@@ -1,6 +1,6 @@
 // priority: 32767
 
-global.VARIABLE_ADVENTURE_COMMON_BASEVALUE = {
+global.VARIABLE_CASUAL_COMMON_BASEVALUE = {
     "Energy": 0.5,
 }
 
