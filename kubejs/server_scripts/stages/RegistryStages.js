@@ -1,7 +1,7 @@
 // 此脚本用于注册阶段，根据全局变量 global.MAP_STAGES_RULE
 // priority: 50
 
-let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "$packMode")
+let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
 
 let allItems = Item.getList()
 // 注册基础 Astages 阶段

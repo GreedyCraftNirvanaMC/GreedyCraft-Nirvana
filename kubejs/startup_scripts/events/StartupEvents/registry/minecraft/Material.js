@@ -312,6 +312,7 @@ new registryMetals("chaotic", 0x828c9a)
 
 new registryMetals("sodium_chloride", 0xe1e7e0)
     .crystal()
+    .slurry()
 
 /** @type {registryMetals[]} */
 let materialList = []
@@ -404,15 +405,4 @@ StartupEvents.registry("item", event => {
             console.log(`Registry Metals: greedycraft:${material.name}_${type}`)
         })
     })
-})
-
-StartupEvents.registry("mekanism:chemical", event => {
-	global.materialList.forEach(material => {
-		material.types.forEach(type => {
-			if (type == "slurry") {
-				event.create(`greedycraft:${material.name}_dirtyslurry`, "mekanism:dirty_slurry").tint(material.color)
-				event.create(`greedycraft:${material.name}_cleanslurry`, "mekanism:clean_slurry").tint(material.color)
-			}
-		})
-	})
 })
