@@ -24,7 +24,8 @@
     "mekanism.client.gui.machine.GuiChemicalCrystallizer": true,
     "mekanism.client.gui.machine.GuiChemicalWasher": true,
     "mekanism.client.gui.machine.GuiChemicalDissolutionChamber": true,
-    "mekanism.client.gui.machine.GuiAdvancedElectricMachine": true
+    "mekanism.client.gui.machine.GuiAdvancedElectricMachine": true,
+    "dev.ftb.mods.ftblibrary.ui.ScreenWrapper": true
   },
   "hideBackground": {
     "mezz.jei.gui.recipes.RecipesGui": false,
