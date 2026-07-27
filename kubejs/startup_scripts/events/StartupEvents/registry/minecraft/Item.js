@@ -416,12 +416,12 @@ new registryItem("tower_chest_unlocked")
 new registryItem("tower_chest")
     .setTooltips(1)
 
-/** @type {registryItem[]} */
-let itemList = []
-
-itemList = global.itemList
-
 StartupEvents.registry("item", event => {
+    /** @type {registryItem[]} */
+    let itemList = []
+
+    itemList = global.itemList
+
     itemList.forEach(normalItem => {
         let item = event.create(`greedycraft:${normalItem.name}`)
         if (normalItem.isStageUnlockItem) {

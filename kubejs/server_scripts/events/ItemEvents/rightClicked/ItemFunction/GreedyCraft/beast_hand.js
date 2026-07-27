@@ -2,20 +2,20 @@
 // 此脚本用于实现整合包内自定义物品的功能-巨兽之手
 // priority: 50
 
-let SeasonHelper = Java.loadClass("sereneseasons.api.season.SeasonHelper")
-let Season = Java.loadClass("sereneseasons.api.season.Season")
-
-let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
-
 ItemEvents.rightClicked("greedycraft:beast_hand", event => {
     let level = event.getLevel()
     let player = event.getPlayer()
 
+    let $SeasonHelper = Java.loadClass("sereneseasons.api.season.SeasonHelper")
+    let $Season = Java.loadClass("sereneseasons.api.season.Season")
+
+    let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
+
     // 获取当前世界的季节
-    let season = SeasonHelper.getSeasonState(level).getSeason()
+    let season = $SeasonHelper.getSeasonState(level).getSeason()
 
     // 判断季节是否是冬季
-    if (season != Season.WINTER) {
+    if (season != $Season.WINTER.name) {
         // 判断当前群系是否是雪地
         if (!(level.getBiome(player.blockPosition()).isTag("c:is_ocean"))) {
             // 发送消息

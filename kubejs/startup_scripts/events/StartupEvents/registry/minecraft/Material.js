@@ -314,12 +314,12 @@ new registryMetals("sodium_chloride", 0xe1e7e0)
     .crystal()
     .slurry()
 
-/** @type {registryMetals[]} */
-let materialList = []
-
-materialList = global.materialList
-
 StartupEvents.registry("item", event => {
+    /** @type {registryMetals[]} */
+    let materialList = []
+
+    materialList = global.materialList
+
     materialList.forEach(material => {
         material.types.forEach(type => {
             switch (type) {

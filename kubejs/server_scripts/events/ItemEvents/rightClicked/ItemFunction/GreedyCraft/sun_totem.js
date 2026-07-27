@@ -2,13 +2,13 @@
 // 此脚本用于实现整合包内自定义物品的功能-太阳图腾
 // priority: 50
 
-let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
-
 ItemEvents.rightClicked("greedycraft:sun_totem", event => {
     let level = event.getLevel()
     let player = event.getPlayer()
 
     let hasReturn = false
+
+    let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
 
     // 必须在晴天
     if (level.isRaining()) {

@@ -2,14 +2,14 @@
 // 此脚本用于调整整合包蜘蛛类生物的伤害
 // priority: 50
 
-let MobEffectInstance = Java.loadClass("net.minecraft.world.effect.MobEffectInstance")
-let MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
-
 EntityEvents.beforeHurt("minecraft:player", event => {
     let source = event.getSource()
     let entity = event.getEntity()
     let player = event.getPlayer()
     let level = event.getLevel()
+
+    let $MobEffectInstance = Java.loadClass("net.minecraft.world.effect.MobEffectInstance")
+    let $MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
 
     // 判断造成伤害的是否是蜘蛛
     // 防止空指针并判断攻击的对象是否在常量 global.VARIABLE_SPIDER_LIST 中
@@ -32,10 +32,10 @@ EntityEvents.beforeHurt("minecraft:player", event => {
                     }
 
                     // 添加累加等级的缓慢效果
-                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, effectLevel + addEffectLevel))
+                    player.addEffect(new $MobEffectInstance($MobEffects.MOVEMENT_SLOWDOWN, 200, effectLevel + addEffectLevel))
                 } else {
                     // 添加 4 级的缓慢效果 持续时间 200 tick
-                    player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 4))
+                    player.addEffect(new $MobEffectInstance($MobEffects.MOVEMENT_SLOWDOWN, 200, 4))
                     // 判断玩家位置的方块是否为空
                     if (level.isEmptyBlock(player.blockPosition())) {
                         // 在玩家位置放置蜘蛛网
@@ -45,7 +45,7 @@ EntityEvents.beforeHurt("minecraft:player", event => {
             }
         } else {
             // 没有则直接给予缓慢效果
-            player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 0))
+            player.addEffect(new $MobEffectInstance($MobEffects.MOVEMENT_SLOWDOWN, 200, 0))
         }
     }
 })

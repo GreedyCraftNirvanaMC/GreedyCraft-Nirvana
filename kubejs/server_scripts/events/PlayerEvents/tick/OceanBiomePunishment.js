@@ -2,14 +2,14 @@
 // 此脚本用于海洋生物群系窒息惩罚
 // priority: 50
 
-let MobEffectInstance = Java.loadClass("net.minecraft.world.effect.MobEffectInstance")
-let MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
-
 PlayerEvents.tick(event => {
     let player = event.getPlayer()
     let level = event.getLevel()
     let server = player.getServer()
     let biome = level.getBiome(player.blockPosition())
+
+    let $MobEffectInstance = Java.loadClass("net.minecraft.world.effect.MobEffectInstance")
+    let $MobEffects = Java.loadClass("net.minecraft.world.effect.MobEffects")
 
     // 限制 20 tick 执行一次
     if (server.overworld().time % 20 == 0) {
@@ -37,9 +37,9 @@ PlayerEvents.tick(event => {
                         let amplifier = Math.min(10, Math.floor(depth / 10))
 
                         // 给予玩家凋零效果，持续时间 40 tick，等级为 1 + 玩家当前高度除以 10 - 4 的四舍五入结果
-                        player.addEffect(new MobEffectInstance(MobEffects.WITHER, 40, amplifier))
+                        player.addEffect(new $MobEffectInstance($MobEffects.WITHER, 40, amplifier))
                         // 给予玩家失明效果，持续时间 40 tick，等级为 1 + 玩家当前高度除以 10 - 4 的四舍五入结果
-                        player.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 40, amplifier))
+                        player.addEffect(new $MobEffectInstance($MobEffects.BLINDNESS, 40, amplifier))
                         // 显示警告信息
                         player.setStatusMessage(Component.translatable("greedycraft.message.warn.deep_ocean"))
                     }

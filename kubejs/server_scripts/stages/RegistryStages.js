@@ -1,9 +1,6 @@
 // 此脚本用于注册阶段，根据全局变量 global.MAP_STAGES_RULE
 // priority: 50
 
-let packMode = KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode")
-
-let allItems = Item.getList()
 // 注册基础 Astages 阶段
 AStages.addRestrictionForItem("greedycraft_stage/item/init", "init", ["greedycraft:placeholder"]).setHideInJEI(false).setHideTooltip(true)
 
@@ -19,12 +16,14 @@ AStages.addRestrictionForItem("greedycraft_stage/item/init/expert", "expert", [
 
 AStages.addRestrictionForItem("greedycraft_stage/item/init/end", "end", ["greedycraft:placeholder"]).setHideInJEI(false).setHideTooltip(true)
 
-const stageRuleEntries = /** @type {global.StageRuleEntry[]} */ (
-    Object.entries(global.MAP_STAGES_RULE)
-)
-
 // 判断整合包模式是否为休闲模式
-if (packMode != "casual") {
+if (KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode") != "casual") {
+    const stageRuleEntries = /** @type {global.StageRuleEntry[]} */ (
+        Object.entries(global.MAP_STAGES_RULE)
+    )
+    
+    let allItems = Item.getList()
+
     // 从全局变量中提取阶段类型与阶段对象
     stageRuleEntries.forEach(([stageType, stageMap]) => {
         // 按类型分别注册

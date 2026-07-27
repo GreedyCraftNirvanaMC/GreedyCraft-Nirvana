@@ -2,15 +2,15 @@
 // 此脚本用于实现整合包内自定义物品的功能-技能重置卷轴
 // priority: 50
 
-let SkillsType = Java.loadClass("net.bandit.reskillable.common.skills.Skill")
-let SkillModel = Java.loadClass("net.bandit.reskillable.common.capabilities.SkillModel")
-
 ItemEvents.rightClicked("greedycraft:skill_reset_scroll", event => {
     let server = event.getServer()
     let player = event.getPlayer()
 
-    let skills = SkillsType.values()
-    let model = SkillModel.get(player)
+    let $SkillsType = Java.loadClass("net.bandit.reskillable.common.skills.Skill")
+    let $SkillModel = Java.loadClass("net.bandit.reskillable.common.capabilities.SkillModel")
+
+    let skills = $SkillsType.values()
+    let model = $SkillModel.get(player)
 
     let totalXP = 0
     // 遍历所有技能

@@ -3,12 +3,12 @@
 
 // 注册材料浆液
 
-/** @type {registryMetals[]} */
-let materialList = []
-
-materialList = global.materialList
-
 StartupEvents.registry("mekanism:chemical", event => {
+    /** @type {registryMetals[]} */
+    let materialList = []
+
+    materialList = global.materialList
+
     materialList.forEach(material => {
         material.types.forEach(type => {
             if (type == "slurry") {

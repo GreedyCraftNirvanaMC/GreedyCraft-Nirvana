@@ -2,13 +2,13 @@
 // 此脚本用于实现整合包内自定义物品的功能-净化之尘
 // priority: 50
 
-let hasPrePurifyingDustRecipes = false
-let PrePurifyingDustRecipes = {}
-
 ItemEvents.rightClicked("greedycraft:purifying_dust", event => {
     let level = event.getLevel()
     let player = event.getPlayer()
     let blockTarget = event.getTarget().block
+
+    let hasPrePurifyingDustRecipes = false
+    let PrePurifyingDustRecipes = {}
 
     // 判断是否右键的方块
     if (blockTarget == null) {
