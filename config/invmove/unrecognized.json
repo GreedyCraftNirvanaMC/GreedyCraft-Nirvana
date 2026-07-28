@@ -25,7 +25,18 @@
     "mekanism.client.gui.machine.GuiChemicalWasher": true,
     "mekanism.client.gui.machine.GuiChemicalDissolutionChamber": true,
     "mekanism.client.gui.machine.GuiAdvancedElectricMachine": true,
-    "dev.ftb.mods.ftblibrary.ui.ScreenWrapper": true
+    "dev.ftb.mods.ftblibrary.ui.ScreenWrapper": true,
+    "com.jerry.meklm.client.gui.machine.base.GuiLargeChemicalTank": true,
+    "mekanism.client.gui.GuiChemicalTank": true,
+    "sonar.fluxnetworks.client.gui.GuiFluxDeviceHome": true,
+    "sonar.fluxnetworks.client.gui.tab.GuiTabSelection": true,
+    "sonar.fluxnetworks.client.gui.tab.GuiTabCreate": true,
+    "mekanism.client.gui.machine.GuiPRC": true,
+    "mekanism.client.gui.GuiEnergyCube": true,
+    "com.jaquadro.minecraft.storagedrawers.inventory.DrawerScreen$Slot1": true,
+    "mekanism.client.gui.machine.GuiElectricMachine": true,
+    "mekanism.client.gui.machine.GuiChemicalOxidizer": true,
+    "com.lowdragmc.lowdraglib2.gui.holder.ModularUIContainerScreen": true
   },
   "hideBackground": {
     "mezz.jei.gui.recipes.RecipesGui": false,
@@ -45,6 +56,17 @@
     "mekanism.client.gui.machine.GuiChemicalCrystallizer": true,
     "mekanism.client.gui.machine.GuiChemicalWasher": true,
     "mekanism.client.gui.machine.GuiChemicalDissolutionChamber": true,
-    "mekanism.client.gui.machine.GuiAdvancedElectricMachine": true
+    "mekanism.client.gui.machine.GuiAdvancedElectricMachine": true,
+    "com.jerry.meklm.client.gui.machine.base.GuiLargeChemicalTank": true,
+    "mekanism.client.gui.GuiChemicalTank": true,
+    "sonar.fluxnetworks.client.gui.GuiFluxDeviceHome": true,
+    "sonar.fluxnetworks.client.gui.tab.GuiTabSelection": true,
+    "sonar.fluxnetworks.client.gui.tab.GuiTabCreate": true,
+    "mekanism.client.gui.machine.GuiPRC": true,
+    "mekanism.client.gui.GuiEnergyCube": true,
+    "com.jaquadro.minecraft.storagedrawers.inventory.DrawerScreen$Slot1": true,
+    "mekanism.client.gui.machine.GuiElectricMachine": true,
+    "mekanism.client.gui.machine.GuiChemicalOxidizer": true,
+    "com.lowdragmc.lowdraglib2.gui.holder.ModularUIContainerScreen": true
   }
 }

@@ -20,8 +20,8 @@ ServerEvents.recipes(event => {
                 "amount": 1000,
                 "chemical": "greedycraft:sodium_chloride_chemical"
             },
-            "duration": 200,
-            "energy_required": 1000 * Energy,
+            "duration": 20,
+            "energy_required": 400 * Energy,
             "fluid_input": {
                 "amount": 100,
                 "tag": "minecraft:water"

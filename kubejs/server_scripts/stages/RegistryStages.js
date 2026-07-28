@@ -18,7 +18,7 @@ AStages.addRestrictionForItem("greedycraft_stage/item/init/end", "end", ["greedy
 
 // 判断整合包模式是否为休闲模式
 if (KJSutilsCommon.getJsonStringValue("config/greedycraft/config.json", "packMode") != "casual") {
-    const stageRuleEntries = /** @type {global.StageRuleEntry[]} */ (
+    let stageRuleEntries = /** @type {global.StageRuleEntry[]} */ (
         Object.entries(global.MAP_STAGES_RULE)
     )
     
